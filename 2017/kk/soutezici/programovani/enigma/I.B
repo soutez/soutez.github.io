@@ -1,0 +1,1 @@
+GA, AB, YC, WD, BE, DF, CG, OH, EI, TJ, VK, IL, FM, PN, ZO, NP, UQ, HR, XS, JT, QU, KV, LW, RX, MY, SZ

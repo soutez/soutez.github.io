@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Zadání soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Zadání</span> soutěžních
+            úloh
+         </h1>
+         
+         <h2 class="category">Kategorie tvorba webu</h2>
+         
+         <h2 class="date">20. až 22. dubna&nbsp; 2017</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 31.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2016/2017</p>
+         
+      </header>
+      <div class="toc"><a href="#piškvorky">Piškvorky</a><br><a href="#hádejslovo">Hádej slovo</a><br><a href="#rozvrh">Rozvrh</a><br></div>
+      
+      
+      <p>Úlohy můžete řešit v&nbsp;libovolném
+         pořadí a samozřejmě je nemusíte vyřešit všechny. Počet bodů za každou úlohu
+         je uveden přímo v&nbsp;jejím zadání. Hodnotí se shoda se zadáním,
+         funkčnost, dodržování webových standardů a přehlednost zdrojového
+         kódu.
+      </p>
+      
+      
+      <p>Na řešení úloh máte 4 hodiny čistého
+         času.
+      </p>
+      
+      
+      <p>Před zahájením soutěže vám pořadatel
+         oznámí, kde najdete testovací soubory a kam máte ukládat řešení
+         úloh. Kompletní řešení každé úlohy (soubory HTML, CSS, obrázky,
+         případně Javascript) uložte do samostatného podadresáře nazvaného
+         jménem úlohy (např. <code>piskvorky</code>). Stránku s&nbsp;řešením vždy pojmenujte <code>index.html</code> a
+         uložte v&nbsp;kódování UTF-8.
+      </p>
+      
+      
+      <p>Při zápisu HTML a CSS kódu dodržujte
+         webové standardy. Součást hodnocení vašich řešení je i&nbsp;kontrola
+         zdrojových kódů pomocí validátorů. Doporučujeme používat HTML5, ale
+         můžete použít i&nbsp;starší verze – HTML4 nebo XHTML1.
+      </p>
+      
+      
+      <p>Při řešení je povoleno používat knihovnu
+         jQuery bez pluginů. Ostatní frameworky a knihovny nejsou dovoleny.
+      </p>
+      
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="piškvorky">Piškvorky</h2>
+         
+         <p class="koeficient">max. 16 bodů</p>
+         
+         
+         <p>Vytvořte webovou stránku, která umožní hrát piškvorky.</p>
+         
+         
+         <p>Stránka je rozdělena na čtvercová políčka cca 20 × 20px. Políčka jsou od sebe oddělena
+            jednoduchou čarou. Políčka zabírají celou plochu okna, přičemž nesmí být
+            zobrazen posuvník (scrollbar). Políčka, která se na stránku nevejdou celá,
+            můžete buď nezobrazovat, nebo zobrazit jen jejich část. Můžete předpokládat, že
+            po načtení stránky se nebude měnit velikost okna prohlížeče.
+         </p>
+         
+         
+         <p>Po načtení stránky je zobrazena rozehraná partie, kterou vidíte na tomto
+            výřezu:
+         </p>
+         
+         
+         <p><img src="zacatek.png" style="image-resolution: 144dpi;"></p>
+         
+         
+         <p>První hráč má modrá kolečka, druhý hráč červené křížky. Hráči se
+            pravidelně střídají: nejdříve je na tahu modrý, pak červený, pak znovu
+            modrý, atd. Kliknutím na prázdné políčko umístí hráč na tahu na toto políčko
+            svůj symbol. Pokud to nebyl vítězný tah, pokračuje druhý hráč.
+         </p>
+         
+         
+         <p>Vyhrává hráč, který vytvoří nepřerušovanou řadu pěti svých symbolů. Řada
+            může vést vodorovně, svisle, nebo úhlopříčně. Pokud některý z&nbsp;hráčů vyhrál,
+            hra to vhodným způsobem oznámí včetně informace, zda vyhrál modrý, nebo
+            červený hráč.
+         </p>
+         
+         
+         <p>Umožněte „undo“, tedy vrácení jednoho tahu. Hráč, který umístil svůj
+            symbol, může stisknutím klávesy Backspace tento tah vrátit a umístit svůj
+            symbol jinam. Toto nemusí fungovat, pokud svým tahem prohrál.
+         </p>
+         
+         
+         <p>Umožněte neomezené undo, tedy postupným mačkáním klávesy Backspace se
+            vrací další a další tahy až po startovní pozici.
+         </p>
+         
+         
+         <p>Po konci hry kromě informace o&nbsp;tom, který hráč vyhrál, zobrazte tlačítko
+            „replay“. Po jeho stisknutí bude přehrána celá právě proběhlá partie od
+            jejího začátku (tedy počínaje startovní pozicí z&nbsp;obrázku výše). Mezi
+            jednotlivými tahy při přehrávání zvolte vhodnou pevnou časovou prodlevu.
+         </p>
+         
+         
+         <p>Během hry zobrazujte výherní a nebezpečná políčka. Políčka, na která je
+            výhodné táhnout, protože hráč na tahu ihned vyhraje, podbarvěte světle
+            zeleně. Políčka, která představují okamžitou výherní pozici pro druhého
+            hráče (a&nbsp;hráč na tahu by tedy takové políčko měl obsadit, jinak
+            v&nbsp;následujícím tahu prohraje), podbarvěte světle červeně.
+         </p>
+         
+         
+         
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="hádejslovo">Hádej slovo</h2>
+         
+         <p class="koeficient">max. 16 bodů</p>
+         
+         
+         <p>Vyrobte webovou stránku, na které si uživatel může zahrát hru, ve které hádá
+            slovo. Hráč zmáčkne písmeno. Pokud je správné, je doplněno do slova. Pokud
+            je chybné, nakreslí se kousek obrázku.
+         </p>
+         
+         
+         <p>Úloha má dvě části, které je možné řešit nezávisle. V&nbsp;závěru úlohy jsou
+            pak obě části propojeny. Budete-li mít jen jednu z&nbsp;částí (nebo obě, ale bez
+            jejich propojení), získáte jen část bodů.
+         </p>
+         
+         
+         <h3>Kreslení obrázku</h3>
+         
+         
+         <ol>
+            
+            <li>Zobrazte obrázek, který vypadá přibližně takto:<br>
+               <img src="prase.png" style="width: 33%; max-width: 300px;"></li>
+            
+            <li>Zobrazte obrázek postupným vykreslováním čar, ze kterých se skládá. Tedy
+               nejprve nakreslete čáru tvořící jednu stranu obdélníka, pak druhou, třetí
+               a čtvrtou stranu, potom postupně první a druhou čáru hlavičky, první,
+               druhou, třetí a čtvrtou nožičku, očičko a nakonec ocásek.
+            </li>
+            
+            <li>Vykreslování animujte. Každá z&nbsp;čar se tedy kreslí postupně, podobně jako
+               bychom obrázek pomalu kreslili pastelkou. Pokud je to možné, kreslení
+               jednotlivých čar by mělo navazovat (ne vždy je to možné, celý obrázek
+               nakreslit jedním tahem pochopitelně nejde). Zvládnete-li animování jen
+               rovných čar, dostanete část bodů.
+            </li>
+            
+         </ol>
+         
+         
+         <p>Poznámka: splníte-li (3), nemusíte pochopitelně dělat zvlášť
+            (1) a (2), ty jsou v&nbsp;(3) už obsaženy automaticky. Obdobně pro (2).
+         </p>
+         
+         
+         <h3>Doplňování písmen</h3>
+         
+         
+         <p>Nechte počítač, aby si myslel slovo. Bod navíc dostanete, pokud bude
+            slovo vybráno náhodně z&nbsp;několika možných. Slovo zobrazte tak, že místo
+            každého písmene zapíšete podtržítko. Mezi podtržítky musí být viditelné
+            mezery (nesmí tedy splývat do jedné čáry).
+         </p>
+         
+         
+         <p>Stránka reaguje na stisk kláves s&nbsp;písmeny. Pokud se dané písmeno nachází
+            ve slově, zobrazí se toto písmeno na svém místě namísto podtržítka. Dbejte
+            na to, aby příslušné podtržítko skutečně zmizelo. Pokud je ve slově toto
+            písmeno víckrát, zobrazí se všechna. Při nahrazování podtržítek písmeny
+            nesmí ostatní znaky „skákat“, musí zůstat na svých místech.
+         </p>
+         
+         
+         <p>Pokud hráč uhodne celé slovo, objeví se blahopřání k&nbsp;vítězství.</p>
+         
+         
+         <h3>Chybná písmena</h3>
+         
+         
+         <p>Při načtení stránky není obrázek s&nbsp;prasátkem viditelný.</p>
+         
+         
+         <p>Pokud hráč stiskl písmeno, které se ve slově nenachází, nebo které už je
+            zobrazeno, dostává trestný bod. To se projeví tak, že je nakreslena jedna
+            čára z&nbsp;prasátka. Při dalším trestném bodu je nakreslena další čára
+            z&nbsp;prasátka, atd. Jinými slovy, zakomponujte část „Kreslení obrázku“, která
+            je vysvětlená výše, včetně případných animací. Prasátko se ale nebude
+            kreslit celé automaticky, ale postupně po krocích za každé špatně hádané
+            písmeno.
+         </p>
+         
+         
+         <p>V&nbsp;okamžiku, kdy je nakresleno celé prasátko (tedy po vykreslení ocásku),
+            oznámí hra hráči, že prohrál a odkryje mu celé slovo.
+         </p>
+         
+         
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="rozvrh">Rozvrh</h2>
+         
+         <p class="koeficient">max. 23 bodů</p>
+         
+         
+         <p><strong>V&nbsp;této úloze nesmíte používat obrázky.</strong></p>
+         
+         
+         <h3>Statický rozvrh</h3>
+         
+         
+         <p>Vytvořte stránku, na které se zobrazí rozvrh hodin jako na obrázku:</p>
+         
+         
+         <p align="center"><img src="vzor.png" alt="Vzorový rozvrh" style="max-width:90%;"></p>
+         
+         
+         <p>Na stránce by nemělo být nic jiného. Mřížka rozvrhu je
+            čtvercová, velikosti přibližně 100px×100px. Volné hodiny zabírají
+            jedno políčko mřížky, rozpůlené hodiny polovinu atp.
+         </p>
+         
+         
+         <p>První řádek s&nbsp;hodinami a sloupec se dny je černý, s&nbsp;šedým ohraničením
+            a bílým písmem. Rozložení buňek a velikost písma upravte tak, aby co
+            nejlépe odpovídaly obrázku. Použijte vhodné bezpatkové písmo dle vlastního
+            uvážení. Nadpis je vycentrován uprostřed tabulky.
+         </p>
+         
+         
+         <p>Sudé a liché řádky jsou barevně odlišeny. Sudé řádky používají na pozadí
+            předmětů barvu <code class="color">#dfe</code>, na pozadí dne
+            <code class="color">#264</code>. Předměty v&nbsp;liché řádce
+            <code class="color">#def</code>, den <code class="color">#246</code>.
+            Volné hodiny zůstávají bílé nezávisle na tom, kde jsou.
+         </p>
+         
+         
+         <p>Po najetí myši na řádek se všechny předměty v&nbsp;daný den podbarví barvou
+            <code class="color">#fed</code>. Den se vyznačí barvou <code class="color">#642</code>. Názvy dnů jsou otočeny o&nbsp;90°.
+         </p>
+         
+         
+         <p>Zobrazovaný rozvrh by opravdu měl obsahovat všechny informace tak, jak
+            jsou na obrázku (všechny předměty, učitele, skupiny atp.).
+         </p>
+         
+         
+         <h3>Generovaný rozvrh</h3>
+         
+         
+         <p>Rozšiřte vaše řešení a umožněte načíst data rozvrhu ve formátu JSON. Po otevření stránky
+            zobrazte formulář, do kterého půjde nahrát soubor s&nbsp;rozvrhem. Popis
+            formátu naleznete níže. Po nahrání souboru překreslete rozvrh.
+         </p>
+         
+         
+         <p>K&nbsp;dispozici máte soubor <code>vzor.json</code> obsahující popis
+            vzorového rozvrhu. Načtěte jej při otevření stránky, aby mohla být
+            hodnocena první část úlohy.
+         </p>
+         
+         
+         <p>Pokud nepůjde soubor nahrávat, ale stále půjde snadno vyměnit (např.
+            bude umístěn na serveru, kde jej porota nahradí za jiný), dostanete většinu
+            bodů. Boduje se zejména funkce generování stránky z&nbsp;dostupného formátu.
+         </p>
+         
+         
+         <p>Můžete předpokládat, že uživatel nahrává pouze validní soubory.</p>
+         
+         
+         <h3>Popis formátu</h3>
+         
+         
+         <p>Soubor obsahuje jediný objekt typu rozvrh. Objekt typu rozvrh:</p>
+         <pre style="font-size:smaller; margin: 0;">{
+  class: třída, pro kterou je rozvrh generován (řetězec),
+  hours: začátky a konce výukových hodin (slovník),
+  days: popis dní (pole objektů typu den)
+}
+</pre>
+         
+         
+         <p>Objekt typu den:</p>
+         <pre style="font-size:smaller; margin: 0;">{
+  name: název dne (řetězec),
+  lessons: vyučované předměty (pole objektů typu předmět)
+}
+</pre>
+         
+         <p>Objekt typu předmět:</p>
+         <pre style="font-size:smaller; margin: 0;">{
+  hour: výuková hodina, ve které předmět začíná (číslo),
+  subject: zkratka předmětu (řetězec),
+  teacher: zkratka učitele předmětu (řetězec),
+  room: místnost, ve které probíhá výuka (řetězec),
+  skupina: kód skupiny, pro kterou je předmět určen (volitelný řetězec),
+  week: označení týdne (lichý/sudý),
+        pokud výuka neprobíhá každý týden (volitelný řetězec),
+  duration: délka předmětu ve výukových hodinách (volitelné číslo, výchozí 1),
+}
+</pre>
+         
+         <p>Přestože může být v&nbsp;datech popsáno více hodin v&nbsp;poli <code>hours</code>,
+            zobrazte pouze ty sloupce, které jsou potřeba. Pokud je v&nbsp;některý čas více
+            předmětů najednou, zobrazte je v&nbsp;libovolném pořadí. Pokud některé předměty
+            trvají více výukových hodin, překrývají se pouze se stejně dlouhými
+            předměty začínajícími ve stejnou hodinu.
+         </p>
+         
+         
+         
+         
+         
+      </section>
+      
+      
+      
+      
+   </body>
+</html>

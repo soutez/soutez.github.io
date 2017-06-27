@@ -1,0 +1,1 @@
+CA, DB, PC, KD, HE, GF, SG, IH, XI, LJ, MK, VL, FM, JN, NO, OP, RQ, QR, TS, UT, WU, YV, ZW, AX, BY, EZ

@@ -1,0 +1,384 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Zadání soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Zadání</span> soutěžních
+            	  úloh
+         </h1>
+         
+         <h2 class="category">Kategorie programování žáci a mládež</h2>
+         
+         <h2 class="date">20. až 22. dubna&nbsp; 2017</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 31.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2016/2017</p>
+         
+      </header>
+      <div class="toc"><a href="#prasátko">Prasátko</a><br><a href="#dvanáctsettroska">Dvanáct set troska</a><br><a href="#simulátorenigma">Simulátor Enigma</a><br></div>
+      
+      
+      <p>Úlohy můžete řešit v&nbsp;libovolném pořadí a
+         samozřejmě je nemusíte vyřešit všechny. Za každou úlohu můžete dostat
+         maximálně 10 bodů, z&nbsp;nichž je většinou 9 bodů vyhrazeno na ohodnocení
+         funkčnosti programu, jeho shody se zadáním a efektivity a jeden bod na
+         dokumentaci a přehlednost zdrojového kódu (vhodné členění zdrojového
+         kódu, vhodně zvolené názvy identifikátorů, komentáře na místech, kde
+         je to potřeba, atd.). Body získané za každou úlohu se ještě násobí
+         koeficientem, který odráží složitost úlohy.
+      </p>
+      
+      
+      <p>Na řešení úloh máte 4 hodiny čistého
+         času.
+      </p>
+      
+      
+      <p>Před zahájením soutěže vám pořadatel
+         oznámí, kde najdete testovací soubory a kam máte ukládat řešení úloh.
+      </p>
+      
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="prasátko">Prasátko</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">1</span></p>
+         
+         
+         <p>Prohlédněte si prosím animaci v&nbsp;přiloženém souboru
+            <a href="prasatko/prase.html"><code>prase.html</code></a>. Vaším úkolem je
+            napsat program, který zobrazí obdobný výsledek. Nejvíce bodů získáte,
+            pokud provedete plynulou animaci vykreslování čar (za stejný čas se
+            vždy vykreslí stejná délka čáry). Pozornost věnujte i&nbsp;postupnému
+            vykreslení oka a ocásku, u&nbsp;nich se hodnotí kulatost jak oka, tak
+            ocásku a u&nbsp;ocásku také shoda s&nbsp;předlohou (správný směr zakroucení,
+            stoupání spirály, počet otáček).
+         </p>
+         
+         
+         
+         <p>Pokud je celé zadání nad vaše síly, můžete zpracovat jednodušší
+            variantu – animovat postupně po automaticky spouštěných krocích, kdy
+            krokem je zobrazení jedné celé čáry, a&nbsp;pak celého oka a celého
+            ocásku. Několik málo bodů dostanete i&nbsp;v&nbsp;případě, že program celé
+            prasátko nakreslí najednou.
+         </p>
+         
+         
+         <p>Body dostanete i&nbsp;za to, že v&nbsp;průběhu animace okno vašeho
+            programu <q>nevytuhne</q> a lze s&nbsp;ním např. pohybovat.
+         </p>
+         
+         
+         <p>Je zakázáno využívat zdrojový kód vzorového řešení a obrázek
+            prasátka ze zadání. Nebudou také hodnoceny programy zobrazující
+            předpřipravené obrázkové soubory.
+         </p>
+         
+         
+         
+         <p><img src="prase.png" style="float:right; width: 33%; max-width: 300px;">
+            Pokud budete mít problém se zobrazením vzorové animace, můžete vyjít
+            z&nbsp;přiloženého obrázku a následujícího popisu: Animace začíná
+            vykreslením čáry za hlavou prasátka shora dolů, následuje spodní hrana
+            těla, zadní hrana a pak hrana horní. Následně dvě čáry hlavy od té
+            horní (začíná shora), přední nohy, zadní nohy, oko a nakonec
+            ocásek. Nohy a ocásek se vždy začínají kreslit na straně blíže
+            k&nbsp;tělu. Pokud na sebe dvě čáry navazují (tělo, hlava), začíná se ta
+            druhá kreslit ve směru od té první.
+         </p>
+         
+         
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="dvanáctsettroska">Dvanáct set troska</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">3</span></p>
+         
+         
+         <p>Zdědili jste po svém pradědečkovi luxusní automobil Škoda 1203.
+            Poté, co jste spatřili své dědictví, které jste ušlechtile nazvali
+            <em>dvanáct set troska</em>, rozhodli jste se ho odvézt zhodnotit
+            na skládku. Po cestě se stala ale nemilá věc – zasekl se vám
+            volant a nejde otočit doleva, můžete tedy na křižovatkách jezdit
+            jen rovně nebo zatáčet doprava! Vaším úkolem je s&nbsp;takto poškozeným
+            vozem najít co nejkratší cestu na skládku, aby se vám náhodou po
+            cestě nerozbilo ještě něco.
+         </p>
+         
+         
+         <p>Napište program, který na vstupu dostane mapu města, výchozí pozici
+            dvanáct set trosky a pozici skládky, a&nbsp;najde nejkratší cestu dvanáct set
+            troskou na skládku tak, aby na každé křižovatce jela buď rovně nebo zahla
+            doprava. Vypište délku nejkratší cesty a <em>interaktivně</em> nalezenou
+            cestu zobrazte.
+         </p>
+         
+         
+         <h3>Vstup</h3>
+         
+         
+         <p>Vstup načtěte ze souboru <code>mesto.txt</code>. Tento soubor obsahuje
+            mapu města, což je čtverečková síť o&nbsp;rozměrech 100×100 políček.
+            Mapa města je uložena na 100 řádcích s&nbsp;tím, že každý řádek je ukončený znaky
+            <code>CR</code> a <code>LF</code> a obsahuje (kromě znaků ukončení řádku)
+            přesně 100 znaků – jednotlivá políčka tohoto řádku mapy města. Znaky
+            v&nbsp;souboru mohou být následovné:
+         </p>
+         
+         <ul>
+            
+            <li><code>.</code> silnice (průjezdné pole)
+               
+            </li>
+            <li><code>X</code> budova (neprůjezdné pole)
+               
+            </li>
+            <li><code>@</code> skládka
+               
+            </li>
+            <li><code>%</code> dvanáct set troska
+               
+            </li>
+         </ul>
+         
+         
+         <p>Můžete předpokládat, že soubor je vždy v&nbsp;pořádku, obsahuje právě jednu skládku
+            a právě jednu dvanáct set trosku. Navíc počáteční pozice dvanáct set trosky
+            sousedí s&nbsp;právě jednou silnicí – předpokládejte tedy, že dvanáct set
+            troska je na začátku natočena směrem k&nbsp;této silnici.
+         </p>
+         
+         
+         <h3>Výstup</h3>
+         
+         
+         <p>Pro daný soubor najděte nejkratší cestu dvanáct set trosky na skládku
+            tak, aby dvanáct set troska jela jen po silnici a zatáčela jen doprava (tj.
+            pokud z&nbsp;nějakého směru přijede na políčko silnice, může buď pokračovat
+            rovně, nebo zatočit o&nbsp;90° doprava). Můžete předpokládat, že taková cesta vždy
+            existuje. Pokud jich existuje více, najděte libovolnou z&nbsp;nich.
+         </p>
+         
+         
+         <p>Až cestu naleznete, vypište její délku – počet políček, které na cestě
+            navštívíte, včetně políčka skládky. Pokud nějaké políčko navštívíte
+            vícekrát, počítejte ho vícekrát. Poté nalezenou cestu interaktivně
+            zobrazte – umožněte jednak vykreslení kompletní cesty, a&nbsp;jednak krokování
+            jednotlivých políček cesty.
+         </p>
+         
+         
+         <h3>Příklad</h3>
+         
+         
+         <p>Pro následující mapu města (pro názornost je zobrazený jen její levý
+            horní roh o&nbsp;velikosti 7×7, všechna ostatní nezobrazená políčka jsou
+            <code>X</code>):
+         </p>
+         <pre>XXXXXXX
+.......
+.X.X.X.
+.......
+.X.X.X.
+.X@X%X.
+XXXXXXX</pre>
+         <p>je nejkratší cesta na skládku dlouhá 22 políček. Kdyby bylo možné zatáčet
+            doleva, byla by nejkratší cesta dlouhá 6 políček. Nejkratší správná cesta je
+            zobrazena na následující mapě:
+         </p>
+         <pre>XXXXXXX
+┌─┐.┌─┐
+│X│X│X│
+└─┼─┼─┘
+.X│X│X.
+.X@X%X.
+XXXXXXX</pre>
+         
+         
+         
+         
+         </section>
+      
+      <section class="include">
+         
+         
+         <hr>
+         <h2 id="simulátorenigma">Simulátor Enigma</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">2</span></p>
+         
+         
+         <p>Enigma byl šifrovací přístroj, používaný za druhé světové
+            války. Tento šifrovací stroj uměl šifrovat vstupní text pomocí
+            šifrování jednotlivých znaků vstupního textu na jiné znaky výstupního
+            textu.
+         </p>
+         
+         
+         <p>Celkový proces šifrování strojem Enigma spočíval v&nbsp;postupném
+            šifrování jednoho znaku průchodem přes několik šifrovacích tabulek,
+            což mohlo vypadat např. následovně:   
+         </p>
+         
+         <pre>E → B → I → S → M → K → J → T
+N → P → U → J → R → Q → R → X
+I → E → J → B → O → X → L → W
+G → C → P → D → Z → G → M → Y
+M → F → Y → P → G → D → X → S
+A → G → L → W → C → E → K → V
+</pre>
+         
+         <p>Celkově  ENIGMA → TXWYSV<br>
+            První sloupec→poslední sloupec
+         </p>
+         
+         
+         <p>Vaším úkolem je napsat program, který bude simulovat činnost šifrovacího stroje Enigma.</p>
+         
+         
+         <p>Šifrují se pouze velká písmena anglické abecedy.</p>
+         
+         
+         <p>Máme několik šifrovacích tabulek ve tvaru 26 dvojic velkých písmen
+            anglické abecedy <code>A</code> až <code>Z</code> oddělených čárkou („bílé“ znaky
+            ignorujte). Každé písmeno abecedy je v&nbsp;tabulce obsaženo právě
+            dvakrát. Jednou je ve dvojici vlevo, jednou vpravo. Například:
+         </p>
+         
+         <pre>EK, JF, TE, DA, BX, LO, AP, CJ, KG, SL, RI, UZ, QD,
+OB, IV, XQ, GN, NT, HU, PR, YW, MC, VM, ZY, WS, FH
+</pre>
+         
+         <p>Při šifrování se znak <code>A</code> změní na <code>P</code>, <code>B</code> na <code>X</code> atd., až <code>Z</code> na <code>Y</code>.
+         </p>
+         
+         
+         <p>Vstupem programu jsou textové soubory, jednotlivé řádky jsou
+            odděleny znaky <code>CR LF</code>, vstupní kódování je
+            ASCII. Výstupem programu je výpis zašifrovaného textu na
+            obrazovku.
+         </p>
+         
+         
+         <p>Postupně v&nbsp;programu naimplementujte následující funkce:</p>
+         
+         
+         <ul>
+            
+            <li>Uživatel si vybere vstupní soubor pro šifrování.</li>
+            
+            <li>Načtení vstupního souboru a nastavení šifrování pro tento běh
+               programu z&nbsp;prvního řádku.
+            </li>
+            
+            <li>Vypsání nastavení šifrování.</li>
+            
+            <li>Vypisování nezašifrovaného a zašifrovaného textu ze vstupního
+               souboru po jednotlivých řádkách.
+            </li>
+            
+         </ul>
+         
+         
+         <p>První řádka vstupního souboru obsahuje jména použitých
+            šifrovacích tabulek. Jména jsou oddělena čárkou, bílé znaky
+            se ignorují.
+         </p>
+         
+         
+         <p>Například při nastavení ve tvaru</p>
+         
+         <pre>I.A, II.A, III.A, P1.AB, III.B, II.B, I.B
+</pre>
+         
+         <p>budou pro šifrování postupně použity šifrovací tabulky ze souborů
+            <code>I.A</code>, <code>II.A</code>, … a jako poslední ze souboru <code>I.B</code>.
+         </p>
+         
+         
+         <p>Další řádky vstupního souboru obsahují text zprávy určený k&nbsp;zašifrování psaný velkými
+            písmeny anglické abecedy. Mezery se přenášejí beze změny.
+         </p>
+         
+         
+         <p>Po načtení nastavení šifrování program toto nastavení (obsah první
+            řádky vstupního souboru) vypíše. Následovně bude vstupní soubor po
+            řádkách šifrovat. Pro každou řádku vstupního souboru program vypíše
+            dvě řádky – první řádka bude obsahovat originální text a druhá
+            zašifrovaný text. Nezašifrovaný řádek začíná textem
+            <code>VSTUP=</code> a zašifrovaný textem <code>VYSTUP=</code>.
+         </p>
+         
+         
+         <p>V&nbsp;ukázkovém adresáři máte kromě šifrovacích tabulek i&nbsp;několik
+            vzorových datových souborů <code>VZORx.DAT</code>.
+         </p>
+         
+         
+         <p>Například pro soubor <code>VZOR6.DAT</code>:
+         </p>
+         
+         <pre>I.A, UKWB.A, I.B
+SKAKAL PES PRES OVES
+IMNMNW RHI RPHI FJHI
+RPHI YHWHAFB WFBMB</pre>
+         
+         <p>by měl výtup programu vypadat takto:</p>
+         
+         <pre>I.A, UKWB.A, I.B
+VSTUP=SKAKAL PES PRES OVES
+VYSTUP=IMNMNW RHI RPHI FJHI
+VSTUP=IMNMNW RHI RPHI FJHI
+VYSTUP=SKAKAL PES PRES OVES
+VSTUP=RPHI YHWHAFB WFBMB
+VYSTUP=PRES ZELENOU LOUKU
+</pre>
+         
+         
+         
+         
+         </section>
+      
+      
+      
+      
+   </body>
+</html>

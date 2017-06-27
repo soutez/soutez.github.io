@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rozvrh</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery.js"></script>
+    <script src="schedule.js"></script>
+    <script src="generate.js"></script>
+</head>
+<body>
+    <form>
+        <label for="json">Zvolte soubor:</label>
+        <input name="json" type="file" id="json">
+    </form>
+    <table class="schedule">
+    </table>
+
+    <script type="text/javascript">
+
+        $("#json").change(function(e) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    schedule.fill($("table"), JSON.parse(reader.result));
+                };
+
+                reader.readAsText(this.files[0]);
+        });
+    </script>
+</body>
+</html>

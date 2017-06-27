@@ -1,0 +1,364 @@
+{
+  "class": "7.Z",
+  "days": [
+    {
+      "lessons": [
+        {
+          "group": "SkA",
+          "hour": 1,
+          "room": "302",
+          "subject": "M",
+          "teacher": "NVK"
+        },
+        {
+          "group": "SkB",
+          "hour": 1,
+          "room": "S2",
+          "subject": "Cj",
+          "teacher": "DVŘ"
+        },
+        {
+          "group": "SkA",
+          "hour": 2,
+          "room": "302",
+          "subject": "Cj",
+          "teacher": "DVŘ"
+        },
+        {
+          "group": "SkB",
+          "hour": 2,
+          "room": "S2",
+          "subject": "M",
+          "teacher": "NVK"
+        },
+        {
+          "group": "Aj",
+          "hour": 3,
+          "room": "Jaz2",
+          "subject": "Aj",
+          "teacher": "TCR"
+        },
+        {
+          "group": "Nj",
+          "hour": 3,
+          "room": "302",
+          "subject": "Nj",
+          "teacher": "LHR"
+        },
+        {
+          "group": "Fj",
+          "hour": 3,
+          "room": "Jaz1",
+          "subject": "Fj",
+          "teacher": "INS"
+        },
+        {
+          "hour": 4,
+          "room": "Hv",
+          "subject": "Hv",
+          "teacher": "ZPV"
+        },
+        {
+          "duration": 2,
+          "hour": 5,
+          "room": "213",
+          "subject": "M",
+          "teacher": "NVK"
+        }
+      ],
+      "name": "Po"
+    },
+    {
+      "lessons": [
+        {
+          "hour": 0,
+          "room": "IVT1",
+          "subject": "Prg",
+          "teacher": "MFF"
+        },
+        {
+          "hour": 1,
+          "room": "302",
+          "subject": "Z",
+          "teacher": "SVT"
+        },
+        {
+          "hour": 2,
+          "room": "302",
+          "subject": "M",
+          "teacher": "NVK"
+        },
+        {
+          "hour": 3,
+          "room": "302",
+          "subject": "Bi",
+          "teacher": "BNK"
+        },
+        {
+          "group": "Aj",
+          "hour": 4,
+          "room": "Jaz2",
+          "subject": "Aj",
+          "teacher": "TCR"
+        },
+        {
+          "group": "Nj",
+          "hour": 4,
+          "room": "302",
+          "subject": "Nj",
+          "teacher": "LHR"
+        },
+        {
+          "group": "Fj",
+          "hour": 4,
+          "room": "Jaz1",
+          "subject": "Fj",
+          "teacher": "INS"
+        },
+        {
+          "duration": 2,
+          "group": "SEM",
+          "hour": 6,
+          "room": "Lab1",
+          "subject": "SEM",
+          "teacher": "EXP"
+        },
+        {
+          "duration": 2,
+          "group": "Lit",
+          "hour": 6,
+          "room": "302",
+          "subject": "Lit",
+          "teacher": "ABC"
+        },
+        {
+          "duration": 2,
+          "group": "SBI",
+          "hour": 6,
+          "room": "Lab3",
+          "subject": "SBI",
+          "teacher": "VYR"
+        },
+        {
+          "duration": 2,
+          "group": "SEF",
+          "hour": 6,
+          "room": "Lab2",
+          "subject": "SEF",
+          "teacher": "OHM"
+        },
+        {
+          "duration": 2,
+          "group": "SED",
+          "hour": 6,
+          "room": "104",
+          "subject": "SED",
+          "teacher": "ARC"
+        }
+      ],
+      "name": "Út"
+    },
+    {
+      "lessons": [
+        {
+          "hour": 1,
+          "room": "302",
+          "subject": "M",
+          "teacher": "NVK"
+        },
+        {
+          "hour": 2,
+          "room": "302",
+          "subject": "Z",
+          "teacher": "SVT"
+        },
+        {
+          "hour": 3,
+          "room": "Lab2",
+          "subject": "F",
+          "teacher": "AMP"
+        },
+        {
+          "duration": 2,
+          "group": "IVT1",
+          "hour": 4,
+          "room": "IVT3",
+          "subject": "IVT",
+          "teacher": "LIN"
+        },
+        {
+          "duration": 2,
+          "group": "IVT2",
+          "hour": 4,
+          "room": "IVT2",
+          "subject": "IVT",
+          "teacher": "WIN"
+        },
+        {
+          "duration": 2,
+          "group": "IVT3",
+          "hour": 4,
+          "room": "IVT1",
+          "subject": "IVT",
+          "teacher": "OSX"
+        },
+        {
+          "duration": 2,
+          "group": "SkA",
+          "hour": 7,
+          "room": "Lab",
+          "subject": "Ch",
+          "teacher": "H2O",
+          "week": "S"
+        },
+        {
+          "duration": 2,
+          "group": "SkB",
+          "hour": 7,
+          "room": "Lab",
+          "subject": "Ch",
+          "teacher": "H2O",
+          "week": "L"
+        }
+      ],
+      "name": "St"
+    },
+    {
+      "lessons": [
+        {
+          "duration": 2,
+          "group": "Chl",
+          "hour": 1,
+          "room": "T1",
+          "subject": "Tv",
+          "teacher": "SLK"
+        },
+        {
+          "duration": 2,
+          "group": "Dív",
+          "hour": 1,
+          "room": "T2",
+          "subject": "Tv",
+          "teacher": "KRS"
+        },
+        {
+          "group": "Aj",
+          "hour": 3,
+          "room": "302",
+          "subject": "Aj",
+          "teacher": "TCR"
+        },
+        {
+          "group": "Nj",
+          "hour": 3,
+          "room": "Jaz1",
+          "subject": "Nj",
+          "teacher": "LHR"
+        },
+        {
+          "group": "Fj",
+          "hour": 3,
+          "room": "Jaz2",
+          "subject": "Fj",
+          "teacher": "INS"
+        },
+        {
+          "hour": 4,
+          "room": "302",
+          "subject": "M",
+          "teacher": "NVK"
+        },
+        {
+          "group": "SEM",
+          "hour": 5,
+          "room": "Lab1",
+          "subject": "SEM",
+          "teacher": "EXP"
+        },
+        {
+          "group": "Lit",
+          "hour": 5,
+          "room": "302",
+          "subject": "Lit",
+          "teacher": "ABC"
+        },
+        {
+          "group": "SBI",
+          "hour": 5,
+          "room": "Lab3",
+          "subject": "SBI",
+          "teacher": "VYR"
+        },
+        {
+          "group": "SEF",
+          "hour": 5,
+          "room": "Lab2",
+          "subject": "SEF",
+          "teacher": "OHM"
+        },
+        {
+          "group": "SED",
+          "hour": 5,
+          "room": "104",
+          "subject": "SED",
+          "teacher": "ARC"
+        },
+        {
+          "hour": 7,
+          "room": "302",
+          "subject": "Cj",
+          "teacher": "DVŘ"
+        }
+      ],
+      "name": "Čt"
+    },
+    {
+      "lessons": [
+        {
+          "hour": 2,
+          "room": "302",
+          "subject": "M",
+          "teacher": "NVK"
+        },
+        {
+          "hour": 4,
+          "room": "Lab2",
+          "subject": "F",
+          "teacher": "AMP"
+        },
+        {
+          "hour": 3,
+          "room": "302",
+          "subject": "Hv",
+          "teacher": "ZPV"
+        },
+        {
+          "hour": 1,
+          "room": "302",
+          "subject": "Cj",
+          "teacher": "DVŘ"
+        },
+        {
+          "hour": 5,
+          "room": "Lab3",
+          "subject": "Bi",
+          "teacher": "BNK"
+        }
+      ],
+      "name": "Pá"
+    }
+  ],
+  "hours": {
+    "-1": "6:15 – 7:00",
+    "0": "7:05 – 7:55",
+    "1": "8:00 – 8:45",
+    "2": "8:55 – 9:40",
+    "3": "9:50 – 10:35",
+    "4": "10:55 – 11:40",
+    "5": "11:50 – 12:35",
+    "6": "12:40 – 13:25",
+    "7": "13:30 – 14:15",
+    "8": "14:20 – 15:05",
+    "9": "15:10 – 15:55"
+  }
+}

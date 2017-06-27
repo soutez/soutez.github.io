@@ -1,0 +1,97 @@
+body {
+   font-family: "Open Sans", sans-serif;
+   font-size: 18px;
+}
+
+table, tr, th, td {
+   margin: 0;
+   padding: 0;
+}
+
+table.schedule td, table.schedule th {
+   padding: 4px 2px;
+   border: 1px solid black;
+   margin: 0;
+}
+
+table.schedule {
+   border-collapse: collapse;
+}
+
+table.schedule th {
+   background-color: #333;
+   color: #fff;
+   border-color: #777;
+}
+
+table.schedule thead th {
+   width: 100px;
+}
+
+table.schedule tbody th {
+   height: 100px;
+}
+
+table.schedule thead th:first-child {
+   width: 20px;
+}
+table.schedule thead th small {
+   display: block;
+   font-weight: normal;
+}
+
+table.schedule tbody th span {
+   display: block;
+   transform: rotate(-90deg);
+}
+
+table.schedule tbody td {
+   border-color: #000;
+   text-align: center;
+   vertical-align: middle;
+}
+
+table.schedule tbody td strong {
+   font-size: 1.2em;
+}
+
+table.schedule tbody td.full strong {
+   display: block;
+}
+
+table.schedule tbody td *:after {
+   content: ' ';
+}
+
+table.schedule tbody.day-odd tr {
+   background-color: #dfe;
+}
+
+table.schedule tbody.day-even tr {
+   background-color: #def;
+}
+
+table.schedule tbody:hover tr {
+   background-color: #fed;
+}
+
+table.schedule tbody.day-odd th {
+   background-color: #264;
+}
+
+table.schedule tbody.day-even th {
+   background-color: #246;
+}
+
+table.schedule tbody:hover th {
+   background-color: #642;
+}
+
+table.schedule td.free {
+   background-color: #fff !important;
+}
+
+table.schedule caption {
+   font-size: 32px;
+   line-height: 2;
+}

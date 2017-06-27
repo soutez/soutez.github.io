@@ -1,0 +1,405 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Hodnocení soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Hodnocení</span> soutěžních
+            	  úloh
+         </h1>
+         
+         <h2 class="category">Kategorie programování mikrořadičů</h2>
+         
+         <h2 class="date">20. až 22. dubna&nbsp; 2017</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 31.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2016/2017</p>
+         
+      </header>
+      <div class="toc"><a href="#mrtváschránka">Mrtvá schránka</a><br></div>
+      
+      
+      <p>Na řešení úlohy máte 2 hodiny čistého času.</p>
+      
+      
+      <p>Pro řešení můžete použít vývojovou platformu s mikrokontrolérem
+         dle své preference (Arduino, Raspberry, ESP8266, STM32, PicAxe,
+         BASIC Stamp, AVR, PIC…). Pro řešení úlohy budete dále potřebovat:
+      </p>
+      
+      
+      <ul>
+         
+         <li>PC s vývojovým prostředím pro tuto platformu.</li>
+         
+         <li>LED sedmisegmentovku (libovolný typ, jednomístný, libovolná barva).</li>
+         
+         <li>Jedno tlačítko (libovolný typ).</li>
+         
+         <li>Sériovou EEPROM (vhodné typy jsou 24C01, 24C02 apod.).</li>
+         
+         <li>Nezbytné součástky k připojení a propojení (rezistory, nepájivé kontaktní pole, propojovací
+            dráty).
+         </li>
+         
+         <li>Další hardware není omezen (voltmetr apod.), ale pro řešení úlohy není nutný.</li>
+         
+      </ul>
+      
+      
+      <p>Před zahájením soutěže vám pořadatel oznámí, kam máte ukládat
+         řešení úloh. Zároveň připravte pro hodnotícího návod, jak uvést vaše
+         zařízení do provozu. Hodnotící nebude do zařízení nic nahrávat. Jen ho
+         zapne a vyhodnotí podle úlohy, na které jste pracovali.
+      </p>
+      
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="mrtváschránka">Mrtvá schránka</h2>
+         
+         
+         <p>Mrtvá schránka je výraz pro místo, kam se dají ukládat <a href="https://cs.wikipedia.org/wiki/Informace">informace</a> pro
+            další osoby, většinou <a href="https://cs.wikipedia.org/wiki/Zpravodajstv%C3%AD">zpravodajského</a>
+            rázu. Takovým místem se mohla stát například dutina ve stromě,
+            nepoužívaná poštovní schránka, vyčnívající roura, nádržka
+            splachovadla na veřejných toaletách, úkryty na dětských hřištích
+            atd. Informace mohla být předána také např. zaznačením do
+            telefonního seznamu ve <a href="https://cs.wikipedia.org/wiki/Telefonn%C3%AD_budka">veřejném
+               telefonním automatu</a>. Tento způsob <a href="https://cs.wikipedia.org/wiki/%C5%A0pion%C3%A1%C5%BE">špionáže</a>
+            byl hojně využíván <a href="https://cs.wikipedia.org/wiki/Agent">agenty</a> za <a href="https://cs.wikipedia.org/wiki/Druh%C3%A1_sv%C4%9Btov%C3%A1_v%C3%A1lka">druhé
+               světové války</a> i&nbsp;v&nbsp;období tzv. <a href="https://cs.wikipedia.org/wiki/Studen%C3%A1_v%C3%A1lka">studené
+               války</a>.
+            
+         </p>
+         
+         
+         <p>Navrhněte, sestavte a zprovozněte pomocí svého elektronického
+            kitu a součástek zapojení „digitální mrtvé schránky“ na
+            kódy. Bude fungovat takto:
+         </p>
+         
+         
+         <p>Máte jen jedno tlačítko, jednu sedmisegmentovku, EEPROM a
+            pasivní součástky. Potřebujete si pomocí jednoho tlačítka uložit
+            sérii čtyř až deseti číslic.
+         </p>
+         
+         
+         <ul>
+            
+            <li>Jednotlivé číslice se zadávají po jedné od první do poslední
+               (nejméně 4, nejvíce 10) a to tak, že počet stisknutí odpovídá dané
+               číslici. Jedno stisknutí je 1, dvě stisknutí 2, deset stisknutí je
+               0, jedenáct opět 1 atd. Zobrazujte na sedmisegmentovém displeji
+               průběžnou hodnotu. Pauza mezi stisknutími nesmí být delší než 1
+               sekunda.
+            </li>
+            
+            <li>Jakmile od posledního stisknutí uplyne 1 sekunda, zobrazte
+               znak <code>-</code> (segment G) po dobu 0.3 s, který znamená, že
+               číslo bylo uloženo.
+            </li>
+            
+            <li>Poté se stejným způsobem zadají další číslice.</li>
+            
+            <li>Zadávání číslic se ukončí stisknutím tlačítka po dobu 2 vteřin
+               po uložení poslední číslice. Ukončení zadávací sekvence zobrazíte
+               jako tři čárky nad sebou na sedmisegmentovém displeji (segmenty A,
+               G a D).
+            </li>
+            
+            <li>Takto zadanou posloupnost číslic uložte do externí paměti
+               EEPROM.
+            </li>
+            
+            <li>Ošetřete stav, kdy uživatel zadá málo nebo moc číslic. Chybový
+               stav zobrazte znakem E a nic neukládejte.
+            </li>
+            
+            <li>Po zadání všech číslic se celé zadané číslo bude zobrazovat na
+               displeji tak, že každá číslice bude svítit 0.5 sekundy, a&nbsp;po celém
+               čísle bude 1 sekundu displej zhasnutý
+            </li>
+            
+            <li>Přidržením tlačítka na dobu 5 a více sekund se zapojení
+               vynuluje. Vynulování dejte uživateli najevo např. vysvícením všech
+               segmentů i&nbsp;s&nbsp;desetinnou tečkou.
+            </li>
+            
+            <li>Při startu zařízení / po resetu zkontrolujte, zda v&nbsp;EEPROM
+               není už číslo uložené.  Pokud je, zobrazujte jej na displeji, jak
+               je popsáno výše, až do prvního stisknutí tlačítka.  Po prvním
+               stisknutí tlačítka číslo v&nbsp;EEPROM smažte, uživatele o&nbsp;tom
+               informujte rozsvícením všech segmentů, a&nbsp;nechte uživatele výše
+               popsaným způsobem zadat nové číslo.
+            </li>
+            
+            <li>Zadané číslo posílejte na sériový port, pokud to váš kit
+               umožňuje.
+            </li>
+            
+            <li>Další body můžete dostat, pokud vaše řešení bude šetřit připojenou paměť.</li>
+            
+            <li>Zamyslete se nad zobrazováním číslic, aby se dala rozpoznat
+               třeba série 1222333. Rozšiřte způsob zobrazování tak, aby se
+               podobná čísla lépe četla.
+            </li>
+            
+            <li>Součástí řešení je i&nbsp;schéma zapojení. Může být nakresleno na
+               papír. Musí obsahovat stručný popis, proč je to zapojeno tak, jak
+               je a jaký je význam jednotlivých součástek.
+            </li>
+            
+         </ul>
+         
+         
+         <section>
+            
+            
+            <h3>Hodnocení</h3>
+            
+            
+            <p>Hardware</p>
+            
+            
+            <ul>
+               
+               <li>Rezistory pro sedmisegmentový displej</li>
+               
+               <li>Segmenty jsou spojeny na stejném PORT mikrokontroléru</li>
+               
+               <li>Pull-up rezistory pro I2C sběrnici, pokud je EEPROM na I2C.</li>
+               
+               <li>Pull-up rezistor pro tlačítko. Pokud není zapojen, zkontrolovat v&nbsp;kódu, jestli je
+                  použit interní pull-up.
+               </li>
+               
+               <li>Tlačítko je zapojeno na přerušení a je to využito v&nbsp;kódu.</li>
+               
+               <li>Schéma zapojení s&nbsp;využitím standardních značek pro elektronická schémata.</li>
+               
+               <li>Shoda fyzického zapojení se schématem.</li>
+               
+               <li>Ověření funkce</li>
+               
+               <li>Pokud funkce souhlasí, tak ověření funkce EEPROM: zadat
+                  číslo, vypnout zařízení, zapnout, mělo by zobrazit
+                  číslo. Opět vypnout, fyzicky odpojit EEPROM (vytáhnout čip z&nbsp;kontaktního pole např.)
+                  a zapojit - nemělo by se ukázat
+                  nic. Opět vypnout, zapojit čip zpátky, zapnout,
+                  zkontrolovat, zda číslo vydrželo.
+               </li>
+               
+            </ul>
+            
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  
+                  <tr>
+                     
+                     <td>0</td>
+                     <td>účastník nedodal nic, dodal zařízení nefunkční</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>zařízení reaguje na stisknutí tlačítka, ukazuje správně číslice, ale nic dalšího
+                        (neukládá, po prodlevě nezobrazí znak -, …)
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>vložte sekvenci sekvence 1111, po restartu se přehraje</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>vložte sekvenci 0123456789, po restartu se přehraje</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>12 stisků zobrazí číslici 2</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>zadání sekvence 123 zobrazí znak E (chyba)</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>po zadání chybné sekvence (méně než 4 číslice nebo více než 10 číslic) se
+                        nic neuloží
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     <td>2</td>
+                     <td>zařízení vypisuje zadávaná čísla v&nbsp;terminálu na PC (připojení přes sériový
+                        port / USB). Účastník musí dodat rychlost sériové komunikace v&nbsp;rámci řešení, přípustné
+                        je uvedené do kódu v&nbsp;podobě
+                        komentáře, poznámka v&nbsp;dokumentaci apod.
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>3</td>
+                     <td>uložte libovolnou sekvenci čísel, zařízení odpojte od napájení, odpojte napájení
+                        EEPROM, zařízení zapněte. Displej by neměl nic ukázat. Jde o&nbsp;test, zda se opravdu
+                        ukládá do externí EEPROM.
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Využití přerušení pro ovládání tlačítka</td>
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>3</td>
+                     <td>Buzení osmi segmentů displeje přes jeden fyzický PORT na zařízení (lze-li
+                        aplikovat)
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>5</td>
+                     <td>Rovnoměrné využívání EEPROM (adresa pro ukládání dat se mění). To půjde zjistit
+                        jen v&nbsp;kódu.
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>5</td>
+                     <td>Ukládání čísel v&nbsp;komprimovaném formátu (BCD, binární). To půjde zjistit jen
+                        v&nbsp;kódu.
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Lze snadno poznat, že se zobrazuje další
+                        číslice. Lépe se tak čtou čísla obsahující více stejných
+                        číslic za sebou. Například bliknutím tečky, nebo jiným
+                        vhodným způsobem.
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Shoda mezi zapojením a schématem</td>
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Použití rezistorů pro displej</td>
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Použití rezistorů na I2C sběrnici u&nbsp;EEPROM</td>
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Kompletní dokumentace předána</td>
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Schéma je čitelné a dává smysl</td>
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Přesné dodržení specifikace - dodržuje pauzy, lze zadat čísla dlouhá podle
+                        specifikace
+                     </td>
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      
+      
+      
+   </body>
+</html>

@@ -1,0 +1,1 @@
+IA, AB, YC, GD, CE, VF, ZG, LH, SI, BJ, MK, WL, XM, TN, HO, DP, RQ, QR, FS, ET, JU, KV, NW, OX, PY, UZ
