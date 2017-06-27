@@ -1,0 +1,4 @@
+Cas: 0.00, X: 70.00, Y: 100.00, V_X: -1.00, V_Y: 0.00, P: 20.00, L: 120.00, R: 160.00, nahoru: 0, doleva: 0, doprava: 0
+Cas: 3.31, X: 66.69, Y: 61.73, V_X: -1.00, V_Y: -23.15, P: 20.00, L: 120.00, R: 160.00, nahoru: 1, doleva: 0, doprava: 0
+Cas: 7.08, X: 62.92, Y: 10.00, V_X: -1.00, V_Y: -4.30, P: 16.23, L: 120.00, R: 160.00, nahoru: 1, doleva: 0, doprava: 0
+Krach!

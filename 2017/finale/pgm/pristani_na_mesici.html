@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <title>Přistání na Měsíci</title>
+    <style type="text/css">
+      @media screen { body { max-width: 42em; }}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Úloha Přistání na Měsíci</h1>
+      <h2 class="category">Kategorie programování</h2>
+      <h2 class="date">23. až 25. června 2017</h2>
+      <p class="contest">Soutěž v programování &ndash; 31. ročník</p>
+      <p>Celostátní kolo 2016/2017</p>
+    </header>
+
+    <p><em>Přestože to asi nevíte, minulou neděli jsme oslavili významné
+    jubileum &ndash; uplynulo 420 kilohodin od prvního přistání na Měsíci (nemáte-li
+    rádi kilohodiny, jakkoliv je to nepochopitelné, jedná se o&nbsp;17,5 kilodní
+    neboli 2,5 kilotýdnů). Kvůli nadbytečnému použití motorů v&nbsp;první fázi
+    přistání dosedal modul kilometry od plánované lokality, na místo plné
+    velkých kamenů. Proto převzal Neil Armstrong řízení a přistál ručně.
+    Po dosednutí zbylo v&nbsp;nádrži palivo na méně než 30 vteřin letu.</em></p>
+
+    <p>I vy máte možnost si dnes zkusit přistát na Měsíci s ručním řízením a také
+    naprogramovat automatického pilota. Pro zjednodušení si přistání
+    představujme pouze v&nbsp;rovině. Přistání probíhá tak, že získáte kontrolu nad
+    modulem v&nbsp;jisté výšce nad zvoleným místem přistání a vaším cílem je na
+    tomto místě
+    přistát tak, aby rychlost v&nbsp;okamžiku přistání umožnila bezpečné dosednutí
+    modulu na povrch.</p>
+
+    <div style="text-align: center"><img src="images/moon_landing.svg" style="width: 50%" alt="Přistání na Měsíci"></div>
+
+    <p>K dispozici máte tři motory &ndash; jeden urychlující modul směrem vzhůru,
+    druhý doleva a třetí doprava. Každý z&nbsp;nich samozřejmě spotřebovává palivo,
+    kterého máte jen omezené množství.</p>
+
+    <h2>Komunikační protokol</h2>
+
+    <p>Modul ovládáte tak, že posíláte požadavky serveru, který vám poskytuje informace
+    o&nbsp;pozici a rychlosti modulu a kterému signalizujete spuštění či vypnutí
+    motorů. Komunikace probíhá pomocí protokolu HTTP, všechny požadavky se
+    provádějí metodou <code>GET</code>, server vrací data typu
+    <code>text/plain</code> v&nbsp;ASCII kódování a&nbsp;odděluje řádky pomocí
+    znaků <code>CR</code> a <code>LF</code>.</p>
+
+    <p>Přistání začne požadavkem na <code>http://<em>adresa</em>/start</code>
+    (<em>adresa</em> bude popsána později). Odpověď serveru má 5 řádků.
+    První řádek obsahuje identifikační číslo přistání (celé číslo od jedné do miliardy).
+    Druhý řádek obsahuje pozici středu modulu &ndash; dvě čísla <i>X</i> a <i>Y</i> (viz obrázek na následující straně).
+    Třetí řádek obsahuje rychlost modulu, opět jako dvě čísla
+    <i>V<sub>X</sub></i> a <i>V<sub>Y</sub></i>. Na čtvrtém řádku je množství
+    paliva <i>P</i> v&nbsp;nádrži. Na posledním řádku je pozice přistávací plochy
+    jako dvě čísla <i>L</i> a <i>R</i>. Všechna čísla (kromě identifikačního čísla
+    přistání) jsou desetinná, jsou zapsána pomocí desetinné tečky (bez použití
+    exponentu) a pokud jich je na řádku víc, jsou oddělena právě jednou mezerou.</p>
+
+    <p>Souřadnice <i>X</i> se měří horizontálně a roste zleva doprava, souřadnice
+    <i>Y</i> je výška nad povrchem a směrem dolů klesá. Povrch měsíce i
+    přistávací plocha jsou ve výšce 0. Přistávací modul má velikost
+    <i>20&times;20</i>.</p>
+
+    <div style="text-align: center"><img src="images/moon_landing_sizes.svg" style="width: 75%" alt="Ilustrace souřadnic, pozice a velikosti"></div>
+
+    <p><em>Pokud máte rádi fyziku a zajímá vás, v&nbsp;jakých jednotkách se
+      souřadnice </em>X<em> a </em>Y<em> vyjadřují, vězte, že
+      v&nbsp;</em>jakometrech<em>, které mají značku </em>jm.</p>
+
+    <p>Od okamžiku, kdy je zahájeno, probíhá přistání na serveru v&nbsp;reálném čase. Aktuální stav můžete
+    zjistit kdykoliv pomocí požadavku
+    <code>http://<i>adresa</i>/stav?id=<i>identifikační-číslo-přistání</i></code>,
+    přičemž server odpoví stejně jako v&nbsp;předchozím případě. Můžete navíc ovládat
+    motory &ndash; požadavek <code>stav</code> má tři nepovinné argumenty
+    <code>doleva</code>, <code>doprava</code> a <code>nahoru</code>, které
+    pomocí hodnot <code>0</code> a <code>1</code> vypínají či zapínají motory
+    působící v&nbsp;daném směru (tedy například zapnout motor působící směrem nahoru
+    a vypnout všechny ostatní lze pomocí požadavku
+    <code>http://<i>adresa</i>/stav?id=<i>id</i>&amp;nahoru=1&amp;doleva=0&amp;doprava=0</code>).
+    Činnost motoru se změní přesně v&nbsp;době požadavku. Pokud nějaký z&nbsp;parametrů
+    <code>doleva</code>, <code>doprava</code> či <code>nahoru</code> není
+    přítomen, činnost příslušného motoru se nemění.</p>
+
+    <p>Od chvíle, kdy přistání skončí, odpovídá server na požadavek
+    <code>stav</code> vždy jedním řádkem, a to buď s hodnotou <code>Zdar!</code> (v&nbsp;případě úspěšného přistání) nebo <code>Krach!</code> (v&nbsp;případě neúspěšného přistání).</p>
+
+    <h2>Přesná pravidla pohybu</h2>
+
+    <p>Řekněme, že modul se nachází na pozici <i>X</i>, <i>Y</i> s&nbsp;rychlostí
+    <i>V<sub>X</sub></i>, <i>V<sub>Y</sub></i> a množstvím paliva <i>P</i>. Proměnné <i>doleva</i>,
+    <i>doprava</i> a <i>nahoru</i> mají hodnotu 0 nebo 1 podle toho, zda je
+    příslušný motor vypnutý či zapnutý. Za <i>T</i> sekund, ve kterých nedošlo ke
+    změně činnosti motorů, bude pozice, rychlost a množství paliva
+    následující:</p>
+    <ul>
+      <li><i>X<sub>nové</sub> = X + V<sub>X</sub>&middot;T + &frac12;&middot;(6&middot;doprava - 6&middot;doleva)&middot;T<sup>2</sup></i>
+      <li><i>Y<sub>nové</sub> = Y + V<sub>Y</sub>&middot;T + &frac12;&middot;(-7 + 12&middot;nahoru)&middot;T<sup>2</sup></i>
+      <li><i>V<sub>X</sub> <sub>nové</sub> = V<sub>X</sub> + (6&middot;doprava - 6&middot;doleva)&middot;T </i>
+      <li><i>V<sub>Y</sub> <sub>nové</sub> = V<sub>Y</sub> + (-7 + 12&middot;nahoru)&middot;T </i>
+      <li><i>P<sub>nové</sub> = P - (&frac12;&middot;doleva + &frac12;&middot;doprava + 1&middot;nahoru)&middot;T</i>
+    </ul>
+
+    <p>Přistání je úspěšné, pokud v&nbsp;okamžiku dosednutí modulu na povrch
+    (<i>Y=10</i>) je celý modul nad přistávací plochou (<i>X-10&ge;L</i> a současně
+    <i>X+10&le;R</i>) a jeho rychlost není v&nbsp;žádném směru vyšší než 5.
+    Pokud modul tyto podmínky v&nbsp;okamžiku dosednutí na povrch nesplňuje, je
+    přistání neúspěšné. Když modulu dojde palivo, pokračuje v&nbsp;letu, ale motory
+    od této doby již nepracují (tj. pohyb pokračuje dle uvedených rovnic, ale
+    <i>doleva</i>, <i>doprava</i> a <i>nahoru</i> mají hodnotu 0).</p>
+
+    <h2>Soutěžní úloha</h2>
+    <p>Vaším úkolem je naprogramovat klienta pro přistání na Měsíci. Můžete napsat
+    klienta, který umožní interaktivní ovládání modulu uživatelem nebo automatické
+    řízení. Pokud to stihnete, můžete naprogramovat klienty oba dva. Oba klienti
+    mohou být součástí jedné aplikace, nebo to mohou být aplikace dvě. Každý klient se
+    musí umět připojit k&nbsp;libovolnému serveru a&nbsp;na libovolný port, výchozí
+    adresa je <code>localhost:8000</code>. Při psaní programu můžete
+    předpokládat, že odpovědi serveru jsou korektní, a nemusíte tedy
+    ošetřovat chybný formát odpovědi serveru.</p>
+
+    <p>Kromě níže uvedených bodů za funkcionalitu můžete získat až 20 bodů za
+    přehlednost zdrojového kódu a komentáře.</p>
+
+    <h3>1) Interaktivní ovládání uživatelem [maximálně 100 bodů]</h3>
+    <p>Implementujte nejprve obě následující funkce:</p>
+
+    <ul>
+      <li>Spuštění přistání s&nbsp;libovolnou adresou serveru.
+      <li>Zobrazení aktuální pozice modulu a přistávací plochy tak, že zobrazíte
+        oblast na souřadnicích <i>(0, 0)</i> až <i>(200, 200)</i>. Pro zobrazení
+        uvedených jakometrů na monitoru můžete zvolit libovolné
+        měřítko.
+    </ul>
+
+    <p>Dále v libovolném pořadí implementujte následující funkce:</p>
+    <ul>
+      <li>Ovládaní motorů modulu klávesnicí.
+      <li>Grafické zobrazení stavu motorů, rychlostí modulu a zbývajícího paliva.
+      <li>Korektní reakce na konec přistání a zobrazení, zda bylo přistání
+        úspěšné či nikoliv.
+      <li>Možnost startu nového přistání poté, co je přistání ukončeno.
+      <li>Dynamická velikost zobrazované plochy &ndash; umožněte zobrazení
+        modulu a přistávací plochy s&nbsp;libovolnými souřadnicemi (nejen mezi
+        0 a 200). Zobrazte čtvercovou oblast takovou, že přistávací plocha je
+        vždy v&nbsp;polovině jejího spodního okraje, a zvolte správné zmenšení tak, aby
+        byl vidět i celý modul. Nezobrazujte menší oblast než o&nbsp;rozměrech
+        200&times;200 jakometrů.
+      <li>Ovládání motorů modulu vhodným způsobem pomocí myši.
+    </ul>
+    <p>Bude hodnocena i&nbsp;grafická úroveň, plynulost simulace a ergonomie ovládání.
+    Dostáváte k&nbsp;dispozici obrázek modulu, ale můžete použít i vlastní.</p>
+
+    <h3>2) Automatické řízení počítačem [maximálně 150 bodů]</h3>
+    <p>Implementujte klienta automatického řízení přistání počítačem. Klient
+    bude vyhodnocen na několika simulacích přistání. Za každé úspěšné přistání
+    získá 50&nbsp;% bodů a zbytek podle množství ušetřeného paliva (nejlepší z vašich
+    řešení získá za přistání 100&nbsp;%, a přistání, po kterém nezůstane žádné palivo,
+    získá 50&nbsp;%).</p>
+
+    <p>Klienty budeme testovat na třech různých druzích přistání &ndash; můžete
+    tedy implementovat jen některé z&nbsp;nich:</p>
+    <ul>
+      <li>Vertikální přistání &ndash; stačí ovládat motor působící nahoru, modul
+        je přesně nad přistávací plochou (ale samozřejmě libovolně vysoko). [50
+        bodů]
+      <li>Kompletní přistání &ndash; je třeba ovládat všechny tři motory. [50
+        bodů]
+      <li>Kompletní přistání s&nbsp;omezením rychlosti &ndash; je třeba ovládat
+        všechny tři motory a zároveň nesmí nikdy během celého přistání žádná
+        z&nbsp;rychlostí <i>V<sub>X</sub></i> ani <i>V<sub>Y</sub></i> překročit
+        zadanou hodnotu maximální rychlosti. [50 bodů]
+    </ul>
+
+    <p>Kvůli možnosti automatického vyhodnocení <em>musí</em> klient používat
+    parametry z&nbsp;příkazového řádku &ndash; první je adresa serveru (např.
+    <code>localhost:8000</code>) a druhý je <em>omezení maximální rychlosti</em>
+    (hodnota omezení maximální rychlosti je nula pro první
+    dva druhy přistání). V&nbsp;případě, že jsou tyto parametry zadány, <em>musí</em>
+    klient bez další interakce začít přistání s&nbsp;automatickým řízením.
+    Tedy například <code>váš_spustitelný_soubor localhost:8000 0</code>.</p>
+
+    <h2>Testování klientů</h2>
+
+    <p>Na adrese <code>https://soutez.github.io/</code> si můžete stáhnout
+    ukázkový server. Po spuštění poslouchá
+    server na portu 8000 a&nbsp;ovládat ho můžete z&nbsp;internetového prohlížeče zadáním
+    adresy <code>http://localhost:8000</code> &ndash; můžete měnit startovní podmínky
+    a prohlížet probíhající a již proběhlá přistání. Každé přistání se také
+    ukládá do vlastního souboru v&nbsp;podadresáři <code>logy</code>.
+  </body>
+</html>

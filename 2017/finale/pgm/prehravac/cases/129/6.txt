@@ -1,0 +1,22 @@
+Cas: 0.00, X: 100.00, Y: 20.00, V_X: -5.00, V_Y: 0.00, P: 10.00, L: 85.00, R: 115.00, nahoru: 0, doleva: 0, doprava: 0
+Cas: 1.04, X: 94.82, Y: 16.25, V_X: -5.00, V_Y: -7.25, P: 10.00, L: 85.00, R: 115.00, nahoru: 1, doleva: 0, doprava: 0
+Cas: 1.25, X: 93.76, Y: 14.82, V_X: -5.00, V_Y: -6.19, P: 9.79, L: 85.00, R: 115.00, nahoru: 0, doleva: 0, doprava: 0
+Cas: 1.27, X: 93.65, Y: 14.68, V_X: -5.00, V_Y: -6.35, P: 9.79, L: 85.00, R: 115.00, nahoru: 1, doleva: 0, doprava: 0
+Cas: 1.54, X: 92.31, Y: 13.16, V_X: -5.00, V_Y: -5.01, P: 9.52, L: 85.00, R: 115.00, nahoru: 0, doleva: 0, doprava: 0
+Cas: 1.56, X: 92.19, Y: 13.04, V_X: -5.00, V_Y: -5.17, P: 9.52, L: 85.00, R: 115.00, nahoru: 1, doleva: 0, doprava: 0
+Cas: 1.82, X: 90.92, Y: 11.88, V_X: -5.00, V_Y: -3.90, P: 9.27, L: 85.00, R: 115.00, nahoru: 0, doleva: 0, doprava: 0
+Cas: 1.85, X: 90.74, Y: 11.74, V_X: -5.00, V_Y: -4.15, P: 9.27, L: 85.00, R: 115.00, nahoru: 1, doleva: 0, doprava: 0
+Cas: 1.90, X: 90.50, Y: 11.55, V_X: -5.00, V_Y: -3.92, P: 9.22, L: 85.00, R: 115.00, nahoru: 0, doleva: 0, doprava: 0
+Cas: 1.92, X: 90.39, Y: 11.46, V_X: -5.00, V_Y: -4.08, P: 9.22, L: 85.00, R: 115.00, nahoru: 1, doleva: 0, doprava: 0
+Cas: 1.96, X: 90.21, Y: 11.32, V_X: -5.00, V_Y: -3.91, P: 9.18, L: 85.00, R: 115.00, nahoru: 0, doleva: 0, doprava: 0
+Cas: 1.99, X: 90.04, Y: 11.18, V_X: -5.00, V_Y: -4.15, P: 9.18, L: 85.00, R: 115.00, nahoru: 1, doleva: 0, doprava: 0
+Cas: 2.04, X: 89.80, Y: 10.99, V_X: -5.00, V_Y: -3.92, P: 9.14, L: 85.00, R: 115.00, nahoru: 0, doleva: 0, doprava: 0
+Cas: 2.06, X: 89.69, Y: 10.89, V_X: -5.00, V_Y: -4.08, P: 9.14, L: 85.00, R: 115.00, nahoru: 1, doleva: 0, doprava: 0
+Cas: 2.10, X: 89.51, Y: 10.75, V_X: -5.00, V_Y: -3.91, P: 9.10, L: 85.00, R: 115.00, nahoru: 0, doleva: 0, doprava: 0
+Cas: 2.13, X: 89.34, Y: 10.61, V_X: -5.00, V_Y: -4.15, P: 9.10, L: 85.00, R: 115.00, nahoru: 1, doleva: 0, doprava: 0
+Cas: 2.18, X: 89.11, Y: 10.43, V_X: -5.00, V_Y: -3.92, P: 9.06, L: 85.00, R: 115.00, nahoru: 0, doleva: 0, doprava: 0
+Cas: 2.20, X: 88.99, Y: 10.33, V_X: -5.00, V_Y: -4.09, P: 9.06, L: 85.00, R: 115.00, nahoru: 1, doleva: 0, doprava: 0
+Cas: 2.24, X: 88.82, Y: 10.20, V_X: -5.00, V_Y: -3.91, P: 9.02, L: 85.00, R: 115.00, nahoru: 0, doleva: 0, doprava: 0
+Cas: 2.27, X: 88.65, Y: 10.06, V_X: -5.00, V_Y: -4.15, P: 9.02, L: 85.00, R: 115.00, nahoru: 1, doleva: 0, doprava: 0
+Cas: 2.28, X: 88.58, Y: 10.00, V_X: -5.00, V_Y: -4.08, P: 9.01, L: 85.00, R: 115.00, nahoru: 1, doleva: 0, doprava: 0
+Krach!

@@ -1,0 +1,105 @@
+      <script type="text/javascript"><!--
+var game_server, game_id;
+
+function start() {
+  stop();
+
+  game_server = $('#address').val() + ":" + $('#port').val();
+  $('#zprava').empty();
+  $('#hra').show();
+  $.get('http://' + game_server + '/start', function (data) {
+    show_landing(data);
+    setTimeout(update, 10);
+  }).fail(function(error) {
+    $('#zprava').text('Při startu hry došlo k chybě!');
+  });
+}
+
+function stop() {
+  game_id = -1;
+}
+
+function update(command) {
+  if (game_id == -1) return;
+
+  $.get('http://' + game_server + '/stav?id=' + game_id + '&' + command, function (data) {
+    show_landing(data);
+    if (!command) setTimeout(update, 10);
+  }).fail(function(error) {
+    stop();
+    $('#zprava').text('Server neodpověděl!');
+  });
+}
+
+function show_landing(data) {
+  var lines = data.split(/\r?\n/);
+  if (lines.length > 0 && !lines[lines.length-1]) lines.pop();
+
+  if (lines.length == 1) {
+    $('#zprava').text(data);
+    stop();
+    return;
+  }
+
+  data = data.split(/\s+/);
+  if (game_id != data[0]) {
+    game_id = data[0];
+    $('#plocha_pristani').css({
+      'left': (data[6] * 3).toString() + 'px',
+      'width': ((data[7] - data[6]) * 3).toString() + 'px'
+    });
+  }
+
+  $('#plocha_modul').css({
+    'left': ((data[1] - 10) * 3).toString() + 'px',
+    'top': ((200 - (data[2] - 10) - 20) * 3).toString() + 'px'
+  });
+
+  $('#zprava').text('Vx: ' + data[3] + ', Vy: ' + data[4] + ', P: ' + data[5]);
+}
+
+
+$(document).keydown(function(e) {
+  if (e.keyCode == 37) update("doleva=1");
+  if (e.keyCode == 38) update("nahoru=1");
+  if (e.keyCode == 39) update("doprava=1");
+  if (e.keyCode >= 37 && e.keyCode <= 40) return false;
+
+  if (e.keyCode == 32) return false;
+});
+$(document).keyup(function(e) {
+  if (e.keyCode == 37) update("doleva=0");
+  if (e.keyCode == 38) update("nahoru=0");
+  if (e.keyCode == 39) update("doprava=0");
+  if (e.keyCode >= 37 && e.keyCode <= 40) return false;
+
+  if (e.keyCode == 32) {start(); return false; }
+});
+      --></script>
+          <div class="panel panel-default" id="hra" style="display: none">
+            <div class="panel-heading">Probíhající hra</div>
+            <div class="panel-body">
+              <div id="plocha" style="position: relative; width: 600px; height: 605px; margin-left: auto; margin-right: auto; background-color: white">
+                <img id="plocha_modul" src="/lunar_lander.svg" style="position: absolute; width: 60px; height: 60px; left: 260px; top: 0px" />
+                <div id="plocha_pristani" src="/lunar_lander.svg" style="position: absolute; left: 200px; width: 200px; height: 5px; top: 600px; background-color: black"></div>
+              </div>
+              <div id="zprava" class="alert alert-info" style="margin-top: 20px; margin-bottom: 0px; width: 600px; margin-left: auto; margin-right: auto"></div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">Nová hra</div>
+            <div class="panel-body form-horizontal">
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Adresa:</label>
+                <div class="col-sm-10"><input type="text" class="form-control" id="address" value="localhost"></div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Číslo portu:</label>
+                <div class="col-sm-10"><input type="text" class="form-control" id="port" value="8000"></div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10"><button type="button" class="btn btn-primary form-control" onclick="start()">Začít novou hru</button></div>
+              </div>
+            </div>
+          </div>
