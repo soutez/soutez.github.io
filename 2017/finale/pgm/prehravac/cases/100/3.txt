@@ -1,0 +1,4 @@
+Cas: 0.00, X: 100.00, Y: 60.00, V_X: 0.00, V_Y: -5.00, P: 15.00, L: 85.00, R: 115.00, nahoru: 0, doleva: 0, doprava: 0
+Cas: 1.81, X: 100.00, Y: 39.43, V_X: 0.00, V_Y: -17.69, P: 15.00, L: 85.00, R: 115.00, nahoru: 1, doleva: 0, doprava: 0
+Cas: 4.49, X: 100.00, Y: 10.00, V_X: 0.00, V_Y: -4.31, P: 12.32, L: 85.00, R: 115.00, nahoru: 1, doleva: 0, doprava: 0
+Zdar!
