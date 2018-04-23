@@ -1,0 +1,11 @@
+Nelze vyresit - pozadavky do kruhu:
+10 chce 9
+9 chce 8
+8 chce 7
+7 chce 6
+6 chce 5
+5 chce 4
+4 chce 3
+3 chce 2
+2 chce 1
+1 chce 10

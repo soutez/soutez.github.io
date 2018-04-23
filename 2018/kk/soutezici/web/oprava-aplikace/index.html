@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Simulátor hejbátek</title>
+	<link href="styles.css" rel="stylesheet" />
+	<script src="script.js"></script>
+</head>
+
+<body>
+	<div id="menu">
+		<table id="controlPanel">
+			<tr>
+				<h1>Simulátor nějakých hejbátek</h1>
+				<td>
+					<div class="file-upload">
+						<button type="menu" onclick="var fileUpload = document.getElementById('import-file-upload'); fileUpload.value = '';fileUpload.click()">Otevřít mapu</button>
+						<!-- BUG: onchange se zavolá jenom když se ten soubor fakt změní, je potřeba to ale reloadnout vždy když se zadá znova ten samý soubor; Je to vyřešené tím, že se vyčistí -->
+						<input id="import-file-upload" class="file-upload__input" type="file" name="file-upload" onchange="var file = event.target.files.item(0); if (file != null) app.loadMapFromFile(file);"
+						/>
+					</div>
+				</td>
+				<td>
+					<a href="" onclick="return app.saveMap(this)" download="map.json">Uložit mapu</a>
+				</td>
+				<!-- <td>
+					<a href="..." onclick="app.importEpicMap(); return false;">Epic Import</a>
+				</td> -->
+				<td>
+					<button type="button" id="pauseButton">Pauza</button>
+					<button type="button" id="playButton" style="display: none">spustit</button>
+					<button type="button" id="resetButton">resetovat</button>
+				</td>
+				<td>
+					<label>
+						Rychlost:
+						<input id="speedRange" type="range" min="-5" max="5" step="0.01" />
+					</label>
+				</td>
+				<span id="timeDisplay"></span>
+			</tr>
+		</table>
+	</div>
+	<div id="canvas">
+		<!-- <svg id="map"></svg> -->
+
+		<svg id="map">
+			<!-- <path d="M1,2  L-2,2" stroke="black" stroke-width="1"></path>
+			<path d="M4,6  L4,10" stroke="black" stroke-width="1"></path>
+			<path d="M100,200  L196,398" stroke="black" stroke-width="1"></path>
+			<path d="M100,200  L196,394" stroke="black" stroke-width="1"></path> -->
+		</svg>
+	</div>
+
+	<script>
+		var app = new StuffSimulator.App(
+			document.getElementById("map"),
+			StuffSimulator.ControlPanel.create(document.getElementById("menu"))
+		);
+		app.loadFromLocalStorage();
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html lang="cs" id="mcu">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Zadání soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, Unifont, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Zadání</span> soutěžních
+            úloh
+         </h1>
+         
+         <h2 class="category">Kategorie programování mikrořadičů</h2>
+         
+         <h2 class="date">19. až 21. dubna 2018</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 32.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2017/2018</p>
+         
+      </header>
+      <div class="toc"><a href="#přechodprochodceřízenýsemaforem.">Přechod pro chodce řízený semaforem.</a><br><a href="#blikánířízenénapětím">Blikání řízené napětím</a><br><a href="#blikánířízenétlačítky">Blikání řízené tlačítky</a><br><a href="#ledkyreagujícínapolohuruky">Ledky reagující na polohu ruky</a><br></div>
+      
+      
+      <p>Na řešení úloh máte 4 hodiny čistého času.</p>
+      
+      
+      <p>Před zahájením soutěže vám pořadatel oznámí, kam máte ukládat
+         řešení úloh. Zároveň připravte pro hodnotícího návod, jak uvést vaše
+         zařízení do provozu a napište, které úlohy jste řešili, a jak mezi
+         nimi přepínat. Hodnotící nebude do zařízení nic nahrávat. Jen ho zapne
+         a vyhodnotí úlohy, na kterých jste pracovali.
+      </p>
+      
+      
+      <hr>
+      <h2 class="notoc">Barevné hrátky</h2>
+      
+      
+      <p>LED diody, někdo říká svítivé diody, pokrývají dnes širokou škálu
+         barev.  K dispozici je červená, zelená, žlutá, modrá, ale také bílá a
+         IR.  A samozřejmě také vykazují nejrůznější elektrické a mechanické
+         parametry. Kdysi začínaly velice skromně. Za spoustu peněz jste si
+         mohli koupit jakoukoliv ledku, tedy pokud jste si přáli malou,
+         červenou. To už dnes není pravda a tak si levně můžete pohrát s led
+         diodami různých barev i velikostí. Proto jsou tolik oblíbené v
+         nejrůznějších hrátkách. Většinou se jedná o nejrůznější blikátka.  Ale
+         napadlo vás někdy spočítat, kolik existuje možností jak toto blikání
+         řídit? V&nbsp;následujících úloh si vyzkoušíme čtyři možnosti.
+      </p>
+      
+      
+      <p>Pro řešení můžete použít vývojovou platformu s mikrokontrolérem dle
+         své preference (Arduino, Raspberry, ESP8266, FRDM, STM32, micro:bit,
+         PicAxe, BASIC Stamp, AVR, PIC …). Pro řešení úlohy budete dále
+         potřebovat:
+      </p>
+      
+      
+      <ul>
+         
+         <li>PC s vývojovým prostředím pro tuto platformu.</li>
+         
+         <li>Použít můžete i online vývojové prostředí pro tuto platformu.</li>
+         
+         <li>LED diody 2x červená, 2x zelená, 2x žlutá.</li>
+         
+         <li>Dvě tlačítka (libovolný typ) – použít můžete i tlačítka, která jsou součástí vašeho
+            kitu.
+         </li>
+         
+         <li>Dva spínače (libovolný typ, např. DIP).</li>
+         
+         <li>Tříosý akcelerometr s I2C komunikací (např. MPU-6050) – použít můžete i akcelerometr,
+            který je součástí vašeho kitu, nebo si zhotovíte vlastní modul.
+         </li>
+         
+         <li>Potenciometr 10k.</li>
+         
+         <li>Nezbytné součástky k připojení a propojení (rezistory, nepájivé kontaktní pole, propojovací
+            dráty).
+         </li>
+         
+         <li>Místo použití nepájivého pole si můžete předem připravit modul, který bude všechny
+            požadované součástky obsahovat.
+         </li>
+         
+         <li>Další hardware není omezen (voltmetr apod.), ale pro řešení úlohy není nutný.</li>
+         
+      </ul>
+      
+      
+      <p>Máte dva spínače, které vám poskytují čtyři varianty jejich
+         vzájemného sepnutí. Tím získáváte čtyři možnosti, jak se váš program
+         bude chovat a jakou z&nbsp;následujících úloh tak řeší. Váš program
+         musí reagovat na přepnutí i během svého běhu.
+      </p>
+      
+      
+      <p>Můžete řešit jakékoliv z&nbsp;následujících úloh v&nbsp;libovolném
+         pořadí. Pokud budete řešit více než jednu, musíte zároveň
+         implementovat funkci jejich přepínání.
+      </p>
+      
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="přechodprochodceřízenýsemaforem.">Přechod pro chodce řízený semaforem.</h2>
+         
+         <p class="koeficient">Maximální počet bodů 16,5</p>
+         
+         <p>Vytvořte program, který bude řídit semafor pro auta a chodce podle následujících pravidel:</p>
+         
+         <ul>
+            
+            <li>Semafor pro auta jsou tři ledky – červená, žlutá, zelená.</li>
+            
+            <li>Semafor pro chodce jsou dvě ledky – červená, zelená.</li>
+            
+            <li>Klidový stav (po přechodu do programu) je zelená pro auta a červená pro chodce. Ostatní
+               LED nesvítí.
+            </li>
+            
+            <li>Stiskem tlačítka žádá chodec o&nbsp;uvolnění přechodu.</li>
+            
+            <li>Přibližně 10 sekund po stisku tlačítka se na semaforu pro auta rozsvítí žlutá a současně
+               zhasne zelená.
+            </li>
+            
+            <li>Za další cca 1 sekundu se pro auta rozsvítí červená a současně zhasne žlutá.</li>
+            
+            <li>Za další cca 1,5 sekundy se pro chodce rozsvítí zelená a současně zhasne červená.</li>
+            
+            <li>Za další cca 2,5 sekundy se pro chodce rozsvítí červená a současně zhasne zelená.</li>
+            
+            <li>Za další cca 4 sekundy se pro auta kromě červené rozsvítí i&nbsp;žlutá.</li>
+            
+            <li>Za další cca 0,5 sekundy se pro auta rozsvítí zelená a současně zhasnou žlutá a červená.</li>
+            
+            <li>Do dalšího stisku tlačítka zůstává semafor v&nbsp;klidovém stavu.</li>
+            
+            <li>Při opakovaném stisku tlačítka musí celá sekvence proběhnout od začátku (tedy 10 sekund
+               zelené pro auta).
+            </li>
+            
+         </ul>
+         
+         
+         
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="blikánířízenénapětím">Blikání řízené napětím</h2>
+         
+         <p class="koeficient">Maximální počet bodů je 18,5</p>
+         
+         <p>Vytvořte program, který dovolí ovládání blikajících LED pomocí potenciometru podle
+            následujících pravidel:
+         </p>
+         
+         <ul>
+            
+            <li>Řídící napětí je získáno z&nbsp;potenciometru.</li>
+            
+            <li>Při napětí nižším než přibližně 0,2 maximálního nechť bliká jedna červená ledka s&nbsp;periodou
+               přibližně 2 sekundy.
+            </li>
+            
+            <li>Při napětí vyšším než přibližně 0,2 maximálního nechť bliká i&nbsp;druhá červená ledka
+               s&nbsp;periodou přibližně 1,5 sekundy.
+            </li>
+            
+            <li>Při napětí vyšším než přibližně 0,4 maximálního nechť bliká i&nbsp;jedna zelená ledka s&nbsp;periodou
+               přibližně 2 sekundy.
+            </li>
+            
+            <li>Při napětí vyšším než přibližně 0,6 maximálního nechť bliká i&nbsp;druhá zelená ledka s&nbsp;periodou
+               přibližně 1,5 sekundy.
+            </li>
+            
+            <li>Při napětí vyšším než přibližně 0,8 maximálního nechť bliká i&nbsp;žlutá ledka s&nbsp;periodou
+               přibližně 2 sekundy.
+            </li>
+            
+            <li>Blikání nastavte tak, že doba svítí = doba nesvítí.</li>
+            
+         </ul>
+         
+         
+         
+         
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="blikánířízenétlačítky">Blikání řízené tlačítky</h2>
+         
+         <p class="koeficient">Maximální počet bodů 8,5</p>
+         
+         <p>Vytvořte program, který dovolí ovládat rychlost blikání ledek pomocí dvou tlačítek
+            podle následujících pravidel:
+         </p>
+         
+         <ul>
+            
+            <li>Cílem programu je zajistit synchronní blikání tří ledek (1x červená, 1x zelená, 1x
+               žlutá).
+            </li>
+            
+            <li>Nejkratší perioda blikání (po přechodu do programu) je přibližně 1 sekunda, nejdelší
+               přibližně 10 sekund.
+            </li>
+            
+            <li>V&nbsp;těchto hranicích měňte s&nbsp;použitím dvou tlačítek (plus, mínus) nastavení periody
+               v&nbsp;deseti krocích.
+            </li>
+            
+            <li>Blikání nastavte tak, že doba svítí = doba nesvítí.</li>
+            
+         </ul>
+         
+         
+         
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="ledkyreagujícínapolohuruky">Ledky reagující na polohu ruky</h2>
+         
+         <p class="koeficient">Maximální počet bodů 24,5</p>
+         
+         <p>Vytvořte program, který dovolí ovládání blikajících LED pomocí akcelerometru podle
+            následujících pravidel:
+         </p>
+         
+         <ul>
+            
+            <li>Cílem programu je s&nbsp;pomocí akcelerometru zjistit jeho polohu vůči vertikální ose.
+               Akcelerometr přitom držíte v&nbsp;ruce.
+            </li>
+            
+            <li>Pokud je akcelerometr ve sklonu max 30° od horizontální polohy, bliká žlutá ledka
+               s&nbsp;frekvencí přibližně 0,5&nbsp;Hz.
+            </li>
+            
+            <li>Pokud je akcelerometr ve sklonu 30° až 45°, bliká zelená ledka s&nbsp;frekvencí přibližně
+               1&nbsp;Hz.
+            </li>
+            
+            <li>Pokud je akcelerometr ve sklonu 45° až 60°, bliká zelená ledka s&nbsp;frekvencí přibližně
+               2&nbsp;Hz.
+            </li>
+            
+            <li>Pokud je akcelerometr ve sklonu 60° až 90°, bliká červená i&nbsp;zelená ledka s&nbsp;frekvencí
+               přibližně 2&nbsp;Hz.
+            </li>
+            
+            <li>Pokud sklon akcelerometru překročí 90°, blikají obě ledky (červená i&nbsp;zelená) s&nbsp;frekvencí
+               přibližně 3&nbsp;Hz.
+            </li>
+            
+            <li>Blikání nastavte tak, že doba svítí = doba nesvítí.</li>
+            
+            <li>Nastavení hranic je možné řešit experimentálně.</li>
+            
+         </ul>
+         
+         
+         
+         
+         
+         
+      </section>
+      
+      
+      
+      
+   </body>
+</html>

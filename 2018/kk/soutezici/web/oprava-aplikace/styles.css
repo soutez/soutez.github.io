@@ -1,0 +1,23 @@
+.file-upload {
+	position: relative;
+	display: inline-block;
+}
+
+.file-upload__input {
+	/* nějaký hack ze StackOverflow na schování <input type=file> */
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 1;
+	width:0;
+	height: 100%;
+	opacity: 0;
+	z-index: -1000000;
+}
+
+#map {
+	width: 100vw;
+	height: 100vh;
+}

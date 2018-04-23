@@ -1,0 +1,1195 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Hodnocení soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, Unifont, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Hodnocení</span> soutěžních
+            úloh
+         </h1>
+         
+         <h2 class="category">Kategorie tvorba webu</h2>
+         
+         <h2 class="date">19. až 21. dubna 2018</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 32.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2017/2018</p>
+         
+      </header>
+      <div class="toc"><a href="#had">Had</a><br><a href="#dynamickévyhledávání">Dynamické vyhledávání</a><br><a href="#oprava-aplikace">Oprava aplikace</a><br></div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="had">Had</h2>
+         
+         <p class="koeficient">max. 40 bodů</p>
+         
+         
+         <p><strong>V této úloze je zakázáno používat předem připravené rastrové obrázky. Významné zjednodušení
+               řešení (tj. pouhé zobrazení obrázku) znamená ohodnocení úlohy 0 body.</strong>
+            
+            
+         </p>
+         <h3>Statická část</h3>
+         
+         
+         <p>Po otevření stránky zobrazte mřížku z čtverečků jako na obrázku. Pro plný
+            	počet bodů by mřížka měla mít rozměry 7×7 políček. Mřížka je vždy
+            	umístěna uprostřed obrazovky (jak horizontálně, tak vertikálně).
+         </p>
+         
+         <img src="1.png" alt="">
+         
+         
+         <p>Pozadí stránky je černé. Rozměr čtverečku je 40 px, mezi čtverečky je 10 px mezera.
+            Barva čtverečků je určena jejich
+            	pozicí. Každá složka (červená, modrá, zelená) je určena svým vlastním pravidlem:
+         </p>
+         
+         
+         <ul>
+            	
+            <li>Červená roste rovnoměrně po řádcích. V prvním řádku je 0 %, v posledním 100 %.</li>
+            	
+            <li>Zelená roste rovnoměrně po sloupcích. V prvním sloupci 0 %, v posledním 100 %.</li>
+            	
+            <li>Modrá klesá rovnoměrně po diagonálách. V levém horním rohu je 100 %, v pravém dolním
+               0 %.
+            </li>
+            
+         </ul>
+         
+         
+         <p>Pro kontrolu: prostřední pole je šedé, <code>#808080</code>.
+         </p>
+         
+         
+         <p>Vytvořte na stránce, vpravo od herního pole, vertikálně uprostřed stránky, ovládací
+            panel podle obrázku:
+         </p>
+         
+         <img src="3.png" alt="">
+         
+         
+         <p>Šipka je Unicode znak s hexadecimálním kódem <code>27a4</code>. Tlačítka mají šedý zaoblený okraj, černou šipku a
+            	bílé pozadí.
+         </p>
+         
+         
+         <p>V dalších odstavcích budeme mluvit o různých stavech políčka. Je-li políčko <i>rozsvícené</i>, má barvu přidělenou
+            	popsanými pravidly. Pokud je políčko <i>zhasnuté</i>, každá ze složek jeho barvy je 20 % původní hodnoty.
+            	Pokud je <i>inverzní</i>, má všechny složky barev převrácené, tedy například z modré se stane žlutá.
+         </p>
+         
+         
+         <p>Mřížka reprezentuje herní pole hry <i>Had</i>. Políčka zabraná hadem jsou <i>rozsvícená</i>.
+            	Políčka, na kterých se vyskytuje jídlo, jsou <i>inverzní</i>. Ostatní políčka jsou <i>zhasnutá</i>.
+         </p>
+         
+         
+         <p><strong>Nebudete-li programovat dynamickou část</strong>, upravte mřížku, aby vypadala jako na obrázku:
+         </p>
+         
+         <img src="2.png" alt="">
+         
+         
+         <p>V našem příkladě je had dlouhý sedm políček (fialová až šedá), jídlo se nachází na
+            pastelově zeleném políčku.
+         </p>
+         
+         
+         <h3>Dynamická část</h3>
+         
+         
+         <p>Kliknutím na zhasnuté políčko se na jeho místě objeví jídlo. Kliknutím na jídlo se
+            na tomto políčku jídlo zruší.
+            	Klikání na hada nemá žádný efekt.
+         </p>
+         
+         
+         <p>Naprogramujte pohyb hada pomocí šipek ovládacího panelu. Na začátku had stojí uprostřed
+            plochy. Při najetí myší na šipku had změní
+            	směr. Šipka změní okraj a barvu na červenou a hlava hada se začne pohybovat daným
+            směrem. Had se pohne o jedno
+            	políčko každou půlsekundu. Šipka zůstává červená, dokud se had pohybuje daným směrem.
+         </p>
+         
+         
+         <p>Pokud by měl had vyjet z herní plochy, objeví se na protilehlé straně.</p>
+         
+         
+         <p>Na začátku hry je had 3 políčka dlouhý, ale je svinut na prostředním políčku. Až když
+            se začne hýbat, vysune se do
+            	své plné délky.
+         </p>
+         
+         
+         <p>Pokud se hlava hada přesune na políčko s jídlem, had se v tu chvíli prodlouží o jedno
+            pole (v tomto časovém kroku se
+            	neposune ocas hada). Jídlo je hadem snědeno, z herního plánu tedy mizí.
+         </p>
+         
+         
+         <p>Pokud by had narazil hlavou do sebe sama, hra končí. Zobrazte zprávu o ukončení hry.
+            Pozor na to, že had se hýbe celý
+            	najednou. Například pokud je had dlouhý 7 políček, může bez zásahu uživatele procházet
+            stěnou a kroužit dokola, aniž by si ukousnul ocas.
+         </p>
+         
+         
+         <p>Had nemůže „couvat“, neboli si ukousnout políčko těsně za hlavou. Najetí na šipku
+            takového směru prostě
+            	ignorujte.
+         </p>
+         
+         
+         <p>Během hry počítejte skóre (počet snědených jídel) a viditelně ho zobrazte. Zobrazte
+            ho také ve zprávě o ukončení
+            	hry. Nabídněte restart hry.
+         </p>
+         
+         
+         <p>S každým snědeným jídlem zkraťte časový krok o 0.01 sekundy. Nemusíte řešit okrajový
+            případ.
+         </p>
+         
+         
+         <p>Umožněte uživateli zvolit si parametry hry pomocí parametrů požadavku v URL. Zohledněte
+            následující parametry
+            	(výchozí hodnoty v závorkách):
+         </p>
+         
+         
+         <ul>
+            	
+            <li><code>width</code>: šířka pole (7)
+            </li>
+            	
+            <li><code>height</code>: výška pole (7)
+            </li>
+            	
+            <li><code>length</code>: počáteční délka hada (3)
+            </li>
+            	
+            <li><code>timestep</code>: počáteční čas na jedno kolo v milisekundách (500)
+            </li>
+            	
+            <li><code>timedelta</code>: úbytek času na bod skóre v milisekundách (viz níže)
+            </li>
+            
+         </ul>
+         
+         
+         <p>Není-li uveden úbytek času explicitně, dopočítá se vzorcem <code>timestep / (width * height)</code>. Nemusíte kontrolovat smysluplnost parametrů, předpokládejte, že jsou vždy rozumné.
+         </p>
+         
+         
+         <p>Například kdybychom chtěli hrát těžkou hru na mřížce 30×15:</p>
+         
+         
+         <p align="center">
+            <code>had.html?width=30&amp;height=15&amp;timestep=300&amp;timedelta=5</code>
+            
+         </p>
+         
+         
+         <section>
+            
+            
+            <h3>Hodnocení</h3>
+            
+            
+            <p>Pokud soutěžící nenaprogramoval dynamickou část, ověřte, že mřížka není jen
+               předpřipravený rastrový obrázek (zdrojový kód stránky bude podezřele krátký,
+               debugger nebude ukazovat jednotlivé čtverečky jako elementy). Pozor, použití
+               SVG (ať už přímo jako součást HTML, nebo externě načteného), podobně jako
+               kreslení na canvas z JavaScriptu, je v pořádku.
+            </p>
+            
+            
+            <p>V hodnocení se používá výraz "umí". Pokud soutěžící implementoval dynamickou
+               část, hodnoťte podle toho, jestli jste schopni takovou situaci vyvolat. Pokud
+               soutěžící implementoval pouze statickou část, hodnoťte podle toho, co vidíte –
+               pokud nelze ověřit, body neudělujte.
+            </p>
+            
+            
+            <p>Pokud soutěžící umí změnit velikost mřížky pomocí parametrů, ověřujte
+               funkčnost stylování obecně (tj. např. strhněte body za vzhled, pokud zobrazení
+               jiného rozměru tabulky rozbije vzhled). Naproti tomu body za přijetí parametrů
+               v takovém případě udělte zcela. Vyhněte se okrajovým situacím, kdy se mřížka na
+               obrazovku nemůže vejít, zadávejte pouze rozumné hodnoty parametrů.
+            </p>
+            
+            
+            <h3>Hodnocení</h3>
+            
+            <table class="hodnoceni">
+               	
+               <thead>
+                  	
+                  <tr>
+                     		
+                     <th>Body</th>
+                     		
+                     <th>Za co</th>
+                     	
+                  </tr>
+                  	
+               </thead>
+               	
+               <tbody>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Stránka projde validátorem HTML na <a href="http://validator.w3.org">validator.w3.org</a>.
+                     </td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Stránka projde validátorem CSS na <a href="http://jigsaw.w3.org/css-validator/">jigsaw.w3.org/css-validator</a>.
+                     </td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Javascript nevypisuje do konzole žádné chyby (pouze pokud je zapojen do řešení úlohy).</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Zobrazí se mřížka horizontálně zarovnaná na střed.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Mřížka je vertikálně zarovnána na střed.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Mřížka zůstává uprostřed i při změně velikosti obrazovky.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Políčka mřížky jsou čtverečky velké 40 px.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Mřížka obsahuje 7×7 políček.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Mezi políčky je 10 px mezera.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Políčka mřížky mají různou barvu. Každé políčko je jednobarevné (= celá mřížka není
+                        jen souvislý přechod).
+                     </td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Odstín políček odpovídá zadání (pozor na to, že může být zobrazena herní situace,
+                        ověřujte pouze rozsvícená a zhasnutá políčka, příp. inverzi invertovaných).
+                     </td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Mezery mezi políčky jsou vždy černé (neprosvítá barva).</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Stránka umí zobrazit rozsvícená políčka.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Stránka umí zobrazit zhasnutá políčka.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Stránka umí zobrazit invertovaná políčka.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Stránka obsahuje ovládací panel, vzhled odpovídá zadání.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Ovládací panel je vpravo od mřížky, uprostřed stránky.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Šipka, nad kterou byla naposledy myš, je červená.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Klikáním lze přepínat mezi rozsvíceným a zhasnutým políčkem.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Had se umí pohybovat (rozsvěcí se hlava, zhasíná ocas).</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Klikání na pohybujícího se hada nemá žádný efekt (ani po tom, co had odjede).</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Had se pohybuje směrem podle poslední šipky.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Ovládání je "přirozené", nemá zpoždění, umožňuje přepnout směr vícekrát během jednoho
+                        kroku.
+                     </td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Had se pohybuje cca jednou za půl sekundy.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Had zabírá na začátku jen 1 pole, vysune se až při pohybu.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Had se pohybuje na toru (protilehlé hranice pole jsou "spojené").</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Nelze změnit směr na opačný od současného (ověřte i rychlé přepnutí přes jiný směr,
+                        nesmí se rozbít).
+                     </td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Snědení jídla prodlouží hada a zmizí jídlo.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>V okamžiku snědení jídla se nepohne ocas.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Pohyb hada se zrychluje s přibývající délkou.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Je zobrazeno skóre (počet snědených jídel) v průběhu a po konci hry.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Hra končí, když had narazí sám do sebe.</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Had si nesní ocas (ověřte hadem délky 7 jezdícím "dokola").</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Po skončení hry je nabízen restart (funkční).</td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Velikost plochy jde určit parametry <code>width</code> a <code>height</code>.
+                     </td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Počáteční délka hada jde určit parametrem <code>length</code>.
+                     </td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Rychlost pohybu jde určit parametrem <code>timestep</code> (ověřte vysokou hodnotou).
+                     </td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Obtížnost hry jde určit parametrem <code>timedelta</code> (zkuste např. 200 ms)
+                     </td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Není-li <code>timedelta</code> uvedena, dopočítává se (zkuste vysokou hodnotou <code>timestep</code> a malou mřížkou).
+                     </td>
+                  </tr>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Parametrizace se nerozbije zadáním neexistujícího parametru (ověřte např. <code>foo-width=30</code>, nesmí se projevit)
+                     </td>
+                  </tr>
+                  	
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="dynamickévyhledávání">Dynamické vyhledávání</h2>
+         
+         <p class="koeficient">max. 20 bodů</p>
+         
+         
+         <p>Právě jste se z čista jasna ocitli s Felisem na vesmírné lodi. Bohužel ani jeden neumíte
+            vesmírnou 
+            loď řídit a kolem vás je blížící se meteorit, dále spousta světelných let vesmíru
+            a ještě také několik 
+            desítek příruček k raketě. Záchranou by mohlo být pouze to, kdyby se vám podařilo
+            včas najít správnou příručku s 
+            informacemi podstatnými pro vychýlení směru vesmírné lodi a vyhnout se tak jinak téměř
+            jisté srážce s meteoritem.
+            
+         </p>
+         
+         
+         <p>Vytvořte aplikaci, která vám bude poskytovat grafické rozhraní s funkcí vyhledávání
+            ve zdrojích specifikovaných v přiloženém souboru.
+         </p>
+         
+         
+         <p>Přiložený soubor obsahuje seznam knih, které máte k dispozici a bude úkolem je zobrazit.
+            Se souborem můžete dělat co uznáte za vhodné.
+         </p>
+         
+         
+         <h3>Formát souboru</h3>
+         
+         <ul>
+            
+            <li>Soubor obsahuje jednotlivé knihy v elementu <code>knihovnicka</code>.
+            </li>
+            
+            <li>Jednotlivé knihy jsou uzavřeny v elementu <code>article</code>.
+            </li>
+            
+            <li>Element <code>details</code> obsahuje element <code>summary</code> obsahující název knihy.
+            </li>
+            
+            <li>Informace o knize – název, autor, kategorie jsou uzavřeny samostatně v elementu <code>var</code> a jejich název je určen atributem <code>data-type</code>.
+            </li>
+            
+            <li>Dále element <code>details</code> obsahuje ještě element <code>figure</code>, ve kterém je vložen obrázek.
+            </li>
+            
+            <li>Příklad souboru naleznete ve&nbsp;<a href="vyhledavani/data.xml"><code>vyhledavani/data.xml</code></a>.
+            </li>
+            
+         </ul>
+         
+         <h4>Příklad</h4>
+         <pre class="wide-print">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;knihovnicka&gt;
+  &lt;article&gt;
+    &lt;figure&gt;
+      &lt;img src="http://ecx.images-amazon.com/images/I/41kSLEoswsL.jpg"
+           alt="044310073X.jpg image" width="304" height="228"/&gt;
+      &lt;figcaption&gt;044310073X.jpg image&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;details&gt;
+      &lt;summary&gt;Oral and Maxillofacial Surgery: An Objective-Based
+                  Textbook, 2e&lt;/summary&gt;
+      &lt;var data-type="indexId"&gt;044310073X&lt;/var&gt;
+      &lt;var data-type="author"&gt;&lt;/var&gt;
+      &lt;var data-type="categoryId"&gt;16&lt;/var&gt;
+      &lt;var data-type="category"&gt;Medical Books&lt;/var&gt;
+    &lt;/details&gt;
+  &lt;/article&gt;
+&lt;/knihovnicka&gt;
+</pre>
+         
+         <h3>Grafická část aplikace:</h3>
+         
+         <ul>
+            
+            <li>Webová stránka bude rozdělena na tři části – záhlaví, hlavní obsah a zápatí.</li>
+            
+            <li>V záhlaví bude pole pro zadání textu, vyjížděcí seznam obsahující položky „Název“,
+               „Autor“, „Autor a název“, „Kategorie“ a „Vše“, 
+               checkbox s textem „Použít regex“ a tlačítko s nápisem „Vyhledat“.
+            </li>
+            
+            <li>Hlavní část stránky bude obsahovat seznam knih z výše popisovaného souboru.</li>
+            
+            <li>Seznam knih bude zobrazen ve třech sloupcích.</li>
+            
+            <li>Knihy budou mít postupně zobrazeny pouze své názvy. Po kliknutí na název se kniha
+               zobrazí přes všechny sloupce, pod jejím názvem se objeví zbylé informace. V levé polovině
+               budou textové informace – bude zde zobrazen pouze autor knihy a název kategorie, v
+               pravé polovině bude zobrazen obrázek. Zároveň zbylé knihy budou zobrazeny nad a pod
+               touto knihou.
+            </li>
+            
+            <li>Zápatí a záhlaví bude mít stejnou (rozumnou) výšku a bude viditelné po celou dobu
+               skrolováním stránkou.
+            </li>
+            
+            <li>Zápatí bude obsahovat text „Počet nalezených položek
+               <var>X</var>/<var>Y</var>“ kde <var>X</var> je hodnotu počtu
+               aktuálně zobrazených (tj. nalezených) položek a <var>Y</var> je
+               celkový počet knih.  Po spuštění aplikace budou zobrazeny všechny
+               knihy, viz funkční část aplikace.
+            </li>
+            
+         </ul>
+         
+         
+         
+         <h3>Funkční část aplikace:</h3>
+         
+         <ul>
+            
+            <li>Aplikace funguje jako filtrování nalezených knih. 
+               Po otevření stránky či jejím aktualizováním (a zároveň tedy i pro prázdné vyhledávací
+               pole) jsou zobrazeny všechny výsledky seřazené dle abecedy.
+            </li>
+            
+            
+            <li>Poté, co uživatel zadá do vyhledávacího pole textový řetězec, budou zobrazeny výsledky,
+               které začínají nebo obsahují zadaný řetězec v názvu knihy.
+            </li>
+            
+            <li>Ve výsledcích budou zobrazeny prioritně knihy, které zadaným řetězcem začínají.</li>
+            
+            <li>Vylepšete implementaci tak, že řetězec bude vyhledáván v poli vybraném ve vyjížděcím
+               seznamu (pro položku „Vše“ bude prohledáváno „Autor“,
+               „Název“ a „Kategorie“).
+            </li>
+            
+            <li>Implementujte i vyhledávání pomocí regulárních výrazů (část znaků v řetězci tedy bude
+               moci být nahrazena např. znaky jako jsou * . ? či jinými regexovými patterny). Vyhledávání
+               pomocí regexu 
+               bude použito v případě, že uživatel zaškrtne checkbox v záhlaví.
+            </li>
+            
+            <li>Vyhledávání bude fungovat dynamicky – nebude nutné stisknout tlačítko vyhledat a výsledky
+               budou filtrovány průběžně v průběhu psaní dotazu uživatelem.
+            </li>
+            
+            <li>Na základě počtu aktuálně nalezených knih bude aktualizována hodnota v zápatí.</li>
+            
+         </ul>
+         
+         
+         
+         <section>
+            
+            <h3>Hodnocení</h3>
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>	 
+                  <!-- Strukturu této části je potřeba dodržet, automaticky se z ní generují hodnotící tabulky v Excelu -->         
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Stránka je validní</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0,5</td>
+                     
+                     <td>Rozvržení odpovídá zadání (záhlaví, hlavní část, zápatí, obsahuje všechny prvky)</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0,5</td>
+                     
+                     <td>Při prvním načtení jsou zobrazeny knihy ze souboru</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Knihy jsou zobrazeny ve 3 sloupcích</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Jsou zobrazeny pouze názvy knih</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Na název knihy lze kliknout a zobrazit podrobnosti</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>V levé polovině jsou zobrazené textové informace - zobrazuje se pouze autor a kategorie,
+                        v pravé polovině obrázek.
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Rozkliknutá kniha se zobrazí přes celou šířku</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Při rozkliknutí knihy se názvy ostatních knih zobrazují nad a pod detaily rozkliknuté
+                        knihy
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0,5</td>
+                     
+                     <td>Zápatí a záhlaví má stejnou výšku</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0,5</td>
+                     
+                     <td>Zápatí a záhlaví je zobrazeno i při skrolování</td>
+                     
+                  </tr>
+                  
+                  
+                  
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Knihy jsou zobrazeny podle abecedy</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Funguje vyhledávání</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1,5</td>
+                     
+                     <td>Vyhledává i ve vybraných položkách (Autor, Název, Kategorie)</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1,5</td>
+                     
+                     <td>Funguje i vyhledávání podle regulárních výrazů</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0,5</td>
+                     
+                     <td>Vyhledávání podle regulárních výrazů funguje pouze při zaškrtnutém políčku v záhlaví</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Při vyhledání "Classic" (pro název knihy) je zobrazena prioritně kniha začínající
+                        na "Classic" a po ní kniha obsahující "Classics"
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0,5</td>
+                     
+                     <td>Vyhledávání funguje po stisku vyhledávacího tlačítka (pokud je splněn následující
+                        bod, tak je splněn i tento)
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Vyhledávání je dynamické - výsledky jsou zobrazovány i v průběhu psaní dotazu</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0,5</td>
+                     
+                     <td>Je zobrazen počet knih</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0,5</td>
+                     
+                     <td>Je aktualizován správně počet nalezených knih (v zápatí)</td>
+                     
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         	
+         <hr>
+         <h2 id="oprava-aplikace">Oprava aplikace</h2>
+         
+         <p class="koeficient">max. 30 bodů (10 grafická část, 20 funkční část)</p>
+         	
+         <p>Pejsek s&nbsp;kočičkou se rozhodli si zase něco vyrobit. Protože pejsek měl rád dopravní
+            prostředky a kočička Javascript, tak
+            		si v&nbsp;Javascriptu napsali simulátor dopravních prostředků. Má ale nějaké mouchy,
+            kočičku už to přestalo bavit a pejsek si
+            		to spravit neumí, tak by potřeboval pomoc.
+         </p>
+         	
+         <p>Součástí zadání je aplikace, spustíte jí otevřením souboru <a href="oprava-aplikace/index.html"><code>index.html</code></a>. Nahoře je „ovládací panel“, kde můžete
+            		ovládat rychlost simulace, resetovat jí a hlavně nahrát soubor (JSON, formát je
+            popsaný níže). Testovací soubory najdete v&nbsp;stejné
+            		složce, je tam jednoduchý <code>test1.json</code>, a&nbsp;komplexnější <code>test2.json</code> (sice vám může připadat povědomý, ale je to dost zjednodušené,
+            		tak si podle toho neplánujte cestu domů).
+         </p>
+         	
+         <p>Aplikace je napsaná v&nbsp;Typescriptu, což je jazyk transpilovaný do Javascriptu; přidává
+            téměř jenom typovou kontrolu (aby
+            		tam nebyly hloupé chyby). Navíc aplikace používá některé nové konstrukce Javascriptu
+            (ES6), tak se nelekněte. Pro případ, že by vám to nevyhovovalo,
+            		nebo byste se jenom chtěli podívat, do čeho se určitá konstrukce kompiluje, máte
+            vedle souboru
+            		<code>script.ts</code> také
+            		<code>script.js</code> (ES6) a
+            		<code>script.es5.js</code> (ES5, "starý Javascript"), které jsou ekvivalentní (je to výstup Typescriptového
+            kompilátoru).
+            		I&nbsp;pokud nechcete upravovat Typescriptovou verzi, může vám trochu pomoci se podívat
+            na definice typů, se kterými aplikace pracuje – jsou všechny hned nahoře a jsou u&nbsp;nich
+            komentáře.
+            		Chyby stačí opravit jenom v&nbsp;jednom z&nbsp;nich, ale aplikace musí používat ten opravený,
+            aby fungovala (takže pokud si vyberete, že opravíte Typescript, musíte ho zkompilovat
+            do Javascriptu, aby to browser pochopil). Opravený výsledek včetně všech dalších potřebných
+            souborů uložte do adresáře s&nbsp;názvem úlohy stejně jako u&nbsp;ostatních úloh.
+            	
+         </p>
+         	
+         <h3 id="formát-dat">Formát dat</h3>
+         	
+         <p>Data aplikace jsou v&nbsp;JSONu a kromě toho, že jsou data v&nbsp;tomto formátu uložená, tak
+            s&nbsp;ekvivalentním modelem simulátor interně
+            		pracuje – uložený soubor je v&nbsp;podstatě jenom serializovaný objekt typu
+            		<code>SimulationData</code>. Struktura vypadá nějak takto:
+         </p>
+         	
+         <ul>
+            		
+            <li>
+               			<code>map</code> – Mapa světa, ve kterém se pohybuje
+               			
+               <ul>
+                  				
+                  <li>
+                     					<code>nodes</code> – pole bodů v&nbsp;mapě (vrcholy, tj. křižovatky)
+                     					
+                     <ul>
+                        						
+                        <li>
+                           							<code>pos</code> – souřadnice bodu
+                           							<code>[x, y]</code>
+                           						
+                        </li>
+                        					
+                     </ul>
+                     				
+                  </li>
+                  				
+                  <li>
+                     					<code>connections</code> – propojení mezi body (hrany, tj. silnice/koleje)
+                     					
+                     <ul>
+                        						
+                        <li>
+                           							<code>from</code>,
+                           							<code>to</code> – mezi jakými body vede (číslo je index v&nbsp;poli
+                           							<code>nodes</code>). Cesta je vždy obousměrná.
+                        </li>
+                        						
+                        <li>
+                           							<code>distance</code> – jak dlouho trvá tudy projet (v&nbsp;simulovaných sekundách)
+                        </li>
+                        						
+                        <li>
+                           							<code>curve</code> – křivka (resp. lomená čára) cesty, bod [0,0] je na začátku, prázdné pole udělá rovnou
+                           čáru
+                        </li>
+                        					
+                     </ul>
+                     				
+                  </li>
+                  				
+                  <li>
+                     					<code>stations</code> – pole stanic
+                     					
+                     <ul>
+                        						
+                        <li>
+                           							<code>node</code> – číslo bodu, kde se stanice nachází
+                        </li>
+                        						
+                        <li>
+                           							<code>name</code> – její jméno
+                        </li>
+                        					
+                     </ul>
+                     				
+                  </li>
+                  			
+               </ul>
+               		
+            </li>
+            		
+            <li>
+               			<code>lines</code> – pole linek, které jezdí po mapě
+               			
+               <ul>
+                  				
+                  <li>
+                     					<code>stops</code> – na kterých stanicích spoje staví
+                     					(<code>id</code> je index v&nbsp;poli stanic)
+                  </li>
+                  				
+                  <li>
+                     					<code>timeTable</code> – jízdní řád výchozích stanic
+                     					
+                     <ul>
+                        						
+                        <li>
+                           							<code>direction</code> – směr, jakým spoj jede (1 nebo -1)
+                        </li>
+                        						
+                        <li>
+                           							<code>time</code> – kdy vyjíždí
+                        </li>
+                        						
+                        <li>
+                           							<code>from</code> – odkud vyjíždí. Pokud není uvedeno, tak je to konečná určená podle směru
+                        </li>
+                        					
+                     </ul>
+                     				
+                  </li>
+                  				
+                  <li>
+                     					<code>name</code> – jméno linky
+                  </li>
+                  			
+               </ul>
+               		
+            </li>
+            	
+         </ul>
+         	
+         <p>Jednoduchý příklad, který si můžete dle libosti editovat pro otestování, čeho budete
+            chtít, je v&nbsp;souboru
+            		<code>test1.json</code>.
+         </p>
+         	
+         <h3 id="co-je-potřeba-upravit">Co je potřeba upravit</h3>
+         	
+         <p>Aplikace má několik chyb, které je potřeba opravit:</p>
+         	
+         <ul>
+            		
+            <li>Menu je ošklivé – kočička má sice ráda Javascript, ale CSS moc ne… Tak by to chtělo
+               trochu vyčistit. Tlačítka v&nbsp;menu by
+               			měla být zarovnaná, kliknutí na pauzu by nemělo změnit velikost, „Uložit mapu“
+               by mělo vypadat stejně jako „Otevřít mapu“, popisek
+               			„Rychlost“ by měl být vizuálně svázaný s&nbsp;posouvátkem rychlosti a ne náhodně pohozený
+               v&nbsp;panelu, čas by měl být součástí
+               			panelu (vpravo, prosím) a ne pohozený nad ním.
+               		
+            </li>
+            		
+            <li>Aplikace by neměla mít scrollbar a měla by využít celou plochu obrazovky (menu by
+               mělo být nahoře, tag
+               			<code>svg</code> by měl pokrýt zbytek obrazovky a neměl by přetékat).
+               		
+            </li>
+            		
+            <li>
+               			Po pauze už nejde simulace znovu spustit.
+               		
+            </li>
+            		
+            <li>
+               			Čas se nezobrazuje tak, jak jsme zvyklí – pokud je sekund méně než 10, zobrazují
+               se jenom jednociferně. Místo „4:7“ by se mělo zobrazovat „4:07“.
+               		
+            </li>
+            		
+            <li>
+               			Chtěli bychom, aby se po najetí myší na zelený bod zobrazil název linky, kterou
+               tento dopravní prostředek obsluhuje. Mělo by to fungovat podobně, jako když najedete
+               na zastávku (červený bod). Tip: během pauzy se na bod najíždí lépe.
+               		
+            </li>
+            	
+         </ul>
+         
+         	
+         <section>
+            		
+            <h3>Hodnocení</h3>
+            		
+            <p>Spusťte aplikaci a zkuste, jak fungují testovací vstupy. Odevzdaná aplikace by měla
+               fungovat alespoň tak, jako fungovala předtím, pokud nějak zásadně nefunguje (nejde
+               načíst mapa, nehýbe se, ...) aplikaci prosím hodnoťte 0 body.
+            </p>
+            		
+            <p>
+               			Poznámka: Pokud si aplikace nepamatuje mezi načteními stránky mapu, tak to pravděpodobně
+               není chyba soutěžícího, ale zakázaným ukládáním stavu v&nbsp;prohlížeči (do localStorage).
+               Za to rozhodně body nestrhávejte, i&nbsp;přes to, že vám to možná přidělá trochu práce.
+               		
+            </p>
+            		
+            <table class="hodnoceni">
+               			
+               <thead>
+                  				
+                  <tr>
+                     					
+                     <th>Body</th>
+                     					
+                     <th>Za co</th>
+                     				
+                  </tr>
+                  			
+               </thead>
+               			
+               <tbody>
+                  				
+                  <!-- Strukturu této části je potřeba dodržet, automaticky se z ní generují hodnotící tabulky v Excelu -->
+                  				
+                  <tr>
+                     					
+                     <td>2</td>
+                     					
+                     <td>HTML je validní</td>
+                     				
+                  </tr>
+                  				
+                  <tr>
+                     					
+                     <td>2</td>
+                     					
+                     <td>Menu není ošklivé – je zarovnané v&nbsp;jednom řádku (včetně času, nápisu "Rychlost").</td>
+                     				
+                  </tr>
+                  				
+                  <tr>
+                     					
+                     <td>2</td>
+                     					
+                     <td>Tlačítka jsou konzistentní, mají stejnou výšku, stejný styl. Nicméně stále fungují
+                        – vyzkoušejte prosím, jestli jde mapa načíst a uložit, jestli funguje reset a pauza.
+                     </td>
+                     				
+                  </tr>
+                  				
+                  <tr>
+                     					
+                     <td>3</td>
+                     					
+                     <td>SVG je správně roztažené – s&nbsp;menu zaplňuje celou obrazovku, je vidět celá mapa bez
+                        scrollování.
+                     </td>
+                     				
+                  </tr>
+                  				
+                  <tr>
+                     					
+                     <td>1</td>
+                     					
+                     <td>Není zobrazen vertikální ani horizontální posuvník (scrollbar).</td>
+                     				
+                  </tr>
+                  				
+                  <tr>
+                     					
+                     <td>6</td>
+                     					
+                     <td>Funguje spuštění po pauze – poté co aplikaci pauznete, tak jde znovu spustit.</td>
+                     				
+                  </tr>
+                  				
+                  <tr>
+                     					
+                     <td>4</td>
+                     					
+                     <td>Čas se zobrazuje ve formátu m:ss – sekundy mají vždy dvě cifry i&nbsp;přes to, že jich
+                        je méně než 10.
+                     </td>
+                     				
+                  </tr>
+                  				
+                  <tr>
+                     					
+                     <td>10</td>
+                     					
+                     <td>Po najetí myší na dopravní prostředek (zelený bod) se zobrazí název linky. Můžete
+                        si aplikaci pauznout, aby se body "daly chytit". Mělo by to fungovat podobně jako
+                        po najetí na zastávku.
+                     </td>
+                     				
+                  </tr>
+                  			
+               </tbody>
+               		
+            </table>
+            	
+         </section>
+         
+         
+         
+         
+      </section>
+      
+      
+      
+      
+   </body>
+</html>

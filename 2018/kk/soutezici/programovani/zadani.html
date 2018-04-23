@@ -1,0 +1,417 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Zadání soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, Unifont, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Zadání</span> soutěžních
+            úloh
+         </h1>
+         
+         <h2 class="category">Kategorie programování žáci a mládež</h2>
+         
+         <h2 class="date">19. až 21. dubna 2018</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 32.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2017/2018</p>
+         
+      </header>
+      <div class="toc"><a href="#hodinyjakoteploměr">Hodiny jako teploměr</a><br><a href="#čtenímorzeovkysvýpisemnaobrazovku">Čtení morzeovky s výpisem na obrazovku</a><br><a href="#počítánískvrn">Počítání skvrn</a><br><a href="#úřad">Úřad</a><br></div>
+      
+      
+      <p>Úlohy můžete řešit v&nbsp;libovolném pořadí a
+         samozřejmě je nemusíte vyřešit všechny. Za každou úlohu můžete dostat
+         maximálně 10 bodů, z&nbsp;nichž je většinou 9 bodů vyhrazeno na ohodnocení
+         funkčnosti programu, jeho shody se zadáním a efektivity a jeden bod na
+         dokumentaci a přehlednost zdrojového kódu (vhodné členění zdrojového
+         kódu, vhodně zvolené názvy identifikátorů, komentáře na místech, kde
+         je to potřeba, atd.). Body získané za každou úlohu se ještě násobí
+         koeficientem, který odráží složitost úlohy.
+      </p>
+      
+      
+      <p>Na řešení úloh máte 4 hodiny čistého
+         času.
+      </p>
+      
+      
+      <p>Před zahájením soutěže vám pořadatel
+         oznámí, kde najdete testovací soubory a kam máte ukládat řešení úloh.
+      </p>
+      
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="hodinyjakoteploměr">Hodiny jako teploměr</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">1</span></p>
+         
+         
+         <p>Karlík si takhle jednou hrál na doktora a v ruce měl teploměr, prohlížel si jej a
+            řekl si, že by bylo fajn, kdyby i jeho hodiny na stěně ukazovaly čas stejně, 
+            	jako se ukazuje teplota na teploměru. Zkuste Karlíkovi pomoci a napište pro něj program,
+            který bude ukazovat aktuální čas na 3 stupnicích (hodiny, minuty a sekundy zvlášť)
+            podobně jako teploměr.
+         </p>
+         	
+         <ul>
+            	
+            <li>Hodiny jsou ukázány jako červený sloupec, stupnice je označena od 0 do 12. (12:30,
+               tedy půl jedné odpoledne, se na hodinách zobrazí stejně jako 0:30, tedy půl jedné
+               v noci)
+            </li>
+            	
+            <li>Minuty jsou ukázány jako modrý sloupec, stupnice je označena od 0 do 60.</li>
+            	
+            <li>Sekundy jsou ukázány jako zelený sloupec, stupnice je označena od 0 do 60.</li>
+            	
+            <li>Všechny stupnice musí být čitelné, minimální velikost hodin je 400 x 400 bodů (pixelů).</li>
+            	
+         </ul>
+         	
+         	
+         <p>Jako vylepšení můžete naprogramovat (a získat tak další body):</p>
+         	
+         <ul>
+            	
+            <li>Plynulý pohyb sloupce hodin a minut (rostou s každou sekundou, minutou).</li>
+            	
+            <li>Možnost nastavení času na hodinách (jen na hodinách, ne v celém počítači).</li>
+            
+         </ul>
+         
+         
+         <hr>
+         
+         <p>Jak by mohly takové hodiny vypadat se podívejte na obrázku, berte to jako inspiraci
+            :-)
+            <img src="Příklad hodin.png">
+            	
+         </p>
+         <hr>
+         
+         
+         
+         
+         
+      </section>
+      
+      <section class="include">    
+         
+         <hr>
+         <h2 id="čtenímorzeovkysvýpisemnaobrazovku">Čtení morzeovky s výpisem na obrazovku</h2>
+         
+         
+         <p class="koeficient">Koeficient <span class="koef">1</span></p>    
+         
+         
+         <p>Napište program který umí luštit zprávy psané v&nbsp;morzeově abecedě.
+            Vstupní text obsahuje malá a velká písmena české abecedy, mezery, konce řádků a interpunkci
+            a je kódovaný následným způsobem:
+         </p>
+         
+         
+         <ul>
+            
+            <li>Pokud slovo začíná samohláskou, interpretuje se toto slovo jako tečka morzeovy abecedy.</li>
+            
+            <li>Pokud slovo začíná souhláskou,  interpretuje se jako čárka morzeovy abecedy.</li>
+            
+            <li>Interpunkční znaménka oddělují jednotlivá písmena.</li>
+            
+         </ul>
+         
+         
+         
+         <h3>Příklady</h3>
+         
+         
+         <p>Vstup:</p>
+         
+         <pre>Aby program; óóóóóhromil porotu tak musí; 
+umět;všechny,soubory jedním spuštěním. 
+Musí mít READ ,
+ ME alternativně help!
+</pre>
+         
+         <p>Výsledek: <code>AJETOOK</code></p>
+         
+         
+         <p>Vstup:</p>
+         
+         <pre>ó n, á h l ý !d é š? ť j i ž ,z v í ,ř i l ,p r a c, h a č, i l
+,á; l a, ň t e ,ď b ě ,ž í s h, o u f ,c e m ,G a z e, l k ,ú k,
+r y t, ů m;
+</pre>
+         
+         <p>Výsledek: <code>APKQGKQKAENGGYUKCMAKA</code></p>
+         
+         
+         <p>Od programu se očekává, že po startu umožní opakovaně vybírat
+            vstupní soubory a dešifrovaný obsah vypisovat na obrazovku. Tj. na
+            jedno spuštění zpracovat postupně více vstupních souborů.
+         </p>
+         
+         
+         <p>Předpokládejte, že soubory jsou uloženy v&nbsp;kódování UTF-8.</p>
+         
+         
+         <h3>Morzeova abeceda</h3>
+         
+         <pre>A   .-         H   ....      N   -.         U   ..-        
+B   -...       CH  ----      O   ---        V   ...-   
+C   -.-.       I   ..        P   .--.       W   .--    
+D   -..        J   .---      Q   --.-       X   -..-   
+E   .          K   -.-       R   .-.        Y   -.--   
+F   ..-.       L   .-..      S   ...        Z   --..   
+G   --.        M   --        T   -     
+</pre>
+         
+         
+         
+         
+         </section>
+      
+      <section class="include">    
+         
+         <hr>
+         <h2 id="počítánískvrn">Počítání skvrn</h2>    
+         
+         <p class="koeficient">Koeficient <span class="koef">1</span></p>    
+         
+         
+         <p>V akademii věd v chemické sekci manuálně počítají olejové skvrny s
+            různou barvou na vodním filmu. Pomozte jim a napište program, který
+            jim tu práci usnadní.
+         </p>
+         
+         
+         <p>Pro zjednodušení předpokládejte:</p>
+         
+         <ul>
+            
+            <li>že, stačí analyzovat pouze statický obraz v souboru PNG  (maximální velikost 2000x2000
+               pixelů),
+            </li>
+            
+            <li>že, okolní barva filmu je bílá,</li>
+            
+            <li>že, skvrny mají kruhový tvar a minimální velikost je 1x1 pixel,</li>
+            
+            <li>že, jedna skvrna má pouze jednu barvu,</li>
+            
+            <li>že, žádná skvrna nemá bílou barvu,</li>
+            
+            <li>že, může být více skvrn s téže barvy,</li>
+            
+            <li>že, skvrny nezasahují mimo analyzovaný prostor a ani se nedotýkají stěn,</li>
+            
+            <li>že, se skvrny nepřekrývají a ani se nedotýkají (mají mezi sebou minimálně 1 pixel
+               vodního filmu a to i v šikmém směru).
+            </li>
+            
+         </ul>
+         
+         
+         <p>Dále zajistěte:</p>
+         
+         <ul>
+            
+            <li>výběr souboru PNG pomocí dialogového okna,<br></li>
+            
+            <li>výběr souboru lze provést opakovaně bez ukončení programu,<br></li>
+            
+            <li>program si pamatuje poslední použitý adresář.<br></li>
+            
+         </ul>		
+         
+         
+         <p>Program musí:</p>
+         
+         
+         <ol>	
+            
+            <li>Spočítat a vypsat celkový počet skvrn.</li>
+            
+            <li>Spočítat a vypsat počet skvrn od každé barvy – barvy vyjádřete ve formátu
+               [red,green,blue] (řazeno od nejpočetnější barvy po nejméně početnou
+               barvu, dále řazeno dle formátu [r,g,b]).
+            </li>
+            
+            <li>Seřadit skvrny podle velikosti a zobrazit je jako obrázek. Skvrny
+               uspořádejte do původní šířky obrázku ve vodorovných řadách od shora s
+               distancí 5 pixelů tak, aby nezasahovaly do okraje obrázků. Pokud výška
+               obrázku nestačí zvětšete ji.
+            </li>
+            
+         </ol>
+         
+         
+         <p class="break-before"><b>Ukázka zadání:</b> Vodní film se skvrnami – vstupní
+            soubor:<br><img src="kolecka.png" heigh="100" width="200">
+            
+         </p>
+         
+         
+         <p><b>Ukázka řešení:</b></p>
+         <pre>úkol 1:  celkový počet skvrn: 7
+úkol 2:  [0,255,0]: 2x, [255,255,0]: 2x,
+         [0,0,0]: 1x, [0,0,255]:1x, [255,0,0]: 1x
+úkol 3:  <img src="kolecka_Res.png" heigh="50" width="200" valign="top">	
+</pre>
+         
+         <p>V adresáři <code><a href="skvrny/">skvrny/</a></code> nejdete
+            soubory pro testování vaší úlohy a ukázkové řešení úlohy.
+         </p>
+         
+         
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="úřad">Úřad</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">3</span></p>
+         
+         <p>
+            Na úřadě v očíslovaných kancelářích sedí úředníci.
+            Pokud jim donesete všechna razítka, která chtějí od jiných úředníků, dají vám to svoje
+            (samozřejmě až po vystání fronty, vyplnění formulářů a zaplacení poplatků, ale to
+            tu řešit nebudeme).
+            
+         </p>
+         
+         <p>
+            Napište program, který najde nejrychlejší cestu mezi jednotlivými úředníky tak, abyste
+            všechna potřebná razítka ve správném pořadí dostali.
+            
+         </p>
+         
+         
+         <h3>Vstup</h3>
+         
+         <p>
+            Úředníci jsou popsáni přirozenými čísly, která mají na svých dveřích (v každé kanceláři
+            je jen jeden úředník).
+            Stejným číslem označíme i razítko, které úředník vydává.
+            Kanceláře (tím pádem i úředníci a razítka) mají přirozená čísla v rozsahu 1..10000
+            .
+            Vstupem je soubor v následujícím tvaru:
+            
+         </p>
+         <ul>
+            	
+            <li>na prvním řádku jsou čísla razítek, která potřebujeme, oddělená mezerou</li>
+            	
+            <li>další řádky vypadají takhle:
+               <pre>&lt;číslo dveří&gt; &lt;požadované razítko 1&gt; &lt;požadované razítko 2&gt; …</pre>
+               	</li>
+            	
+            <li>pokud by nějaké číslo dveří v souboru nebylo, předpokládejte, že příslušný úředník
+               výjimečně žádné razítko nevyžaduje
+            </li>
+            
+         </ul>
+         
+         
+         <h3>Výstup</h3>
+         
+         <p>
+            Pokud řešení neexistuje z důvodu že si úředníci, jejichž razítka potřebuji, navzájem
+            vyžadují razítka do kruhu, program tento kruh vypíše v následujícím formátu (místo
+            <var>&lt;u1&gt;</var> až <var>&lt;un&gt;</var> uvedete příslušná čísla):
+            
+         </p>
+         <pre>Nelze vyresit - pozadavky do kruhu:
+<var>&lt;u1&gt;</var> chce <var>&lt;u2&gt;</var>
+<var>&lt;u2&gt;</var> chce <var>&lt;u3&gt;</var>
+...
+<var>&lt;un&gt;</var> chce <var>&lt;u1&gt;</var>
+</pre>
+         
+         <p>
+            V ostatních případech bude výstupem seznam dveří, která je potřeba
+            postupně projít, tak abych u každého úředníka už měl všechna razítka,
+            která požaduje, a na konci měl všechna razítka, která potřebuji.
+            Čísla vypisujte jednotlivě po řádcích (na každý řádek jedno číslo).
+         </p>
+         
+         
+         <h3 class="break-before">Ukázky</h3>
+         
+         
+         <p><b>Vstup:</b></p>
+         <pre>1 2 3
+1 2 3 4 5
+2 3 4 5
+3 4 5
+4 5
+</pre>
+         
+         <p><b>Výstup:</b></p>
+         <pre>5
+4
+3
+2
+1
+</pre>
+         
+         <p><b>Vstup:</b></p>
+         <pre>1 2 3
+1 2 3 4 5
+2 3 4 5
+3 4 5
+4 5
+5 3
+</pre>
+         
+         <p><b>Výstup:</b></p>
+         <pre>Nelze vyřešit - požadavky do kruhu:
+3 chce 4
+4 chce 5
+5 chce 3
+</pre>
+         
+         
+         
+         
+         </section>
+      
+      
+      
+      
+   </body>
+</html>

@@ -1,0 +1,40 @@
+{
+    "map": {
+        "nodes": [
+            { "pos": [1, 2] },
+            { "pos": [4, 2] },
+            { "pos": [4, 6] },
+            { "pos": [1, 5] },
+            { "pos": [8, 3] }
+        ],
+        "connections": [
+            { "from": 0, "to": 1, "distance": 1.4, "curve": [ [ 1, 1 ], [ 1.5, 1 ] ] },
+            { "from": 2, "to": 1, "distance": 1, "curve": [] },
+            { "from": 3, "to": 1, "distance": 1, "curve": [] },
+            { "from": 3, "to": 2, "distance": 4, "curve": [] },
+            { "from": 2, "to": 4, "distance": 1, "curve": [] }
+        ],
+        "stations": [
+            { "node": 0, "name": "ST 0" },
+            { "node": 3, "name": "ST 1" },
+            { "node": 4, "name": "ST 2" }
+        ]
+    },
+    "lines": [
+        {
+            "name": "L1",
+            "stops": [
+                { "id": 1 },
+                { "id": 0 },
+                { "id": 2 }
+            ],
+            "timeTable": [
+                { "direction": 1, "time": 0 },
+                { "direction": -1, "time": 0 },
+                { "direction": -1, "time": 1 }
+            ]
+        }
+    ],
+    "currentTime": 0,
+    "speed": 0
+}

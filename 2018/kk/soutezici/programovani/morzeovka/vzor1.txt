@@ -1,0 +1,3 @@
+Aby program; óóóóóhromil porotu tak musí; 
+umět;všechny,soubory jedním spuštěním. Musí mít READ ,
+ ME alternativně help!

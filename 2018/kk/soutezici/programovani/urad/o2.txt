@@ -1,0 +1,4 @@
+Nelze vyresit - pozadavky do kruhu:
+3 chce 4
+4 chce 5
+5 chce 3
