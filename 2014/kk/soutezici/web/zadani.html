@@ -1,0 +1,94 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+   <title>Zadání soutěžních úloh</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><style type="text/css">
+    .simplelist { width: 100% }
+    .screen, .programlisting, .literallayout { background-color: silver }
+    body { font-family: Verdana, sans-serif; }
+    .article .titlepage { text-align: center; }
+    .section .titlepage { text-align: left; }
+    .remark { color: red;
+              background-color: yellow;
+	      font-style: italics;
+	    }
+  </style></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="cs" class="article" title="Zadání soutěžních úloh"><div class="titlepage"><div><div><h2 class="title"><a name="d5e1"></a><span>Zadání</span>
+soutěžních úloh</h2></div><div><h3 class="subtitle"><i>Kategorie tvorba webu</i></h3></div><div><p class="releaseinfo">Soutěž v&nbsp;programování – 28.&nbsp;ročník</p></div><div><p class="releaseinfo">Krajské&nbsp;kolo&nbsp;2013/2014</p></div><div><span class="date">10. až 12. dubna 2014<br></span></div></div><div></div><hr></div><div class="toc"><dl><dt><span class="section"><a href="#d5e17">Šachy</a></span></dt><dt><span class="section"><a href="#d5e32">Grafická úprava dokumentu</a></span></dt><dt><span class="section"><a href="#d5e66">Kolo štěstí</a></span></dt><dt><span class="section"><a href="#d5e93">Seznamy</a></span></dt></dl></div><p>Úlohy můžete řešit v&nbsp;libovolném pořadí a samozřejmě je nemusíte
+vyřešit všechny. Za každou úlohu můžete dostat maximálně 10 bodů – hodnotí se shoda se zadáním,
+funkčnost, dodržování webových standardů a přehlednost zdrojového kódu. Body získané za každou úlohu
+se ještě násobí koeficientem, který odráží složitost úlohy.</p><p>Na řešení úloh máte 4 hodiny čistého času.</p><p>Kompletní rešení každé úlohy (soubory HTML, CSS, obrázky, případně
+Javascript) uložte do samostatného adresáře nazvaného jménem úlohy (např.
+<code class="filename">ukol1</code>). Stránku s&nbsp;řešením vždy pojmenujte <code class="filename">index.html</code> a
+uložte v kódování UTF-8.</p><p>Při řešení je povoleno používat frameworky
+jako je například jQuery.</p><div lang="cs" class="section" title="Šachy"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e17"></a>Šachy</h2></div><div><h3 class="subtitle">Koeficient <span class="koef">2</span></h3></div></div></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Zobrazte šachovnici (8×8 políček, střídavě bílá a černá, levé horní pole je bílé).
+        Políčka by měla být přibližně čtvercová. Šachovnici obtáhněte tenkou černou čarou.</p></li><li class="listitem"><p>Na šachovnici zobrazte šachové figurky v základním postavení.<sup>[<a name="d5e26" href="#ftn.d5e26" class="footnote">1</a>]</sup> Pro zobrazení figurek použijte znaky Unicode:</p><pre class="programlisting">   U+2654       bílý král              U+265A   černý král   
+   U+2655       bílá dáma              U+265B   černá dáma   
+   U+2656       bílá věž               U+265C   černá věž    
+   U+2657       bílý střelec           U+265D   černý střelec
+   U+2658       bílý kůň               U+265E   černý kůň    
+   U+2659       bílý pěšec             U+265F   černý pěšec</pre><p>Použijte vhodný font, který tyto znaky obsahuje. Figurky by měly být na každém políčku
+        vystředěné. Políčko by nemělo být více jak dvakrát větší, než je velikost figurky. Figurky
+        by měly vypadat, že mají správnou barvu, tj. bílý pěšec na černém políčku je skutečně bílý,
+        apod.</p></li><li class="listitem"><p>Umožněte figurky na šachovnici přemísťovat tažením myší. Dbejte na to, aby figurka nešla
+        umístit na políčko, které je již obsazené. Kontrolovat tah na platnost podle šachových
+        pravidel nemusíte. Dejte si pozor na správnou barvu figurky po umístění na nové
+        políčko.</p></li></ol></div></div><div lang="cs" class="section" title="Grafická úprava dokumentu"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e32"></a>Grafická úprava dokumentu</h2></div><div><h3 class="subtitle">Koeficient <span class="koef">1</span></h3></div></div></div><p>Součástí zadání je <a class="ulink" href="dokument.html" target="_top">HTML soubor</a>. Tento soubor nesmíte
+    upravovat ani do něj jinak zasahovat. Prohlížet si ho samozřejmě můžete. Vaším úkolem je tedy
+    vyrobit soubor <code class="filename">styl.css</code>.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Zobrazte text dokumentu černě na bílém pozadí, patkovým písmem. Nadpisy zobrazte
+            tučně zeleně, bezpatkovým písmem.</p></li><li class="listitem"><p>První řádek každého odstavce odsaďte o dvojnásobek velikosti fontu, mezi odstavci
+            ponechte úzkou mezeru.</p></li><li class="listitem"><p>Patičku zobrazte menším písmem a od textu ji oddělte šedou čarou.</p></li><li class="listitem"><p>Tabulkám dejte světlounce šedé pozadí, buňky tabulky oddělte tenkými jednoduchými
+            černými linkami.</p></li><li class="listitem"><p>Buňky, které tvoří záhlaví sloupců nebo řádků tabulky, zobrazte s bílým textem na
+            černém pozadí a šedými oddělovači mezi buňkami.</p></li><li class="listitem"><p>Odkazy nechť jsou oranžové a nepodtržené, podtrhnou se při najetí ukazatele myši.
+            Navštívené odkazy jsou o něco světlejší než nenavštívené.</p></li></ul></div></li><li class="listitem"><p>Dle zásad typografie se první řádek odstavce, který následuje hned po nadpisu,
+        neodsazuje. Učiňte tak.</p></li><li class="listitem"><p>Poslední sloupec každé tabulky podbarvěte světle žlutou (mimo záhlaví).</p></li><li class="listitem"><p>Zajistěte, aby citace, které se v dodaném souboru nachází v elementu
+          <code class="sgmltag-element">q</code>, měly správné české uvozovky nezávisle na nastavení prohlížeče, tj.
+        levé takto: „ a pravé takto: “.</p></li><li class="listitem"><p>Některá slova či fráze obsahují vysvětlivku. Takovýto text je uzavřen v elementu
+          <code class="sgmltag-element">span</code>, samotná vysvětlivka je pak obsahem jeho atributu <code class="sgmltag-attribute">data-vysvetlivka</code>. Zobrazte text, který obsahuje vysvětlivku,
+        podtržený oranžovou přerušovanou čarou, samotný text bude normálně černý. Po najetí myší na
+        tento text zobrazte vysvětlivku v komiksové bublině (nemusí mít „zobáček“).</p></li></ol></div><p>Dbejte na dobrou čitelnost textu dokumentu. Výsledný soubor by měl projít CSS
+    validátorem.</p></div><div lang="cs" class="section" title="Kolo štěstí"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e66"></a>Kolo štěstí</h2></div><div><h3 class="subtitle">Koeficient <span class="koef">3</span></h3></div></div></div><p>Jistě znáte kolo štěstí: kruh s barevnými výsečemi, v každé výseči je napsána výhra.
+    Soutěžící kolo roztočí, to se chvíli točí setrvačností, až se zastaví. Soutěžící si odnáší
+    výhru, která se po zastavení nachází vpravo. Typicky se na pravé straně kola nachází šipka,
+    která na výherní položku ukazuje.</p><div class="figure"><a name="d5e71"></a><p class="title"><b>Obrázek 1. Ukázkové zobrazení kola štěstí</b></p><div class="figure-contents"><div class="mediaobject"><img src="kolo.png" alt="Ukázkové zobrazení kola štěstí"></div></div></div><br class="figure-break"><p>Máte zadaný seznam výher:</p><p>Audi A8, ponožky, let balónem, živý krokodýl, učebnice fyziky, plavky, křupky, kulečník, let
+    na Měsíc, socha, vařečka, stroboskop, čokoláda, 500 000 Kč, houpačka.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Zobrazte názvy výher <span class="quote">„<span class="quote">v kole</span>“</span>, tj. tak, aby vycházely ze stejného středu a
+        byly v pravidelných úhlech.</p></li><li class="listitem"><p>Zobrazte pod názvy výher barevné výseče. Sousední výseče nesmějí mít stejnou barvu.
+        Zobrazte šipku u výseče nejvíce vpravo.</p></li><li class="listitem"><p>Zajistěte, aby se kolo po kliknutí roztočilo.</p></li><li class="listitem"><p>Po roztočení se kolo po náhodném čase zastaví. Více bodů dostanete, pokud se kolo bude
+        realisticky zpomalovat do úplného zastavení.</p></li><li class="listitem"><p>Zobrazte blahopřání obsahující název vylosované výhry.</p></li></ol></div><p>Správná funkčnost ve webkit prohlížečích (Chrome, Safari, Opera &gt; 12.x) není
+    vyžadována.</p></div><div lang="cs" class="section" title="Seznamy"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e93"></a>Seznamy</h2></div><div><h3 class="subtitle">Koeficient <span class="koef">1</span></h3></div></div></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Vyrobte seznam, který bude strukturován jako na obrázku níže. Odrážky i číslování musejí
+        být automatické. Nemusíte dodržet tvar a formu odrážek (tedy místo pomlček můžete mít tečky,
+        místo písmen čísla, atd.), odsazení dodržet musíte.</p><pre class="programlisting">&#9632; Pohádka O perníkové chaloupce
+    1. Mařenka
+    2. Jeníček
+    3. ježibaba
+&#9632; Pohádka O Červené Karkulce
+    1. Karkulka
+        &#9679; červený čepeček
+        &#9679; košík
+    2. vlk
+        &#9679; ostré zuby
+        &#9679; hlad
+    3. babička
+        &#9679; sežrána
+&#9632; Pohádka O Šípkové Růžence
+    A. sudičky
+        1. Miroslava
+            – pozvána
+            – daruje krásu
+        2. Květoslava
+            – pozvána
+            – daruje prince
+        3. Věnceslava
+            – nepozvána
+            – daruje spánek
+    B. Růženka
+        &#9679; nesmí do věže
+        &#9679; píchne se o trn
+    C. princ</pre></li><li class="listitem"><p>Dodržte i tvar a formu odrážek tak, jak jsou na obrázku.</p></li><li class="listitem"><p>Po kliknutí na libovolnou položku sbalte/rozbalte všechny její podpoložky. Příklad: po
+        kliknutí na <span class="quote">„<span class="quote">sudičky</span>“</span> bude příslušná část seznamu vypadat takto:</p><pre class="programlisting">...
+&#9632; Pohádka O Šípkové Růžence
+    A. sudičky
+    B. Růženka
+        &#9679; nesmí do věže
+        &#9679; píchne se o trn
+    C. princ</pre><p>Po opětovném kliknutí se podpoložky opět rozbalí.</p></li></ol></div></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.d5e26" href="#d5e26" class="para">1</a>] </sup>Horní řada zleva doprava: černé figurky: věž, kůň, střelec, dáma, král, střelec,
+            kůn, věž; druhá řada shora: 8 černých pěšců vedle sebe dolní řada zleva doprava: bílé
+            figurky: věž, kůň, střelec, dáma, král, střelec, kůn, věž; druhá řada zdola: 8 bílých
+            pěšců vedle sebe.</p></div></div></div></body></html>

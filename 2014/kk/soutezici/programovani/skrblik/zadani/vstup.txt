@@ -1,0 +1,5 @@
+Jeden Murphyho zakon o programovani
+Kazdy program obsahuje jeden chybny radek
+Libovolny program jde zkratit o jeden radek
+Z toho plyne ze kazdy jeden program jde
+zkratit na jeden radek ktery je radek chybny

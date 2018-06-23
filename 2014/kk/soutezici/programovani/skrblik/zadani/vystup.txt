@@ -1,0 +1,3 @@
+jeden 5
+radek 4
+program 3
