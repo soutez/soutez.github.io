@@ -1,0 +1,1 @@
+Geo = {"city":"Chrastava","country":"CZ","lat":"50.816002","lon":"14.968200","IP":"95.85.233.233","netmask":"24"}

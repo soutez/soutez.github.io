@@ -1,0 +1,109 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <title>Zadání soutěžních úloh</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><style type="text/css">
+    .simplelist { width: 100% }
+    .screen, .programlisting, .literallayout { background-color: silver }
+    body { font-family: Verdana, sans-serif; }
+    .article .titlepage { text-align: center; }
+    .section .titlepage { text-align: left; }
+    .remark { color: red;
+              background-color: yellow;
+	      font-style: italics;
+	    }
+  </style></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="cs" class="article" title="Zadání soutěžních úloh"><div class="titlepage"><div><div><h2 class="title"><a name="d5e1"></a><span>Zadání</span> soutěžních
+úloh</h2></div><div><h3 class="subtitle"><i>Kategorie žáci a mládež</i></h3></div><div><p class="releaseinfo">Soutěž v&nbsp;programování –
+27.&nbsp;ročník</p></div><div><p class="releaseinfo">Krajské&nbsp;kolo&nbsp;2012/2013</p></div><div><span class="date">18. až 20. dubna 2013<br></span></div></div><div></div><hr></div><div class="toc"><dl><dt><span class="section"><a href="#d5e14">Pyramidy</a></span></dt><dt><span class="section"><a href="#d5e24">Odstraňování bugů</a></span></dt><dt><span class="section"><a href="#d5e73">Spojnicový graf</a></span></dt></dl></div><p>Úlohy můžete řešit v&nbsp;libovolném
+pořadí a samozřejmě je nemusíte vyřešit všechny. Za každou úlohu
+můžete dostat maximálně 10 bodů, z&nbsp;nichž je většinou 9 bodů
+vyhrazeno na ohodnocení funkčnosti programu, jeho shody se zadáním
+a efektivity a jeden bod na dokumentaci a přehlednost zdrojového
+kódu. Body získané za každou úlohu se ještě násobí koeficientem, který
+odráží složitost úlohy.</p><p>Na řešení úloh máte 4 hodiny čistého
+času.</p><p>Před zahájením soutěže vám pořadatel
+oznámí, kde najdete testovací soubory. Textové testovací soubory pro
+všechny operační systémy používají řádky ukončené dvojicí znaků CR a
+LF.</p><div lang="cs" class="section" title="Pyramidy"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e14"></a>Pyramidy</h2></div><div><h3 class="subtitle">Koeficient <span class="koef">1</span></h3></div></div></div><p>Mladý Ramses se rozhodl nechat si postavit pyramidu. Jelikož se
+nemohl rozhodnout, jak by měla být vysoká, rozhodl se nejdříve si
+vytvořit plochou maketu, aby si udělal lepší představu.</p><p>Pomozte Ramsesovi a napište program, který při zadání výšky
+pyramidy v rozmezí 1 až 500 spočte, kolik je potřeba kvádru na její
+stavbu, a pyramidu vykreslí. Program by měl při vykreslení optimalně
+využít plochu okna.</p><p>Kvádry mají rozměry 2:1 a řady se o půl kvadrů
+překrývají. Například pro plošnou pyramidu výšky 3 je třeba šest
+kvádrů.</p><div class="mediaobject" align="center"><img src="zidka.png" align="middle"></div></div><div lang="cs" class="section" title="Odstraňování bugů"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e24"></a>Odstraňování bugů</h2></div><div><h3 class="subtitle">Koeficient <span class="koef">3</span></h3></div></div></div><p>
+    Odstraňování bugů z&nbsp;programu může být velmi vyčerpávající práce. Velká
+    vědecká kapacita doktor Z. Ounek proto hledá způsob, jak by bylo možné
+    odstraňovat bugy automaticky. Protože je ale příliš zaměstnán přemítáním
+    o&nbsp;tom, jak bude slavný až se mu to podaří, zůstala implementace zkušební
+    verze Dr. Z. Ounkova odstraňovače na vás.
+  </p><p>
+    Napište program, který dostane dva textové řetězce <em class="varname">BUG</em>
+    a <em class="varname">PROGRAM</em>. Délka každého z&nbsp;nich je nejvýš
+    200&nbsp;000 znaků a oba obsahují pouze číslice a velká
+    a malá písmena anglické abecedy.  Vaším úkolem je odstranit všechny výskyty
+    řetězce <em class="varname">BUG</em> z&nbsp;<em class="varname">PROGRAM</em>u. Pozor na to,
+    že odstraněním jednoho <em class="varname">BUG</em>u může vzniknout další.
+  </p><div class="section" title="Popis vstupu"><div class="titlepage"><div><div><h3 class="title"><a name="d5e35"></a>Popis vstupu</h3></div></div></div><p>
+      Vstup načtěte ze souboru <code class="filename">bugy.txt</code> v&nbsp;aktuálním adresáři.
+    </p><p>
+      Soubor <code class="filename">bugy.txt</code> obsahuje dva řádky. První obsahuje
+      řetězec <em class="varname">BUG</em> a druhý řetězec <em class="varname">PROGRAM</em>.
+      Délka každého z&nbsp;nich je nanejvýš 200&nbsp;000 znaků a oba
+      obsahují pouze číslice a velká a malá písmena anglické abecedy. Oba řádky
+      jsou ukončeny dvojicí znaků <code class="constant">CR</code>
+      a <code class="constant">LF</code>.
+    </p></div><div class="section" title="Popis výstupu"><div class="titlepage"><div><div><h3 class="title"><a name="d5e45"></a>Popis výstupu</h3></div></div></div><p>
+      Výstup vypište do souboru <code class="filename">vystup.txt</code> v&nbsp;aktuálním adresáři.
+    </p><p>
+      Na jediný řádek souboru <code class="filename">vystup.txt</code> vypište řetězec,
+      který zůstane z&nbsp;řetězce <em class="varname">PROGRAM</em> po odstranění všech
+      <em class="varname">BUG</em>ů. Řádek ukončete dvojicí znaků
+      <code class="constant">CR</code> a <code class="constant">LF</code>.  Pozor na to, že
+      odstraněním jednoho <em class="varname">BUG</em>u může vzniknout další.
+    </p></div><div class="section" title="Příklad vstupu a výstupu"><div class="titlepage"><div><div><h3 class="title"><a name="d5e56"></a>Příklad vstupu a výstupu</h3></div></div></div><table width="100%" id="d5e58"><tr>
+        <td><code class="filename">bugy.txt</code></td>
+        <td><code class="filename">vystup.txt</code></td>
+      </tr><tr>
+        <td>
+          <pre class="programlisting">bug
+bububuggbak</pre>
+        </td>
+        <td>
+          <pre class="programlisting">bubak</pre>
+        </td>
+      </tr></table></div><div class="section" title="Ukázková data"><div class="titlepage"><div><div><h3 class="title"><a name="d5e69"></a>Ukázková data</h3></div></div></div><p>
+      V&nbsp;adresáři <code class="filename">bugy</code> se nachází ukázková data včetně
+      příkladu ze zadání. Pro získání plného počtu bodů by měl váš program
+      vyřešit každá z&nbsp;nich během vteřiny.
+    </p></div></div><div lang="cs" class="section" title="Spojnicový graf"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e73"></a>Spojnicový graf</h2></div><div><h3 class="subtitle">Koeficient <span class="koef">3</span></h3></div></div></div><p>Náš oblíbený strýček Pompo by od vás potřeboval pomoci. Každou
+chvíli dostane mailem soubor, ve kterém je vidět, jak se mu měnil stav
+na bankovních účtech. Bohužel se v&nbsp;něm špatně orientuje a tak by mu
+pomohlo, když by se mohl podívat, zda mu peníze přibývají či
+ubývají. Napiště pro strýčka Pompa program, který převede přijatý
+textový soubor na spojnicový graf.</p><p>Uvažujte, že v&nbsp;jednom souboru mohou být informace o&nbsp;jednom až
+pěti bankovních účtech. Všechny pak vykreslete do jednoho grafu a pro
+jejich rozlišení použijte různé barvy. Nezapomeňte na legendu (popis
+grafu).</p><div class="section" title="Vstupní soubor"><div class="titlepage"><div><div><h3 class="title"><a name="d5e79"></a>Vstupní soubor</h3></div></div></div><p>Na vstupu je textový soubor, který obsahuje v&nbsp;prvním řádku
+hlavičku, v&nbsp;dalších řádcích pak jednotlivé hodnoty. Hodnoty na řádku
+jsou mezi sebou odděleny znakem středník. První sloupec obsahuje vždy
+datum, další sloupce pak jednotlivé zůstatky na účtech k&nbsp;danému
+datu. Zůstatky jsou vždy celočíselné. Hlavička obsahuje texty bez
+diakritiky a její první položka vždy obsahuje řetězec
+<code class="code">Datum</code>. Umožněte uživateli, aby si vstupní soubor mohl sám
+vybrat po sputění programu.</p></div><div class="section" title="Vzhled grafu"><div class="titlepage"><div><div><h3 class="title"><a name="d5e83"></a>Vzhled grafu</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Osa X bude zachycovat datum.</p></li><li class="listitem"><p>Osa Y bude zachycovat stav na účtu (uvažujte, že stav na účtu může být dočasně i&nbsp;záporný).</p></li><li class="listitem"><p>Vykreslený graf by měl optimálně vyplnit celou plochu obrazovky.</p></li><li class="listitem"><p>Vykreslený graf vždy obsahuje legendu.</p></li></ul></div></div><div class="section" title="Příklad vstupu a výstupu"><div class="titlepage"><div><div><h3 class="title"><a name="d5e94"></a>Příklad vstupu a výstupu</h3></div></div></div><div class="informaltable"><table border="0"><colgroup><col><col></colgroup><tbody><tr><td>Vstupní soubor <code class="filename">denni_vypis.csv</code></td><td align="center">Vykreslený graf</td></tr><tr><td><pre class="programlisting">Datum;Ucet v Kc;Ucet v EUR;
+1.2.2013;1000;100;
+2.2.2013;1000;105;
+3.2.2013;2000;105;
+4.2.2013;2000;105;
+5.2.2013;42000;5000;
+6.2.2013;32000;500;
+7.2.2013;25000;600;
+8.2.2013;25000;-2000;
+9.2.2013;25000;-2000;
+10.2.2013;20195;-2000;
+11.2.2013;20195;-2500;
+12.2.2013;20542;300;
+13.2.2013;27329;700;
+14.2.2013;30037;1500;</pre></td><td><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="283"><tr><td><img src="denni_vypis.jpg" width="283"></td></tr></table></div></td></tr></tbody></table></div><div class="informaltable"><table border="0"><colgroup><col><col></colgroup><tbody><tr><td>Vstupní soubor <code class="filename">mesicni_vypis.csv</code></td><td align="center">Vykreslený graf</td></tr><tr><td><pre class="programlisting">Datum;Ucet v CSOB;Ucet v KB;Ucet v CS;
+31.1.2013;159123;1000123;312345;
+28.2.2013;234576;2001239;300986;
+31.3.2013;20432;3002561;253612;</pre></td><td><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="283"><tr><td><img src="mesicni_vypis.jpg" width="283"></td></tr></table></div></td></tr></tbody></table></div></div></div></div></body></html>
