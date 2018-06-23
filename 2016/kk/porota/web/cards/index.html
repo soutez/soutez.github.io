@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>Karty - vzorové řešení</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <a class="card hidden">
+            <span class="norm"></span>
+            <span class="rev"></span>
+            <span class="big"></span>
+        </a>
+
+        <div class="center">
+            <input type="number" id="numcards" value="10" min="1">
+            <input type="submit" value="zamíchat">
+        </div>
+        <div class="cards">
+
+        </div>
+
+        <script src="jquery.js"></script>
+
+        <script>
+            function rand(up) {
+                return Math.floor(Math.random() * up);
+            }
+
+            $(function() {
+                var nc = $("input#numcards");
+                var proto = $(".card").remove().removeClass("hidden");
+                var cont = $('.cards');
+
+                var nums = [ "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" ];
+                var syms = [ "♠", "♣", "♦", "♥" ];
+
+                regen = function() {
+                    cont.empty();
+                    for (var i = 0; i < nc.val(); i++) {
+                        var num = nums[rand(nums.length)];
+                        var sid = rand(syms.length);
+                        var sym = syms[sid];
+                        var color = sid < 2 ? "black" : "red";
+
+                        var card = proto.clone();
+                        card.find('span').text(sym + num);
+                        card.find('span.big').text(sym);
+                        card.addClass(color);
+                        cont.append(card);
+                    }
+
+                    return false;
+                }
+
+                nc.change(regen);
+                $("input[type=submit]").click(regen);
+                regen();
+
+            });
+        </script>
+    </body>
+</html>

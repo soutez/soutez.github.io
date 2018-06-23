@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <div class="tabs">
+        <ul>
+            <li><a href="#" class="active">Plocha 1</a></li>
+            <li><a href="#">Plocha 2</a></li>
+            <li><a href="#">Plocha 3</a></li>
+            <li><a href="#" class="add">+</a></li>
+        </ul>
+        <div class="windows"></div>
+    </div>
+    <div class="window prototype">
+        <div class="bar">
+            <div class="button close">&times;</div>
+            <div class="button max">&square;</div>
+            <span class="title">Window 1</span>
+        </div>
+        <div class="content">
+            <p>
+                <strong>Program provedl neplatnou operaci a bude ukončen.</strong>
+            </p>
+
+            <p>Pokud jste na něčem pracovali, informace mohly být ztraceny.</p>
+            <p><strong>Ohlaste tento problém společnosti.</strong></p>
+            <p>Byla vytvořena zpráva o chybách, kterou nám můžete zaslat a&nbsp;pomoci tak při zdokonalení aplikace. Tato sestava bude zpracována jako důvěrná a&nbsp;anonymní.</p>
+            <div class="right">
+                <a class="button" href="mailto:soutez@programovani.cz">Odeslat zprávu o chybách</a>
+                <a class="button close">Neodesílat</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+        var wincount = 1;
+        var zindex = 1;
+        var container = $('.tabs .windows');
+
+        var prototype = $('.prototype').removeClass('prototype').remove();
+        function spawn() {
+            var win = prototype.clone();
+            win.find('.bar span.title').text("Okno " + wincount);
+
+            win.css({
+                top: (wincount * 100) % (container.height() - 300),
+                left: (wincount * 100) % (container.width() - 500)
+            });
+            wincount++;
+            container.append(win);
+            $('.window').removeClass('active');
+            win.addClass('active').css('z-index', zindex++);
+            return win;
+        }
+
+        spawn();
+        spawn().addClass('active');
+
+        container.on('mousedown', '.window', function () {
+            $('.window').removeClass('active');
+            $(this).addClass('active').css('z-index', zindex++);
+        }).on('mousedown', '.window .bar span', function (event) {
+            if (event.which != 1) return;
+            var win = $(this).parent().parent();
+            win.addClass('dragging');
+            var offX = event.screenX - parseInt(win.css('left'));
+            var offY = event.screenY - parseInt(win.css('top'));
+
+            $(document).on('mousemove.drag', function (event) {
+                var top = event.screenY - offY;
+                var left = event.screenX - offX;
+
+                //top = Math.min(Math.max(top, 0), container.height() - win.height() - 62);
+                //left = Math.min(Math.max(left, 0), container.width() - win.width());
+                win.css({ top: top, left: left });
+            }).on('mouseup', function () {
+                $(document).off('mousemove.drag');
+                win.removeClass('dragging');
+            });
+        }).on('click', '.window .close', function () {
+            $(this).closest('.window').remove();
+            spawn();
+            spawn();
+        }).on('click', '.window .max', function () {
+            $(this).closest('.window').toggleClass('maximized');
+            return false;
+        }).on('dblclick', function (event) {
+            var win = spawn();
+            win.css({ top: event.clientY - 70, left: event.clientX - 250 });
+        });
+
+        $('.tabs ul').on('click', 'a', function () {
+            if ($(this).hasClass('add')) {
+                var newTab = $('<li><a href="#">Plocha ' + $(this).closest('ul').find('li').size() + '</a></li>');
+                $(this).parent().before(newTab);
+                return false;
+            }
+            var cur = $(this).closest('ul').find('a.active');
+            cur.removeClass('active');
+            cur.data('content', container.html());
+            var cont = $(this).data('content');
+            container.html(cont ? cont : "");
+            $(this).addClass('active');
+            return false;
+        });
+
+    </script>
+</body>
+</html>

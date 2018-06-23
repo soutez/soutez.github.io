@@ -1,0 +1,848 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Hodnocení soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Hodnocení</span> soutěžních
+            	  úloh
+         </h1>
+         
+         <h2 id="d11e18" class="category">Kategorie programování žáci a mládež</h2>
+         
+         <h2 id="d11e21" class="date">14. až 16. dubna&nbsp; 2016</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 30.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2015/2016</p>
+         
+      </header>
+      <div class="toc"><a href="#d11e33">Zobrazení rezistorů</a><br><a href="#d11e265">Drahé slovo</a><br><a href="#d11e467">Hrátky s&nbsp;čísly</a><br><a href="#d11e621">Rozpoznávání číslic</a><br></div>
+      
+      
+      
+      
+      
+      
+      
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="d11e33">Zobrazení rezistorů</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">1</span></p>
+         
+         
+         <p>Prokop dostal k&nbsp;Vánocům arduino se spoustou součástek a návodů na zapojení.
+            Ihned se chtěl pustit do práce, ale všiml si, že zatímco v&nbsp;návodech jsou
+            hodnoty rezistorů  uváděny číselně. On má jen jakési válečky
+            s&nbsp;barevnými proužky. Neváhal a na wikipedii si nalezl pravidla pro barevné
+            značení a rozhodl, že si na to napíše program. Pomůžete mu?
+         </p>
+         
+         
+         <p> Vaším úkolem je napsat program, který ze zadané číselné hodnoty rezistoru,
+            která může obsahovat i&nbsp;jednotku k – kilo nebo M – mega (např. 7k1 = 7100),
+            nakreslí rezistor s&nbsp;jeho barevným značením (viz obrázek) – odchylku ignorujte.
+         </p>
+         
+         
+         <p align="center">
+            <img src="baravne_znaceni_rezistoru.gif">
+            <br>Zdroj: http://www.amapro.cz
+         </p>
+         
+         
+         <p>
+            Zadávání hodnot rezistorů se řídí těmito pravidly:
+            
+         </p>
+         <ul>
+            
+            <li>hodnoty rezistorů jsou dány tímto výčtem možností:<br>
+               d  dn dn0 dK dKn dnK dn0K dM dMn dnM dn0M,<br></li>
+            
+         </ul>
+         
+         <p>kde</p>
+         
+         <ul>
+            
+            <li>d  jsou číslice 1 - 9</li>
+            
+            <li>n  jsou číslice 0 - 9</li> 
+            
+            <li>K&nbsp;je oddělovač tisíců od jednotek ohmů</li>
+            
+            <li>M  je oddělovač miliónů od tisíců ohmů</li>
+            
+         </ul>
+         
+         
+         <p>Například:</p>
+         
+         <p>pro 6 =&gt; 6 ohmů (d=6)<br>
+            pro 68  =&gt; 68 ohmů (d=6, n=8)<br>
+            pro 680  =&gt; 680 ohmů (d=6, n=8)<br>
+            pro 6K  =&gt; 6 kiloohmů (d=6)<br>
+            pro 6K8  =&gt; 6,8 kiloohmů (d=6, n=8)<br>
+            ...
+         </p>
+         
+         
+         <p>Rozšiřte program tak, aby uměl vykreslit seriové či paralelní zapojení podle 
+            zadaného výrazu včetně barevného zobrazení.
+         </p>
+         
+         
+         <p>Pravidla zadání:</p>
+         
+         <ol>
+            
+            <li>Sériové zapojení  dvou rezistorů R1 a R2 je vyjádřeno pomocí plus "+" :  R1 + R2.</li>
+            
+            <li>Paralelní zapojení  dvou rezistorů R1 a R2 je vyjádřeno pomocí lomítka "/" :  R1 /
+               R2.
+            </li>
+            
+            <li>U&nbsp;paralelního zapojení jsou max. dva rezistory a v&nbsp;každé větvi po jednom rezistoru.</li>
+            
+         </ol>
+         
+         
+         <p>Příklady:</p>
+         
+         
+         <ol>
+            
+            <li>seriové zapojení: 7K1+120<br>     
+               <img src="seriove.gif"> 
+            </li>
+            
+            <li>paralelní zapojení: 120/1K2<br>   
+               <img src="paralel.gif"></li>
+            
+            <li>kombinované zapojení: 7K1 + 120 / 1K2<br>  
+               <img src="kombin.gif"> 
+            </li>   
+            
+         </ol>
+         
+         
+         <section>
+            
+            <h3>Hodnocení</h3>
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  	 
+                  <!-- Strukturu této části je potřeba dodržet, automaticky se z ní generují hodnotící tabulky v Excelu -->
+                  
+                  <tr>
+                     
+                     <td>0,5</td>
+                     
+                     <td>Program lze spustit</td>
+                     
+                  </tr>
+                  
+                  
+                  <tr>
+                     
+                     <td>0,5</td>
+                     
+                     <td>Program zobrazí schématickou značku rezistoru<br><img src="o1.gif">           
+                     </td>
+                     
+                  </tr>
+                  
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Program správně zobrazí barevné značení číselných hodnot (první dva barevné pruhy
+                        - nezávisle na násobiteli)<br><img src="o2.gif">           
+                     </td>
+                     
+                  </tr>
+                  
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Program správně zobrazí barevné značení násobitele (třetí barevný pruh)<br><img src="o3.gif">           
+                     </td>
+                     
+                  </tr>
+                  
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Program správně zobrazí jednoduché seriové zapojení (viz.Příklad 1)</td>
+                     
+                  </tr>
+                  
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Program správně zobrazí jednoduché paralélní zapojení (viz.Příklad 2)</td>
+                     
+                  </tr>
+                  
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Program správně zobrazí jednoduché kombinované zapojení (viz.Příklad 3)</td>
+                     
+                  </tr>
+                  
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Program optimalizuje složitější kombinované značení tak, aby všechny rezistory byly
+                        zobrazené -např. zmenší velikost rezistorů, popř. zobrazí v&nbsp;další vodorovné řadě.
+                     </td>
+                     
+                  </tr>
+                  
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Dokumentace</td>
+                     
+                  </tr>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="d11e265">Drahé slovo</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">1</span></p>
+         
+         
+         <p>Strýček Skrblík si chce naplánovat výdaje za tisk. Pomůže mu, pokud zjistí, které
+            slovo z&nbsp;textu obsahuje nejvíce různých znaků.
+         </p>
+         
+         
+         <p>Napište program, který v&nbsp;zadaném textu nalezne slovo, které obsahuje nejvíce různých
+            znaků a ukáže ho.
+            Je možné, že takových slov je v&nbsp;textu více a nejsou stejná.
+            V&nbsp;takovém případě zobrazte všechna taková slova v&nbsp;pořadí, v&nbsp;jakém jsou ve vstupním
+            souboru.
+         </p>
+         
+         
+         <p>Vstup pro programy bez grafiky (konzole) je textový soubor, jehož jméno je zadáno
+            jako první parametr při spuštění.
+            Na obrazovce (stdout) zobrazte nalezené slovo. Pokud je takových slov více, zobrazte
+            každé takové slovo na samostatném řádku.<br>
+            Vstup pro programy s&nbsp;grafickým rozhraním (GUI) je textový soubor, jehož 
+            jméno uživatel zvolí výběrem ze seznamu zvoleného adresáře.
+            Nalezené slovo nebo slova se zobrazí samostatně v&nbsp;textovém okně. Pokud je takových
+            slov více, zobrazte každé takové slovo na samostatném řádku.<br>
+            Pokud váš program umožňuje obě varianty vstupu, je třeba to zveřejnit v&nbsp;dokumentaci
+            i&nbsp;v&nbsp;grafickém rozhraní (GUI). Výstup bude stejného typu, jako je aktuální vstup.
+         </p>
+         
+         
+         <p>V&nbsp;obou případech zobrazte postup prohledávání (animaci).</p>
+         
+         
+         <p>Slova jsou tvořena znaky s&nbsp;kódy 33 až 255. Znaky s&nbsp;kódy 1 až 32 slova oddělují. Kódování
+            souborů je windows-1250, každý bajt je právě jeden znak.<br>
+            Velikost písmen, háčky a čárky se rozlišují.<br>
+            Například následující znaky jsou různé: E É Ě e é ě<br>
+            Interpunkce je součástí slova.
+            Například na následujícím řádku je jen jedno slovo, které má 12 různých znaků.<br>
+            Slovo;slovodva"slovoIII/slovo4
+         </p>
+         
+         
+         <p>V&nbsp;adresáři s&nbsp;testovacími daty naleznete tři soubory:</p>
+         
+         
+         <table>
+            
+            <tbody>
+               <tr>
+                  <th>název souboru</th>
+                  <th>počet různých znaků</th>
+                  <th>počet nejdelších slov</th>
+                  <th>hledané/á slovo/a</th>
+                  <th>poznámka</th>
+               </tr>
+               
+               <tr>
+                  <td>Slovo1.txt</td>
+                  <td>11</td>
+                  <td>1</td>
+                  <td>Předsednictvo</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td>Slovo2.txt</td>
+                  <td>14</td>
+                  <td>1</td>
+                  <td>prostřednictvím</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td>Slovo3.txt</td>
+                  <td>8</td>
+                  <td>4</td>
+                  <td>zvláštní<br>"Listina")<br>soudcům,<br>Republice
+                  </td>
+                  <td>Soubor má 4 různá slova s&nbsp;nejvyšším počtem znaků. Každé slovo je na samostatném řádku.</td>
+               </tr>
+               
+            </tbody>
+         </table>
+         
+         
+         <section>
+            
+            <h3>Hodnocení</h3>
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  	 
+                  <!-- Strukturu této části je potřeba dodržet, automaticky se z ní generují hodnotící tabulky v Excelu -->
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Program lze spustit a lze vybrat soubor (krátký text)</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Program správně vyhodnotí porota1.txt 1 hledané slovo:<br>přezkoumávání
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Program správně vyhodnotí porota2.txt 1 hledané slovo:<br>přezkoumávání
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>3</td>
+                     
+                     <td>Program správně vyhodnotí porota3.txt 5 hledaných slov:<br>bezprostředně<br>bezpečnostních<br>přezkoumávání<br>shromáždění,<br>demokratických
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Program zobrazuje animaci vyhledávání</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Program umožňuje obě metody vstupu a je to uvedeno v&nbsp;dokumentaci i&nbsp;GUI</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Dokumentace</td>
+                     
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="d11e467">Hrátky s&nbsp;čísly</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">1</span></p>
+         
+         
+         <p>K&nbsp;maximálně 8místnému přirozenému číslu <var>X</var> nalezněte nejmenší číslo <var>Y</var>,
+            které je větší než číslo <var>X</var> a je současně součinem právě tří různých
+            prvočísel.
+         </p>
+         
+         
+         <p>
+            Například pro číslo 30 to je číslo  42 (= 2×3×7).
+         </p>
+         
+         
+         <p>V&nbsp;adresáři <code><a href="hratky-s-cisly/">hratky-s-cisly</a></code> máte k&nbsp;dispozici tabulku potřebných prvočísel. Hledání
+            jedné  trojice prvočísel nesmí překročit dobu deseti sekund.
+         </p>
+         
+         
+         <section>
+            
+            <h3>Hodnocení</h3>
+            
+            <p>Body se přidělí pouze pokud program výsledek oznámí do deseti sekund.</p>
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  	 
+                  <!-- Strukturu této části je potřeba dodržet, automaticky se z ní generují hodnotící tabulky v Excelu -->
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>99999999 100000006  =           2 *         491 *      101833</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>42142       42143  =         17  *           37 *              67</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>83788396    83788397  =          7 *           11 *    1088161</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>99938130    99938131  =      379 *         457 *             577</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>99938127    99938131  =      379 *         457 *             577</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>99938126    99938127  =           3 *        233 *      142973</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>99938124    99938127  =           3 *        233 *      142973</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>99938123    99938127  =           3 *        233 *      142973</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>99938121    99938127  =           3 *        233 *      142973</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>dokumentace, komentáře, přehlednost, výstižné názvy proměnných,funkčnost: třetí prvočíslo
+                        se nehledá hrubou silou, ale přibližně určí například jako X/(a*b) a v&nbsp;několika krocích
+                        dohledá - 0.5 bodu
+                     </td>
+                     
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="d11e621">Rozpoznávání číslic</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">3</span></p>
+         
+         
+         <p>Zisky strýčka Skrblíka stouply do takových výšek, že Skrblík ani
+            nestačí sčítat a zapisovat vydělané peníze do svého notesu. Pomozte
+            mu vytvořením programu, který bude rozpoznávat ručně psané číslice,
+            takže se zisky budou sčítat automaticky.
+         </p>
+         
+         
+         <p>Vaším cílem je poznat, jaká číslice 0 až 9 je na daném obrázku
+            ve stupni šedi. Velikost obrázku je vždy 28×28.
+         </p>
+         
+         
+         <p>Abyste měli z&nbsp;čeho vycházet, pro každou číslici dostanete 100
+            ukázkových psaní této číslice.
+         </p>
+         
+         
+         <h3>Vstup</h3>
+         
+         
+         <p>Na vstupu dostanete dva soubory, <code>vzory.bmp</code>
+            a <code>cislice.bmp</code>. Soubor <code>cislice.bmp</code> obsahuje obrázek
+            ve stupních šedi o&nbsp;velikosti 28×28, který obsahuje jednu neznámou
+            ručně psanou číslici 0 až 9. Soubor <code>vzory.bmp</code> je také ve
+            stupních šedi a obsahuje 100 variant každé ručně psané číslice 0 až
+            9, a&nbsp;to následujícím způsobem: v&nbsp;souboru je nejprve vedle sebe uloženo
+            100 variant číslice 0, pod nimi 100 variant číslice 1, a&nbsp;tak dále, až
+            na spodku obrázku je uloženo 100 variant číslice 9. Velikost obrázku
+            <code>vzory.bmp</code> je tedy 2800×280.
+         </p>
+         
+         
+         <h3>Výstup</h3>
+         
+         
+         <p>Na výstup vypište, jaká ručně psaná číslice 0 až 9 se nachází na vstupním
+            obrázku <code>cislice.bmp</code></p>
+         
+         
+         <h3>Formát BMP</h3>
+         
+         
+         <p>Pokud nemáte k&nbsp;dispozici knihovnu načítající obrázky ve formátu BMP,
+            můžete se spolehnout na to, že obrázky BMP v&nbsp;této úloze jsou vždy uloženy
+            následovně. Prvních 1146 bajtů je hlavička a po ní následují jednotlivé
+            pixely obrázku, každý pixel je reprezentován jako jeden bajt, přičemž
+            hodnota 0 reprezentuje zcela černou a hodnota 255 zcela bílou. Pixely jsou
+            uloženy po řádcích od <em>spodního</em> k&nbsp;<em>hornímu</em>, takže první
+            pixel za hlavičkou je levý spodní bod obrázku a poslední pixel v&nbsp;souboru je
+            pravý horní bod obrázku.
+         </p>
+         
+         
+         <h3>Příklad</h3>
+         
+         
+         <p>Pro následující vstup:</p>
+         
+         
+         <table style="width:100%">
+            
+            <thead>
+               
+               <tr>
+                  <th style="width:88%"><code>vzory.bmp</code></th>
+                  <th style="width:12%"><code>cislice.bmp</code></th>
+               </tr>
+               
+            </thead>
+            
+            <tbody>
+               
+               <tr>
+                  <td style="width:88%"><img src="vzory.bmp" style="width:100%"></td>
+                  <td style="width:12%"><img src="ukazka3.bmp" style="width:100%"></td>
+               </tr>
+               
+            </tbody>
+            
+            <tbody>
+               <tr>
+                  
+               </tr>
+            </tbody>
+         </table>
+         
+         
+         <p>by měl váš program vypsat <code>3</code>.
+         </p>
+         
+         
+         <section>
+            
+            <h3>Hodnocení</h3>
+            
+            
+            <p>Program soutěžících se vyhodnotí na desíti vstupních souborech
+               <code>cislice0.bmp</code> až <code>cislice9.bmp</code>, za každý dostane
+               soutěžící 0 bodů nebo 0.9 bodu.
+            </p>
+            
+            
+            <p>Při vyhodnocování souboru <code>cisliceN.bmp</code> zkopírujeme tento
+               soubor do adresáře s&nbsp;programem soutěžícího a přejmenujeme ho na
+               <code>cislice.bmp</code>. Do tohoto adresáře také zkopírujeme soubor
+               <code>vzory.bmp</code> a program soutěžícího spustíme (pokud to program
+               vyžaduje, vybereme soubory <code>vzory.bmp</code>
+               a <code>cislice.bmp</code>). Program musí skončit do deseti vteřin.
+               Pokud program v&nbsp;limitu vypsal, že neznámá číslice je <code>N</code>,
+               dostane 0.9 bodu, jinak dostane 0 bodů.
+            </p>
+            
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  
+                  <tr>
+                     
+                     <td>0.9</td>
+                     
+                     <td>Program vrátí hodnotu 0 pro soubor <code>cislice0.bmp</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.9</td>
+                     
+                     <td>Program vrátí hodnotu 1 pro soubor <code>cislice1.bmp</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.9</td>
+                     
+                     <td>Program vrátí hodnotu 2 pro soubor <code>cislice2.bmp</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.9</td>
+                     
+                     <td>Program vrátí hodnotu 3 pro soubor <code>cislice3.bmp</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.9</td>
+                     
+                     <td>Program vrátí hodnotu 4 pro soubor <code>cislice4.bmp</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.9</td>
+                     
+                     <td>Program vrátí hodnotu 5 pro soubor <code>cislice5.bmp</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.9</td>
+                     
+                     <td>Program vrátí hodnotu 6 pro soubor <code>cislice6.bmp</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.9</td>
+                     
+                     <td>Program vrátí hodnotu 7 pro soubor <code>cislice7.bmp</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.9</td>
+                     
+                     <td>Program vrátí hodnotu 8 pro soubor <code>cislice8.bmp</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.9</td>
+                     
+                     <td>Program vrátí hodnotu 9 pro soubor <code>cislice9.bmp</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>dokumentace, komentáře, přehlednost, výstižné názvy proměnných, …</td>
+                     
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      
+      
+      
+   </body>
+</html>

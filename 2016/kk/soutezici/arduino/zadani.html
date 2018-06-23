@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Zadání soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Zadání</span> soutěžních
+            	  úloh
+         </h1>
+         
+         <h2 id="d8e18" class="category">Kategorie programování mikrořadičů</h2>
+         
+         <h2 id="d8e21" class="date">14. až 16. dubna&nbsp; 2016</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 30.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2015/2016</p>
+         
+      </header>
+      <div class="toc"><a href="#d8e70">Hlídání ledničky</a><br></div>
+      
+      
+      <ul>
+         
+         <li>Na řešení úlohy máte 60 minut čistého času.</li>
+         
+         <li>Můžete použít libovolný mikrořadič.</li>
+         
+         <li>Musíte použít fotorezistor a LED, kterou dostanete společně se zadáním.
+            Jiné senzory nebo výstupy nesmíte použít.
+         </li>
+         
+         <li>Pokud budete potřebovat další hardware, např. programátor, tak musíte použít vlastní.</li>
+         
+         <li>Hodnotí se výsledná funkčnost zařízení.</li>
+         
+         <li>Výsledné zařízení musí fungovat samostatně bez připojení k&nbsp;počítači.</li>
+         
+      </ul>
+      
+      
+      <h3>Než výsledek odevzdáte</h3>
+      
+      
+      <p>Než výsledek odevzdáte, tak připravte pro hodnotícího návod, jak
+         uvést vaše zařízení do provozu a podle jaké úlohy jste zařízení
+         vytvářeli. Hodnotí se vždy jen poslední, nejsložitější,
+         úloha. Hodnotící nebude do zařízení nic nahrávat. Jen ho zapne a
+         vyhodnotí podle úlohy, na které jste pracovali a kterou jste uvedli
+         v&nbsp;návodu, jak zařízení zapojit.
+      </p>
+      
+      
+      <p><b>Příklad návodu pro hodnotící:</b><br>
+         <i>Zařízení uvedete do provozu tak, že USB kabel připojíte k&nbsp;počítači nebo nabíječce.
+            Po zapnutí se spustí aplikace podle úlohy č. 2.</i></p>
+      
+      
+      <section class="">
+         
+         
+         <hr>
+         <h2 id="d8e70">Hlídání ledničky</h2>
+         
+         
+         
+         
+         <p>Jak všichni víte, když necháte otevřenou lednici, tak se obsah
+            dřív nebo později zkazí. Vaším úkolem bude vytvořit jednoduché
+            zařízení, které bude hlídat, že je lednice otevřena, a&nbsp;pokud
+            bude otevřena déle než 30 sekund, tak spustí poplach.
+         </p>
+         
+         
+         <h3>Senzor</h3>
+         
+         
+         <p>Pro detekci otevření lednice máte k&nbsp;dispozici fotorezistor (v&nbsp;zavřené lednici je tma).
+            Fotorezistor mění v&nbsp;závislosti na intenzitě osvětlení svůj vnitřní
+            odpor.
+         </p>
+         
+         
+         <p align="center"><img src="senzor.png" alt="Senzor" width="30%"></p>
+         
+         
+         <h3>Poplach</h3>
+         
+         
+         <p>K&nbsp;simulaci poplachu použijeme LED.</p>
+         
+         
+         <p align="center"><img src="dioda.png" alt="Dioda" width="30%"></p>
+         
+         
+         <p>Následující úlohy jsou kroky, kterými dojdete k&nbsp;nejvíce bodovanému řešení. Hodnotí
+            se celkový výsledek, ne dílčí úlohy. Můžete tedy začít s&nbsp;nejtěžší úlohou, pokud si
+            troufáte. Vaše zařízení musí fungovat automaticky při připojení napájení bez připojeného
+            počítače. Představte si, že zařízení musí jít rovnou umístit do lednice. Hodnotí se
+            funkčnost zařízení ne programový kód. 
+         </p>
+         
+         
+         <section class="include" style="page-break-before: auto;">
+            
+            <h3>Úloha č. 1</h3>
+            
+            
+            <ol>
+               
+               <li>Zapojte LED.</li>
+               
+               <li>Rozblikejte LED s&nbsp;frekvencí 2 Hz.</li>
+               
+            </ol>
+            
+            
+            
+         </section>
+         
+         
+         <section class="include" style="page-break-before: auto;">
+            
+            <h3>Úloha č. 2</h3>
+            
+            
+            <ol>
+               
+               <li>Zapojte fotorezistor s&nbsp;připojeným rezistorem tak, abyste mohli měřit napětí na fotorezistoru.</li>
+               
+               <li>Zakryjte fotorezistor („tma“) a zjistěte hodnotu naměřenou na fotorezistoru.</li>
+               
+               <li>Pokud je „tma“, rozsviťte LED, pokud je „světlo“ zhasněte LED.</li>
+               
+            </ol>
+            
+            
+            
+         </section>
+         
+         
+         <section class="include" style="page-break-before: auto;">
+            
+            <h3>Úloha č. 3</h3>
+            
+            
+            <ol>
+               
+               <li>Pokud detekujete „světlo“ počkejte 30 vteřin a pak rozsviťte LED, jako poplach.</li>
+               
+               <li>Pokud dojde k&nbsp;zavření lednice (tma), vypněte ihned poplach, tedy zhasněte LED.</li>
+               
+            </ol>
+            
+            
+            
+         </section>
+         
+         
+         <section class="include" style="page-break-before: auto;">
+            
+            <h3>Úloha č. 4</h3>
+            
+            
+            <ol>
+               
+               <li>Místo rozsvícení LED (úloha č. 3) LED rozblikejte s&nbsp;frekvencí 4 Hz.</li>
+               
+            </ol>
+            
+            
+            
+         </section>
+         
+         
+         
+         
+      </section>
+      
+      
+      
+      
+   </body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Zadání soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Zadání</span> soutěžních
+            	  úloh
+         </h1>
+         
+         <h2 id="d9e18" class="category">Kategorie tvorba webu</h2>
+         
+         <h2 id="d9e21" class="date">14. až 16. dubna&nbsp; 2016</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 30.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2015/2016</p>
+         
+      </header>
+      <div class="toc"><a href="#d9e55">Karty</a><br><a href="#d9e122">Okna</a><br></div>
+      
+      
+      <p>Úlohy můžete řešit v&nbsp;libovolném
+         pořadí a samozřejmě je nemusíte vyřešit všechny. Počet bodů za každou úlohu
+         je uveden přímo v&nbsp;jejím zadání. Hodnotí se shoda se zadáním,
+         funkčnost, dodržování webových standardů a přehlednost zdrojového
+         kódu.
+      </p>
+      
+      
+      <p>Na řešení úloh máte 4 hodiny čistého
+         času.
+      </p>
+      
+      
+      <p>Před zahájením soutěže vám pořadatel
+         oznámí, kde najdete testovací soubory a kam máte ukládat řešení
+         úloh. Kompletní řešení každé úlohy (soubory HTML, CSS, obrázky,
+         případně Javascript) uložte do samostatného podadresáře nazvaného
+         jménem úlohy (např.
+         
+         <filename>karty</filename>). Stránku s&nbsp;řešením vždy pojmenujte 
+         <filename>index.html</filename> a
+         uložte v&nbsp;kódování UTF-8.
+      </p>
+      
+      
+      <p>Při zápisu HTML a CSS kódu dodržujte
+         webové standardy. Součást hodnocení vašich řešení je i&nbsp;kontrola
+         zdrojových kódů pomocí validátorů. Doporučujeme používat HTML5,
+         ale můžete použít i&nbsp;starší verze – HTML4 nebo XHTML1.
+      </p>
+      
+      
+      <p>Při řešení je povoleno používat
+         knihovnu jQuery bez pluginů. Další obdobné frameworky pouze po
+         schválení porotou.
+      </p>
+      
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="d9e55">Karty</h2>
+         
+         <p class="koeficient">max. 10 bodů</p>
+         
+         
+         <p>Vytvořte stránku, na které se zobrazí karty podobně jako na obrázku:</p>
+         
+         <img src="cards.png" alt="">
+         
+         
+         <p>Každá karta je 320 px vysoká a 200 px široká. Mezi kartami jsou viditelné&nbsp;rozestupy,
+            stejně tak od okrajů stránky. Velikost písma přibližně odpovídá obrázku.
+         </p>
+         
+         
+         <p>Symboly na kartách jsou unicodové znaky:</p>
+         
+         
+         <table>
+            
+            <tbody>
+               <tr>
+                  
+                  <td>♠: U+2660</td>
+                  
+                  <td>♣: U+2663</td>
+                  
+                  <td>♥: U+2665</td>
+                  
+                  <td>♦: U+2666</td>
+                  
+               </tr>
+               
+            </tbody>
+         </table>
+         
+         
+         <p>Pro připomenutí, karty mohou nabývat hodnot A, 2, 3, 4, 5, 6, 7, 8, 9,
+            10, J, Q nebo K.
+         </p>
+         
+         
+         <p>Karty jsou dvouhlavé, tedy text vespod je vzhůru nohama. Srdce a káry
+            jsou červené, piky a kříže černé. Nemusíte zachovat hodnoty jako na
+            obrázku, ale musíte použít všechny čtyři symboly.
+         </p>
+         
+         
+         <p>Celkem bude zobrazeno deset karet. Karty mají pevnou velikost, a&nbsp;na
+            šířku je jich maximum kolik se vejde do okna prohlížeče. Při změně
+            velikosti okna by se měly přeskládat.
+         </p>
+         
+         
+         <p>Pokud na kartu najedete myší, zvětší se přibližně&nbsp;o&nbsp;půlku, tedy na 300
+            px šířky. Všechny elementy na kartě se proporčně&nbsp;zvětší a zůstanou na
+            správných místech vzhledem ke zvětšené kartě. Jakmile myší kartu opustíte,
+            vrátí se do původní velikosti.
+         </p>
+         
+         <img src="hover.png" alt="" class="float-right">
+         
+         
+         <p>Zvětšená karta musí překrývat okolní karty a žádné jiné karty se nesmějí
+            pohnout.
+         </p>
+         
+         
+         <p>Bonusové body dostanete, pokud bude zvětšování plynulé (animované),
+            u&nbsp;každé karty nezávislé na ostatních.
+         </p>
+         
+         
+         <p>Na stránku viditelně umístěte tlačítko s&nbsp;textem "zamíchat". Po jeho
+            stisknutí zobrazené karty zmizí, a&nbsp;místo nich se najednou objeví deset
+            jiných, jejichž hodnoty a symboly budou zvolené náhodně. Karty se mohou
+            opakovat.
+         </p>
+         
+         
+         <p>Vedle tlačítka umístěte textové políčko s&nbsp;počátečním textem "10". Při
+            kliknutí na tlačítko zamíchat se objeví tolik karet, kolik je napsáno
+            v&nbsp;tomto políčku. Pokud není zadáno číslo větší než nula, neobjeví se žádné
+            karty.
+         </p>
+         
+         
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="d9e122">Okna</h2>
+         
+         <p class="koeficient">max. 30 bodů</p>
+         
+         <p>
+            Dnešní prohlížeče mají schopnosti, o&nbsp;kterých se mohlo
+            programátorům před lety jen zdát. Nevěříte?
+         </p>
+         
+         <p>
+            Zkusíte si v&nbsp;prohlížeči vytvořit Windows 98. <b>V&nbsp;celé úloze
+               nesmíte používat obrázky,</b> v&nbsp;opačném případě nedostanete žádné body.
+         </p>
+         
+         <h3>Základní okna</h3>
+         
+         <p>
+            Stránka bude mít modré pozadí. Na ní budou zobrazena dvě okna s&nbsp;obsahem jako na obrázku:
+         </p>
+         <img src="okna_1.png" width="665" height="191">
+         
+         <p>
+            Dbejte na to, aby se okna takto zobrazila v&nbsp;každém prohlížeči na každém
+            operačním systému – nespoléhejte na to, že systémová tlačítka mají právě tento
+            vzhled. 3D efektu tlačítek a oken docílíte tak, že na levém a horním okraji
+            bude barva světlejší, zatímco na pravém a dolním bude tmavší. Všechna tlačítka
+            lze viditelně stisknout a chovají se podobně jako systémová tlačítka.
+         </p>
+         
+         <p>
+            Aktivní okno se od neaktivního odliší pomocí horního pruhu. Aktivní okno má
+            pruh s&nbsp;přechodem od tmavé ke světlé modré. Kliknutím kamkoli do okna
+            lze okna přepnout.
+         </p>
+         
+         <p>
+            Tlačítkem „Odeslat zprávu o&nbsp;chybách“ se vyvolá lokální
+            e-mailový klient, s&nbsp;adresou příjemce <tt>&lt;soutez@example.com&gt;</tt>.
+         </p>
+         
+         <p>
+            Kliknutím na tlačítko se čtverečkem se okno maximalizuje. Takové
+            okno zabírá celou plochu. Opětovným kliknutím na tlačítko se
+            čtverečkem se okno vrátí do původního tvaru.
+         </p>
+         
+         <h3>Plochy</h3>
+         
+         <p>
+            Lidem, co na počítači pracují, nemůže jedna plocha stačit.
+            Proto přidejte záložky:
+         </p>
+         <img src="okna_3.png" width="665" height="92">
+         
+         <p>
+            Dnes
+            už je důležité, aby byl operační systém krásný. Záložky by
+            měly mít všechny hrany zaoblené jako na obrázku. Pamatujte, že nesmíte používat obrázky.
+         </p>
+         
+         <h3>Oživení</h3>
+         
+         <p>
+            Kliknutím na křížek nebo tlačítko „neodesílat“ se okno
+            zavře. Abyste lépe poznali atmosféru dob minulých, při zavření
+            libovolného okna se dvě nová otevřou.
+         </p>
+         
+         <p>
+            Když se otevře nové okno, objeví se na nějakém místě na
+            obrazovce tak, aby v&nbsp;případě, že se jich objeví více najednou, se
+            vzájemně nepřekrývala. Můžete se inspirovat svým operačním
+            systémem. Nová okna udržují číslování (Okno 1, Okno 2, Okno
+            3, …)
+         </p>
+         
+         <p>
+            Okno s&nbsp;chybovou hláškou se také otevře, pokud nešťastně dvojkliknete na
+            plochu. V&nbsp;takovém případě se otevře na místě, kde jste dvojklikli.
+         </p>
+         
+         <p>
+            Za horní pruh jde okno chytit a přesouvat. Pokud se dvě nebo více
+            oken překrývá, nahoře je to, které jste používali nejpozději.
+         </p>
+         <img src="okna_2.png" width="373" height="224">
+         
+         <p>
+            Okno
+            lze částečně vysunout z&nbsp;obrazovky. Monitor ale nezvětšíte,
+            proto by se nemělo nic stát ani s&nbsp;prohlížečem. Plocha by také
+            neměla mít posuvníky.
+         </p>
+         
+         <p>
+            Aktivní může být jen jedna plocha, jejíž záložka je vizuálně
+            odlišená. Vhodný způsob vizuálního odlišení sami zvolte (ukázkový
+            obrázek jej neobsahuje). Klikáním na záložky se přepínají plochy –
+            každé okno je právě na jedné.
+         </p>
+         
+         <p>
+            Kliknutím na záložku „+“ se přidá další plocha.
+         </p>
+         
+         
+         
+         
+      </section>
+      
+      
+      
+      
+   </body>
+</html>

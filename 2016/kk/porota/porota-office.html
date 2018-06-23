@@ -1,0 +1,2182 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Hodnocení soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+      </style><link rel="stylesheet" href="katex/katex.min.css"><script src="katex/katex.min.js"></script><script>
+          var renderMath = function()
+          {
+            var els = document.querySelectorAll(".math");
+            var i;
+            for (i = 0; i != els.length; i++)
+            {
+              var eqe = els.item(i);
+              var span = document.createElement('span');
+              katex.render(eqe.textContent, span, { displayMode: (eqe.localName == 'div') });
+              eqe.parentNode.replaceChild(span, eqe);
+            }
+          };
+          
+          window.onload = renderMath; 
+        </script></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Hodnocení</span> soutěžních
+            	  úloh
+         </h1>
+         
+         <h2 id="d10e18" class="category">Kategorie kancelářské aplikace</h2>
+         
+         <h2 id="d10e21" class="date">14. až 16. dubna&nbsp; 2016</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 30.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2015/2016</p>
+         
+      </header>
+      <div class="toc"><a href="#d10e33">Časopis MATFYZIN</a><br><a href="#d10e1121">Výpočet tíhového zrychlení</a><br><a href="#d10e1863">Propagace časopisu</a><br></div>
+      
+      
+      
+      
+      
+      
+      
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="d10e33">Časopis MATFYZIN</h2>
+         
+         <p class="koeficient">max. 55 bodů</p>    
+         
+         
+         <p>Pracujete jako grafik časopisu MATFYZIN. Vaším úkolem je z&nbsp;příspěvků různých autorů
+            vytvořit <b>časopis podle předlohy</b> v&nbsp;souboru <code><a href="časopis_matfyzin.pdf">časopis_matfyzin.pdf</a></code>.
+         </p>
+         
+         
+         <p>Příspěvky jsou uloženy ve složce <code><a href="úkol1_časopis">úkol1_časopis</a></code> a je třeba z&nbsp;nich odebrat hypertextové odkazy a opravit překlepy.
+         </p>
+         
+         
+         <p><strong>Formát časopisu:</strong></p>
+         
+         
+         <ul>
+            
+            <li>velikost strany A4</li>
+            
+            <li>zrcadlové okraje; vnitřní okraj 3 cm, vnější 2 cm</li>
+            
+            <li>základní text: font  Cambria, velikost 12</li>
+            
+            <li>mezera za odstavcem: 12 bodů</li>
+            
+            <li>řádkování jednoduché</li>
+            
+            <li>zarovnání textu do bloku</li>
+            
+            <li>velikost písma nadpisu: 20 bodů</li>
+            
+            <li>je dodrženo pravidlo, že na konci řádku není jednopísmenková předložka</li>
+            
+            <li>na všech listech kromě prvního je v&nbsp;zápatí vloženo číslo stránky (pravý okraj) a text
+               3/2016 MATFYZIN (levý okraj)
+            </li>
+            
+         </ul>
+         
+         
+         <h3>UPŘESNĚNÍ K&nbsp;JEDNOTLIVÝM STRANÁM ČASOPISU</h3>
+         
+         
+         <h4>1. STRANA</h4>
+         
+         <p>Všimněte si znaku vloženého v&nbsp;textu: <img valign="middle" src="text-a-znak.jpg" alt="text-a-znak.jpg" style="max-height: 12pt"></p>
+         
+         
+         <h4>2. STRANA</h4>
+         
+         <p>Věnujte pozornost indexům, řeckému písmenu kapa, konstantě a vzorci. Nejsou ve zdrojovém
+            textu. 
+         </p>
+         
+         
+         <h4>3. STRANA</h4>
+         
+         <p>Vložte poznámky pod čarou ke slovům <strong>LIGO</strong> a <strong>LISA</strong>.<br>
+            Poznámka ke slovu LIGO: Interferometr pro hledání gravitačních vln<br>
+            Poznámka ke slovu LISA: Připravovaný projekt pro detekci gravitačních vln
+         </p>
+         
+         
+         <h4>4. STRANA</h4>
+         
+         <p>Stránka je otočena na šířku</p>
+         
+         
+         <h4>5. STRANA</h4>
+         
+         <p>Ze slova <b>gravitace</b> (první slovo odstavce na stránce) vytvořte hypertextový odkaz na: <code>http://www.csfd.cz/film/275420-gravitace/prehled/</code></p>
+         
+         <p>Věnujte pozornost číslům a vzorci v&nbsp;části <b>Soutěžní úkol</b>.
+         </p>
+         
+         
+         
+         <section pgm-ignore-styling="true">
+            
+            
+            <h3>Hodnocení</h3>
+            
+            
+            <p>Body nejsou přidělovány za řešení úkolu vykopírováním z&nbsp;předlohy. Požadované jevy
+               (rovnice, speciální symboly, tvary, …) by v&nbsp;takovém případě byly vloženy jako obrázky.
+               VĚNUJTE TOMU PROSÍM ZVÝŠENOU POZORNOST.
+            </p>
+            
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p><b>1. strana</b></p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>
+                           Formát textu „časopis pro zájemce…“ 
+                           
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>bílé písmo, modré
+                                 pozadí, zarovnání na střed, (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>horní + dolní ohraničení dvojitou čarou nebo
+                                 silnější čarou, po naskenování je hůře rozpoznatelný styl čáry (1
+                                 bod)
+                              </p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Modrý čtvereček v&nbsp;textu „ročník: 3 …“</p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Wordart „matfyzin“ „gravitace“ barva, velikost,
+                           pozice odpovídá předloze
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Obrázek velikost a pozice odpovídá
+                           předloze
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Generovaný obsah (body
+                           pouze pokud je obsah generovaný)
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>vložení obsahu (1
+                                 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>správné naformátování (font Cambria, velikost
+                                 12) (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">3</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Šipky</p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Vložení šipky (1
+                                 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Napsaný text (1
+                                 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Stín (1 bod)</p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Adresa
+                           redakce
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Umístění vedle
+                                 šipky (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Znak obálka a telefon (1 bod)</p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">
+                           <br clear="none">
+                           
+                        </p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p><b>2. strana</b></p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Nadpisy 
+                           
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Font, velikost
+                                 barva (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Podtržení nadpisu = dolní ohraničení odstavce
+                                 (1 bod),<br clear="none"> vložení tvaru „čára“ (1&nbsp;bod), použití podtržení písma
+                                 (0&nbsp;bodů)
+                              </p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Sloupce (1
+                           bod)
+                        </p>
+                        
+                        <p>Poznámka: Pokud jsou udělané pomocí textových
+                           polí (0 bodů)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Iniciály (celkem
+                           3krát)
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Vložená iniciála
+                                 (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Správní umístěná a velká přes 2 řádky (1
+                                 bod)
+                              </p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Členění textu na odstavce je pomocí nastavení
+                           mezery za odstavcem (1&nbsp;bod) v&nbsp;celém dokumentu
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">6</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Poslední
+                           odstavec
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Je uděláno pomocí
+                                 vlastností odstavce (ne tabulka) (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Ohraničení a výplň
+                                 (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Zápis horních a
+                                 dolních indexů (všech!) (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Řecké písmeno kapa
+                                 (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Vzorec (2 bod)</p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">3</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Isaac
+                           Newton
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Obrázek – správná
+                                 velikost a umístění (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Text v&nbsp;textovém
+                                 poli (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Ohraničení podle předlohy (1 bod)</p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">
+                           <br clear="none">
+                           
+                        </p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p><b>3. strana</b></p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Text v&nbsp;textovém
+                           poli
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Vložení textu
+                                 v&nbsp;text poli, velikost, barva (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Stín textového pole (1 bod)</p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">3</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Tabulka</p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Vložení tabulky
+                                 „víceméně“ odpovídající předloze (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Text historie OTR
+                                 zarovnán svisle (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Ostatní texty zarovnány na střed buňky (1
+                                 bod)
+                              </p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">3</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Obrázek</p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Velikost a pozice
+                                 odpovídá předloze (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Popis obrázku font
+                                 Cambria, velikost 9 (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Ohraničení (1 bod)</p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Poznámky pod čarou (obě!) (1 bod)</p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Jsou odstraněny hypertextové odkazy a opravená
+                           spojená slova z&nbsp;původního textu
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">
+                           <br clear="none">
+                           
+                        </p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p><b>4 strana</b></p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Otočení pouze této jedné strany na šířku (1
+                           bod)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">
+                           <br clear="none">
+                           
+                        </p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p><b>5 strana</b></p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Hypertextový odkaz ze slova gravitace (1
+                           bod)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Obrázek</p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Ořez obrázku (1
+                                 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Stín obrázku (1 bod)</p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">3 
+                           
+                        </p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Soutěžní
+                           úkol
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Zápis rovnice (3 body)</p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Text
+                           kurzívou<b> </b>(1 bod)
+                        </p>
+                        
+                        <p>Není uvedeno v&nbsp;zadání, aby psali kurzívou
+                           → 
+                           pozornost soutěžících při čtení předlohy 
+                           
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">
+                           <br clear="none">
+                           
+                        </p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p><b>Celkový vzhled</b></p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">3</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Zápatí</p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Text zápatí je na
+                                 všech stranách, kromě první (2 bod) 
+                                 
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>(není-li splněno
+                                 předchozí pak:) Text zápatí je aspoň někde anebo všude (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Číslo stránky (1 bod)</p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1 
+                           
+                        </p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Okraje</p>
+                        
+                        <p>-nastaveny zrcadlové okraje (1 bod)</p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Celá práce má stejný font písma a velikost písma
+                           základního textu (vel&nbsp;12), řádkování jednoduché (2 body pokud je vše splněno)
+                           
+                           
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Na konci řádků nejsou jednopísmenkové předložky –
+                           je to řešeno pevnou mezerou (1 bod)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Zarovnání textu do bloku (všude v&nbsp;základním
+                           textu!) (1 bod)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Časopis má přesně 5 stran (text není na víc
+                           stran, není na konci prázdná strana,&nbsp;…) (1&nbsp;bod)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Text je správně formátovaný tj. po zapnutí
+                           netisknutelných znaků není plný „smetí“ tj. enter na prázdném řádku, shift+enter na
+                           konci řádku nebo kdekoliv jinde zbytečně, mezery na konci řádku, …
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+            
+            
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="d10e1121">Výpočet tíhového zrychlení</h2>
+         
+         <p class="koeficient">max. 47 bodů</p>    
+         
+         
+         <p>Honza se rozhodl změřit místní tíhové zrychlení <span class="math">g</span>. Využil k&nbsp;tomu volného pádu.
+            Ze vztahu  <span class="math">s = \frac{1}{2} \cdot g \cdot t^2</span>  si odvodil, jak ho vypočítat. Vyšel mu tento vzorec: <span class="math">g = 2 \cdot \frac{s}{t^2}</span>.
+            V&nbsp;tomto vzorci písmeno <span class="math">s</span> znamená dráhu, kterou urazí těleso a písmeno <span class="math">t</span> čas, tj. dobu pohybu tělesa. 
+            Provedl 60 měření. Kuličku pouštěl z&nbsp;výšky 2 m, 3 m a 4 m. Výsledky měření si zapisoval
+            do sešitu.  Při přepisování do poznámkového bloku v&nbsp;počítači si nedal pozor a měření
+            zapsal neuspořádaně. Každé měření zapsal na samostatný řádek ve tvaru výška mezera
+            čas. 
+            
+         </p>
+         
+         
+         <ol>
+            
+            <li>Importujte data ze souboru <code>data.txt</code> do
+               tabulkového kalkulátoru. Pokud neumíte data importovat, pracujte se souborem
+               <code>mereni.xlsx</code>. (Soubory najdete ve složce <code><a href="úkol2">úkol2/</a></code>.)
+            </li>
+            
+            <li>Vypočítejte tíhové zrychlení <span class="math">g</span> pro každé měření. Vzorec pro výpočet zapište do dalšího sloupce v&nbsp;tabulce. Sloupec
+               nadepište „tíhové zrychlení“<br>
+               <b>pomůcka: <span class="math">t^2 = t*t</span>, použijte závorky</b></li>
+            
+            <li>Vložte nový sloupec, ve kterém budou vypočítané hodnoty tíhového zrychlení <span class="math">g</span> zaokrouhlené na 3 desetinná místa. Použijte k&nbsp;tomu vhodnou funkci (ne pouhé zobrazení
+               čísla).
+            </li>
+            
+            <li>Vypočítejte průměr ze zaokrouhlených hodnot. (Kdo nemá zaokrouhlené, může počítat
+               z&nbsp;vypočítaných hodnot.) Vzorec vložte pod tabulku do příslušného sloupce.
+            </li>
+            
+            <li>Vypočítejte odchylku každého měření. Odchylku zjistíte jako rozdíl mezi průměrnou
+               hodnotou zrychlení a vypočítaným zrychlením <span class="math">g</span> pro každé měření.
+            </li>
+            
+            <li>V&nbsp;našich zeměpisných šířkách je <span class="math">g = 9,81 ms^{-2}</span>. Do dalšího sloupce vložte takový vzorec, který vypíše +, pokud je vypočítaná hodnota
+               větší než 9,81, v&nbsp;ostatních případech vypíše -.
+            </li>
+            
+            <li>Do dalšího sloupce vložte takový vzorec, který vypíše text „přesné měření“, pokud
+               se vypočítaná hodnota nachází v&nbsp;intervalu hodnot 9,8 až 9,9. V&nbsp;ostatních případech
+               zůstane buňka prázdná.
+            </li>
+            
+            <li>Ukotvěte příčku tak, aby při rolování zůstával zobrazen řádek s&nbsp;popiskem výška, čas,
+               atd.
+            </li>
+            
+            <li>Určete pomocí vzorce, jaký největší čas Honza naměřil. Vložte jej pod tabulku do sloupce,
+               ve kterém je čas. 
+            </li>
+            
+            <li>Určete, při kolika pokusech tento největší čas naměřil. Použijte vzorec, nepočítejte
+               „ručně“!   Výsledek vložte také pod tabulku.
+            </li>
+            
+            <li>Pomocí podmíněného formátování (světle modrá barva výplně buňky) zvýrazněte všechna
+               měření s&nbsp;časem <span class="math">t &lt; 0,65 \text{ s}</span>.
+            </li>
+            
+            <li>Zkopírujte na druhý list jen sloupce obsahující výsledky měření, tj. sloupce vyska
+               (m), cas (s).
+            </li>
+            
+            <li>Přejmenujte listy. První list na <b>1. výpočet</b>, druhý list na <b>2. seřazení</b>.
+            </li>
+            
+         </ol>
+         
+         
+         <p><b>Následující úkoly zpracovávejte na druhém listu.</b></p>
+         
+         
+         <ol start="14">
+            
+            <li>Seřaďte data podle údajů o&nbsp;výšce výšky a dále podle času vzestupně.</li>
+            
+            <li>Vypočítejte průměr času pro každou měřenou výšku zvlášť. K&nbsp;tomu si do tabulky vložte
+               volné řádky. 
+            </li>
+            
+            <li>Pro jednotlivé výšky vypočítejte tíhové zrychlení
+               <span class="math">g</span>, vzorec vložte do řádku, ve kterém jsou
+               vypočítané průměry.  K&nbsp;jeho výpočtu použijte již vypočítané
+               průměrné hodnoty času.  Výsledek zobrazte na 2 desetinná
+               místa.
+            </li>
+            
+         </ol>
+         
+         
+         <p><b>Následující úkol zpracovávejte na třetím listu</b></p>
+         
+         
+         <p>Třetí list pojmenujte <b>3. graf</b>.  Na tomto listu vytvořte graf podle následujícího zadání.
+         </p>
+         
+         
+         <ol start="17">
+            
+            <li>
+               <p>Graf závislosti dráhy volného pádu na čase.</p>
+               <p>Vstupní hodnoty umístěte do tabulky.
+                  Tabulka bude zachycovat délku dráhy volného pádu pro časy od 0 sekund do 10 sekund
+                  s&nbsp;krokem půl sekundy. 
+               </p>
+               <ol>
+                  
+                  <li>Do prvního sloupce tabulky zapište časy.</li>
+                  
+                  <li>Do druhého sloupce tabulky vypočítejte dráhu volného pádu <span class="math">s = \frac{1}{2}
+                        \cdot g \cdot t^2</span> (Pro výpočet použijte hodnotu <span class="math">g=9,81
+                        ms^{-2}</span>.)
+                  </li>
+                  
+                  <li>Do třetího sloupce zaokrouhlete výsledky na celé metry.</li>
+                  
+                  <li>Pro sestrojení grafu použijte zaokrouhlené hodnoty. (poznámka: nemáte-li zaokrouhleno,
+                     sestrojte graf z&nbsp;vypočítaných hodnot)
+                  </li>
+                  
+                  <li>Sestrojte graf. Zformátujte ho podle předlohy.<br>
+                     <img src="zrychleni.png" alt="zrychleni.png"></li>
+                  
+               </ol>
+            </li>
+            
+         </ol>
+         
+         
+         <section pgm-ignore-styling="true">
+            
+            
+            <h3>Hodnocení</h3>
+            
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">3</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>1. úkol:
+                           Import dat 
+                           
+                        </p>
+                        
+                        <p>(u&nbsp;importovaných dat číslo
+                           končí <b>sudou číslicí</b>, data v&nbsp;souboru mereni.xlsx lichou)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>2. úkol: Výpočet tíhového
+                           zrychlení
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>3. úkol: Zaokrouhlení na 3
+                           desetinná místa (ne zobrazení)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>4. úkol: Průměr z&nbsp;tíhového
+                           zrychlení
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>5. úkol:
+                           Odchylka (použití absolutní adresy buňky s&nbsp;průměrnou hodnotou)
+                        </p>
+                        
+                        <p>
+                           za výpočet bez absolutní adresy – 1
+                           bod
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">3</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>6. úkol:
+                           Funkce když: výpis +, – 
+                           
+                        </p>
+                        
+                        <p>(vzorec, který vypíše +, pokud
+                           je vypočítaná hodnota větší než 9,81, v&nbsp;ostatních případech vypíše –)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">6</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>7. úkol:
+                           Funkce když: výpis přesné měření
+                        </p>
+                        
+                        <p>(vzorec,
+                           který vypíše text „přesné měření“, pokud se vypočítaná hodnota nachází v&nbsp;v&nbsp;intervalu
+                           hodnot 9,8 až 9,9. V&nbsp;ostatních případech zůstane buňka prázdná.)
+                        </p>
+                        
+                        <p>možné řešení: vnořené když(), i&nbsp;funkce když() a a()
+                           
+                           
+                        </p>
+                        
+                        <p>není-li
+                           řešení v&nbsp;jednom vzorci, ale je použito více sloupců (4 body)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>8. úkol: Ukotvení
+                           příčky
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>9. úkol: Funkce max() –
+                           největší naměřený čas
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>10. úkol: Funkce countif() –
+                           při&nbsp;kolika pokusech byl změřen maximální čas 
+                           
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>11. úkol:
+                           Podmíněné formátování
+                        </p>
+                        
+                        <p>(Pomocí podmíněného
+                           formátování (světle modrá barva výplně buňky) zvýrazněte všechna měření s&nbsp;časem
+                           t&lt;0,65 s.)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>12. úkol: Vytvoření kopie
+                           (kopie obsahuje pouze sloupce vyska (m), cas&nbsp;(s))
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>13. úkol: Přejmenování všech
+                           tří listů (1. výpočet; 2. seřazení; 3. graf)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>14. úkol: Seřazení, vzestupně
+                           podle výšky, při stejné výšce podle času<br clear="none">seřazení jen podle jednoho
+                           kriteria: 1 bod
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>15. úkol:
+                           Funkce průměr() – průměr času za každou výšku
+                        </p>
+                        
+                        <p>Nejsou všechny průměry: 1
+                           bod
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>16. úkol: výpočet g, zobrazení
+                           na 2 desetinná místa
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Zpracování úkolů je přehledné, čitelné, buňky jsou ohraničené</p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">
+                           <br clear="none">
+                           
+                        </p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p><b>3. list</b></p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">3</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>17. úkol: Vytvoření tabulky
+                           (výpočet dráhy, zaokrouhlení) 
+                           
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">
+                           <br clear="none">
+                           
+                        </p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>graf</p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">3</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Sestrojení správného typu grafu (xy bodový, ze
+                                 zaokrouhlených hodnot)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Správný graf, ale z&nbsp;nezaokrouhlených hodnot (2 body)</p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>jednotky na ose, stejně jako v&nbsp;předloze grafu</p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Nadpis</p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Popis os</p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>mřížka</p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Barva čáry grafu a
+                                 pozadí
+                              </p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="d10e1863">Propagace časopisu</h2>
+         
+         <p class="koeficient">max. 17 bodů</p>    
+         
+         
+         <p>Svůj časopis vytvořený v&nbsp;první úloze máte propagovat formou prezentace.
+            Vytvořte tedy prezentaci věnovanou článkům z&nbsp;časopisu.
+         </p>
+         
+         
+         <ul>
+            
+            <li>Informace čerpejte z&nbsp;materiálu pro úkol v&nbsp;textovém editoru</li>
+            
+            <li>V&nbsp;prezentaci informujte o&nbsp;třech článcích – každému článku jsou věnovány dva snímky</li>
+            
+            <li>Nepoužívejte žádný motiv (tj. předefinovaný vzhled prezentace), ale vytvořte si vlastní
+               grafický návrh, nejlépe s&nbsp;využitím předlohy snímku.
+            </li>
+            
+            <li>Prezentaci zpracujte podle pravidel pro tvorbu prezentace</li>
+            
+            <li>Zvolte vhodně animace či přechody snímků</li>
+            
+         </ul>
+         
+         
+         <p><b>Obsah snímků:</b></p>
+         
+         <p><b>1. snímek</b> – úvodní snímek prezentace
+         </p>
+         
+         <p><b>2. snímek</b> – obsahuje rozcestník tj. názvy článků, o&nbsp;kterých v&nbsp;prezentaci informujete.<br>
+            Každý z&nbsp;těchto názvů je hypertextovým odkazem, který vede na snímek věnovaný danému
+            tématu.
+         </p>
+         
+         <p><b>3.–8. snímek</b> – obsahují informace o&nbsp;článcích z&nbsp;časopisu. <b>jeden článek = 2 snímky</b><br>
+            Na každém jsou vložena dvě tlačítka (nebo tvary).
+         </p>
+         
+         <ul>
+            
+            <li>První z&nbsp;nich odkazuje na 2. snímek, tj. na rozcestník </li>
+            
+            <li>Druhé tlačítko ukončí prezentaci </li>
+            
+         </ul>
+         
+         
+         <p>Na všechny snímky vložte zápatí a do něj své jméno.</p>
+         
+         
+         <section pgm-ignore-styling="true">
+            
+            
+            <h3>Hodnocení</h3>
+            
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">3</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Vzhled
+                           prezentace
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Definován
+                                 vlastní vzhled prezentace s&nbsp;využitím předlohy snímků (3 body)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Vlastní vzhled
+                                 (bez předlohy snímků) (1 bod)
+                              </p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                        <p>Hodnocení vzhledu je určitě
+                           individuální. Měla by být nastavena aspoň barva nadpisu, tvar odrážek, jeden
+                           další prvek – třeba barva pozadí, vlastnosti zápatí,&nbsp;… Klidně může být
+                           v&nbsp;předloze nastavena i&nbsp;animace
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Dostatečná velikost písma, tj.
+                           min 26
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Texty formou odrážek (ne
+                           rozsáhlý text, ctrl+C, ctrl+V&nbsp;ze zdrojového textu)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Estetičnost (pěkně řešený první snímek, celkový
+                           vzhled)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Hypertextové odkazy na 2. snímku 
+                           
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>Všechny odkazy
+                                 (2 body)
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p>Aspoň jeden odkaz (1 bod)</p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">4</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Funkční tlačítka na 3. – 8. snímku 
+                           
+                        </p>
+                        
+                        <p>(2 body za tlačítko na návrat na
+                           2. snímek, pokud není na všech snímcích, tak 1 bod. Další 2 body za tlačítko
+                           ukončení prezentace, pokud není na všech snímcích, tak 1 bod)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">2</p>
+                        
+                        <p>
+                           <br clear="none">
+                           
+                        </p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Použití animace nebo přechodu</p>
+                        
+                        <p>(alespoň na 3. až 8.snímku –
+                           stejné 2 body, různé animace a přechody 1 bod, nepřehledné nebo příliš rychlé
+                           animace 1 bod)
+                        </p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>
+                        
+                        <p align="CENTER">1</p>
+                        
+                     </td>
+                     
+                     <td valign="TOP" rowspan="1" colspan="1">
+                        
+                        <p>Vložení zápatí</p>
+                        
+                     </td>
+                     
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      
+      
+      
+   </body>
+</html>

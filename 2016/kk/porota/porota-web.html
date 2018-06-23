@@ -1,0 +1,647 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Hodnocení soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Hodnocení</span> soutěžních
+            	  úloh
+         </h1>
+         
+         <h2 id="d9e18" class="category">Kategorie tvorba webu</h2>
+         
+         <h2 id="d9e21" class="date">14. až 16. dubna&nbsp; 2016</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 30.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2015/2016</p>
+         
+      </header>
+      <div class="toc"><a href="#d9e33">Karty</a><br><a href="#d9e219">Okna</a><br></div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="d9e33">Karty</h2>
+         
+         <p class="koeficient">max. 10 bodů</p>
+         
+         
+         <p>Vytvořte stránku, na které se zobrazí karty podobně jako na obrázku:</p>
+         
+         <img src="cards.png" alt="">
+         
+         
+         <p>Každá karta je 320 px vysoká a 200 px široká. Mezi kartami jsou viditelné&nbsp;rozestupy,
+            stejně tak od okrajů stránky. Velikost písma přibližně odpovídá obrázku.
+         </p>
+         
+         
+         <p>Symboly na kartách jsou unicodové znaky:</p>
+         
+         
+         <table>
+            
+            <tbody>
+               <tr>
+                  
+                  <td>♠: U+2660</td>
+                  
+                  <td>♣: U+2663</td>
+                  
+                  <td>♥: U+2665</td>
+                  
+                  <td>♦: U+2666</td>
+                  
+               </tr>
+               
+            </tbody>
+         </table>
+         
+         
+         <p>Pro připomenutí, karty mohou nabývat hodnot A, 2, 3, 4, 5, 6, 7, 8, 9,
+            10, J, Q nebo K.
+         </p>
+         
+         
+         <p>Karty jsou dvouhlavé, tedy text vespod je vzhůru nohama. Srdce a káry
+            jsou červené, piky a kříže černé. Nemusíte zachovat hodnoty jako na
+            obrázku, ale musíte použít všechny čtyři symboly.
+         </p>
+         
+         
+         <p>Celkem bude zobrazeno deset karet. Karty mají pevnou velikost, a&nbsp;na
+            šířku je jich maximum kolik se vejde do okna prohlížeče. Při změně
+            velikosti okna by se měly přeskládat.
+         </p>
+         
+         
+         <p>Pokud na kartu najedete myší, zvětší se přibližně&nbsp;o&nbsp;půlku, tedy na 300
+            px šířky. Všechny elementy na kartě se proporčně&nbsp;zvětší a zůstanou na
+            správných místech vzhledem ke zvětšené kartě. Jakmile myší kartu opustíte,
+            vrátí se do původní velikosti.
+         </p>
+         
+         <img src="hover.png" alt="" class="float-right">
+         
+         
+         <p>Zvětšená karta musí překrývat okolní karty a žádné jiné karty se nesmějí
+            pohnout.
+         </p>
+         
+         
+         <p>Bonusové body dostanete, pokud bude zvětšování plynulé (animované),
+            u&nbsp;každé karty nezávislé na ostatních.
+         </p>
+         
+         
+         <p>Na stránku viditelně umístěte tlačítko s&nbsp;textem "zamíchat". Po jeho
+            stisknutí zobrazené karty zmizí, a&nbsp;místo nich se najednou objeví deset
+            jiných, jejichž hodnoty a symboly budou zvolené náhodně. Karty se mohou
+            opakovat.
+         </p>
+         
+         
+         <p>Vedle tlačítka umístěte textové políčko s&nbsp;počátečním textem "10". Při
+            kliknutí na tlačítko zamíchat se objeví tolik karet, kolik je napsáno
+            v&nbsp;tomto políčku. Pokud není zadáno číslo větší než nula, neobjeví se žádné
+            karty.
+         </p>
+         
+         
+         <section>
+            
+            <h3>Poznámky pro porotu</h3>
+            
+            
+            <p>Funkčnost kontrolujte pouze v&nbsp;jednom prohlížeči, který si zvolí soutěžící.</p>
+            
+            
+            <p>V&nbsp;případě implementace nezávislého zvětšování není vyžadováno, aby karty
+               ležely přes sebe v&nbsp;pořadí ve kterém byly přejety myší. Stačí, pokud pouze
+               karta na které je právě myš bude nad všemi ostatními.
+            </p>
+            
+            
+            <p>Nezávislé zvětsování poznáte třeba tak, že budete rychle jezdit myší tam
+               a zpátky přes obrazovku.
+            </p>
+            
+            
+            <h3>Hodnocení</h3>
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>jsou zobrazeny karty, jsou použité všechny symboly</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>text vespod karty je vzhůru nohama, karta má kulaté rohy, je správně červená nebo
+                        černá, velký symbol je přesně uprostřed (á&nbsp;0.5 bodu)
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>při najetí myší se karta zvětší (včetně obsahu), při odjetí zase zmenší, přitom neovlivní
+                        ostatní karty a "nerozbije se"
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.5</td>
+                     
+                     <td>zvětšená karta překrývá karty okolo ve všech směrech</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>při zvětšování je viditelná animace</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.5</td>
+                     
+                     <td>animace je u&nbsp;každé karty nezávislá, tj. po přejetí myši přes několik karet se všechny
+                        chvíli pohybují najednou
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>karet je (na začátku) 10 a přeskládávají se se změnou šířky prohlížeče</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>kliknutím na tlačítko zamíchat se vygenerují nové náhodné karty</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>karet se generuje správný počet podle hodnoty v&nbsp;textovém poli</td>
+                     
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="d9e219">Okna</h2>
+         
+         <p class="koeficient">max. 30 bodů</p>
+         
+         <p>
+            Dnešní prohlížeče mají schopnosti, o&nbsp;kterých se mohlo
+            programátorům před lety jen zdát. Nevěříte?
+         </p>
+         
+         <p>
+            Zkusíte si v&nbsp;prohlížeči vytvořit Windows 98. <b>V&nbsp;celé úloze
+               nesmíte používat obrázky,</b> v&nbsp;opačném případě nedostanete žádné body.
+         </p>
+         
+         <h3>Základní okna</h3>
+         
+         <p>
+            Stránka bude mít modré pozadí. Na ní budou zobrazena dvě okna s&nbsp;obsahem jako na obrázku:
+         </p>
+         <img src="okna_1.png" width="665" height="191">
+         
+         <p>
+            Dbejte na to, aby se okna takto zobrazila v&nbsp;každém prohlížeči na každém
+            operačním systému – nespoléhejte na to, že systémová tlačítka mají právě tento
+            vzhled. 3D efektu tlačítek a oken docílíte tak, že na levém a horním okraji
+            bude barva světlejší, zatímco na pravém a dolním bude tmavší. Všechna tlačítka
+            lze viditelně stisknout a chovají se podobně jako systémová tlačítka.
+         </p>
+         
+         <p>
+            Aktivní okno se od neaktivního odliší pomocí horního pruhu. Aktivní okno má
+            pruh s&nbsp;přechodem od tmavé ke světlé modré. Kliknutím kamkoli do okna
+            lze okna přepnout.
+         </p>
+         
+         <p>
+            Tlačítkem „Odeslat zprávu o&nbsp;chybách“ se vyvolá lokální
+            e-mailový klient, s&nbsp;adresou příjemce <tt>&lt;soutez@example.com&gt;</tt>.
+         </p>
+         
+         <p>
+            Kliknutím na tlačítko se čtverečkem se okno maximalizuje. Takové
+            okno zabírá celou plochu. Opětovným kliknutím na tlačítko se
+            čtverečkem se okno vrátí do původního tvaru.
+         </p>
+         
+         <h3>Plochy</h3>
+         
+         <p>
+            Lidem, co na počítači pracují, nemůže jedna plocha stačit.
+            Proto přidejte záložky:
+         </p>
+         <img src="okna_3.png" width="665" height="92">
+         
+         <p>
+            Dnes
+            už je důležité, aby byl operační systém krásný. Záložky by
+            měly mít všechny hrany zaoblené jako na obrázku. Pamatujte, že nesmíte používat obrázky.
+         </p>
+         
+         <h3>Oživení</h3>
+         
+         <p>
+            Kliknutím na křížek nebo tlačítko „neodesílat“ se okno
+            zavře. Abyste lépe poznali atmosféru dob minulých, při zavření
+            libovolného okna se dvě nová otevřou.
+         </p>
+         
+         <p>
+            Když se otevře nové okno, objeví se na nějakém místě na
+            obrazovce tak, aby v&nbsp;případě, že se jich objeví více najednou, se
+            vzájemně nepřekrývala. Můžete se inspirovat svým operačním
+            systémem. Nová okna udržují číslování (Okno 1, Okno 2, Okno
+            3, …)
+         </p>
+         
+         <p>
+            Okno s&nbsp;chybovou hláškou se také otevře, pokud nešťastně dvojkliknete na
+            plochu. V&nbsp;takovém případě se otevře na místě, kde jste dvojklikli.
+         </p>
+         
+         <p>
+            Za horní pruh jde okno chytit a přesouvat. Pokud se dvě nebo více
+            oken překrývá, nahoře je to, které jste používali nejpozději.
+         </p>
+         <img src="okna_2.png" width="373" height="224">
+         
+         <p>
+            Okno
+            lze částečně vysunout z&nbsp;obrazovky. Monitor ale nezvětšíte,
+            proto by se nemělo nic stát ani s&nbsp;prohlížečem. Plocha by také
+            neměla mít posuvníky.
+         </p>
+         
+         <p>
+            Aktivní může být jen jedna plocha, jejíž záložka je vizuálně
+            odlišená. Vhodný způsob vizuálního odlišení sami zvolte (ukázkový
+            obrázek jej neobsahuje). Klikáním na záložky se přepínají plochy –
+            každé okno je právě na jedné.
+         </p>
+         
+         <p>
+            Kliknutím na záložku „+“ se přidá další plocha.
+         </p>
+         
+         <section>
+            
+            <h3>Poznámky pro porotu</h3>
+            V&nbsp;případě použití obrázků jsou všechny body z&nbsp;částí "Základní okna" a "Plochy"
+            hodnoceny 0 body (tj. body udělujte pouze za javascript). Obrázek nesmí být použit
+            ani jako soubor v&nbsp;tagu img, v&nbsp;CSS parametru url, skrze url data: a&nbsp;podobně)
+            
+            Částečné body neudělujte, pokud není uvedeno jinak.
+            
+            
+            <h3>Hodnocení</h3>
+            
+            <table class="hodnoceni">
+               	
+               <thead>
+                  		
+                  <tr>
+                     			
+                     <th>Body</th>
+                     			
+                     <th>Za co</th>
+                     		
+                  </tr>
+                  	
+               </thead>
+               	
+               <tbody>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>CSS projde validátorem CSS 3 https://jigsaw.w3.org/css-validator/</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>jsou zobrazena dvě okna bez ohledu na formátování</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>okno vypadá podobně jako na obrázku, podobné barvy, existence tlačítek, texty atp.</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>pruh aktivního okna obsahuje barevný přechod</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>všechna 4 tlačítka v&nbsp;okně nespoléhají na vzhled systémových tlačítek, kurzor myši
+                        má tvar šipky
+                     </td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>jsou zobrazeny záložky bez ohledu na vzhled a funkci</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>2</td>
+                     			
+                     <td>záložky mají kulaté&nbsp;rohy přesně podle zadání (včetně rohů mezi záložkami)</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>linka od záložek pokračuje přes celou šířku obrazovky</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>spodní strana záložek není ohraničena linkou</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>kliknutím kamkoli do okna se přepne aktivní okno (modrý pruh)</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>tlačítko odeslat vyvolá e-mailového klienta se zadanou adresou</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>2</td>
+                     			
+                     <td>okna jdou maximalizovat a vrátit zpět (za obojí bod)</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>dvojklikem na plochu se otevře nové okno</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>toto okno se otevře pod kurzorem myši</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>křížkem a tl. neodesílat se dané okno zavře</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>při zavření okna libovolnou metodou se otevřou dvě nová</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>okna se otevírají na rozumných místech (ne mimo obrazovku, ne přesně přes sebe)</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>okna udržují souvislé&nbsp;číslování</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>2</td>
+                     			
+                     <td>okna jdou přesouvat taháním za pruh</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>přesouvání je plynulé, okna neposkakují při uchopení, pohybují se i&nbsp;při vysunutí kurzoru
+                        mimo okno prohlížeče
+                     </td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>tři okna se správně&nbsp;řadí nad sebe podle pořadí aktivace</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>při změně velikosti okna prohlížeče zůstává maximalizované okno přes celou plochu,
+                        ostatní okna nemění svou pozici
+                     </td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>plochy jdou přepínat, je vidět, která plocha je aktivní</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>na ostatních plochách se dají otevírat nová okna dvojklikem</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>každé okno je vidět právě&nbsp;na jedné ploše</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>mezi přepnutími ploch tam a zpět si okna zachovají polohu</td>
+                     		
+                  </tr>
+                  		
+                  <tr>
+                     			
+                     <td>1</td>
+                     			
+                     <td>kliknutí na tlačítko plus přidá novou plochu</td>
+                     		
+                  </tr>
+                  	
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      
+      
+      
+   </body>
+</html>

@@ -1,0 +1,5 @@
+Tak jako v každém èísle i nyní máme pro vás soutìžní úkol. Své odpovìdi zasílejte na adresu èasopisu do 15. dubna 2016.
+Mìsíc obíhá kolem Zemì ve vzdálenosti 384 000 km a má hmotnost 7,41 10 22 kg. Na spojnici støedù obou tìles najdìte bod C, ve kterém by byl èlovìk ve stavu beztíže. V tomto bodì se gravitaèní síla Zemì rovna gravitaèní síle Mìsíce.
+
+Øešení z èísla 2/2016
+Pro èasový interval platí následující vztah: 
