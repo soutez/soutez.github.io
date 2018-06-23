@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <title>Kategorie Web, 2015, Tabulky - test</title>	
+    <script src="tablesMock.js"></script>	
+  </head>
+<body>
+<script>
+
+tables.setTitle("teploty");
+tables.setColumnCount(3);
+tables.setHeaderTitles(['month', 'min temp', 'max temp'] );
+tables.addRow("leden", "-2.4", "4.7");
+tables.addRow("únor", "-1.4", "3.5");
+tables.addRow("březen", "3.4", "8.0");
+tables.addRow("duben", "8.4", "14.0");
+tables.addRowFromString("květen;9.9;15.2");
+tempsSummer = [
+	['červen', '12.4', '19.0'],
+	['červenec', '17.4', '25.2']
+];
+tables.addRowsJson(tempsSummer);
+tables.setRowCount(6);
+tables.createTable("here");
+
+</script>
+
+<div id="here"></div>
+</body>
+</html>
