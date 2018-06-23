@@ -1,0 +1,143 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <title>Zadání soutěžních úloh</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><style type="text/css">
+    .simplelist { width: 100% }
+    .screen, .programlisting, .literallayout { background-color: silver }
+    body { font-family: Verdana, sans-serif; }
+    .article .titlepage { text-align: center; }
+    .section .titlepage { text-align: left; }
+    .remark { color: red;
+              background-color: yellow;
+	      font-style: italics;
+	    }
+  </style></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="cs" class="article" title="Zadání soutěžních úloh"><div class="titlepage"><div><div><h2 class="title"><a name="d5e1"></a><span>Zadání</span> soutěžních
+úloh</h2></div><div><h3 class="subtitle"><i>Kategorie <span>mládež</span></i></h3></div><div><p class="releaseinfo">Soutěž v&nbsp;programování –
+26.&nbsp;ročník</p></div><div><p class="releaseinfo">Krajské&nbsp;kolo&nbsp;2011/2012</p></div><div><span class="date">19. až 21. dubna 2012<br></span></div></div><div></div><hr></div><div class="toc"><dl><dt><span class="section"><a href="#d5e16">Prozohy znkaů</a></span></dt><dt><span class="section"><a href="#d5e37">Poprask v&nbsp;Sherwoodu</a></span></dt><dt><span class="section"><a href="#d5e79">Hrátky s čísly </a></span></dt><dt><span class="section"><a href="#d5e85">Děda K. encyklopedistou</a></span></dt></dl></div><p>Úlohy můžete řešit v&nbsp;libovolném
+pořadí a samozřejmě je nemusíte vyřešit všechny. Za každou úlohu
+můžete dostat maximálně 10 bodů, z&nbsp;nichž je většinou 9 bodů
+vyhrazeno na ohodnocení funkčnosti programu, jeho shody se zadáním
+a efektivity a jeden bod na dokumentaci a přehlednost zdrojového
+kódu. Body získané za každou úlohu se ještě násobí koeficientem, který
+odráží složitost úlohy.</p><p>Na řešení úloh máte 4 hodiny čistého
+času.</p><p>Před zahájením soutěže vám pořadatel
+oznámí, kde najdete testovací soubory  a vzorová řešení úloh. Textové
+testovací soubory pro všechny operační systémy používají řádky
+ukončené dvojicí znaků CR a LF.</p><div lang="cs" class="section" title="Prozohy znkaů"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e16"></a>Prozohy znkaů</h2></div><div><h3 class="subtitle">Koeficient <span class="koef">1</span></h3></div></div></div><p>
+    Říká se, že při čtení textu dokážeme bez problému přečíst i slova s přeházenými znaky, pokud zůstane první a poslední písmenko na svém místě. Vaším
+    úkolem je napsat program, který to pomůže ověřit. Na vstupu
+    programu je text a celé číslo <em class="varname">P</em> v rozsahu od 0 do 1000 určující míru prohazování (viz dále). 
+    Výstupem je text s proházenými písmenky.
+  </p><p>
+    Přesný postup prohazování písmen je takovýto: Změny budeme
+	provádět pouze ve slovech, slovem se rozumí posloupnost písmen
+	české abecedy oddělená alespoň jedním nepísmenem
+	(jakýmkoliv jiným znakem, mezerou, číslicí a pod).  Znaky mimo
+	slova nebudeme nijak měnit. Slova kratší než 4 písmena
+	ponecháme také beze změn. Pro slova o čtyřech a více znacích
+	určíme nejdříve počet prováděných prohozů pro dané slovo –
+	má-li slovo <em class="varname">N</em> písmen, pak počet prohozů
+	<em class="varname">X</em> bude náhodné číslo v rozsahu od 0 do
+	<em class="varname">P</em>*(<em class="varname">N</em>-3)/100. Následně
+	<em class="varname">X</em>-krát vybereme vždy náhodně dvě pozice
+	písmen ve slově mimo první a poslední a písmena na nich umístěná
+	prohodíme. Prohazujeme bez ohledu na to, zda již dříve na
+	daném místě k prohozu došlo.
+  </p><p>Pro zjednodušení chápejte písmeno „ch“ jako dvě samostatná
+  písmena „c“ a „h“.</p><p>
+    Má-li váš program grafické rozhraní, bude vstupní text vložen uživatelem do vstupního pole dle zvyklostí daného rozhraní. 
+    Programátoři pracující v prostředích preferujících příkazový řádek mohou pracovat se standardím vstupem a výstupem.
+    Předpokládejte délky textů maximáně do osmi tisíc znaků.
+  </p><div class="example"><a name="d5e30"></a><p class="title"><b>Příklad 1. Příklad vstupu</b></p><div class="example-contents"><pre class="screen">Důležitá věc je, aby byla první a poslední písmena na správném místě.</pre></div></div><br class="example-break"><div class="example"><a name="d5e33"></a><p class="title"><b>Příklad 2. Příklad výstupu pro parametr <em class="varname">P</em> = 200</b></p><div class="example-contents"><pre class="screen">Dleůitžá věc je, aby blya pnvrí a psoelndí pímesna na srpváénm mstíě.</pre></div></div><br class="example-break"></div><div lang="cs" class="section" title="Poprask v&nbsp;Sherwoodu"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e37"></a>Poprask v&nbsp;Sherwoodu</h2></div><div><h3 class="subtitle">Koeficient <span class="koef">3</span></h3></div></div></div><p>
+    V&nbsp;sherwoodském lese už to zase vře – skupina zlosynů se snaží polapit
+    Robina Hooda! Robin je na ně ovšem připraven a chce je přivítat bravurní
+    střelou ze svého nového luku, který dokáže prostřelit i několik nepřátel
+    naráz.
+  </p><p>
+    Problém je v&nbsp;tom, že zlosynů je opravdu hodně a Robin neví, jakým způsobem
+    by jich mohl jedním výstřelem zasáhnout co nejvíc. Přemýšlel o&nbsp;tom,
+    že by poprosil zlosyny, aby chvilku postáli bez pohnutí, dokud si nevyměří, odkud
+    bude střílet, ale nebyl si jistý, že by jeho slušné žádosti zlosyni
+    vyhověli. Poprosil nakonec raději o&nbsp;pomoc vás.
+  </p><p>
+    Napište program, který pokud možno rychle vyřeší Robinův problém. Na vstupu
+    dostane souřadnice až 3000 různých bodů, každý zadaný dvěma souřadnicemi v rozsahu
+    1 až 1000. Cílem je najít přímku, která protne co nejvíc bodů.  Přímka
+    protne bod jenom tehdy, když prochází <span class="emphasis"><em>bez zaokrouhlování přesně
+    jeho souřadnicemi</em></span>. Máte zaručeno, že taková přímka je jedinečná.
+    Výslednou přímku zobrazte spolu se všemi ostatními zlosyny v&nbsp;grafické podobě
+    a vypište, kolik zlosynů dokáže Robin jedním výstřelem skolit.
+  </p><div class="section" title="Popis vstupu"><div class="titlepage"><div><div><h3 class="title"><a name="d5e45"></a>Popis vstupu</h3></div></div></div><p>
+      Vstup načtěte ze souboru <code class="filename">zlosyni.txt</code> v&nbsp;aktuálním adresáři.
+    </p><p>
+      Soubor <code class="filename">zlosyni.txt</code> obsahuje souřadnice nepřátel,
+      na každé řádce jsou mezerou oddělená dvě přirozená čísla v&nbsp;rozsahu 1 až
+      1000. Nepřátel je nanejvýš 3000 a každý má jedinečné souřadnice. Řádky
+      jsou ukončeny dvojicí znaků <code class="constant">CR</code> a <code class="constant">LF</code>.
+    </p></div><div class="section" title="Zobrazení výstupu"><div class="titlepage"><div><div><h3 class="title"><a name="d5e53"></a>Zobrazení výstupu</h3></div></div></div><p>
+      Zobrazte oblast <code class="constant">(1, 1)</code> až
+      <code class="constant">(1000, 1000)</code> se všemi zlosyny a s&nbsp;výslednou přímkou
+      tak, aby bod <code class="constant">(1, 1)</code> byl vlevo dole.
+      Také zobrazte nebo vypište, kolik zlosynů dokáže Robin jedním výstřelem skolit.
+    </p></div><div class="section" title="Příklad vstupu a výstupu"><div class="titlepage"><div><div><h3 class="title"><a name="d5e59"></a>Příklad vstupu a výstupu</h3></div></div></div><table width="100%" id="d5e61"><tr>
+        <td><code class="filename">zlosyni.txt</code></td>
+        <td>obrazovka</td>
+      </tr><tr valign="top">
+        <td>
+          <pre class="programlisting">100 900
+400 700
+900 100
+500 500
+100 100
+500 900
+150 200
+900 900
+500 100</pre>
+        </td>
+        <td>
+            <p><span class="emphasis"><em>Robin může jedním výstřelem skolit 4 zlosyny.</em></span></p>
+            <div class="mediaobject"><img src="robin-hood.png"></div>
+        </td>
+      </tr></table></div><div class="section" title="Ukázková data"><div class="titlepage"><div><div><h3 class="title"><a name="d5e75"></a>Ukázková data</h3></div></div></div><p>
+      V&nbsp;adresáři <code class="filename">robin-hood</code> se nachází ukázková data včetně
+      příkladu ze zadání. Pro získání plného počtu bodů by měl váš program
+      vyřešit každá z&nbsp;nich během vteřin.
+    </p></div></div><div lang="cs" class="section" title="Hrátky s čísly"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e79"></a>Hrátky s čísly </h2></div><div><h3 class="subtitle">Koeficient <span class="koef">1</span></h3></div></div></div><p>Vypracujte program, který k zadanému celému kladnému číslu
+nalezne a vypíše co největší prvočíslo v jehož zápisu se každá číslice
+vyskytuje nanejvýš jednou a je menší než zadané číslo. </p><p>Například k 98777 to je prvočíslo 98731. Prvočíslo 98737
+nevyhovuje protože se v něm vyskytuje číslice 7 dvakrát.</p></div><div lang="cs" class="section" title="Děda K. encyklopedistou"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e85"></a>Děda K. encyklopedistou</h2></div><div><h3 class="subtitle">Koeficient <span class="koef">3</span></h3></div></div></div><p>
+    Děda K. se rozhodl, že napíše encyklopedii. 
+    Taková encyklopedie se skládá z hesel, což je dvojice: název předmětu – popis předmětu.
+    Vaším úkolem bude dědovi práci zjednodušit.
+  </p><p>
+    Napište program, pro práci s encyklopedickými hesly.
+    Hesel nebude celkem více než 10 tisíc.
+    
+    
+    
+    Název předmětu nebude mít více než 255 znaků.
+    Žádná dvě hesla nesmí mít stejný název.
+    Popis nebude mít více než 32000 znaků.
+    
+  </p><p>
+    Program umožní tyto funkce:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>načítání hesel z datového souboru, určeného uživatelem,</p></li><li class="listitem"><p>zobrazování hesel – hesla jsou přitom zobrazována abecedně seřazená podle názvu předmětu, malá a velká písmena jsou rovnocená,</p></li><li class="listitem"><p>vytvoření hesla,</p></li><li class="listitem"><p>vyhledání hesla podle názvu předmětu,</p></li><li class="listitem"><p>změna hesla,</p></li><li class="listitem"><p>vymazání hesla,</p></li><li class="listitem"><p>vyhledání textu v názvech nebo popisech, případně obojím,</p></li><li class="listitem"><p>ukládání hesel do datového souboru, původního nebo do určeného uživatelem,</p></li><li class="listitem"><p>export hesel do souboru HTML a vytvoření/zvýraznění odkazů na jiná hesla v popisech.</p></li></ul></div><p>Funkce přidávejte postupně, jak jsou uvedeny v zadání.  Funkce
+    nebude hodnocena, pokud nebudou fungovat všechny funkce
+    předcházející.  Popis datového souboru a HTML souboru najdete
+    dále.
+  </p><p>
+    Prohlédněte si také ukázkový program.
+  </p><div class="section" title="Popis datového souboru"><div class="titlepage"><div><div><h3 class="title"><a name="d5e113"></a>Popis datového souboru</h3></div></div></div><p>
+      Datový soubor je textový soubor obsahující hesla, která jsou oddělena dvěma prázdnými řádky.
+      Heslo se skládá z jedné řádky obsahující název předmětu. Následuje jedna prázdná řádka a jedna nebo více řádek popisu předmětu.
+      Pozor: jednotlivé prázdné řádky v popisu předmětu jsou možné, zatímco dvě a více nikoliv, protože ty jsou použité jako oddělení hesel mezi sebou.
+      Viz ukázkové soubory v adresáři <code class="filename">encyklopedie</code>.
+    </p></div><div class="section" title="Popis HTML souboru"><div class="titlepage"><div><div><h3 class="title"><a name="d5e117"></a>Popis HTML souboru</h3></div></div></div><p>
+      Tento soubor – stránka HTML zobrazuje hesla (názvy předmětu i
+      popis předmětu) seřazená podle názvů, malá a velká písmena jsou
+      rovnocená.  Hesla, jejichž název začíná stejným písmenem jsou
+      seskupena do oddílů, na které jsou odkazy na začátku stránky.  U
+      každého hesla jsou odkazy vedoucí na začátek oddílu a stránky.
+      Pokud se v popisu hesla objeví text, který se shoduje s názvem
+      kteréhokoliv hesla (bez ohledu na velikost písmen), změňte tento
+      text na odkaz na shodné heslo.  Viz ukázkový soubor v adresáři
+      <code class="filename">encyklopedie</code>.
+    </p></div></div></div></body></html>

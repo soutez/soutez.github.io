@@ -1,0 +1,44 @@
+Karel Soukup
+
+Své sarkastické písnì, reagující na politickou situaci v zemi, zpíval sám jen za doprovodu kytary. Byl nìkolikrát vìznìn a v roce 1981 odešel do emigrace. V souèasné dobì žije v Austrálii.
+
+
+Stereo
+
+Stereofonie, zkrácenì stereo, je vícekanálový záznam, pøenos a reprodukce zvuku, která má v posluchaèích vyvolat prostorový dojem.
+Pùvodní systémy záznamu a pøenosu zvuku nepoužívaly stereo efektu, ale byly pouze monofonní – jednokanálové. Po mnoha desítkách let experimentù se vícekanálový zvuk prosadil ve spotøební elektronice v šedesátých letech dvacátého století.
+U gramofonové desky bylo stereofonního záznamu dosaženo tak, že kmitání levého a pravého kanálu je vyryto do jedné jediné drážky v rovinách naklonìných vlevo a vpravo o 45° proti rovinì desky. Dosahuje se tím i kompatibibility s pùvodním monofoním záznamem, protože vodorovný pohyb pøenosky odpovídá souètu kanálù a tím i monofonnímu signálu.
+U analogových magnetofonù je pro záznam každého stereofonního kanálu na magnetofonové pásce použita samostatná záznamová stopa.
+Pro digitální záznam stereofonního zvuku bývají oba kanály èasovì multiplexovány a na digitálním nosièi záznamu zaznamenány oddìlenì.
+Stereo signál není možné pøenášet amplitudovou modulací pøi zachování zpìtné kompatibility. Využívá se proto pouze pøi frekvenèní modulaci. Ve vysílaèi je frekvencí 38kHz pøepínán levý a pravý signál elektronickým pøepínaèem. Takto vytvoøíme signál kde je složka M a složka S. Složka M je v kmitoètovém rozsahu 30 Hz – 15 kHz a složka S v rozsahu 23 kHz – 37,97 kHz. K tìmto složkám je ještì pøidán tzv. pilotní signál s frekvencí rovnou polovinì pøepínácího signálu, èili 19 kHz. Ten umožòuje dekódování a zpìtné vytvoøení stereofonního signálu.
+
+
+Stereofonie
+
+Viz Stereo
+
+
+Legolas
+
+Legolas je postava ve fiktivním svìtì J. R. R. Tolkiena, Støedozemi. Je to elf pocházející z Temného hvozdu. Objevuje se v trilogii Pán Prstenù jako jeden z devíti èlenù Spoleèenstva prstenu.
+Legolas je synem Thranduila, krále Lesních elfù na severozápadì Temného hvozdu, který je zmiòován v Hobitovi jako „král elfù“. Legolas však není jedním z lesních elfù, pøestože mezi nimi žil a považoval se za jednoho z nich. Jeho otec totiž pùvodnì pøišel z Doriathu, oba tedy jsou sindarského pùvodu a souèástí menšiny Sindar, která byla vznešenìjší a moudøejší než Lesní elfové. Stejná situace je i v Lothlórienu, kde také vládne menšina Sindar v èele s Galadriel a Celebornem.
+Aèkoliv se Thranduil a jeho království objevují v Hobitovi, o Legolasovi tam není ani zmínka. Jeho postava zøejmì nebyla ještì hotova, i když už mìl jméno. Existují teorie o tom, že bojoval v Bitvì pìti armád na Ereboru.
+Poprvé se objevuje v knize Spoleèenstvo Prstenu, první èásti Pána Prstenù, pøi Elrondovì radì, kam pøichází jako posel od svého otce se zprávou, že Glum utekl z elfského zajetí v Temném hvozdì. Tolkien ho popisuje jako „cizího elfa v zelené a hnìdé“. Na této radì si Legolas sám zvolil být jedním z èlenù Spoleèenstva Prstenu, které mìlo zajistit znièení Jednoho prstenu. Doprovázel Froda od Roklinky až po Amon Hen, kde se spoleèenstvo rozpadlo.
+Pøi sestupu po neúspìšném pokusu Spoleèenstva zdolat prùsmyk Caradhras, se vydal napøed, zatímco Aragorn a Boromir prošlapávali cestu snìhem. Na rozdíl od nich se totiž dovedl pohybovat tak lehce, že témìø nezanechával stopy ve snìhu, k èemuž pøispívaly i jeho lehké boty. Poté co sestoupili z hory, jejich vùdce Gandalf je zavedl do Morie, staré a nyní opuštìné øíše trpaslíkù, pøestože nìkteøí vèetnì Legolase si tam nepøáli jít. Pøedtím než vstoupili do Morie, pomohl ještì odrazit útok Sauronových vlkù v Cesmínii. V Morii bojoval proti skøetùm a poznal v Durinovì zhoubì jednoho z Morgothových balrogù.
+Když družina vyšla z Morie již bez Gandalfa, který se ztratil pøi boji s balrogem, pøevzal vedení Aragorn a zavedl je do elfí øíše Lothlórienu. Legolas byl zpoèátku jejich mluvèím, protože se jako jediný mohl domluvit s Galadhrim, kteøí strážili hranici.
+Uvnitø Spoleèenstva byly tøenice mezi Legolasem a trpaslíkem Gimlim vycházející ze starovìkých hádek mezi elfy a trpaslíky, které vznikly vyplnìním elfího království Doriathu a zavraždìním krále Thingola v Prvním vìku a také uvìznìním Gimliho otce, Glóina, a ostatních 12 trpaslíkù bìhem Bilbovy výpravy k Osamìlé hoøe. Pøesto však vzniklo mezi nimi v Lothlórienu pøátelství, když Gimli spatøil Paní Zlatého lesa a byl jí pøívìtivì pøijat.
+Po èase opustila družina Prstenu Lothlórien, ale ne bez darù. Legolas dostal od Galadriel nový luk a všichni byli obdarováni plášti a lembasem, elfským chlebem. Pøi plavbì po øece Anduinì sestøelil jedinou ranou ze svého nového luku nazgula na létajícím oøi.
+Potom, co Sarumanovi Skurut-hai zabili Boromira a unesli Smíška s Pipinem, zaèal s Aragornem a Gimlim pronásledovat skøety, jež unesli dva hobity. Nejprve však pochovali Boromira v lodi, kterou pustili do Rauroských vodopádù. A v této trojici pak procházeli všechna ostatní dobrodružství. Skøety se jim nepovedlo dostihnout, protože byli pobiti rohanskými jezdci a když se Legolas s pøáteli vydali po hobitích stopách do Fangornu, našli zde ke své velké radosti Gandalfa, který se vrátil ze smrti. Ten také pøinesl Legolasovi varování od Galadriel varování:
+Poté bojovali v bitvì o Helmùv žleb, v níž Legolas soutìžil s Gimlim v zabíjení skøetù. Po bitvì táhli s Gandalfem a králem Théodenem do Železného pasu, kde byli svìdky Sarumanova pádu a kde také potkali postrádané hobity.
+Pøi tažení do Gondoru doprovázel s Gimlim, hranièáøi ze Severu a Elrondovými syny Aragorna na Stezkách mrtvých. Na rozdíl od Gimliho nemìl Legolas z Mrtvých žádný strach. Aragorn pøemluvil Mrtvé z Èernoboru, aby za nìj bojovali, a pak je vyslal proti Umbarským korzárùm. Legolas se tehdy dostal blízko k moøi a když uslyšel racky, vyplnilo se Galadrielino proroctví. Probudila se v nìm touha odplout do Valinoru, skrytá v srdcích všech Eldar. Nicménì se z Pelargiru plavil do Osgiliathu a bojoval na Pelennorských polích a pozdìji u Morannonu a uvidìl pád Barad-dur spolu s koncem Saurona.
+Po znièení Jednoho prstenu chvíli pobýval v Minas Tirith a zúèastnil se korunovace krále Aragorna Elessara králem Obnoveného království a jeho svatby s Arwen. Pozdìji s Gimlim procestoval Fangorn. Šel s otcovým svolením s nìkolika dalšími elfy do Ithilienu, aby obnovil ve svém zbývajícím èase ve Støedozemi tamní lesy zdevastované válkou. Zde založil elfí kolonii a stal se jejím pánem.
+V Èervené knize je napsáno, že po smrti krále Elessara postavil Legolas v Ithilienu šedou loï a odplul ze Støedozemì do Valinoru spolu se svým pøítelem trpaslíkem Gimlim.
+Ve filmové trilogii Pán Prstenù od Petera Jacksona Legolase ztvárnil britský herec Orlando Bloom. Ve filmu se jeho postava celkem vìrnì drží literární pøedlohy.
+
+
+Association des Sports de Glisse d'Angers
+
+Hráèi s trofejí Jacqua LacarrieraAssociation des Sports de Glisse d'Angers je francouzský klub ledního hokeje z Angers. Klub vznikl v roce 1982 a hraje v nejvyšší francouzské soutìži Ligue Magnus.
+Nejvìtším úspìchem klubu bylo vítìzství ve francouzském poháru v roce 2007, v lize ještì žádný titul nevyhrál.
+
+
