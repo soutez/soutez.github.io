@@ -1,0 +1,527 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Hodnocení soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Hodnocení</span> soutěžních
+            	  úloh
+         </h1>
+         
+         <h2 class="category" id="d9e18">Kategorie tvorba webu</h2>
+         
+         <h2 class="date" id="d9e21">16. až 18. dubna&nbsp; 2015</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování –
+            	28.&nbsp;ročník
+         </p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2014/2015</p>
+         
+      </header>
+      <div class="toc"><a href="#d9e33">Formulář</a><br><a href="#d9e182">Kalendář</a><br></div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="d9e33">Formulář</h2>
+         
+         <p class="koeficient">max. 10 bodů</p>
+         
+         
+         <p>Vytvořte stránku, která bude vypadat jako následující obrázek:</p>
+         <img src="obrazek.png" alt="Vzhled stránky" align="center">
+         
+         
+         <p>Dbejte na oddělení vizuální prezentace (CSS) od struktury stránky
+            (HTML).
+         </p>
+         
+         
+         <p>Stránka by měla reagovat na akce uživatele tímto způsobem:</p>
+         
+         
+         <ul>
+            
+            <li>Při aktivaci vstupního pole formuláře nebo při přejetí přes pole myší
+               se pozadí pole změní na světle zelené a jeho orámování na tmavě zelené.
+               Text zadaný uživatelem by měl být černý.
+            </li>
+            
+            <li>Při přejetí myší přes tlačítko nebo při jeho zvolení klávesou <kbd>Tab</kbd> se
+               změní barva tlačítka na zelenou. Všimněte si, že tlačítko nemá viditelný
+               rámeček a jeho výška je stejná jako výška vstupního pole.
+            </li>
+            
+            <li>Při psaní do pole zmizí nápovědný text. Tato funkce musí
+               fungovat i s vypnutým Javascriptem.
+            </li>
+            
+            <li>Jednotlivá pole formuláře po stisknutí příslušného tlačítka odešlou data
+               na danou službu (tedy vyhledají zadaný text Googlem, apod.). Pole s kódem
+               v Javascriptu neodesílá data na externí stránku, ale přímo spustí zadaný
+               javascriptový kód.
+            </li>
+            
+            <li>Klávesa <kbd>Enter</kbd> odešle data z příslušného pole formuláře, tedy
+               chová se stejně jako stisknutí tlačítka vedle vstupního pole. Funguje takto
+               ve všech pěti vstupních polích.
+            </li>
+            
+         </ul>
+         
+         
+         <p>Vytvořte novou stránku <tt>index2.html</tt>, která se bude od předchozí
+            lišit tím, že obsahuje pouze jediné společné vstupní pole, vedle něhož je
+            jedno tlačítko pro každou službu. Zadaný text se odešle na příslušnou službu
+            podle toho, které tlačítko uživatel zmáčkne. Nezapomeňte odevzdat obě
+            stránky (tj. verzi s více poli v <tt>index.html</tt> i verzi s jedním polem
+            v <tt>index2.html</tt>).
+         </p>
+         
+         
+         <section>
+            
+            <h3>Poznámky pro porotu</h3>
+            
+            
+            <p>Vykonávání javascriptu hodnoťte zadáním: <tt>alert("test")</tt></p>
+            
+            
+            <p>Hodnocení formátování: za tlačítko nestejně vysoké jako vstupní pole nebo
+               pokud je mezi ním a vstupním polem mezera (nebo za obě tyto chyby
+               dohromady), je postih půl bodu. Ostatní chyby znamenají 0&nbsp;bodů za
+               formátování.
+            </p>
+            
+            
+            <h3>Hodnocení</h3>
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  	 
+                  <!-- Strukturu této části je potřeba dodržet, automaticky se z ní generují hodnotící tabulky v Excelu -->
+                  	 
+                  <tr>
+                     <td>1</td>
+                     <td>stránka projde HTML a CSS validátorem (každý půl bodu)</td>
+                  </tr>
+                  	 
+                  <tr>
+                     <td>1</td>
+                     <td>formátování stránky odpovídá obrázku (viz poznámka pro porotu)</td>
+                  </tr>
+                  	 
+                  <tr>
+                     <td>1</td>
+                     <td>při přejetí myší se správně mění formátování polí i tlačítek</td>
+                  </tr>
+                  	 
+                  <tr>
+                     <td>1</td>
+                     <td>aktivované vstupní pole a aktivované tlačítko mají správný formát, i když je myš jinde</td>
+                  </tr>
+                  	 
+                  <tr>
+                     <td>1</td>
+                     <td>při psaní zmizí nápověda a není k tomu použit javascript</td>
+                  </tr>
+                  	 
+                  <tr>
+                     <td>2</td>
+                     <td>první čtyři formuláře fungují (za každý půl bodu)</td>
+                  </tr>
+                  	 
+                  <tr>
+                     <td>1</td>
+                     <td>funguje vykonávání javascriptu (pátý formulář)</td>
+                  </tr>
+                  	 
+                  <tr>
+                     <td>1</td>
+                     <td>funguje klávesa Enter pro odesílání formuláře s javascriptem</td>
+                  </tr>
+                  	 
+                  <tr>
+                     <td>1</td>
+                     <td>odevzdána funkční stránka s jediným společným vstupním polem</td>
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="d9e182">Kalendář</h2>
+         
+         <p class="koeficient">max. 30 bodů</p>
+         
+         
+         <p>Vyrobte HTML stránku, která zobrazuje tabulkový kalendář pro aktuální
+            měsíc. Každý den je představován jedním políčkem kalendáře, ve kterém je
+            zapsáno číslo daného dne v měsíci. Každému týdnu přísluší jeden řádek
+            kalendáře. Týden začíná pondělím. Pokud měsíc nezačíná v pondělí, jsou
+            příslušná políčka na začátku měsíce prázdná; obdobně pro
+            konec měsíce.
+         </p>
+         
+         
+         <p>Kalendář nastylujte pomocí CSS v samostatném souboru tak, aby:</p>
+         
+         <ul>
+            
+            <li>Měl bílé pozadí. Políčka kalendáře jsou oddělena jednoduchou černou
+               čarou. Pozadí stránky okolo kalendáře je světle modré. Políčka jsou
+               přibližně čtvercová. Číslo dne je v levém horním rohu políčka a zabírá
+               přibližně čtvrtinu políčka.
+            </li>
+            
+            <li>Celý kalendář má kulaté rohy.</li>
+            
+            <li>Všechny neděle mají světle červené pozadí políčka, tmavě červený
+               rámeček a tmavě červené číslo dne. Dnešek má silnější rámeček.
+            </li>
+            
+            <li>Políčko, nad kterým se nachází myš, má tmavší pozadí a je na něm bíle
+               zapsán název dne (pondělí, úterý, atd.). Název dne je napsán úhlopříčně
+               (šikmo).
+            </li>
+            
+            <li>Políčka kalendáře se zvětšují a zmenšují se změnou šířky okna, přičemž
+               kalendář zabírá stále stejnou část okna (např. 80% šířky okna, přesný poměr
+               si můžete určit sami).
+            </li>
+            
+         </ul>
+         
+         
+         <p>Při tisku vypadá kalendář takto:</p>
+         
+         <ul>
+            
+            <li>Kalendář je černobílý, jinak formátování odpovídá zobrazení na
+               obrazovce. Neděle nejsou podbarveny, ale zobrazeny tučně.
+            </li>
+            
+            <li>Před každým řádkem je uvedeno číslo týdne.</li>
+            
+         </ul>
+         
+         
+         <p>Následně kalendář „oživte“. Zobrazte nad ním formulář pro
+            výběr měsíce a roku a šipky vpřed a vzad. Šipky přecházejí na
+            předchozí/následující měsíc. Po načtení stránky je zobrazen aktuální měsíc.
+            Kalendář nemusí umět data starší než 1&nbsp;1.&nbsp;1970 a novější než
+            31.&nbsp;12.&nbsp;2199.
+         </p>
+         
+         
+         <p>Připomínáme, že použití cizího kódu mimo předem
+            porotou schválených knihoven není dovoleno. 
+            Například použití holé knihovny jQuery je povoleno, ale pro řešení 
+            této úlohy není možné použít knihovnu jQuery UI a její komponentu datepicker.
+         </p>
+         
+         
+         <p>Státní svátky zobrazte stejně jako neděli. Pro účely této úlohy za státní
+            svátky považujte dny: 1.&nbsp;1., 1.&nbsp;5., 8.&nbsp;5., 5.&nbsp;7.,
+            6.&nbsp;7., 28.&nbsp;9., 28.&nbsp;10., 17.&nbsp;11. a 24.–26.&nbsp;12.
+            Předpokládejte, že státní svátky jsou každý rok stejné. Bod navíc dostanete,
+            pokud správně zobrazíte i Velikonoční pondělí; pro jeho výpočet použijte
+            algoritmus popsaný na české Wikipedii:
+            <a href="http://cs.wikipedia.org/wiki/V%C3%BDpo%C4%8Det_data_Velikonoc"><tt>http://cs.wikipedia.org/wiki/Výpočet_data_Velikonoc</tt></a>
+            
+         </p>
+         
+         
+         <p>Kliknutím na políčko kalendáře se daný den „vybere“:
+            
+         </p>
+         <ul>
+            
+            <li>Pod kalendářem se zobrazí daný den ve formátu <i>den. měsíc rok</i>,
+               přičemž měsíc je zapsán slovně (tedy např.
+               24.&nbsp;prosince&nbsp;2015).
+            </li>
+            
+            <li>Vedle názvu dne pod kalendářem je zapsáno „svátek má <i>jméno</i>“.
+               Jmeniny (svátek) pro přísluný den zjišťujte až na základě kliknutí uživatele.
+               Použijte k tomu některé webové API, např. <tt>http://svatky.adresa.info/</tt>.
+            </li>
+            
+            <li>Vybrané políčko kalendáře se mírně zvětší (takže přesahuje přes sousední
+               políčka).
+            </li>
+            
+            <li>Do políčka jde zapsat poznámka, kterou si kalendář pamatuje i při
+               listování mezi měsíci. Poznámka obtéká číslo dne.
+            </li>
+            
+         </ul>
+         
+         
+         <p>Při zmenšení šířky okna tak, že by měsíční kalendář už měl příliš malá
+            políčka a byl tudíž nečitelný (přesný okamžik si určete sami), se kalendář
+            změní na týdenní. Jednotlivé dny jsou zapsány pod sebou, políčka mají
+            obdélníkový tvar a zabírají většinu či celou šířku okna. Jinak má týdenní
+            kalendář podobný vzhled jako měsíční včetně např. formátování nedělí
+            a obdobnou funkčnost, tedy listování po týdnech, možnost výběru dne,
+            atd.
+         </p>
+         
+         
+         <p>Přepínat měsíce (a týdny) lze i tažením myší (představte si listování
+            kalendářem na tabletu nebo mobilním telefonu). Přepnout měsíc stačí až poté,
+            co uživatel pustí tlačítko myši, není tedy nezbytně potřeba, aby se kalendář
+            posouval plynule během tažení myší. Plynulé posouvání však bude ohodnoceno
+            extra body.
+         </p>
+         
+         
+         <section>
+            
+            <h3>Poznámky pro porotu</h3>
+            
+            
+            <p>V případě, že kód pro listování kalendářem (či jiný kód) je zkopírován
+               z internetu, je <b>příslušná část úlohy hodnocena 0&nbsp;body</b>.
+            </p>
+            
+            
+            <p>Body za formátování lze udělit pouze tehdy, je-li formátování provedeno
+               pomocí CSS v samostatném souboru.
+            </p>
+            
+            
+            <p>Pokud stránka obsahuje databázi jmenin místo toho, aby se na ně ptala
+               přes API, za zobrazení jmenin nebudou uděleny body.
+            </p>
+            
+            
+            <h3>Hodnocení</h3>
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  	 
+                  <!-- Strukturu této části je potřeba dodržet, automaticky se z ní generují hodnotící tabulky v Excelu -->
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>stránka projde HTML validátorem</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>stránka projde CSS validátorem</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>kalendář je v tabulce s číslovanými dny bez ohledu na formátování</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>správné barvy pozadí, černé jednoduché čáry, čtvercová políčka, správně formátované
+                        číslo dne
+                        	 (za každou chybu půl bodu dolů)
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>vnější (tj. čtyři) kulaté rohy</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>správné formátování neděle a dneška</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>správné formátování políčka, nad kterým je myš</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>políčka mění velikost s oknem</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>správné formátování při tisku</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>číslo týdne při tisku</td>
+                  </tr>
+                  
+                  
+                  <tr>
+                     <td>2</td>
+                     <td>jde vybrat rok a měsíc, kalendář na to reaguje</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>jde skákat o měsíc vpřed a vzad</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>únor 2016 je přestupný</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>jde zobrazit prosinec 2050</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>jsou zobrazeny státní svátky v roce 2050</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>19. 4. 2060 je Velikonoční pondělí</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>zobrazení dne po kliknutí</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>2</td>
+                     <td>správné zobrazení jmenin</td>
+                  </tr>
+                  
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>zvětšení vybraného políčka</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>možno zapsat poznámku, poznámka nepřekrývá číslo dne</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>kalendář si poznámku pamatuje</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>2</td>
+                     <td>kalendář se změní na týdenní</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>zobrazené šipky vpřed a vzad skáčou po týdnu, funguje kliknutí na den</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>2</td>
+                     <td>tažení myší přepíná měsíce</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>při tažení kopíruje aktuální měsíc pohyby myši</td>
+                  </tr>
+                  
+                  <tr>
+                     <td>1</td>
+                     <td>a vedle něj se během tažení plynule objevuje předchozí/následující měsíc</td>
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      
+      
+      
+   </body>
+</html>

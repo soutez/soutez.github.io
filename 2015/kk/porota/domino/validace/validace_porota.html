@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Domino: Validace testovacích příkladů</title>
+ <meta charset="utf-8">
+
+ <link rel="stylesheet" href="bootstrap.min.css">
+ <script src="jquery-1.11.2.min.js"></script>
+ <script src="bootstrap.min.js"></script>
+ <script src="validace.js"></script>
+ <script src="validace_porota.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+ <div class="panel panel-default" style="margin-top: 15px">
+  <div class="panel-heading text-center" style="font-size: 200%">Domino: Validace testovacích příkladů</div>
+  <div class="panel-body">
+   <p>Validace testovacích příkladů úlohy Domino, krajské kolo Soutěže v programování 2014/2015.</p>
+
+   <div class="panel panel-success">
+    <div class="panel-heading"><strong>Ukázkový příklad</strong></div>
+    <div class="panel-body">
+     <label>Vyberte testovací příklad, který chcete zkontrolovat.</label>
+     <div class="btn-group btn-group-justified" data-toggle="buttons">
+      <label class="btn btn-primary active"><input type="radio" name="dataset" value="1" autocomplete="off" checked>1</label>
+      <label class="btn btn-primary"><input type="radio" name="dataset" value="2" autocomplete="off">2</label>
+      <label class="btn btn-primary"><input type="radio" name="dataset" value="3" autocomplete="off">3</label>
+      <label class="btn btn-primary"><input type="radio" name="dataset" value="4" autocomplete="off">4</label>
+      <label class="btn btn-primary"><input type="radio" name="dataset" value="5" autocomplete="off">5</label>
+      <label class="btn btn-primary"><input type="radio" name="dataset" value="6" autocomplete="off">6</label>
+      <label class="btn btn-primary"><input type="radio" name="dataset" value="7" autocomplete="off">7</label>
+      <label class="btn btn-primary"><input type="radio" name="dataset" value="8" autocomplete="off">8</label>
+      <label class="btn btn-primary"><input type="radio" name="dataset" value="9" autocomplete="off">9</label>
+     </div>
+    </div>
+   </div>
+   <div class="panel panel-success">
+    <div class="panel-heading">
+     <strong>Vytvořená řada</strong>
+     <div class="pull-right"><button type="button" class="btn btn-primary btn-xs" style="padding: 0 2em" onclick="$('#input').val('')">Vyčistit</button></div>
+    </div>
+    <div class="panel-body">
+     <label>Zadejte řešení ke kontrole.</label>
+     <textarea id="input" class="form-control" rows="10" cols="80" placeholder="Sem nakopírujte řešení ke kontrole."></textarea>
+    </div>
+   </div>
+
+   <div class="panel">
+    <button id="solve" type="button" class="btn btn-primary form-control" onclick="validate()">Zkontrolovat a obodovat řešení</button>
+   </div>
+
+   <div class="panel panel-success">
+    <div class="panel-heading"><strong>Výsledek</strong></div>
+    <div class="panel-body" id="output">
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+</body>
+</html>
