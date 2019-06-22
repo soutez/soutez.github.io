@@ -1,0 +1,11 @@
+{
+"SIRKA": 3,
+"VYSKA": "fdgsfdg",
+"START":{"X":100000000,"Y":1},
+"CIL": {"X": 3,"Y": 3},
+"PLAN": [
+"V,V,V",
+"there is no energy in this file",
+"V,V,V",
+]
+}

@@ -1,0 +1,93 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-content: stretch;
+    justify-content: stretch;
+}
+
+.header {
+    height: 50px;
+    background-color: lightgrey;
+}
+
+.header nav {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    margin-top: 0px;
+    width: 100%;
+}
+.header nav button {
+    height: 50px;
+    width: auto;
+    margin: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: lightgrey;
+    border: none;
+}
+.header nav button:hover {
+    background-color: lightblue;
+}
+.header nav button::after {
+    content: attr(title);
+}
+
+.app-main {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.directories-panel {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.main-content {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.events-panel {
+    width: 300px;
+    padding: 15px;
+    flex-shrink: 0;
+}
+
+.events-panel h4 {
+    margin-bottom: 0px;
+}
+
+.events-panel .event-todo, .events-panel .event-cal {
+    margin-left: 15px;
+}
+.events-panel .event-todo:not(:last-child), .events-panel .event-cal:not(:last-child) {
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid grey;
+}
+
+.activity-box {
+    padding: 15px;
+}
+
+.activity-box:not(:last-child) {
+    border-bottom: 1px solid grey;
+}
+
+.activity-box .preview {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 1300px;
+}
+.activity-box:hover {
+    background-color: lightblue;
+}

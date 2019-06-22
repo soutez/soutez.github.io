@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Testovací vstup</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .state-box {
+            display: none;
+        }
+
+        .if-dir1 {
+            display: none;
+        }
+
+        .state-box#selected-dir-dir1:checked~.app-main .if-dir1 {
+            display: initial;
+        }
+
+        .if-dir2 {
+            display: none;
+        }
+
+        .state-box#selected-dir-dir2:checked~.app-main .if-dir2 {
+            display: initial;
+        }
+
+        .if-dir3 {
+            display: none;
+        }
+
+        .state-box#selected-dir-dir3:checked~.app-main .if-dir3 {
+            display: initial;
+        }
+
+        .state-box#selected-dir-dir1:checked~.app-main label[for=selected-dir-dir1] {
+            background-color: blue;
+            color: white;
+        }
+        .state-box#selected-dir-dir2:checked~.app-main label[for=selected-dir-dir2] {
+            background-color: blue;
+            color: white;
+        }
+        .state-box#selected-dir-dir3:checked~.app-main label[for=selected-dir-dir3] {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <button id="button-download" title="Update messages">
+            </button>
+            <button id="button-newmsg" title="New message">
+            </button>
+            <button id="button-delete" title="Delete">
+            </button>
+            <button id="button-reply" title="Reply">
+            </button>
+        </nav>
+    </div>
+
+    <input type="radio" class="state-box" name="selected-dir" id="selected-dir-dir1" checked />
+    <input type="radio" class="state-box" name="selected-dir" id="selected-dir-dir2" />
+    <input type="radio" class="state-box" name="selected-dir" id="selected-dir-dir3" />
+
+    <div class="app-main">
+        <div class="directories-panel">
+            <h4>
+                Source 1
+            </h4>
+            <ul>
+                <li><label for="selected-dir-dir1">Dir 1</label></li>
+                <li><label for="selected-dir-dir2">Dir 2 - nad tímto je dělící čára</label></li>
+            </ul>
+
+            <h4>
+                Source 2
+            </h4>
+            <ul>
+                <li><label for="selected-dir-dir3">Dir 3 - nikde jinde tady dělící čáry nejsou</label></li>
+            </ul>
+        </div>
+        <div class="main-content if-dir1">
+            <div class="activity-box">
+                <span class="correspondent">Tučné jméno adresa</span>
+                <span class="correspondent-addr">Adresa je šedivá a ve špičatých závorkách</span>
+                <span class="date">Datum</span>
+                <span class="actions"></span>
+                <span class="subject">Předmět je větší a kapitálkami</span>
+                <div class="preview">
+                    Náhled obsahu.
+                </div>
+            </div>
+
+            <div class="activity-box">
+                <span class="correspondent-addr">Adresa je tučná</span>
+                <span class="date">Datum je šedé a vpravo nahoře</span>
+                <span class="actions"></span>
+                <span class="subject">Toto je zpráva z první složky</span>
+                <div class="preview">
+                    Náhled zprávy je zkrácený na jeden řádek a končí třemi tečkami.
+                    Náhled zprávy je zkrácený na jeden řádek a končí třemi tečkami.
+                    Náhled zprávy je zkrácený na jeden řádek a končí třemi tečkami.
+                    Náhled zprávy je zkrácený na jeden řádek a končí třemi tečkami.
+                    Náhled zprávy je zkrácený na jeden řádek a končí třemi tečkami.
+                    Náhled zprávy je zkrácený na jeden řádek a končí třemi tečkami.
+                    Náhled zprávy je zkrácený na jeden řádek a končí třemi tečkami.
+                    Náhled zprávy je zkrácený na jeden řádek a končí třemi tečkami.
+                    Náhled zprávy je zkrácený na jeden řádek a končí třemi tečkami.
+                    Náhled zprávy je zkrácený na jeden řádek a končí třemi tečkami.
+                    Náhled zprávy je zkrácený na jeden řádek a končí třemi tečkami.
+                    Náhled zprávy je zkrácený na jeden řádek a končí třemi tečkami.
+                </div>
+            </div>
+        </div>
+        <div class="main-content if-dir2">
+            <div class="activity-box">
+                <span class="correspondent">Shanna Husser</span>
+                <span class="correspondent-addr">shanna.husser@enron.com</span>
+                <span class="date">Wed, 6 Dec 2000 00:33:00 -0800 (PST)</span>
+                <span class="actions"></span>
+                <span class="subject">Zpráva z druhé složky</span>
+                <div class="preview">
+                    http://www.weather.com/weather/cities/us_co_alamosa.html
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content if-dir3">
+            <div class="activity-box">
+                <span class="correspondent-addr">infrastructure.ubsw@enron.com</span>
+                <span class="date">Mon, 4 Feb 2002 18:51:07 -0800 (PST)</span>
+                <span class="actions"></span>
+                <span class="subject">Zpráva z třetí složky</span>
+                <div class="preview">
+                    Due to a variety of circumstances we did not migrate employees to the UBSWE environment tonight
+                    (Monday, February 4, 2002). We will communicate further details of the migration plan on Tuesday,
+                    February 5, 2002.
+
+                    Thank you for your cooperation in advance, please contact the Resolution Center at x 3-1411 should
+                    you have any questions.
+
+                    UBSW Energy Global Infrastructure
+                </div>
+            </div>
+        </div>
+        <div class="events-panel">
+            <div class="events-block">
+                <h4>Tuto minutu</h4>
+                <div class="event-todo"><span class=name>Zkontrolovat najíždění myší</span></div>
+            </div>
+            <div class="events-block">
+                <h4>Příští minutu</h4>
+                <div class="event-todo"><span class=name></span></div>
+                <div class="event-cal"><span class=time>datum je šedivé a vpravo</span> <span class=name>Zkontrolovat, že data jsou správně formátovaná</span></div>
+                <div class="event-cal"><span class=time>1:30 - 2:00</span> <span class=name>Nad tímto je dělící čára</span></div>
+                <div class="event-cal"><span class=time>1:30 - 2:00</span> <span class=name>Pod tímto není dělící čára</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

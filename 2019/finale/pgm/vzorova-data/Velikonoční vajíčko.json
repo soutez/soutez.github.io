@@ -1,0 +1,28 @@
+{
+"SIRKA": 20,
+"VYSKA": 20,
+"START":{"X":1,"Y":1,"E":100000},
+"CIL": {"X": 16,"Y": 15},
+"PLAN": [
+"V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V",
+"V,V,Z,V,V,Z,V,V,Z,Z,Z,V,V,Z,V,V,V,V,V,V",
+"V,V,Z,V,V,Z,V,V,Z,V,Z,V,V,Z,V,V,V,V,V,V",
+"V,V,Z,V,V,Z,V,V,Z,Z,Z,V,V,Z,V,V,V,V,V,V",
+"Z,V,Z,V,V,Z,V,V,Z,Z,V,V,V,Z,V,V,V,V,V,V",
+"Z,Z,Z,V,V,Z,V,V,Z,V,Z,V,V,Z,V,V,V,V,V,V",
+"V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V",
+"Z,V,Z,V,Z,Z,Z,V,Z,Z,Z,V,Z,Z,Z,V,Z,V,Z,V",
+"Z,Z,V,V,Z,V,Z,V,Z,V,V,V,Z,V,V,V,Z,Z,V,V",
+"Z,V,V,V,Z,V,Z,V,Z,Z,Z,V,Z,Z,Z,V,Z,V,V,V",
+"Z,Z,V,V,Z,V,Z,V,V,V,Z,V,Z,V,V,V,Z,Z,V,V",
+"Z,V,Z,V,Z,Z,Z,V,Z,Z,Z,V,Z,Z,Z,V,Z,V,Z,V",
+"V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V",
+"V,J8,V,J8,J8,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V",
+"V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V",
+"V,V,V,B,V,B,V,B,V,B,V,V,V,V,V,V,V,V,V,V",
+"V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V",
+"V,V,V,V,V,Z4,Z3,V,Z2,Z1,V,Z2,Z3,V,V,V,V,V,V,V",
+"V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V",
+"V,V,V,V,V,V,V,Z,V,Z,Z,V,Z,Z,V,Z,Z,V,V,V"
+]
+}

@@ -1,0 +1,4 @@
+90 63 240 KunetickaHora.bmp
+139 44 255 Palava.pgm
+156 113 250 Rip.png
+303 48 130 Palava.gif

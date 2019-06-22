@@ -1,0 +1,4 @@
+70 50 KunetickaHora
+120 50 Palava
+170 100 Rip
+300 60 Palava

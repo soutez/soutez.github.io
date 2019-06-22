@@ -1,0 +1,1317 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Hodnocení soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, Unifont, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Hodnocení</span> soutěžních
+            úloh
+         </h1>
+         
+         <h2 class="category">Kategorie programování žáci a mládež</h2>
+         
+         <h2 class="date">25. až 27. dubna 2019</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 33.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2018/2019</p>
+         
+      </header>
+      <div class="toc"><a href="#vlajka">Vlajka</a><br><a href="#zkoušení">Zkoušení</a><br><a href="#analýzatvlogu">Analýza TV logu</a><br><a href="#práces&nbsp;mapou">Práce s&nbsp;mapou</a><br><a href="#otravalevopisu">Otrava Levopisu</a><br></div>
+      
+      
+      
+      
+      
+      
+      
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="vlajka">Vlajka</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">1</span></p>
+         
+         
+         <p>Od roku 1920 používá Česká republika (ČR, dříve ČSR, ČSSR, ČSFR) vlajku jak jí známe,
+            tedy:
+         </p>
+         
+         <img src="vlajka.png" style="max-width: 4cm;">
+         
+         
+         <p>Vaším úkolem je tuto vlajku nakresit pomocí vašeho programu:</p>
+         	
+         <ul>
+            	
+            <li>Vykreslete nejprve bílý obdelník o velikosti 600 x 400 bodů (šířka x výška).</li>
+            	
+            <li>Do jeho spodní části vykreslete červenou výseč tak, aby šikmá čára začínala na souřadnicích
+               [0,0] a končila [200,200] a dále pokračovala rovná čára do pozice [600,200]. Souřadnice
+               [0,0] jsou vlevo dole. 
+            </li>
+            	
+            <li>Do levé části nakreslete modrou výseč, kde šikmé čáry jsou z bodu [0,1] do [200,201]
+               a z [200,201] do [0,400].
+            </li>
+            	
+            <li>Umožněte uživateli pozorovat vykreslení jednotlivých částí vlajky – po stisku klávesy
+               ENTER se vykreslí vždy jedna další část vlajky.
+            </li>
+            	
+            <li>Umožněte uživateli měnit velikost vlajky v rozmezí 600×400 až 1200×800 bodů s krokem
+               po 50 bodech. Vlajka musí mít vždy poměr stran 3:2.
+            </li>
+            	
+         </ul>
+         
+         
+         <section>
+            
+            <h3>Hodnocení</h3>
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  	 
+                  <!-- Strukturu této části je potřeba dodržet, automaticky se z ní generují hodnotící tabulky v Excelu -->
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Program nakreslí vlajku o velikosti 600x400 bodů</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Program umožní pozorovat vykreslení jednotlivých kusů vlajky - po stisku ENTER se
+                        zobrazí první díl vlajky
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Program umožní pozorovat vykreslení jednotlivých kusů vlajky - po stisku ENTER se
+                        zobrazí druhý díl vlajky
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Program umožní pozorovat vykreslení jednotlivých kusů vlajky - po stisku ENTER se
+                        zobrazí třetí díl vlajky a vlajka je celá
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Program umožní měnit velikost vlajky - vyberte velikost 900 x 600, vlajka se vykreslí</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Program umožní měnit velikost vlajky - vyberte velikost 1050 x 700, vlajka se vykreslí</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Program umožní měnit velikost vlajky - vyberte velikost 1200 x 800, vlajka se vykreslí</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0,5</td>
+                     
+                     <td>Program umožní měnit velikost vlajky - zkuste vybrat velikost 1020 x 680, program
+                        zadání odmítne (neumožní) protože krok není 50
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0,5</td>
+                     
+                     <td>Program umožní měnit velikost vlajky - zkuste vybrat velikost 1000 x 700, program
+                        zadání odmítne (neumožní) protože poměr není 3:2
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Dokumentace, efektivita, atd.</td>
+                     
+                  </tr>		 
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      <section class="include">    
+         
+         <hr>
+         <h2 id="zkoušení">Zkoušení</h2>    
+         
+         <p class="koeficient">Koeficient <span class="koef">1</span></p>    
+         
+         
+         <p>Vytvořte program na zkoušení těchto matematických operací: sčítání,
+            odčítání, násobení a dělení.
+         </p>
+         
+         
+         <p>Všechna čísla včetně výsledku budou celá v intervalu -99 až
+            99. Tzn. že u dělení musí být čísla navržena tak, že dělení bude bez
+            zbytku. Navrhněte příklady tak, aby čísla příkladů pokryla celý
+            interval -99 až 99. Tzn., že by měl být aspoň jeden příklad, který
+            bude mít jeden z argumentů nebo výsledek v intervalu -99 až -90 nebo
+            90 až 99. 
+         </p>
+         
+         
+         <p>Program vygeneruje zadaný počet příkladů, které uživatel spočítá a
+            vloží.  Nakonec program zobrazí výsledek zkoušení: celkový počet
+            příkladů, počet správných a špatných odpovědí, procentuální úspěšnost
+            zaokrouhlenou na jedno desetinné místo a vypíše chybně vypočítané
+            přiklady.
+         </p>
+         
+         
+         <p>Program je možno napsat jako:</p>
+         
+         <ul>
+            
+            <li>konzolovou aplikaci, kde vstupní parametry jsou:
+               
+               <ul>
+                  
+                  <li>seznam testovaných operací vyjádřený znaky: "+" sčítání, "-" odčítání, "*" násobení,
+                     "/" dělení
+                  </li>
+                  
+                  <li>počet příkladů</li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li>aplikaci s grafickým uživatelským rozhraním, ve kterém se zadají výše uvedené parametry</li>
+            
+         </ul>
+         
+         
+         <p>V obou případech nezapomeňte na stručnou nápovědu – co program dělá a
+            popis parametrů (u konzolové aplikace použijte na vyvolání nápovědy "/?" ).
+         </p>
+         
+         
+         <p><b>Ukázka zadání:</b><br>
+            Vstup 1: +-*/ <br>
+            Vstup 2: 10
+            
+         </p>
+         
+         
+         <div style="float: left; width: 50%; padding-top: 0; margin-right: 0.5em; ">
+            <b>Ukázka vygenerovaných příkladů a vstupu uživatele:</b>
+            
+            
+            <table cellpadding="6" cellspacing="0" width="300">
+               
+               <colgroup>
+                  <col align="right" width="5">
+                  
+                  <col align="right" width="20">
+                  
+                  <col align="center" width="3">
+                  
+                  <col align="right" width="20">
+                  
+                  <col align="center" width="3">
+                  
+                  <col align="right" width="30">
+                  
+                  <col align="left" width="10">
+                  
+               </colgroup>
+               <tbody>
+                  <tr>           
+                     
+                     <td>1.</td> 
+                     <td>55</td> 
+                     <td>+</td> 
+                     <td>5</td> 
+                     <td>=</td> 
+                     <td>60</td> 
+                     <td>ok</td>
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>2.</td> 
+                     <td>4</td> 
+                     <td>+</td> 
+                     <td>9</td> 
+                     <td>=</td> 
+                     <td>13</td> 
+                     <td>ok</td>
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>3.</td> 
+                     <td>5</td> 
+                     <td>*</td> 
+                     <td>5</td> 
+                     <td>=</td> 
+                     <td>27</td> 
+                     <td>chyba</td>
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>4.</td> 
+                     <td>45</td> 
+                     <td>/</td> 
+                     <td>9</td> 
+                     <td>=</td> 
+                     <td>5</td> 
+                     <td>ok</td>
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>5.</td> 
+                     <td>44</td> 
+                     <td>-</td> 
+                     <td>55</td> 
+                     <td>=</td> 
+                     <td>-11</td> 
+                     <td>ok</td>
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>6.</td> 
+                     <td>-99</td> 
+                     <td>/</td> 
+                     <td>3</td> 
+                     <td>=</td> 
+                     <td>-33</td> 
+                     <td>ok</td>
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>7.</td> 
+                     <td>-6</td> 
+                     <td>*</td> 
+                     <td>8</td> 
+                     <td>=</td> 
+                     <td>-48</td> 
+                     <td>ok</td>
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>8.</td> 
+                     <td>7</td> 
+                     <td>*</td> 
+                     <td>8</td> 
+                     <td>=</td> 
+                     <td>56</td> 
+                     <td>ok</td>
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>9.</td> 
+                     <td>0</td> 
+                     <td>+</td> 
+                     <td>99</td> 
+                     <td>=</td> 
+                     <td>99</td> 
+                     <td>ok</td>
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>10.</td> 
+                     <td>16</td> 
+                     <td>/</td> 
+                     <td>-2</td> 
+                     <td>=</td> 
+                     <td>-8</td> 
+                     <td>ok</td>
+                     
+                  </tr>         
+                  
+               </tbody>
+            </table>
+            
+         </div>
+         
+         
+         <p><b>Ukázka výsledku:</b> <br>
+            Celkem:    10<br>
+            Správně:    9<br>
+            Chybně:     1<br>
+            Úspěšnost: 90.0%<br><br>
+            Chybné příklady:<br>
+            5 * 5 =  27   správně 25
+            
+         </p>
+         
+         
+         
+         <section>     
+            
+            <h3>Hodnocení</h3>     
+            
+            <table class="hodnoceni">       
+               
+               <thead>         
+                  
+                  <tr>           
+                     
+                     <th>Body</th>           
+                     
+                     <th>Za co</th>         
+                     
+                  </tr>       
+                  
+               </thead>       
+               
+               <tbody>	 
+                  <!-- Strukturu této části je potřeba dodržet, automaticky se z ní generují hodnotící tabulky v Excelu -->         
+                  
+                  <tr>           
+                     
+                     <td>0.5</td>           
+                     
+                     <td>Program lze spustit a lze zadat vstupy (parametrem / pomocí GUI)</td>         
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>0.5</td>           
+                     
+                     <td>Kontrola na vstupy - Vstup 1 - nahlásí chybný parametr, popř.  stačí ignorovat chybný
+                        parametr<br>v GUI nedovolí zadat jiné hodnoty než, které jsou povolené.
+                        
+                     </td>         
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>0.5</td>           
+                     
+                     <td>Kontrola na vstupy - Vstup 2 - kontrola na numerickou hodnotu počtu zkoušení<br>v GUI nedovolí zadat jiné hodnoty než, které jsou povolené.      
+                        
+                     </td>         
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>1</td>           
+                     
+                     <td>Program navrhne příklady - se správným počtem příkladů</td>         
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>1</td>           
+                     
+                     <td>Program navrhne příklady - ve správných mezích (-99 až 99), včetně výsledků</td>         
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>1</td>           
+                     
+                     <td>Program navrhne příklady - aspoň jeden příklad s argumenty nebo s výsledkem v intevalu
+                        (-99 až 99) nebo (-0 až 99)
+                     </td>         
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>1</td>           
+                     
+                     <td>Příklady obsahují všechny specifikované matematické operace</td>         
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>1</td>           
+                     
+                     <td>Program umožní vložit (zadat) výsledky</td>         
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>1</td>           
+                     
+                     <td>Program kontroluje vstup numerických hodnot</td>         
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>1</td>           
+                     
+                     <td>Program správně vyhodnotí test</td>         
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>0.5</td>           
+                     
+                     <td>Program vypíše chybné příklady se správným výsledkem</td>         
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>0.5</td>           
+                     
+                     <td>Dokumentace - zdrojový text vykazuje známky komentářů, názvy proměnných indikují jejich
+                        význam 
+                     </td>         
+                     
+                  </tr>         
+                  
+                  <tr>           
+                     
+                     <td>0.5</td>           
+                     
+                     <td>Dokumentace - program obsahuje stručný popis funkce programu a popis vstupních parametrů
+                        
+                     </td>         
+                     
+                  </tr>         
+                  
+               </tbody>     
+               
+            </table>    
+            
+         </section>  
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="analýzatvlogu">Analýza TV logu</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">2</span></p>
+         
+         
+         <p>
+            V&nbsp;souboru <code><a href="tvlog/tvlog.csv">tvlog/tvlog.csv</a></code> najdete část logů z&nbsp;testovacího serveru jednoho malého IPTV operátora. Jde o&nbsp;CSV
+            soubor, ze kterého lze vyčíst, který zakazník se kdy díval na jaký televizní kanál.
+            Vaším úkolem je napsat program, který bude z&nbsp;tohoto logu zjišťovat statistické údaje
+            vždy pro jeden konkrétní vybraný měsíc. Po spuštení uživatel vybere vstupní soubor.
+            Dále zvolí, pro který měsíc statistiku požaduje a vybere, jakou statistiku si přeje
+            zobrazit.
+            
+         </p>
+         
+         
+         <p>Program musí umět pro vybraný měsíc zobrazit následující statistiky:</p>
+         
+         <ul>
+            
+            <li>Součet „prosledovaných“ časů pro jednotlivé kanály (součet časů všech diváků po jednotlivých
+               kanálech). Zobrazení TV kanálů a příslušných časů seřadte sestupně podle časů, čas
+               bude zobrazen ve formátu dny.hodiny:minuty:sekundy.
+            </li>
+            
+            <li>Počet unikátních diváků pro jednotlivé kanály (pro všechny kanály, kolik různých zákazníků
+               se na daný kanál dívalo alespoň jednu sekundu), seřadit dle počtu diváků sestupně.
+            </li>
+            
+            <li>Kdy byl server pod maximální zátěží. Měsíc rozdělíme na pětiminutové intervaly, u&nbsp;každého
+               intervalu spočítáme, kolik v&nbsp;daném období bylo aktivních diváků (dívalo se alespoň
+               část intervalu; přesněji – kolik řádek logu zasahuje do daného intervalu; uvažujte
+               pouze řádky začínající ve vybraném měsíci). Výsledky seřadíme sestupně podle počtu
+               diváků, zobrazíme 20 prvních položek (časový interval a počet diváků).
+            </li>
+            
+         </ul>
+         
+         
+         <p>
+            Očekáváme, že program bude napsán dle zvyklostí obvyklých pro použité prostředí –
+            u&nbsp;konzolových aplikací předpokládáme vstupy na příkazové řádce, u&nbsp;grafických prostředí
+            je vhodné použít pro zadávání vstupů a zobrazní výstupů příslušné komponenty daného
+            prostředí.
+            
+         </p>
+         
+         
+         <p>
+            Poznámky:
+         </p>
+         
+         <ul>
+            
+            <li>Neočekávejte, že bude log jakkoliv seřazený – počítáme s&nbsp;tím, že jej vždy projdete
+               celý.
+            </li>
+            
+            <li>Jeden zákazník může ve stejném čase sledovat dva různé programy (i&nbsp;více) na různých
+               zařízeních.
+            </li>
+            
+            <li>Jeden zákazník může ve stejném čase sledovat jeden stejný program na různých zařízeních.</li>
+            
+            <li>Server, z&nbsp;něhož logy pocházejí, některé měsíce některé TV kanály nevysílal, tedy není
+               chyba, že nejsou zalogovány.
+            </li>
+            
+            <li>Bude stačit, když váš program bude umět pracovat s&nbsp;50 televizními stanicemi a 100000
+               zákazníky.
+            </li>
+            
+            <li>Log obsahuje data od května 2018 do února 2019 – tyto mezní měsíce můžete mít v&nbsp;programu
+               „natvrdo“ a&nbsp;nemusíte je zjišťovat ze vstupních dat.
+            </li>
+            
+            <li>Hodnotíme primárně správnost výstupů. Za kvalitu/přehlednost a uživatelskou přívětivost
+               jsou také body, ale podstatná je správnost výsledků.
+            </li>
+            
+         </ul>
+         
+         
+         <p>Formát souboru:</p>
+         
+         
+         <p>
+            CSV oddělený středníky, každý řádek obsahuje jeden záznam o&nbsp;čtyřech sloupcích. První
+            sloupec obsahuje číslo zákazníka, druhý označení televizního kanálu, třetí sloupec
+            čas, kdy zákazník začal kanál sledovat (formát je zřejmý) a ve čtvrtém sloupci je
+            „prosledovaný“ čas v&nbsp;sekundách.
+            
+         </p>
+         
+         
+         <p>
+            Pro Vaši kontrolu – listopad 2018:
+         </p>
+         
+         <ul>
+            
+            <li>prosledované časy - 145d 16:14:29 - ct1 … 0d  0:25:10 - retromusic</li>
+            
+            <li>nejsledovanější 491× - ct1</li>
+            
+            <li>největší zátěž 103 diváků (2018-11-11 20:40)</li>
+            
+         </ul>
+         
+         
+         <section>
+            
+            <h3>Hodnocení</h3>
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  
+                  <!-- Strukturu této části je potřeba dodržet, automaticky se z ní generují hodnotící tabulky v Excelu -->
+                  
+                  <tr>
+                     
+                     <td>0.5</td>
+                     
+                     <td>program lze spustit, lze mu zadat vstupní soubor (gui - dialogem, konzole - pozná
+                        neexistenci zadaného souboru)
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>zobrazí „prosledované“ časy za prosinec 2018 ( 243d 17:12:46 - ct1;  128d 19:20:56
+                        - prima; 112d  5:46:51 - cool; … 0d 0:32:44 - csfilm ) [půl bodu za každý ze čtyř
+                        výsledků]
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>zobrazí „unikátní diváky“ za prosinec 2018 ( 733 - ct1; 521 - prima; 453 - cool; …
+                        2 - csfilm )
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>4</td>
+                     
+                     <td>najde maximální zátěž serveru za prosinec 2018 ( 130 - 2018-12-23 21:05 )</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.5</td>
+                     
+                     <td>přehlednost zobrazení výstupů (=není zjevně nepřehledné / nemá nelogické ovládání)</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>dokumentace (přehlednost, názvy identifikátorů, komentáře)</td>
+                     
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="práces&nbsp;mapou">Práce s&nbsp;mapou</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">2</span></p>
+         
+         
+         <p>Při výletech rádi navštěvujeme blízké i&nbsp;vzdálené vrcholy, ale neradi ztrácíme energii
+            zbytečným klesáním. Pomozte nám s&nbsp;plánováním cesty na vrchol.
+         </p>
+         
+         
+         <p>Napište program, který zjistí, na který nejvyšší vrchol – bod na mapě – se lze dostat
+            bez nutnosti klesat.
+         </p>
+         
+         
+         <p>Program dostane na vstupu textový soubor s&nbsp;jedním nebo více zadáními a sadu map v&nbsp;souborech.
+            Umožněte uživateli pohodlný výběr vstupního souboru. Zpracujte všechna zadání ve vstupním
+            souboru.
+            Zjištěné výsledky průběžně vypisujte na obrazovku ve stejném pořadí, jako je ve vstupním
+            souboru a umožněte uživateli výsledky uložit do jím zvoleného textového souboru.
+         </p>
+         
+         
+         <h3>Popis vstupního souboru</h3>
+         
+         
+         <p>Každý řádek souboru obsahuje jedno zadání, nebo je prázdný.</p>
+         
+         <p>Zadání má tvar:</p>
+         <pre>X Y MAPA</pre>
+         <dl>
+            
+            <dt><code>X Y</code></dt>
+            
+            <dd>souřadnice výchozího bodu (start)</dd>
+            
+            
+            <dt><code>MAPA</code></dt>
+            
+            <dd>název mapy – souboru s&nbsp;mapou, bez přípony</dd>
+            
+         </dl>
+         
+         
+         <p>Položky na řádku jsou odděleny právě jednou mezerou.</p>
+         
+         <p>Mapových souborů stejného jména je více a liší se příponou podle formátu, který obsahují.
+            Nacházejí se ve stejném adresáři (složce), jako soubor se zadáními.
+            Některé mapové soubory jsou obrázky v&nbsp;odstínech šedé – 256 odstínů od černé do bílé.
+            Černá = 0 je nejnižší možná výška.
+            Bílá = 255 je nejvyšší možná výška.
+            Ostatní mapové soubory zaznamenávají tzv. plné barvy. I&nbsp;tomto případě jsou v&nbsp;mapě
+            pouze odstíny šedé – každý bod má stejnou velikost červené, zelené a modré složky.
+            Velikost kterékoliv složky (0-255) je tedy výškou.
+         </p>
+         
+         <p>Příklad: barva bodu = ‭11184810‬ decimálně = AAAAAA hexadecimálně. Velikost složky
+            je AA hexadecimálně = 170 decimálně. Výška je tedy 170.
+         </p>
+         
+         <p>Vrcholy nebo hřebeny jsou na mapě světlejší, údolí jsou tmavší.</p>
+         <img src="KunetickaHora.png" alt="Příklad mapy">
+         
+         <p>Levý horní roh obrázku má souřadnici 0,0. První souřadnice roste doprava, druhá souřadníce
+            roste dolů.
+         </p>
+         <img src="souradnice.png" alt="Ilustrace souřadnic">
+         
+         <p>Po mapě se lze pohybovat v&nbsp;osmi směrech, tedy nejen přes stranu ale i&nbsp;přes roh.</p>
+         <img src="ruzice.png" alt="Ilustrace směrů">
+         
+         
+         
+         <p>Příklad vstupního souboru:</p>
+         <pre>70 50 KunetickaHora
+120 50 Palava
+170 100 Rip
+300 60 Palava
+260 80 Buchlov</pre>
+         
+         <p>Pro první zadání příkladu použijte jeden z&nbsp;těchto souborů: <code>KunetickaHora.bmp</code>, <code>KunetickaHora.gif</code>, <code>KunetickaHora.png</code>, <code>KunetickaHora.pgm</code>.
+            Všechny tyto soubory obsahují stejný obrázek, jen se liší formátem souboru.
+            Stejná mapa může být v&nbsp;jednom zadání použita vícekrát.
+         </p>
+         
+         
+         <p>Výstup výsledků má tento tvar:</p>
+         <pre>X Y Z&nbsp;MAPA</pre>
+         <dl>
+            
+            <dt><code>X Y</code></dt>
+            
+            <dd>souřadnice nalezeného vrcholu (cíl)</dd>
+            
+            
+            <dt><code>Z</code></dt>
+            
+            <dd>výška nalezeného vrcholu</dd>
+            
+            
+            <dt><code>MAPA</code></dt>
+            
+            <dd>název použitého souboru včetně přípony</dd>
+            
+         </dl>
+         
+         
+         <p>Položky na řádku jsou odděleny právě jednou mezerou.</p>
+         
+         <p>V&nbsp;adresáři mapy najdete příklady vstupních, výstupních a mapových souborů.</p>
+         
+         <p>Při hodnocení se vám započítají výsledky zjištěné a vypsané do 90 sekund za celý vstupní
+            soubor. Nezapomeňte dát uživateli možnost výsledky uložit do souboru – bude hodnoceno.
+         </p>
+         
+         
+         <section>
+            
+            <h3>Hodnocení</h3>
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  	 
+                  <!-- Strukturu této části je potřeba dodržet, automaticky se z ní generují hodnotící tabulky v Excelu -->
+                  
+                  <tr>
+                     
+                     <td>0.5</td>
+                     
+                     <td>Program lze spustit</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.5</td>
+                     
+                     <td>Lze zadat vstupní soubor</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.5</td>
+                     
+                     <td>test1.txt řádek 1 139 44 255 Pa</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.5</td>
+                     
+                     <td>test1.txt řádek 2 156 113 250 Rp</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.5</td>
+                     
+                     <td>test1.txt 1 řádek 3 243 81 255 Bv</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.5</td>
+                     
+                     <td>test1.txt 1 řádek 4 213 224 250 Lk</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.5</td>
+                     
+                     <td>test1.txt řádek 5 90 63 240 KH</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1.0</td>
+                     
+                     <td>test2.txt řádek 1 156 113 250 Rp</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1.0</td>
+                     
+                     <td>test2.txt 2 řádek 2 213 224 250 Lk</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1.0</td>
+                     
+                     <td>test2.txt 2 řádek 3 139 44 255 Pa</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1.0</td>
+                     
+                     <td>test2.txt 2 řádek 4 213 224 250 Lk</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1.0</td>
+                     
+                     <td>test2.txt 2 řádek 5 243 81 255 Bv</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>0.5</td>
+                     
+                     <td>Lze uožit výsledky</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1.0</td>
+                     
+                     <td>Dokumentace</td>
+                     
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="otravalevopisu">Otrava Levopisu</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">3</span></p>
+         
+         
+         <p><i>A rak šili spokoleně až do smrdi.</i></p>
+         
+         
+         <p>Hláskoslav Slohomil konečně dopsal svůj první román. Výstavbu díla
+            a uvěřitelnost postav zvádl na jedničku, zato v&nbsp;pravopisu poněkud pokulhává
+            (tedy, spíš by bylo spravedlivé říct, že se s&nbsp;bídou belhá). Najal si tedy
+            vás, abyste mu s&nbsp;opravou pravopisu pomohli.
+         </p>
+         
+         
+         <p>Vaším úkolem je napsat program, který dostane slovník korektních slov
+            plus text napsaný Hláskoslavem Slohomilem, a pro každé Slohomilovo slovo
+            zjistí, na jaká korektní slova ho lze opravit jednou znakovou změnou.
+            Znaková změna může být:
+         </p>
+         
+         <ul>
+            
+            <li>přidání jednoho znaku na libovolnou pozici ve slově
+               (<code>trktor → traktor</code>);
+               
+            </li>
+            <li>odebrání jednoho libovolného znaku ze slova
+               (<code>turaktor → traktor</code>);
+               
+            </li>
+            <li>změna jednoho znaku na libovolné pozici za
+               jakýkoliv jeden znak (<code>traktoš → traktor</code>).
+               
+            </li>
+         </ul>
+         
+         
+         <h3>Vstup</h3>
+         
+         
+         <p>Soubor <code>slovnik.txt</code> obsahuje slovník korektních slov. Každé
+            slovo je samo na řádku a skládá se z&nbsp;nanejvýš 42 libovolných znaků (kromě znaků konce
+            řádku). Soubor je uložený
+            v&nbsp;kódování <code>UTF-8</code> a každý řádek je ukončený znaky
+            <code>CR</code> a <code>LF</code>. Slovník obsahuje nanejvýš <code>10&nbsp;000</code>
+            slov.
+         </p>
+         
+         
+         <p>Samotný Slohomilův text je uložený v&nbsp;souboru <code>levopis.txt</code>,
+            a to ve stejném formátu jako soubor <code>slovnik.txt</code> (slovo na
+            řádku, kódování <code>UTF-8</code>, řádky ukončeny <code>CR</code> a <code>LF</code>,
+            nanejvýš <code>10&nbsp;000</code> slov, každé o délce do 42 znaků).
+            
+            
+         </p>
+         <h3>Výstup</h3>
+         
+         
+         <p>Pro každé slovo ze Slohomilova textu najděte všechna korektní slova ze
+            slovníku, která se liší nanejvýš jednou znakovou změnou.
+            Výstup uložte do souboru <code>opravy.txt</code> tak, že na <i>i</i>-tém
+            řádku jsou mezerou oddělená všechna korektní slova slovníku lišící se
+            nanejvýš jednou znakovou změnou od Slohomilova slova na <i>i</i>-tém řádku.
+            Korektní opravy pro jedno slovo vypište v&nbsp;tom pořadí, v&nbsp;jakém jsou korektní
+            slova uvedena ve slovníku.
+         </p>
+         
+         
+         <h3>Příklad</h3>
+         
+         
+         <table style="width:100%; font-size: 90%; line-height: 1;" class="keep-with-next">
+            
+            <thead>
+               
+               <tr>
+                  <th><code>slovnik.txt</code></th>
+                  <th><code>levopis.txt</code></th>
+                  <th><code>opravy.txt</code></th>
+               </tr>
+               
+            </thead>
+            
+            <tbody>
+               
+               <tr>
+                  <td>a</td>
+                  <td>až</td>
+                  <td>a až aš važ</td>
+               </tr>
+               <tr>
+                  
+               </tr>
+               <tr>
+                  <td>až</td>
+                  <td>do</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  
+               </tr>
+               <tr>
+                  <td>aš</td>
+                  <td>smrdi</td>
+                  <td>smrti</td>
+               </tr>
+               <tr>
+                  
+               </tr>
+               <tr>
+                  <td>smrt</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  
+               </tr>
+               <tr>
+                  <td>smrti</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  
+               </tr>
+               <tr>
+                  <td>važ</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  
+               </tr>
+            </tbody>
+            
+            <tbody>
+               <tr>
+                  
+               </tr>
+            </tbody>
+         </table>
+         
+         
+         <p>Soubory s&nbsp;ukázkovými daty naleznete v adresáři <code><a href="otrava-levopisu">otrava-levopisu</a></code>.
+         </p>
+         
+         
+         <section>
+            
+            <h3>Hodnocení</h3>
+            
+            
+            <p>Program soutěžících se vyhodnotí na šesti sadách vstupních souborů
+               ve složkách <code>1</code> až <code>6</code>, za každou dostane
+               soutěžící 0 či 1.5 bodu.
+            </p>
+            
+            
+            <p>Při vyhodnocování souboru <code>N/levopis.txt</code> zkopírujte tento
+               soubor do adresáře s&nbsp;programem soutěžícího a přejmenujte ho na
+               <code>levopis.txt</code>, a do stejného adresáře také nakopírujte soubor
+               <code>N/slovnik.txt</code> a přejmenujte ho na <code>slovnik.txt</code>.
+               Program soutěžícího spusťte a pokud to program vyžaduje, vyberte soubor
+               <code>slovnik.txt</code> a <code>levopis.txt</code>. Program musí
+               vygenerovat výstup do dvou vteřin. Pokud program v&nbsp;limitu vypíše správnou
+               odpověď, dostane 1.5 bodu, v&nbsp;opačném případě nikoliv. Korektní výstupy jsou
+               systematické, korektnost je tedy možné kontrolovat „pouhým okem“.
+               V větších výstupů stačí zkontrolovat prvních a posledních 20 řádků.
+            </p>
+            
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  	 
+                  <!-- Strukturu této části je potřeba dodržet, automaticky se z ní generují hodnotící tabulky v Excelu -->
+                  
+                  <tr>
+                     
+                     <td>1.5</td>
+                     
+                     <td>Program v&nbsp;limitu vytvoří korektní výstup pro soubor <code>levopis1.txt</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1.5</td>
+                     
+                     <td>Program v&nbsp;limitu vytvoří korektní výstup pro soubor <code>levopis2.txt</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1.5</td>
+                     
+                     <td>Program v&nbsp;limitu vytvoří korektní výstup pro soubor <code>levopis3.txt</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1.5</td>
+                     
+                     <td>Program v&nbsp;limitu vytvoří korektní výstup pro soubor <code>levopis4.txt</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1.5</td>
+                     
+                     <td>Program v&nbsp;limitu vytvoří korektní výstup pro soubor <code>levopis5.txt</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1.5</td>
+                     
+                     <td>Program v&nbsp;limitu vytvoří korektní výstup pro soubor <code>levopis6.txt</code></td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>až 1</td>
+                     
+                     <td>Dokumentace, komentáře, přehlednost, výstižné názvy proměnných, …</td>
+                     
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      
+      
+      
+   </body>
+</html>

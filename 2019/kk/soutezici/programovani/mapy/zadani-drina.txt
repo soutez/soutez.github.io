@@ -1,0 +1,4 @@
+150 150 Loket
+120 145 Loket
+10 10 Palava
+340 40 Loket

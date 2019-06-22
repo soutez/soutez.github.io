@@ -1,0 +1,4 @@
+2 154 160 Buchlov.gif
+213 224 250 Loket.png
+284 46 175 Rip.pgm
+156 113 250 Rip.bmp

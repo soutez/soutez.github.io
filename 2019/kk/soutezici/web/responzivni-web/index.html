@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Superímejl</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .state-box {
+            display: none;
+        }
+
+        .if-inbox {
+            display: none;
+        }
+
+        .state-box#selected-dir-inbox:checked~.app-main .if-inbox {
+            display: initial;
+        }
+
+        .if-sent {
+            display: none;
+        }
+
+        .state-box#selected-dir-sent:checked~.app-main .if-sent {
+            display: initial;
+        }
+
+        .if-junk {
+            display: none;
+        }
+
+        .state-box#selected-dir-junk:checked~.app-main .if-junk {
+            display: initial;
+        }
+
+        .if-webdev {
+            display: none;
+        }
+
+        .state-box#selected-dir-webdev:checked~.app-main .if-webdev {
+            display: initial;
+        }
+
+        .state-box#selected-dir-inbox:checked~.app-main label[for=selected-dir-inbox] {
+            background-color: blue;
+            color: white;
+        }
+        .state-box#selected-dir-sent:checked~.app-main label[for=selected-dir-sent] {
+            background-color: blue;
+            color: white;
+        }
+        .state-box#selected-dir-junk:checked~.app-main label[for=selected-dir-junk] {
+            background-color: blue;
+            color: white;
+        }
+        .state-box#selected-dir-webdev:checked~.app-main label[for=selected-dir-webdev] {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <button id="button-download" title="Aktualizovat zprávy">
+            </button>
+            <button id="button-newmsg" title="Nový mail">
+            </button>
+            <button id="button-delete" title="Smazat">
+            </button>
+            <button id="button-reply" title="Odpovědět">
+            </button>
+        </nav>
+    </div>
+
+    <input type="radio" class="state-box" name="selected-dir" id="selected-dir-inbox" checked />
+    <input type="radio" class="state-box" name="selected-dir" id="selected-dir-sent" />
+    <input type="radio" class="state-box" name="selected-dir" id="selected-dir-junk" />
+    <input type="radio" class="state-box" name="selected-dir" id="selected-dir-webdev" />
+
+    <div class="app-main">
+        <div class="directories-panel">
+            <h4>
+                Email
+            </h4>
+            <ul>
+                <li><label for="selected-dir-inbox">Inbox</label></li>
+                <li><label for="selected-dir-sent">Sent</label></li>
+                <li><label for="selected-dir-junk">Junk</label></li>
+            </ul>
+
+            <h4>
+                Reddit
+            </h4>
+            <ul>
+                <li><label for="selected-dir-webdev">Webdev</label></li>
+            </ul>
+        </div>
+        <div class="main-content if-inbox">
+            <div class="activity-box">
+                <span class="correspondent">Testovací emaily</span>
+                <span class="correspondent-addr">email@example.com</span>
+                <span class="date">Dnes</span>
+                <span class="actions"></span>
+                <span class="subject">Testovací data</span>
+                <div class="preview">
+                    Emaily (kromě tohoto) pochází z oblíbené databáze uniklých mailů z firmy Enron. Nevím pod jakou jsou
+                    licencí ani kde se vzaly.
+                </div>
+            </div>
+
+            <div class="activity-box">
+                <span class="correspondent-addr">reservations@sixcontinentshotels.com</span>
+                <span class="date">12 Jan 2002 18:11:45 -0800 (PST)</span>
+                <span class="actions"></span>
+                <span class="subject">Reservation Confirmation</span>
+                <div class="preview">
+                    Thank you for choosing Crowne Plaza for your travel needs.
+
+                    Your confirmation number is 66679657.
+                    Please use this number to reference your reservation.
+
+                    Guest Name: BASS/ERIC
+                    Hotel: TIMES SQUARE MANHATTAN, NY
+                    1605 Broadway
+                    MANHATTAN, NY 10019 UNITED STATES
+                    Telephone Number: 1800 2436969
+
+                    Driving Directions: N/A
+
+                    Arrival Date: FEB 28, 2002
+                    Number of Nights: 2
+                    Number of Rooms: 1
+                    Room Type: King Leisure Nonsmoking
+                    Rate Type: Great Getaways
+                    Arrival Rate: 199.95 USD*, per night plus tax**, per room.
+
+                    Rate Change: 209.95 USD. Effective: Friday, Saturday
+                    Check in Time: 3PM
+                    Check out Time: 12PM
+                    Gratuity: EXCLUDES GRATUITY
+                    Tax: 13.25% per night and 2.00 USD not included in rate effective February 28, 2002 thru March 2,
+                    2002
+                    Modify or Cancel by: If you need to cancel your reservation, please do so before 6:00PM on February
+                    27, 2002 or your credit card will be billed for the first night.
+
+
+                    To confirm, modify or cancel your reservation (if your rate allows), please visit
+                    http://www.sixcontinentshotels.com/crowneplaza?_template=modify_retrieve.html. Should you have any
+                    questions regarding your reservation, please contact the hotel directly or your nearest reservation
+                    office listed at http://www.sixcontinentshotels.com/sixcontinentshotels?_template=resoffice.html.
+
+                    Dream a Million dreams! Now through 01/05/2002 each stay booked online at
+                    http://www.sixcontinentshotels.com/priorityclub could win you 1,000,000 Priority Club points.*
+
+                    * Dream a Million Dreams Sweepstakes: No purchase or hotel stay necessary. Open to residents of US
+                    and Canada who, as of date of reservation, are Priority Club members, 21 or older. Void in the
+                    Province of Quebec and where prohibited. Sweepstakes ends 11:59 PM 01/05/02.
+                    Visit http://www.sixcontinentshotels.com/priorityclub/milliondreams for full official rules.
+
+                    If you are interested in receiving periodic emails with promotional offers from Six Continents
+                    Hotels hotel brands, please visit http://www.0mm.com/sch/sch-new.html
+
+                    Please Note:
+                    Only the reservation as entered into and confirmed by our system will be honored. Any written or
+                    printed confirmation that has been altered may be rejected by the hotel.
+
+                    * As exchange rates may fluctuate from the time a reservation is made until the actual stay, the
+                    confirmed rate is guaranteed in the hotel's base currency.
+
+                    ** In the United States, most rates exclude applicable taxes and service charges. In many other
+                    destinations, such extras are included in the rate shown. Taxes and other charges will be displayed
+                    next to the rate above when applicable.
+
+                    Have a safe and pleasant trip!
+                </div>
+            </div>
+
+            <div class="activity-box">
+                <span class="correspondent">Confer, Valley</span>
+                <span class="correspondent-addr">valley.confer@enron.com</span>
+                <span class="date">Tue, 5 Feb 2002 18:36:18 -0800 (PST)</span>
+                <span class="actions"></span>
+                <span class="subject">W-2</span>
+                <div class="preview">
+                    Eric,
+
+                    Your W-2 is correct.
+
+                    Did you add in your imputed income and subtract the pre-tax?
+
+                    Gross, less pre-tax, plus imputed = Box 1 taxable income.
+
+                    Please call if you still have questions.
+
+                    Valley
+                    57925
+                </div>
+            </div>
+
+            <div class="activity-box">
+                <!-- <div class="img">ddd</div> -->
+                <span class="correspondent">Enron MailSweeper Admin</span>
+                <span class="correspondent-addr">admin.enron@enron.com</span>
+                <span class="date">Mon, 4 Feb 2002 11:01:30 -0800 (PST)</span>
+                <span class="actions"></span>
+                <span class="subject">An Inbound Message For You Has Been Quarantined</span>
+                <div class="preview">
+                    You have received this message because someone has attempted to send you an e-mail from outside of
+                    Enron with an attachment type that Enron does not allow into our messaging environment. Your e-mail
+                    has been quarantined and is being held at the MailSweeper server.
+
+
+                    Sender: daphneco64@alltel.net
+                    Date: Mon, 4 Feb 2002 12:55:25 -0600
+                    Subject: Play the Enron Blame Game! - Who destroyed America's seventh-largest company Po
+                    Attachment Type: Scenarios/Incoming/Inbound URL Catcher: A filename matching the file mask was
+                    detected: 'play the enron blame game! - who destroyed america's seventh-largest company point the
+                    finger at your favorite culprit. by david plotz.url'.
+                </div>
+            </div>
+        </div>
+        <div class="main-content if-sent">
+            <div class="activity-box">
+                <span class="correspondent">Shanna Husser</span>
+                <span class="correspondent-addr">shanna.husser@enron.com</span>
+                <span class="date">Wed, 6 Dec 2000 00:33:00 -0800 (PST)</span>
+                <span class="actions"></span>
+                <span class="subject">Email 1</span>
+                <div class="preview">
+                    http://www.weather.com/weather/cities/us_co_alamosa.html
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content if-junk">
+            <div class="activity-box">
+                <span class="correspondent-addr">infrastructure.ubsw@enron.com</span>
+                <span class="date">Mon, 4 Feb 2002 18:51:07 -0800 (PST)</span>
+                <span class="actions"></span>
+                <span class="subject">DRAFT: INFORMATION, Please Read: UBSWE Migration postponed</span>
+                <div class="preview">
+                    Due to a variety of circumstances we did not migrate employees to the UBSWE environment tonight
+                    (Monday, February 4, 2002). We will communicate further details of the migration plan on Tuesday,
+                    February 5, 2002.
+
+                    Thank you for your cooperation in advance, please contact the Resolution Center at x 3-1411 should
+                    you have any questions.
+
+                    UBSW Energy Global Infrastructure
+                </div>
+            </div>
+        </div>
+        <div class="main-content if-webdev">
+            <div class="activity-box">
+                <span class="correspondent-addr">u/maholeycow</span>
+                <span class="date">4 hours ago</span>
+                <span class="actions"></span>
+                <span class="subject">Wanting a challenge website for practicing HTML, CSS, and Javascript</span>
+                <div class="preview">
+                    Hi everyone, I was wondering if there was a website that had designs of websites that one can try to implement with HTML & CSS? I am just looking for a way to practice what I am learning. On top of this, maybe even add a little bit of interactivity with Javascript and jQuery. At work I use React right now and get the job done, but just want to further my front end development skills through challenges like these. Thanks! Let me know if you happen to know of any.
+                </div>
+            </div>
+            <div class="activity-box">
+                <span class="correspondent-addr">u/garboooge</span>
+                <span class="date">8 hours ago</span>
+                <span class="subject">Bring me your nightmare stacks</span>
+                <span class="actions"></span>
+                <div class="preview">
+                    Have you ever worked on an insane stack and no one at work understood how antiquated, idiosyncratic, and brittle it was? Let me hear what you’ve worked on! I too have Seen Some Shit (TM) and would love to sympathize.
+                </div>
+            </div>
+        </div>
+        <div class="events-panel">
+            <div class="events-block">
+                <h4>Zítra</h4>
+                <div class="event-todo"><span class=name>Koupit jablka</span></div>
+                <div class="event-cal"><span class=time>13:00 - 14:30</span> <span class=name>Přednáška o CSSkách</span>
+                </div>
+            </div>
+            <div class="events-block">
+                <h4>Pozítří</h4>
+                <div class="event-todo"><span class=name>Koupit hrušky</span></div>
+                <div class="event-cal"><span class=time>12:00 - 13:30</span> <span class=name>Test z CSSek</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

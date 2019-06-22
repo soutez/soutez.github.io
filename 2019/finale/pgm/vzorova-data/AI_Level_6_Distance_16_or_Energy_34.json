@@ -1,0 +1,18 @@
+{
+"SIRKA": 10,
+"VYSKA": 10,
+"START":{"X":1,"Y":10,"E":8},
+"CIL": {"X": 8,"Y": 1},
+"PLAN": [
+"V,V,V,V,V,V,V,V,Z9,J8",
+"V,V,V,J8,V,V,V,V,Z2,J8",
+"V,V,V,V,V,V,V,Z9,J2,V",
+"V,V,V,V,V,V,V,Z9,J1,V",
+"V,V,J8,V,V,V,Z9,J4,V,V",
+"V,V,V,V,V,Z1,J8,V,V,V",
+"V,V,V,V,Z4,J9,V,V,V,V",
+"V,V,V,Z2,J8,V,V,V,V,V",
+"V,V,Z2,J2,V,V,V,V,V,V",
+"V,Z5,J1,V,V,V,V,V,V,V"
+]
+}

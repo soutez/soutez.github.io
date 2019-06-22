@@ -1,0 +1,4 @@
+20 180 Buchlov
+200 200 Loket
+270 70 Rip
+150 100 Rip

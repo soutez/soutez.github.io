@@ -1,0 +1,1050 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Hodnocení soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, Unifont, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Hodnocení</span> soutěžních
+            úloh
+         </h1>
+         
+         <h2 class="category">Kategorie programování webu</h2>
+         
+         <h2 class="date">25. až 27. dubna 2019</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 33.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2018/2019</p>
+         
+      </header>
+      <div class="toc"><a href="#responzivni-web">Responzivní web</a><br><a href="#rodokmen">Rodokmen</a><br></div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="responzivni-web">Responzivní web</h2>
+         
+         <p class="koeficient">max. 30 bodů (15 rozvržení stránky, 15 vzhled prvků)</p>
+         
+         <p>Máme skvělého emailového klienta, který umí
+            zobrazovat emaily v&nbsp;prohlížeči. Aby nebyl tak úplně stejný jaky všechny ostatní, tak
+            má i&nbsp;podporu pro zobrazování zpráv
+            z&nbsp;Redditu a možná i&nbsp;dalších zdrojů. Na tom ale teď nesejde, potřebujeme aby stránka
+            vypadala perfektně na
+            zařízeních všeho druhu – počítačích, mobilech, tabletech, čtečkách ebooků a kdo ví
+            čem ještě.
+         </p>
+         
+         <p>V&nbsp;adresáři <code><a href="responzivni-web">responzivni-web</a></code> máte k&nbsp;úloze přiložené soubory <code>style.css</code> a <code>index.html</code>.
+            Obsahují základní rozhraní pro počítač, od vás potřebujeme doladit jeho podobu a přispůsobit
+            jej pro mobilní obrazovky. Měnit můžete jenom soubor
+            <code>style.css</code>, <strong>v&nbsp;HTML nic neměňte</strong> – je to jenom ukázka, v&nbsp;provozu se bude HTML generovat dynamicky serverem. Měnit
+            jeho
+            strukturu je bohužel velmi komplikované, protože jsme zpackali zálohy a zdrojáky nám
+            odnesla velká voda.
+            Hlavním cílem aplikace je zprávy zobrazovat – pár tlačítek sice obsahuje, ale nic
+            zatím nedělají. To je v&nbsp;pořádku, bude to umět až Enterprise verze,
+            která je předražená a naštěstí si ji zatím nikdo nekoupil.
+         </p>
+         
+         
+         
+         <h3 id="rozvržení-stránky">Rozvržení stránky</h3>
+         
+         <p>Stránka má aktuálně tři panely vedle sebe: vlevo se dají vybírat složky, uprostřed
+            jsou zobrazené zprávy a vpravo
+            je panel s&nbsp;blížícími se událostmi (bez toho by to nebyl emailový klient). Takto má
+            stránka vypadat na počítači s&nbsp;velkým displejem a tam to rozvržení nijak zásadně neměňte.
+         </p>
+         
+         <p>Na trochu menším displeji (tzn. větší tablet nebo menší notebook, řekněme širší než
+            1000px) je možné ušetřit trochu
+            místa tím, že dáme složky (levý panel) a události (pravý panel) pod sebe. Složky jsou
+            důležitější, ty budou nad
+            událostmi a oba panely od sebe budou graficky odlišeny (můžou mít například pozadí
+            v&nbsp;jiném odstínu bílé). Navíc panel trochu zmenšete.
+         </p>
+         
+         <p>Na menších obrazovkách už nebudeme vůbec zobrazovat panel s&nbsp;událostmi a panel se složkami
+            přesuneme do hlavičky.
+            Pokud je obrazovka ještě rozumně široká (menší tablety), složky nebudeme zobrazovat
+            pod sebou ale vedle sebe, aby
+            panel nebyl zbytečně dlouhý. Navíc se při skrolování panel zafixuje v&nbsp;horní části
+            obrazovky, aby šlo složky přepínat ať je uživatel
+            kdekoliv. Pokud se jedná o&nbsp;mobil (má ještě menší displej), tak se panel fixovat nahoře
+            nebude, aby vůbec zbylo nějaké
+            místo na zprávy. Složky zase chceme srovnané pod sebou, protože stejně nemáme mnoho
+            horizontálního prostoru.
+            
+         </p>
+         
+         <p>V&nbsp;každém případě by se aplikace měla přizpůsobit velikosti displeje (nebo okna prohlížeče)
+            a prohlížeč by nikdy
+            neměl uživateli nabídnout horizontální skrolování.
+         </p>
+         
+         
+         <h3 id="vzhled-prvků">Vzhled prvků</h3>
+         
+         <p>Pak bychom chtěli v&nbsp;aplikaci doladit několik vizuálních detailů:</p>
+         
+         <p>Některé zprávy mají u&nbsp;adresáta napsané jméno i&nbsp;adresu, jiné mají jen adresu. Pokud
+            jsou tam oba, tak
+            chceme aby se jméno zobrazovalo tučně a adresa byla šedivá a ve špičatých závorkách
+            (například takto
+            <code><b>Moje Jméno</b> &lt;mujemail@domena.cz&gt;</code>). V&nbsp;tomto případě je navíc plýtváním adresu zobrazovat
+            na malých obrazovkách (mobily a malé tablety), tak jí prosím skryjte úplně. Pokud
+            není jméno uvedené, pak chceme aby
+            adresa byla tučně a nebyla ve špičatých závorkách.
+         </p>
+         
+         <p>Předmět zprávy by měl být napsaný <a href="https://cs.wikipedia.org/wiki/Kapitálky">kapitálkami</a> a trochu větším písmem (cca o&nbsp;čtvrtinu).
+         </p>
+         
+         <p>Datum a čas odeslání zprávy by měly být šedivé (stejně jako adresa) a měly by být
+            při pravém okraji stránky.
+            Stejně tak by se měl zobrazovat i&nbsp;čas události v&nbsp;pravém panelu, pokud je zadaný. Čas
+            by měl být navíc napsaný menším
+            písmem (cca tříčtvrtinové velikosti) a měl by být zarovaný s&nbsp;horním okrajem.
+         </p>
+         
+         <p>V&nbsp;hlavním panelu jsou jednotlivé zprávy vizuálně rozděleny do bločků s&nbsp;dělící čárou
+            a po najetí myší se zvýrazní.
+            Chtěli bychom aby se stejně chovalo i&nbsp;menu se složkami a panel s&nbsp;událostmi. Konkrétně,
+            zařiďte prosím čáry mezi složkami a
+            zvýraznění složky a události po najetí myší. Také zařiďte ať menu se složkami vypadá
+            víceméně stejně jako menu s&nbsp;událostmi (podobné mezery mezi bloky, písma apod). Když
+            se složka vybere klinutím, tak má mít modré pozadí.
+         </p>
+         
+         <p>Aby se nemísil předmět zprávy s&nbsp;datem odeslání a odesílatelem, tak na menších obrazovkách
+            dejte předmět na jiný
+            řádek než odesílatele (přibližně na tabletech a menších, ale otestujte si sami kdy
+            vám připadá nejlepší
+            je oddělit).
+         </p>
+         
+         <p></p>
+         
+         
+         <section>
+            
+            <h3>Hodnocení</h3>
+            
+            <p>Úkolem bylo napsat CSS styly pro připraveného HTML, do kterého nemají soutěžící šahat.
+               Na hodnocení si
+               do řešení zkopírujte soubory <code>web/responzivni-web/puvodni.html</code> a <code>web/responzivni-web/testovaci.html</code> a funkčnost testujte
+               na všech třech (tedy včetně <code>index.html</code>, který dostal/a soutěžící). Pokud nějaká vlastnost bude fungovat jen v&nbsp;nějakých
+               testovacích souborech, strhněte body lineárně (speciálně, pokud si soutěžící upravil/a
+               <code>index.html</code>
+               aby to rozfungoval/a, tak dostane třetinu bodů).
+            </p>
+            
+            <p>Jádrem úlohy je práce s&nbsp;různě velkými displeji. Pro hodnocení tohoto aspektu si můžete
+               otevřít devtools
+               (většinou na klávese F12) a přepnout do mobilního simulátoru ("Responsive Design Mode"
+               ve Firefoxu nebo "Toogle Device Toolbar" v&nbsp;Chrome) nebo prostě vzít
+               okno prohlížeče a zmenšovat/zvětšovat ho. Devtools vám nicméně umožní otestovat i&nbsp;větší
+               obrazovku než testovací
+               počítače, zkuste je prosím použít pokud to vypadá jako že se pořád zobrazuje tabletová
+               verze.
+            </p>
+            
+            <p>Základním požadavkem je, že se nerozbilo to co fungovalo, pokud nějaký z&nbsp;následujících
+               bodů není splněný, tak zbytek hodnoťte jako "nesplněno":
+            </p>
+            
+            <ul>
+               
+               <li>V&nbsp;panelu jsou zobrazeny všechny složky a lze mezi nimi překlikávat. Překlikávání vymění
+                  seznam zpráv.
+               </li>
+               
+               <li>Zobrazuje se seznam zpráv, jsou oddělené čárou, u&nbsp;každého se zobrazuje jednořádkový
+                  náhled obsahu.
+               </li>
+               
+               <li>Nahoře je panel s&nbsp;tlačítky. Tlačítka sice nic nedělají, ale při najetí změní barvu
+                  aby vypadala interkativně.
+               </li>
+               
+               <li>Na dostatečně velkém rozlišení se zobrazuje panel s&nbsp;událostmi.</li>
+               
+            </ul>
+            
+            <p>Detaily k&nbsp;následujícím bodům jsou v&nbsp;zadání ve stejném pořadí.</p>
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  
+                  <!--
+                <tr>
+                    <th colspan="2" style="text-align: left">Rozvržení stránky</th>
+                </tr>
+                -->
+                  
+                  
+                  <tr>
+                     
+                     <td>3</td>
+                     
+                     <td>Při zmenšování displeje panel s&nbsp;událosmi zmizí a události se zobrazí pod složkami.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Při zmenšování displeje se levý panel trochu změnší.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Pak se při zmenšování displeje levý panel zruší, události zmizí a složky se budou
+                        přepínat nahoře.
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Panel se složkami je při určité velikosti v&nbsp;horizontálním módu - složky jsou zobrazené
+                        vedle sebe.
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Panel se složkami je při určité velikosti zafixovaný - nezávisle na skrolování je
+                        navrchu obrazovky.
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Když se obrazovka dostatečně změnší, tak panel zase přestane být zafixovaný nahoře.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>5</td>
+                     
+                     <td>Do šířky cca 300px (to je na začátku velikost bočního panelu) se aplikace vždy přispůsobí
+                        velikosti displeje - není vidět scrollbar ani nic nepřetéká.
+                     </td>
+                     
+                  </tr>
+                  
+                  
+                  <!--
+                <tr>
+                    <th colspan="2" style="text-align: left">Vzhled prvků</th>
+                </tr>
+                -->
+                  
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Odesílatel je tučně</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Pokud je uvedeno i&nbsp;jméno, tak je adresa odesílatele šedivá a ve špičatých závorkách.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Na malém displeji emailová adresa zmizí, pokud je zároveň uvedeno i&nbsp;jméno odesílatele.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Předmět je kapitálkami.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Čas přijetí zprávy a čas události je zarovnaný vpravo nahoře.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Čas přijetí zprávy a čas události je menším písmem a je šedivý.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Události se zvýrazňují po najetí myší.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Pozadí složek se zvýrazňuje po najetí myší.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Složky nejsou v&nbsp;odrážkovém seznamu, ale v "boxech" podobně jako události a zprávy.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Složky jsou oddělené horizontální čárou (oddělené =&gt; čára není pod poslední ani nad
+                        první složkou).
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Box s&nbsp;vybranou složkou má modré pozadí na celé svojí ploše ploše (tedy nemá jiné než
+                        modré pozadí)
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Při určitém zmenšení displeje se předmět zprávy vždycky začne zobrazovat na jiném
+                        řádku než odesílatel a datum.
+                     </td>
+                     
+                  </tr>
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         	
+         <hr>
+         <h2 id="rodokmen">Rodokmen</h2>
+         	
+         <p class="koeficient">max. 50 bodů</p>
+         
+         	
+         <p>Vytvořte aplikaci pro zobrazení rodokmenu. <em>V&nbsp;této úloze je zakázáno
+               	používat předpřipravené obrázky.</em> Pro zobrazení piktogramů a ikon
+            	zvolte symboly Unicode.
+         </p>
+         
+         	
+         <p>Úloha je rozdělena na dvě části. V&nbsp;první budete vytvářet statickou
+            	stránku, v&nbsp;druhé pak aplikaci oživíte a umožníte uživateli zobrazený
+            	rodokmen upravovat. Za statickou část dostanete až 15 bodů, za dynamickou
+            	pak až 35. Úlohu není nutno řešit popořadě – jednotlivé části jsou
+            	hodnoceny víceméně nezávisle.
+         </p>
+         
+         	
+         <p>Pokud nebudete dělat dynamickou část, zobrazte umělý rodokmen o&nbsp;alespoň
+            	třech generacích, na kterém demonstrujete všechny požadavky zmíněné
+            	v&nbsp;zadání. Pamatujte, že nelze přidělit body za splnění požadavku, který
+            	není vidět nebo nelze ověřit!
+         </p>
+         
+         	
+         <h3>Statická část</h3>
+         
+         	
+         <p>Stránka bude obsahovat v&nbsp;levém horním rohu nadpis „Rodokmen“.</p>
+         
+         
+         <div style="width: 40%; min-width: 200px; max-width: 300px; float: right; margin-left: 1em; border: solid 1pt black; padding: 0.5em; ">
+            <b>Příklad zobrazení:</b><br><br>
+            
+            	<img src="priklad.svg" width="100%" alt="Příklad rodokmenu.">
+            
+         </div>
+         
+         	
+         <p>Jednotlivé osoby budou reprezentovány pomocí zaoblených obdélníků
+            	s&nbsp;viditelným ohraničením. Obdélník bude obsahovat tři řádky textu s&nbsp;těmito
+            	informacemi: 1. jméno, 2. datum narození a úmrtí, 3. místo bydliště. Na
+            	prvním řádku bude větším písmem celé jméno dané osoby zarovnané na střed.
+            	Poté budou následovat zbylé dva řádky s&nbsp;menším písmem. Druhý řádek bude
+            	rozdělen na poloviny a v&nbsp;první bude na střed zarovnané datum narození
+            	a v&nbsp;druhé bude na střed zarovnané datum úmrtí. Pokud daná osoba ještě žije,
+            	tak řádek nebude rozdělen na poloviny a bude obsahovat pouze datum narození
+            	zarovnané na střed celého řádku. Datumy budou doplněny o&nbsp;jednoduché
+            	piktogramy znázorňující datum narození a datum úmrtí (např. hvězdička
+            	a křížek). Na posledním řádku bude na střed zarovnané místo bydliště.
+            	Obdélník má zakulacené rohy a všechny obdélníky mají stejnou výšku.
+         </p>
+         
+         	
+         <p>Příbuzenské vztahy budou v&nbsp;rodokmenu znázorněny rovnými čárami
+            	propojující dané osoby. Čáry nesmí procházet přes obdélník nebo jím být
+            	překrývány. Čáry jsou lomené, každý úsek je rovnoběžný s&nbsp;osami. Body
+            	napojení jsou určeny následovně:
+         </p>
+         
+         	
+         <ul>
+            		
+            <li>Čára od dítěte k&nbsp;rodiči vychází ze středu horní strany
+               			obdélníka.
+            </li>
+            		
+            <li>Čára mezi partnery vede mezi středy pravé a levé strany (navíc,
+               			středy stran jsou ve stejné výšce).
+            </li>
+            		
+            <li>Čára od rodiče bez partnera k&nbsp;dítěti vede ze středu dolní
+               			strany.
+            </li>
+            	
+         </ul>
+         
+         	
+         <p>Pro zobrazení vztahu dvou rodičů a dítěte nejprve propojte rovnoběžnou
+            	čarou rodiče, následně v&nbsp;polovině vodorovné čáry oddělte svislou čáru
+            	směrem dolů, kde zobrazte dítě. Pokud je dětí více, ze svislé čáry oddělte
+            	vodorovnou, na kterou teprve děti napojíte.
+         </p>
+         <p>
+            
+            	
+         </p>
+         <p>Osoby v&nbsp;rodokmenu zobrazujte tak, aby příslušníci jedné generace byli
+            	vždy ve stejné výšce.
+         </p>
+         
+         	
+         <p>Rodokmen by měl být vykreslený vektorově. Měla by být zachována
+            	schopnost škálování stránky v&nbsp;prohlížeči – ať už změnou velikosti
+            	písma nebo celé stránky. Velikosti textu by měly respektovat uživatelské
+            	nastavení velikosti písma (tj. vyhněte se absolutním velikostem). Text by
+            	mělo být možné vybrat myší a zkopírovat do schránky.
+         </p>
+         
+         	
+         <p>Pokud je rodokmen větší než dostupný prostor na obrazovce, umožněte
+            	pohyb pomocí scrollbarů. Zajistěte ale, aby se pomocí scrollbarů hýbal
+            	pouze rodokmen sám – nadpis „Rodokmen“ musí být vždy v&nbsp;levém horním
+            	rohu zobrazené části stránky.
+         </p>
+         
+         	
+         <h3>Dynamická část</h3>
+         
+         	
+         <h4>Pohyb</h4>
+         
+         	
+         <p>Umožněte pohyb po rodokmenu jako po mapě – kliknutím myši do
+            	prázdného místa dojde k „uchopení“ bodu rodokmenu a tažením myši se bude
+            	celý rodokmen pohybovat. Musí být možné část rodokmenu vysunout mimo
+            	viditelnou oblast stránky a zpět. Stránka obsahující rodokmen tedy bude
+            	obsahovat scrollbary a možnost posouvat rodokmen pomocí uchopení myší.
+         </p>
+         
+         	
+         <h4>Úpravy osob</h4>
+         
+         	
+         <p>Umožněte osoby v&nbsp;rodokmenu živě upravovat. Pro úpravy zobrazte na každém
+            	obdélníčku odkaz „upravit“, příp. znak tužky (✎) nebo něco podobného. Po
+            	kliknutí se stránka rozdělí na dvě poloviny: v&nbsp;levé zůstane rodokmen,
+            	v&nbsp;pravé se zobrazí okno s&nbsp;formulářem pro úpravu osoby. Rozdělení nesmí
+            	pohnout s&nbsp;rodokmenem (pravá polovina bude tedy zakryta oknem pro úpravy).
+            	Zobrazení okna animujte tak, že se okno vysune z&nbsp;pravého okraje. Zvolte
+            	takovou rychlost animace, aby byla patrná, ale uživatele neotravovala
+            	přílišnou délkou.
+         </p>
+         
+         	
+         <p>Formulář obsahuje pouze prvky zobrazené v&nbsp;rodokmenu: jméno, datum
+            	narození a úmrtí, místo bydliště. Navíc pak tlačítko k&nbsp;uzavření formuláře
+            	– křížek v&nbsp;pravém horním rohu. Zavření okna animujte opětovným
+            	zasunutím do pravého okraje.
+         </p>
+         
+         	
+         <p>Změny ve formuláři se živě (s&nbsp;každou změnou písmene) projevují
+            	v&nbsp;rodokmenu v&nbsp;levé polovině.
+         </p>
+         
+         	
+         <h4>Perzistence</h4>
+         
+         	
+         <p>Rodokmen uschovávejte do libovolného úložiště prohlížeče tak, aby při
+            	opětovném načtení stránky aplikace zobrazila rodokmen ve stavu, ve kterém
+            	byl před uzavřením okna – tj. nejen data rodokmenu, ale i&nbsp;pozice osob
+            	a pohled na rodokmen.
+         </p>
+         
+         	
+         <h4>Úpravy struktury rodokmenu</h4>
+         
+         	
+         <p>Umožněte uživateli přesouvat uzly v&nbsp;rodokmenu myší. Nad pravým horním
+            	rohem každého obdélníčku zobrazte šipku (⬌), za kterou lze obdélníček
+            	uchopit a přesouvat ve vodorovném směru. Poloha ve svislém směru je dána
+            	generací. Díky této možnosti se může stát, že se budou čáry překrývat
+            	– tento problém neřešte. Rozmístění uzlů, aby se čáry nekřížily, je
+            	starost uživatele. Nikdy by ale čáry neměly překrývat obdélníky.
+         </p>
+         
+         	
+         <p>Umožněte přidávat osoby do rodokmenu (přesný popis přidávání následuje
+            	v&nbsp;několik dalších odstavcích).
+         </p>
+         
+         	
+         <p>Aplikace začne tím, že zobrazí rámeček pro jednoho člověka,
+            	ostatní lidé se do rodokmenu přidají pomocí vazeb na tuto
+            	osobu (a&nbsp;její příbuzné) – rodokmen tedy bude vždy
+            	souvislý. Zároveň nebude možno přidávat rozpadlé vztahy
+            	– každý bude mít vždy nejvýše jednoho partnera. Také
+            	není nutno řešit případy, kdy rodokmen není strom (v&nbsp;grafové
+            	terminologii) – tj. každé dvě osoby v&nbsp;rodokmenu jsou
+            	příbuzné právě jednou cestou.
+         </p>
+         
+         	
+         <p>Součástí formuláře k&nbsp;úpravě člověka budou tlačítka k&nbsp;přidání příbuzných.
+            	Některá tlačítka ale můžou být zakázaná – při najetí myší zobrazte
+            	důvod zakázání (např. v&nbsp;tooltipu „Partner již existuje.“). Pokud je důvodů
+            	více, zobrazte libovolný z&nbsp;nich.
+         </p>
+         
+         	
+         <ul>
+            		
+            <li>Tlačítko „přidat dítě“ je vždy povoleno.</li>
+            		
+            <li>Pokud osoba zatím nemá partnera, povolte tlačítko „přidat
+               			partnera“.
+            </li>
+            		
+            <li>Pokud osoba má alespoň jednoho rodiče, povolte tlačítko „přidat
+               			sourozence“.
+            </li>
+            		
+            <li>Pokud osoba zatím nemá dva rodiče, povolte tlačítko „přidat
+               			rodiče“.
+            </li>
+            	
+         </ul>
+         
+         	
+         <p>Kliknutím na tlačítko k&nbsp;přidání příbuzného se přidá osoba do zobrazeného
+            	rodokmenu. Při přidání předpokládejte existenci ostatních vztahů: přidání
+            	druhého rodiče dítěte má stejný efekt, jako přidání partnera rodiče.
+            	Podobně, přidání druhého a dalšího dítěte má stejný efekt jako přidání
+            	sourozence.
+         </p>
+         
+         	
+         <p>Po přidání formulář přejde k&nbsp;úpravám nově vzniklé osoby.</p>
+         
+         	
+         <p>Umožněte osoby mazat – ovšem pouze v&nbsp;případě, že se jejich
+            	odstraněním rodokmen nerozpadne na oddělené části. Také nesmí být možné
+            	odstranit poslední osobu z&nbsp;rodokmenu (pozor, poslední osoba nemusí nutně
+            	být tou původní). Pokud je možné osobu za těchto podmínek odstranit,
+            	součástí formuláře pro úpravy je tlačítko „odstranit“. Tlačítko podbarvěte
+            	červeně. Po kliknutí na něj dojde k&nbsp;odstranění osoby z&nbsp;rodokmenu a uzavření
+            	okna pro úpravy.
+         </p>
+         
+         	
+         <p>Pokud není možné osobu odstranit, zobrazte tlačítko „odstranit“ jako
+            	zakázané. Po najetí myši se uživateli zobrazí libovolný konkrétní důvod
+            	(např. rodokmen by se rozpadl.)
+         </p>
+         
+         	
+         <section>
+            
+            	
+            <h3>Hodnocení</h3>
+            
+            	
+            <p>Body ve statické části přidělujte podle toho, co je možno vidět. Pokud např.
+               	neexistuje blok s&nbsp;osobou s&nbsp;datem úmrtí, nepřidělujte body za rozdělení druhého
+               	řádku.
+            </p>
+            
+            	
+            <table class="hodnoceni">
+               	
+               <thead>
+                  		
+                  <tr> 
+                     <th>Body</th>
+                     <th>Za co</th>
+                  </tr>
+                  <tr>
+                     	
+                  </tr>
+               </thead>
+               	
+               <tbody>
+                  		
+                  <tr>
+                     <td>1</td>
+                     <td>Nadpis Rodokmen je trvale v&nbsp;levém horním rohu</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>0.5</td>
+                     <td>Bloky mají zaoblené rohy</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>0.5</td>
+                     <td>Blok vždy obsahuje 3 řádky s&nbsp;informacemi</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>0.5</td>
+                     <td>Text na 1. řádku je větší než na zbylých 2</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Zemřelé osoby mají 2. řádek rozdělené na dvě poloviny (zarovnané na střed)</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>0.5</td>
+                     <td>Datum narození a úmrtí je doplněn o&nbsp;piktogramy</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Všechny osoby v&nbsp;každé generaci mají středy ve stejné výšce</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>0.5</td>
+                     <td>Existují čáry mezi bloky</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Čáry jsou lomené se souosými úseky</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>0.5</td>
+                     <td>Čáry neprochází skrze obdélníky (a&nbsp;ani jimi nejsou překrývány)</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Čára od dítěte k&nbsp;rodiči vychází ze středu horní strany obdélníka</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Čára mezi partnery vede mezi středy stran</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Čára od rodiče bez partnera k&nbsp;dítěti vede ze středu dolní strany</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Čára pro dítě partnerů vychází ze středu čáry mezi partnery</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Rodokmen je vykreslen vektorově (ověřte pohledem do kódu)</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Jména jdou označit jako text</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Rodokmen lze škálovat prohlížečem bez porušení ostatních bodů hodnocení</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>S&nbsp;rodokmenem lze pohybovat pomocí scrollbarů na obrazovce (rodokmen lze částečně vysunout
+                        mimo viewport)
+                     </td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>Rodokmen lze posouvat uchopením myší.</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Přesun je realizován tažením piktogramu šipek</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Po kliknutí na editační ikonku se rozdělí obrazovka na dvě části</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>V&nbsp;pravé polovině je zobrazen dialog pro úpravu, obsahuje prvky z&nbsp;rodokmenu a tlačítko
+                        pro zavření
+                     </td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Otevřením editačního okna se neposune rodokmen</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Zobrazení a skrývání okna je animováno</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>Lze upravovat data v&nbsp;rodokmenu skrze okno pro úpravy</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Upravy se projevují ihned</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Ovládací prvky jsou stylovány dle zadání</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>Upravená data rodokmenu jsou zachována přes zavření okna</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>Pohled na rodokmen je zachován přes zavření okna</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Obdelníky lze přesouvat tažením za šipku</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Obdélník po přesunu zůstane na přesunutém místě</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Přesouvat lze pouze ve vodorovném směru</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>Čáry se správně přesouvají s&nbsp;obdélníkem</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Po prvním otevření rodokmenu je zobrazen rámeček pouze pro jednu osobu</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Formulář obsahuje nějaká tlačítka pro přidání osoby</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Tlačítka jsou neaktivní dle pravidel v&nbsp;hodnocení</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Funguje přidávání rodičů (i&nbsp;opakovaně)</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Funguje přidávání sourozenců (i&nbsp;opakovaně)</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Funguje přidávání partnerů</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Funguje přidávání dětí (i&nbsp;opakovaně)</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Nová osoba je připojena čarou dle pravidel ve statické části</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Po přidání formulář přejde k&nbsp;úpravám nově vzniklé osoby</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Osoby lze smazat (v&nbsp;povolených případech)</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Po odstranění osoba zmizí a zavře se okno pro úpravy</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Lze smazat počáteční osobu (např. po přidání rodiče)</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Tlačítko je neaktivní, pokud osoba nelze odstranit</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Po najetí na neaktivní tlačítka se zobrazí (správný) důvod</td>
+                  </tr>
+                  <tr>
+                     		
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Ovládací prvky jsou stylovány dle zadání</td>
+                  </tr>
+                  <tr>
+                     	
+                  </tr>
+               </tbody>
+               	
+            </table>
+            
+            	
+         </section>
+         
+         
+         
+         
+      </section>
+      
+      
+      
+      
+   </body>
+</html>

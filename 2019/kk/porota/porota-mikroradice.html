@@ -1,0 +1,791 @@
+<!DOCTYPE HTML>
+<html lang="cs" id="mcu">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Hodnocení soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, Unifont, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Hodnocení</span> soutěžních
+            úloh
+         </h1>
+         
+         <h2 class="category">Kategorie programování mikrořadičů</h2>
+         
+         <h2 class="date">25. až 27. dubna 2019</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 33.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2018/2019</p>
+         
+      </header>
+      <div class="toc"><a href="#příprava">Příprava</a><br><a href="#horizontálníanimacetextu">Horizontální animace textu</a><br><a href="#počítánístiskůtlačítka">Počítání stisků tlačítka</a><br><a href="#videostop">Videostop</a><br></div>
+      
+      
+      <p>Na řešení úloh máte 4 hodiny čistého času.</p>
+      
+      
+      <p>Před zahájením soutěže vám pořadatel oznámí, kam máte ukládat
+         řešení úloh. Zároveň připravte pro hodnotícího návod, jak uvést vaše
+         zařízení do provozu a napište, které úlohy jste řešili, a jak mezi
+         nimi přepínat. Hodnotící nebude do zařízení nic nahrávat. Jen ho zapne
+         a vyhodnotí úlohy, na kterých jste pracovali. Pokud bude hodnotící požadovat
+         vaši součinnost, jistě ochotně vyhovíte.
+      </p>
+      
+      
+      <p>Pro řešení můžete použít vývojovou platformu s mikrokontrolérem dle
+         své preference (např. Arduino, Raspberry, ESP8266, FRDM, STM32,
+         micro:bit, PicAxe, BASIC Stamp, AVR, PIC …). Pro řešení úlohy budete
+         dále potřebovat:
+      </p>
+      
+      
+      <ul>
+         
+         <li>PC s vývojovým prostředím pro tuto platformu.</li>
+         
+         <li>Použít můžete i online vývojové prostředí pro tuto platformu.</li>
+         
+         <li>3× LED žlutá, 3× LED červená, 3× LED zelená, 3× LED modrá.</li>
+         
+         <li>4× tlačitko, 2× posuvný spínač.</li>
+         
+         <li>Alfanumerický LCD, alespoň 2x16 znaků, paralelní nebo I2C.</li>
+         
+         <li>Nezbytné součástky k připojení a propojení (rezistory, nepájivé kontaktní pole, propojovací
+            dráty).
+         </li>
+         
+         <li>Další hardware není omezen (voltmetr apod.), ale pro řešení úlohy není nutný.</li>
+         
+      </ul>
+      
+      
+      
+      <p>Můžete řešit jakékoliv z&nbsp;následujících úloh, ovšem úloha <q>Příprava</q> je povinná 
+         a s tou tedy musíte začít. Ostatní můžete řešit v libovolném
+         pořadí. Pokud budete řešit více než jednu úlohu, musíte zároveň
+         implementovat funkci jejich přepínání.
+         
+      </p>
+      
+      
+      <p>Součástí vaší práce, a tedy i hodnocení, je vytvoření schématu zapojení vašeho mikrořadiče
+         s periferiemi (LCD displej, 4× LED, 4× tlačítko, dvoupólový spínač). 
+         Schéma stačí volnou rukou na papír. Realizujte fyzické zapojení tak, že bude zapojeno
+         
+         po jedné LED od každé barvy.
+         
+      </p>
+      
+      
+      <p>Pro řešení každé úlohy vytvořte vývojový diagram, který zadání řeší na úrovni větvení
+         programu. I vývojový diagram bude součástí hodnocení, ale i ten stačí volnou rukou
+         na papír.
+         
+      </p>
+      
+      
+      <p>U každé úlohy bude jedním bodem hodnocena přehlednost zdrojového kódu (vhodné členění
+         zdrojového kódu, vhodně zvolené názvy identifikátorů, komentáře na místech kde je
+         to potřeba,
+         atd.).
+         
+      </p>
+      
+      
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="příprava">Příprava</h2>
+         
+         <p class="koeficient">Maximální počet bodů 15</p>
+         
+         <p>Tato úloha je povinná.</p>
+         
+         
+         <p>Vytvote program s následující funkcí. </p>
+         
+         <ul>
+            
+            <li>Inicializace LCD displeje.</li>
+            
+            <li>V paměti CGRAM displeje jsou vytvořeny čtyři vlastní znaky dle vzoru. <br><br> <img src="vlastni_znaky.jpg" alt="vlastni_znaky" align="middle"></li>  <br>
+            
+            <li>Displej zobrazuje na prvním řádku text Start.</li>
+            
+            <li>Displej zobrazuje na druhém řádku čtyři vlastní znaky dle vzoru.</li>
+            
+            <li>Na displeji bliká kurzor.</li>
+            
+            <li>S použitím dvoupólového spínače je možné přejít do jakékoliv jiné úlohy.</li>
+            
+         </ul>
+         
+         
+         <section>
+            
+            
+            <h3>Hodnocení</h3>
+            
+            
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  
+                  <tr>
+                     
+                     <td>0</td>
+                     <td>Účastník nedodal správné schéma nebo vývojový diagram, zařízení je nefunkční.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Odevzdané schéma je úplné a správné. Pokud schéma není úplně, ale soutěžící alespoň
+                        něco odevzdal, dostane 0,5 bodu.
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Odevzdaný vývojový diagram je úplný a správný. Pokud vývojový diagram není úplný,
+                        ale soutěžící alespoň něco odevzdal, dostane 0,5 bodu.
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Displej je správně inicializovaný.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Displej na prvním řádku zobrazuje správný text.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>3</td>
+                     <td>Displej na druhém řádku zobrazuje správné znaky.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Na displeji bliká kurzor.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Program přechází do jiné úlohy (bod se udělí pouze v případě, že účastník řešil více
+                        jak jednu úlohu)
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Dokumentace a přehlednost zdrojového kódu. Tento bod je dělený při dílčím plnění
+                        
+                        <ul>
+                           
+                           <li>přehledný a odsazovaný zdrojový kód - 0.25 bodu</li>
+                           
+                           <li>konzistentně a výstižně pojmenované proměnné - 0.25 bodu</li>
+                           
+                           <li>komentáře, vysvětlující obtížnější části kódu - 0.5 bodu</li>
+                        </ul>
+                     </td>
+                     
+                  </tr>       
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="horizontálníanimacetextu">Horizontální animace textu</h2>
+         
+         <p class="koeficient">Maximální počet bodů je 17,5</p>
+         
+         
+         <p>Vytvořte program, který bude na LCD displeji zobrazovat posouvajcí se text podle následujících
+            pravidel:
+         </p>
+         
+         <ul>
+            
+            <li>Na prvním řádku se posouvá text: Soutez v programovani.</li>
+            
+            <li>Na druhém řádku se posouvá text: okresni kolo.</li>
+            
+            <li>Během animace textu je viditelný vždy text pouze na jediném řádku.</li>
+            
+            <li>Rychlost posuvu textu zvolte tak, aby bylo možné pohodlné čtení.</li>
+            
+            <li>Při zobrazení textu na prvním řádku nechť svítí zelená ledka.</li>
+            
+            <li>Při zobrazení textu na druhém řádku nechť svítí žlutá ledka.</li>
+            
+            <li>S použitm dvoupólového spínače je možné přejít do jakékoliv jiné úlohy.</li>
+            
+         </ul>
+         
+         
+         
+         <section>
+            
+            
+            <h3>Hodnocení</h3>
+            
+            
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  
+                  <tr>
+                     
+                     <td>0</td>
+                     <td>Účastník nedodal vývojový diagram, program je nefunkční.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Odevzdaný vývojový diagram je úplný a správný. Pokud vývojový diagram není úplný,
+                        ale soutěžící alespoň něco odevzdal, dostane 0,5 bodu.
+                     </td>
+                     
+                  </tr>
+                  <tr>
+                     
+                     <td>0,5</td>
+                     <td>Program přechází do programu Horizontální animace textu (body se udělí pouze v&nbsp;případě,
+                        že účastník řešil více jak jednu úlohu).
+                     </td>
+                     
+                  </tr>           
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Program staticky zobrazuje text na prvním řádku.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Program staticky zobrazuje text na druhém řádku.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Program zajišťuje posouvání textu, ale nesplňuje zcela zadání.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>5</td>
+                     <td>Program zajišťuje posouvání textu při plném splnění zadání.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Při zobrazení textu na prvním řádku svítí zelená ledka.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Při zobrazení textu na druhém řádku svítí žlutá ledka.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Program přechází do jiné úlohy (bod se udělí pouze v případě, že účastník řešil více
+                        jak jednu úlohu).
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Dokumentace a přehlednost zdrojového kódu. Tento bod je dělený při dílčím plnění
+                        
+                        <ul>
+                           
+                           <li>přehledný a odsazovaný zdrojový kód - 0.25 bodu</li>
+                           
+                           <li>konzistentně a výstižně pojmenované proměnné - 0.25 bodu</li>
+                           
+                           <li>komentáře, vysvětlující obtížnější části kódu - 0.5 bodu</li>
+                        </ul>
+                     </td>
+                     
+                  </tr>           
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="počítánístiskůtlačítka">Počítání stisků tlačítka</h2>
+         
+         <p class="koeficient">Maximální počet bodů je 21,5</p>
+         
+         
+         <p>Vytvořte program, který bude realizovat následující funkci:</p>
+         
+         <ul>
+            
+            <li>Program počítá počet stisků některého ze čtyř tlačítek v úplynulých 5 sekundách.</li>
+            
+            <li>Nejstarší stisk po uplynutí 5 sekund expiruje a není tedy dále započítán.</li>
+            
+            <li>Zákmity tlačítek jsou ošetřeny s použitím přerušení.</li>
+            
+            <li>Počet započítaných stisků je zobrazen na LCD displeji a pomocí ledek.</li>
+            
+            <li>Na LCD displeji je zobrazení pomocí textu Počet platných stisků xx, kde xx je číselná
+               hodnota počtu stisků.
+            </li>
+            
+            <li>Pokud není žádný platný stisk nechť svítí žlutá ledka.</li>
+            
+            <li>Pokud je platný jeden stisk, nechť svítí zelená ledka.</li>
+            
+            <li>Pokud jsou platné dva stisky, nechť svítí modrá ledka.</li>
+            
+            <li>Pokud jsou platné tři a více stisků, nechť svítí červená ledka.</li>
+            
+            <li>S použitím dvoupólového spínače je možné přejít do jakékoliv jiné úlohy.</li>
+            
+         </ul>
+         
+         
+         
+         <section>
+            
+            
+            <h3>Hodnocení</h3>
+            
+            
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  
+                  <tr>
+                     
+                     <td>0</td>
+                     <td>Účastník nedodal vývojový diagram, program je nefunkční.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Odevzdaný vývojový diagram je úplný a správný. Pokud vývojový diagram není úplný,
+                        ale soutěžící alespoň něco odevzdal, dostane 0,5 bodu.
+                     </td>
+                     
+                  </tr>
+                  <tr>
+                     
+                     <td>0,5</td>
+                     <td>Program přechází do programu Počítání stisků tlačítka (body se udělí pouze v&nbsp;případě,
+                        že účastník řešil více jak jednu úlohu).
+                     </td>
+                     
+                  </tr>           
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Program registruje a přičte stisk tlačítka.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Zákmity tlačítka jsou ošetřeny s použitím přerušení.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Registrace stisku po uplynutí 5 sekund expiruje.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>5</td>
+                     <td>Program na LCD displeji zobrazuje text Počet platných stisků xx.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Svítí žlutá ledka, pokud není platný žádný stisk.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Svítí zelená ledka, pokud je platný jeden stisk.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Svítí modrá ledka, pokud jsou platné dva stisky.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Svítí červená ledka, pokud jsou platné tři a více stisků.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Program přechází do jiné úlohy (bod se udělí pouze v&nbsp;případě, že účastník řešil více
+                        jak jednu úlohu).
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Dokumentace a přehlednost zdrojového kódu. Tento bod je dělený při dílčím plnění
+                        
+                        <ul>
+                           
+                           <li>přehledný a odsazovaný zdrojový kód - 0.25 bodu</li>
+                           
+                           <li>konzistentně a výstižně pojmenované proměnné - 0.25 bodu</li>
+                           
+                           <li>komentáře, vysvětlující obtížnější části kódu - 0.5 bodu</li>
+                        </ul>
+                     </td>
+                     
+                  </tr>                  
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+         
+      </section>
+      
+      <section class="include">
+         
+         <hr>
+         <h2 id="videostop">Videostop</h2>
+         
+         <p class="koeficient">Maximální počet bodů je 15,5</p>
+         
+         
+         <p>Vytvořte program, který bude umožňovat hraní hry Videostop.</p>
+         
+         <ul>    
+            
+            <li>Hra začíná stiskem libovolného tlačítka.</li>
+            
+            <li>Na prvním řádku displeje se budou zobrazovat 4 náhodně generované znaky z úlohy Příprava.</li>
+            
+            <li>Uživatelem definované znaky mohou být nahrazeny písmeny A-D.</li>
+            
+            <li>Znaky budou oddělené mezerou.</li>
+            
+            <li>Uživatel bude mít čas 0,5s na stisknutí tlačítka s počtem stejných znaků. </li>
+            
+            <li>Na druhém řádku bude zobrazen počet bodů a čas do konce v sekundách.</li>
+            
+            <li>Počet započítaných bodů bude odpovídat počtu stejných znaků.</li>
+            
+            <li>Pokud bude stisknuto více tlačítek současně, tak se nezapočítá žádné.</li>
+            
+            <li>Správná odpověď bude signalizována rozsvícením zelené led na 0,1s. </li>
+            
+            <li>Nesprávná odpověď bude signalizována rozsvícením červené led na 0,1s.</li>
+            
+            <li>Vypršení časového intervalu na odpověď bude signalizováno rozsvícením žluté led na
+               0,1s.
+            </li>
+            
+            <li>Celkový čas hry bude 1 minuta.</li>
+            
+            <li>S použitím dvoupólového spínače je možné přejít do jakékoliv jiné úlohy.</li>
+            
+         </ul>
+         
+         
+         
+         <section>
+            
+            
+            <h3>Hodnocení</h3>
+            
+            
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  
+                  <tr>
+                     
+                     <td>0</td>
+                     <td>Účastník nedodal vývojový diagram, program je nefunkční.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Odevzdaný vývojový diagram je úplný a správný. Pokud vývojový diagram není úplný,
+                        ale soutěžící alespoň něco odevzdal, dostane 0,5 bodu.
+                     </td>
+                     
+                  </tr>
+                  <tr>
+                     
+                     <td>0,5</td>
+                     <td>Program přechází do programu Videostop (body se udělí pouze v&nbsp;případě, že účastník
+                        řešil více jak jednu úlohu).
+                     </td>
+                     
+                  </tr>           
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Program generuje 4 náhodně vybrané znaky.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Znaky se mění po 0,5s.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Program správně vyhodnocuje stisknuté tlačítko.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Program správně zobrazuje počet bodů.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     <td>Program měří a zobrazuje čas do konce.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Při úspěšné odpovědi svítí zelená ledka.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Při nesprávné odpovědi svítí červená ledka.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Při vypršení času svítí žlutá ledka.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Program přechází do jiné úlohy (bod se udělí pouze v&nbsp;případě, že účastník řešil více
+                        jak jednu úlohu).
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     <td>Dokumentace a přehlednost zdrojového kódu. Tento bod je dělený při dílčím plnění
+                        
+                        <ul>
+                           
+                           <li>přehledný a odsazovaný zdrojový kód - 0.25 bodu</li>
+                           
+                           <li>konzistentně a výstižně pojmenované proměnné - 0.25 bodu</li>
+                           
+                           <li>komentáře, vysvětlující obtížnější části kódu - 0.5 bodu</li>
+                        </ul>
+                     </td>
+                     
+                  </tr> 
+                  
+                  
+               </tbody>
+               
+            </table>
+            
+         </section>
+         
+         
+         
+         
+      </section>
+      
+      
+      
+      
+      
+   </body>
+</html>

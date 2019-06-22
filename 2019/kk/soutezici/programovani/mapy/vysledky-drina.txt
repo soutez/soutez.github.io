@@ -1,0 +1,4 @@
+213 224 250 Loket.gif
+137 102 160 Loket.pgm
+139 44 255 Palava.png
+213 224 250 Loket.bmp
