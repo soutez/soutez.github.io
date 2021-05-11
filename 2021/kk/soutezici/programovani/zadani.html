@@ -1,0 +1,430 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Zadání soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, Unifont, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+        figure { margin-bottom: 1em; }
+        figcaption { font-style: italic;  }
+        figcaption::before { content: "Obr. "; font-weight: bold; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Zadání</span> soutěžních
+            úloh
+         </h1>
+         
+         <h2 class="category">Kategorie programování žáci a mládež</h2>
+         
+         <h2 class="date">22. dubna 2021</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 34.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2020/2021</p>
+         
+      </header>
+      <div class="toc"><a href="#hrátkys&nbsp;čísly">Hrátky s&nbsp;čísly</a><br><a href="#semafor">Semafor</a><br><a href="#hash">Hash</a><br><a href="#hra2048">Hra 2048</a><br></div>
+      
+      
+      <p>Úlohy můžete řešit v&nbsp;libovolném pořadí a
+         samozřejmě je nemusíte vyřešit všechny. Za každou úlohu můžete dostat
+         maximálně 10 bodů, z&nbsp;nichž je většinou 9 bodů vyhrazeno na ohodnocení
+         funkčnosti programu, jeho shody se zadáním a efektivity a jeden bod na
+         dokumentaci a přehlednost zdrojového kódu (vhodné členění zdrojového
+         kódu, vhodně zvolené názvy identifikátorů, komentáře na místech, kde
+         je to potřeba, atd.). Body získané za každou úlohu se ještě násobí
+         koeficientem, který odráží složitost úlohy.
+      </p>
+      
+      
+      <p>Na řešení úloh máte 4 hodiny čistého
+         času.
+      </p>
+      
+      
+      <!-- 
+<p pgm-audience="soutezici">Před zahájením soutěže vám pořadatel
+oznámí, kde najdete testovací soubory a kam máte ukládat řešení úloh.</p>
+-->
+      
+      
+      <section class=" md">
+         <p>Vaše řešení nahrávejte do cloudu přístupného na adrese https://svp.proed.cz/</p>
+         <p>Přihlašovací jméno a heslo jste dostali emailem. Po přihlášení uvidíte
+            složku odpovídající vašemu přihlašovacímu jménu (např. <code>X123</code>) a do ní
+            řešení uložte. Pokud je řešení jedné úlohy složeno z&nbsp;více
+            souborů, doporučujeme je nenahrávat samostatně, ale jako jeden ZIP
+            archiv, jehož jméno odpovídá názvu úlohy (<code>uloha-xyz.zip</code>).
+         </p>
+         <p>Vaše řešení musíte nahrát do 13:00, pozdější nahrání souborů nebude
+            možné. Doporučujeme proto řešení nahrát s&nbsp;několikaminutovou
+            rezervou. Pokud ve vaší kategorii řešíte více úloh, je vhodné každou
+            úlohu nahrát hned, jak ji dokončíte.
+         </p>
+         <p>Nahrávejte jak zdrojové kódy vašeho řešení, tak zkompilované
+            spustitelné soubory (pokud to ve vámi používaném programovacím jazyce
+            dává smysl).
+         </p>
+      </section>
+      
+      
+      <section class="break-before include">
+         
+         <hr>
+         <h2 id="hrátkys&nbsp;čísly">Hrátky s&nbsp;čísly</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">1</span></p>
+         
+         
+         <p>Číselná řada</p>
+         
+         
+         <p>
+            <b><span style="color:red">1</span></b><b><span style="color:blue">2</span></b><b><span style="color:red">3</span></b><b><span style="color:blue">4</span></b><b><span style="color:red">5</span></b><b><span style="color:blue">6</span></b><b><span style="color:red">7</span></b><b><span style="color:blue">8</span></b><b><span style="color:red">9</span></b><b><span style="color:blue">10</span></b><b><span style="color:red">11</span></b><b><span style="color:blue">12</span></b><b><span style="color:red">13</span></b><b><span style="color:blue">14</span></b><b><span style="color:red">15</span></b><b><span style="color:blue">16</span></b><b><span style="color:red">17</span></b><b><span style="color:blue">18</span></b><b><span style="color:red">19</span></b><b><span style="color:blue">20</span></b><b><span style="color:red">21</span></b><b><span style="color:blue">22</span></b><b><span style="color:red">23</span></b><b><span style="color:blue">24</span></b><b><span style="color:red">25</span></b><b><span style="color:blue">26</span></b><b><span style="color:red">27</span></b><b><span style="color:blue">28</span></b><b><span style="color:red">29</span></b><b><span style="color:blue">30</span></b><b><span style="color:red">31</span></b><b><span style="color:blue">32</span></b><b><span style="color:red">33</span></b><b><span style="color:blue">34</span></b><b><span style="color:red">35</span></b><b><span style="color:blue">36</span></b><b><span style="color:red">37</span></b><b><span style="color:blue">38</span></b><b><span style="color:red">39</span></b><b><span style="color:blue">40</span></b><b><span style="color:red">41</span></b><b><span style="color:blue">42</span></b><b><span style="color:red">43</span></b><b><span style="color:blue">44</span></b><b><span style="color:red">45</span></b><b><span style="color:blue">46</span></b><b><span style="color:red">47</span></b><b><span style="color:blue">48</span></b><br><b><span style="color:red">49</span></b><b><span style="color:blue">50</span></b><b><span style="color:red">51</span></b><b><span style="color:blue">52</span></b><b><span style="color:red">53</span></b><b><span style="color:blue">54</span></b><b><span style="color:red">55</span></b><b><span style="color:blue">56</span></b><b><span style="color:red">57</span></b><b><span style="color:blue">58</span></b><b><span style="color:red">59</span></b><b><span style="color:blue">60</span></b><b><span style="color:red">61</span></b><b><span style="color:blue">62</span></b><b><span style="color:red">63</span></b><b><span style="color:blue">64</span></b><b><span style="color:red">65</span></b><b><span style="color:blue">66</span></b><b><span style="color:red">67</span></b><b><span style="color:blue">68</span></b><b><span style="color:red">69</span></b><b><span style="color:blue">70</span></b><b><span style="color:red">71</span></b><b><span style="color:blue">72</span></b><b><span style="color:red">73</span></b><b><span style="color:blue">74</span></b><b><span style="color:red">75</span></b><b><span style="color:blue">76</span></b><b><span style="color:red">77</span></b><b><span style="color:blue">78</span></b><b><span style="color:red">79</span></b><b><span style="color:blue">80</span></b><b><span style="color:red">81</span></b><b><span style="color:blue">82</span></b><b><span style="color:red">83</span></b><b><span style="color:blue">84</span></b><b><span style="color:red">85</span></b><b><span style="color:blue">86</span></b><b><span style="color:red">87</span></b><b><span style="color:blue">88</span></b><b><span style="color:red">89</span></b><b><span style="color:blue">90</span></b><b><span style="color:red">91</span></b><br><b><span style="color:blue">92</span></b><b><span style="color:red">93</span></b><b><span style="color:blue">94</span></b><b><span style="color:red">95</span></b><b><span style="color:blue">96</span></b><b><span style="color:red">97</span></b><b><span style="color:blue">98</span></b><b><span style="color:red">99</span></b><b><span style="color:blue">100</span></b>…
+            
+         </p>
+         
+         
+         <p>vznikne vypsáním všech přirozených čísel.</p>
+         
+         
+         <p>Vypracujte program, který pro z klávesnice zadávaná <var>n</var>
+            (maximálně desetimístná čísla) vypíše do jedné vteřiny číslici z
+            <var>n</var>-tého místa této řady a číslo, v kterém se číslice
+            nachází.
+         </p>
+         <p>
+            
+            
+         </p>
+         <p>Program se ukončí zadáním 0 pro <var>n</var>.
+         </p>
+         
+         
+         <p>Například pro:
+            
+         </p><pre>n=10         vypíše: číslice 1 z čísla 10
+n=100        vypíše: číslice 5 z čísla 55
+n=999        vypíše: číslice 9 z čísla 369
+n=9000       vypíše: číslice 2 z čísla 2527
+n=12345      vypíše: číslice 3 z čísla 3363
+n=99999      vypíše: číslice 1 z čísla 22221
+n=0          vypíše: KONEC <em>a program se ukončí</em>
+</pre>
+         
+         
+         
+         
+         
+         
+         
+         
+         </section>
+      
+      <section class="break-before include">    
+         
+         <hr>
+         <h2 id="semafor">Semafor</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">1</span></p>
+         
+         <p>
+            Semafor pro automobily jistě znáte. Vaším úkolem je vytvořit program, který bude takový
+            semafor zobrazovat, a to jako obdélník, který obsahuje nad sebou tři barevná kruhová
+            světla — shora postupně červené, oranžové a zelené. 
+            Zhasnuté světlo zobrazte buď černou barvou, nebo velmi tmavou červenou/oranžovou/zelenou
+            (s malým jasem). Rozsvícené světlo naopak zobrazujte s plným jasem.
+            
+         </p>
+         <p>
+            Po startu programu bude na 5 sekund svítit zelené světlo, pak tři vteřiny svítí oranžové
+            světlo, následně bude 5 sekund svítit červená, pak jednu sekundu červená a oranžová
+            zároveň a následně se celý cyklus opakuje (5 sekund zelená …). Tedy stejně jako na
+            skutečném semaforu, jen čas pro červený a zelený signál jsme v zadání trochu zkrátili.
+            
+         </p>
+         
+         
+         
+         
+      </section>
+      
+      <section class="break-before include">
+         
+         <hr>
+         <h2 id="hash">Hash</h2>
+         
+         <p class="koeficient">Koeficient <span class="koef">2</span></p>
+         
+         
+         <p>Napište program pro stanovení digitálního otisku všech souborů v zadaném adresáři.</p>
+         
+         
+         <p>Pokud nevíte, co je to digitální otisk (hash), přečtěte si
+            např. <a href="https://cs.wikipedia.org/wiki/Ha%C5%A1ovac%C3%AD_funkce">https://cs.wikipedia.org/wiki/Hašovací_funkce</a></p>
+         
+         
+         <h3>Postup pro stanovení digitálního otisku</h3>
+         
+         <p>Vstupní soubor je textový sobor a obsahuje hexadecimální číslice, tedy znaky <code>0</code> až <code>9</code> a <code>A</code> až <code>F</code> a <code>a</code> až <code>f</code>. Může obsahovat i znaky jiné (například znaky nového řádku, mezery, aj.) – ty ignorujte/přeskakujte.
+         </p>
+         
+         
+         <p>Sečtěte všechny hexadecimální číslice v souboru (součet je opět v hexadecimálním tvaru).
+            Pokud má výsledný součet více než jednu číslici, postup opakujte na výsledném součtu.
+         </p>
+         
+         
+         <p>Výsledná číslice je digitálním otiskem daného souboru.</p>
+         
+         
+         <h3>Příklad</h3>
+         
+         <p>Obsah souboru:</p>
+         <pre>EFBB BF 48 61  73 682031</pre>
+         
+         <p>Postup</p>
+         
+         <p>Sčítáme šestnáctkově postupně číslice <code>E</code>, <code>F</code>, <code>B</code>, <code>B</code>, atd., až <code>0</code>, <code>3</code>, <code>1</code>. Výsledek = 7E má více než jednu číslici.<br>
+            Sečteme tedy číslice <code>7</code> a <code>E</code>. Výsledek = 15 má více než jednu číslici.<br>
+            Sečteme tedy číslice <code>1</code> a <code>5</code>. Výsledek = 6 má jednu číslici. Je tedy digitálním otiskem.
+         </p>
+         
+         
+         <h3>Požadavky na program</h3>
+         
+         
+         <ul>
+            
+            <li>Program si nejprve vyžádá vstupní adresář od uživatele. Bod navíc je za snadný výběr
+               adresáře.
+            </li>
+            
+            <li>Poté načte seznam všech souborů v zadaném adresáři, bez podadresářů.</li>
+            
+            <li>Setřídí seznam podle anglické abecedy.</li>
+            
+            <li>Počítá digitální otisky souborů v pořadí setřídění.</li>
+            
+            <li>Výsledky vypisuje ve tvaru:<br>
+               <code>pořadové_číslo digitální_otisk název_souboru</code></li>
+            
+         </ul>
+         
+         
+         <p>V adresáři <a href="hash/">hash</a> najdete několik menších
+            testovacích souborů. V názvu souboru je v&nbsp;závorce hodnota
+            digitálního otisku tohoto souboru. Pokud váš program chcete
+            otestovat i na větších souborech, můžete si je stáhnout
+            z&nbsp;následující adresy <a href="https://name.vse.cz/kosek/soutez/hash-soutezici-data.zip">https://name.vse.cz/kosek/soutez/hash-soutezici-data.zip</a>
+            (soubor má velikost cca 600&nbsp;MB).
+         </p>
+         
+         
+         
+         
+         
+      </section>
+      
+      <section class="break-before include">    
+         
+         
+         <hr>
+         <h2 id="hra2048">Hra 2048</h2>    
+         
+         <p class="koeficient">Koeficient <span class="koef">3</span></p>
+         
+         
+         <p>Naprogramujte hru 2048.</p>
+         
+         
+         <h3>Pravidla hry</h3>
+         
+         
+         <p>Hra 2048 se hraje na hracím plánu, který je tvořen 4×4 čtvercovými políčky. Na čtvercových
+            políčkách mohou být dlaždice s 
+            čísly, jejichž hodnoty jsou mocniny 2 – od 2 až do 2048 (2<sup>11</sup>).
+         </p>
+         
+         
+         <p>V každém tahu se určí směr posunu dlaždic (nahoru, dolů, doleva, doprava).</p>
+         
+         
+         <p>Konečná pozice a sloučení dlaždic na konci tahu je dáno
+            následujícími pravidly:
+         </p>
+         
+         
+         <ul>
+            
+            <li>Poslední dlaždice ve zvoleném směru se posune co nejdále po čtvercích
+               
+               <ul>
+                  
+                  <li>pokud tam nejsou žádné dlaždice nebo</li>
+                  
+                  <li>pokud tam není kraj hracího pole nebo</li>
+                  
+                  <li>pokud narazí na dlaždici se stejným číslem – v&nbsp;tom případě
+                     se obě dlaždice sloučí na místě dlaždice, do které se
+                     narazilo. Sloučená dlaždice má součet obou čísel a dále se již
+                     neposouvá ani se v&nbsp;tomto tahu dále neslučuje.
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li>Tento postup se zopakuje pro předchozí dlaždice ve zvoleném
+               směru až po první dlaždici ve zvoleném směru.
+            </li>
+            
+         </ul>
+         
+         
+         <p>Po každém tahu se náhodně na některém z volných čtverců vygeneruje nová dlaždice s
+            číslem 2 nebo 4. Zda je to 2 nebo 4 je také náhodné.
+         </p>
+         
+         
+         <figure>
+            
+            <figcaption>Ukázka základního pohybu</figcaption>
+            <img src="2048_a1.png" style="max-width: 60%">
+            
+         </figure>
+         
+         
+         <figure>
+            
+            <figcaption>Spojování více dlaždic v jednom řádku</figcaption>
+            <img src="2048_a2.png" style="max-width: 60%">
+            
+         </figure>
+         
+         
+         <p class="keep-with-next">Posun dlaždic lze provést buď</p>
+         
+         <ul>
+            
+            <li>pomocí klávesových šipek nebo</li>
+            
+            <li>na obrazovce pomocí tlačítek směru (<b>Nahoru</b>, <b>Dolů</b>, <b>Vlevo</b> a <b>Vpravo</b>) nebo
+            </li>
+            
+            <li>pomocí myši tažením po hracím poli se stisknutým levým tlačítkem.</li>
+            
+         </ul>
+         
+         
+         <p>Na začátku hry se vygenerují na náhodných pozicích dvě dlaždice s hodnotou 2.</p>
+         
+         
+         <h3>Cíl hry</h3>
+         
+         
+         <p>Cílem hry je posunovat dlaždice po hracím plánu tak, aby vznikla  dlaždice s číslem
+            2048. V tomto případě hra končí výhrou.
+         </p>
+         
+         
+         <p>Pokud nelze provést tah (tj. neexistuje žádný směr posunu, při kterém by se mohla
+            posunout aspoň jedna dlaždice), hra končí prohrou.
+         </p>
+         
+         
+         <p>Skóre hry je dáno celkovým součtem čísel na všech dlaždicích.</p>
+         
+         
+         <p>Jak hra funguje si můžete vyzkoušet na následující adrese <a href="https://2048game.com/">https://2048game.com/</a>.
+         </p>
+         
+         
+         <h3>Úkoly</h3>
+         
+         <ol>
+            
+            <li>Nakreslete hrací plán a vygenerujte první dvě dlaždice.</li>
+            
+            <li>Určení směru posunu dlaždic zajistěte pomocí klávesových šipek.</li>
+            
+            <li>Určení směru posunu dlaždic zajistěte pomocí 4 tlačítek <b>Nahoru</b>, <b>Dolů</b>, <b>Vlevo</b> a <b>Vpravo</b>.
+            </li>
+            
+            <li>Určení směru posunu dlaždic zajistěte pomocí tažení myši (levé tlačítko), podle toho,
+               zda je delší vodorovný nebo svislý směr.
+            </li>
+            
+            <li>Průběžně zobrazujte stav skóre.</li>
+            
+            <li>Udělejte animaci posunu dlaždic.</li>
+            
+            <li>Umožněte uložit aktuální stav hry do souboru (formát je popsán dále).</li>
+            
+            <li>Umožněte načit aktuální stav hry ze souboru. Výběr souboru by
+               měl probíhat způsobem obvyklým v použitém operačním systému –
+               např. pomocí dialogového okna pro výběr souboru.
+            </li>
+            
+            <li>Program dokáže poznat konec hry (výhru i prohru) a  zobrazte tento stav.</li>
+            
+            <li>Umožněte vrátit 5 tahů zpět.</li>
+            
+            <li>Umožněte přehrát celou hru ze záznamu a zadat délku pauzy mezi
+               jednotlivými tahy. Funkci přehrání je možné vyvolat i v průběhu
+               hry.
+            </li>
+            
+         </ol>
+         
+         
+         <h3>Formát souboru se stavem hry</h3>
+         
+         
+         <p>Stav hry se reprezentuje jako textový soubor se čtyřmi řádky. Na
+            každém řádku jsou čtyři čísla oddělená čárkou. Pole bez dlaždice
+            je označeno hodnotou 0.
+         </p>
+         
+         
+         <p>Jako oddělovač řádků se používá dvojice znaků CR a LF.</p>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+      </section>
+      
+      
+      
+      
+   </body>
+</html>

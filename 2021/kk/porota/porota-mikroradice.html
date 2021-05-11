@@ -1,0 +1,1007 @@
+<!DOCTYPE HTML>
+<html lang="cs" id="mcu">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Hodnocení soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, Unifont, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+        figure { margin-bottom: 1em; }
+        figcaption { font-style: italic;  }
+        figcaption::before { content: "Obr. "; font-weight: bold; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Hodnocení</span> soutěžních
+            úloh
+         </h1>
+         
+         <h2 class="category">Kategorie programování mikrořadičů</h2>
+         
+         <h2 class="date">22. dubna 2021</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 34.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2020/2021</p>
+         
+      </header>
+      <div class="toc"><a href="#soubojtlačítek">Souboj tlačítek</a><br></div>
+      
+      
+      <p>Na řešení úlohy máte 4 hodiny čistého času.</p>
+      
+      
+      <p>Pro řešení můžete použít vývojovou platformu s&nbsp;mikrokontrolérem dle
+         své preference (např. Arduino, Raspberry, ESP8266, FRDM, STM32,
+         micro:bit, PicAxe, BASIC Stamp, AVR, PIC …). Pro řešení úlohy budete
+         dále potřebovat:
+      </p>
+      
+      
+      <ul>
+         
+         <li>Servo motorek (např. SG90)</li>
+         
+         <li>Indikátor vychýlení servo motorku (např. ručička, bývá součástí dodávky)</li>
+         
+         <li>2× Mikrospínač</li>
+         
+         <li>1× Dvouplohový přepínač</li>
+         
+         <li>2× LED, každá jiné barvy</li>
+         
+         <li>Adresovatelný LED pásek s&nbsp;alespoň 11 RGB LED (např. <a href="https://www.postavrobota.cz/Adresovatelny-LED-pasek-18W-m-WS2812B-RGB-1-66cm-d148.htm">https://www.postavrobota.cz/Adresovatelny-LED-pasek-18W-m-WS2812B-RGB-1-66cm-d148.htm</a>)
+         </li>
+         
+         <li>Potenciometr</li>
+         
+         <li>Dvoupolohový přepínač</li>
+         
+         <li>Nepájivé pole a drátky v&nbsp;dostatečné zásobě</li>
+         
+         <li>Součástky nutné pro zapojení výše uvedeného (např. pro nastavení pracovních bodů –
+            odpory apod.)
+         </li>
+         
+         <li>Nezbytné součástky k&nbsp;připojení a propojení (rezistory, nepájivé kontaktní pole, propojovací
+            dráty).
+         </li>
+         
+         <li>Další hardware není omezen (voltmetr apod.), ale pro řešení úlohy není nutný.</li>
+         
+      </ul>
+      
+      
+      <section class=" md">
+         <p>Vaše řešení nahrávejte do cloudu přístupného na adrese https://svp.proed.cz/</p>
+         <p>Přihlašovací jméno a heslo jste dostali emailem. Po přihlášení uvidíte
+            složku odpovídající vašemu přihlašovacímu jménu (např. <code>X123</code>) a do ní
+            řešení uložte. Pokud je řešení jedné úlohy složeno z&nbsp;více
+            souborů, doporučujeme je nenahrávat samostatně, ale jako jeden ZIP
+            archiv, jehož jméno odpovídá názvu úlohy (<code>uloha-xyz.zip</code>).
+         </p>
+         <p>Vaše řešení musíte nahrát do 13:00, pozdější nahrání souborů nebude
+            možné. Doporučujeme proto řešení nahrát s&nbsp;několikaminutovou
+            rezervou. Pokud ve vaší kategorii řešíte více úloh, je vhodné každou
+            úlohu nahrát hned, jak ji dokončíte.
+         </p>
+         <p>Nahrávejte jak zdrojové kódy vašeho řešení, tak zkompilované
+            spustitelné soubory (pokud to ve vámi používaném programovacím jazyce
+            dává smysl).
+         </p>
+      </section>
+      
+      
+      <p>Důležitou součástí vašeho řešení je video, které demonstruje
+         funkčnost vašeho řešení. Natočené video nahrejte do cloudu do složky
+         určené pro video (např. <code>X123_video</code>). U&nbsp;této složky bude
+         povolen zápis i&nbsp;po 13:00, takže se nemusíte obávat toho, že se vám
+         objemnější video nestihne nahrát včas.
+      </p>
+      
+      
+      <p>Součástí vaší práce, a&nbsp;tedy i&nbsp;hodnocení, je vytvoření schématu
+         zapojení vašeho mikrořadiče s&nbsp;periferiemi. Schéma stačí volnou
+         rukou na papír a vyfotit, fotografii přiložit k&nbsp;řešení.
+      </p>
+      
+      
+      <p>Pro řešení vytvořte vývojový diagram, který zadání řeší na úrovni
+         větvení programu. I&nbsp;vývojový diagram bude součástí hodnocení, ale i&nbsp;ten stačí jen
+         nakreslit na papír a vyfotit, fotografii přiložit k&nbsp;řešení.
+      </p>
+      
+      
+      <p>U&nbsp;úlohy bude hodnocena i&nbsp;přehlednost zdrojového kódu (vhodné
+         členění zdrojového kódu, vhodně zvolené názvy identifikátorů,
+         komentáře na místech kde je to potřeba, atd.).
+         
+      </p>
+      
+      
+      <section class=" include">
+         
+         <hr>
+         <h2 id="soubojtlačítek">Souboj tlačítek</h2>
+         <p>Vaším úkolem je realizovat jednoduchou hru pro dva hráče. Každý hráč
+            má k dispozici své tlačítko. Hráči se snaží co nejrychleji mačkat tlačítko.
+         </p>
+         <p>Další herní
+            součástí je ručička vychylovaná servomotorkem. Na začátku hry je ručička ve střední
+            poloze
+            (90°), během hry se vychyluje na dvě strany (levá krajní poloha 0°, pravá krajní poloha
+            180°).
+            Ručička se vychyluje na stranu hráče, který v danou chvíli mačká tlačítko
+            rychleji.
+         </p>
+         <p>Každý stisk tlačítka vychýlí ručičku směrem k hráči o 1/10 rozsahu pohybu
+            ručičky (od středu do krajní polohy). Hraje-li pouze jeden hráč, po 10 stisknutích
+            tlačítka je
+            tedy ručička na jeho straně.
+         </p>
+         <p>Cílem hry je překlopit ručičku na své straně do krajní
+            polohy. Tím hra končí.
+         </p>
+         <p>Další hra začíná poté, co oba hráči (najednou nebo postupně)
+            stisknou své tlačítko. Hra začíná stiskem tlačítka. O začátku hry informují informační
+            diody
+            (viz níže).
+         </p>
+         <p>Hra má časový limit 20 s. Po celou hru se sčítá levému i pravému hráči počet
+            stisků. Jestliže žádný z nich nedokáže vychýlit ručičku do krajní polohy, vyhrává
+            ten, kdo má
+            více stisků.
+         </p>
+         <p>Každý hráč má dvě skóre: skóre aktuální hry – počet stisků a celkové skóre
+            – počet vítězství, kterých hráč dosáhl od zapnutí zařízení.
+         </p>
+         <p>Mají-li levý i pravý hráč po
+            uplynutí časového limitu stejný počet stisků, je hra anulována. Zařízení se chová,
+            jako kdyby
+            ke hře nedošlo; hra se nepřidává do celkového skóre.
+         </p>
+         <p>Po resetu zařízení se servo
+            přemístí do středové polohy a rozsvítí se zeleně prostřední LED na páse. Stejně se
+            zařízení
+            chová i 5 s po skončení poslední hry nebo po návratu z testovacího režimu (zde se
+            jinak chová
+            pás, viz. dále).
+         </p>
+         <p>Při čtení stisku tlačítka je vhodné ošetřit zákmity
+            tlačítka.
+         </p>
+         <h3>Informační diody</h3>
+         <p>Každý hráč má na své straně samostatnou diodu. Když
+            se nehraje, je dioda zhasnutá. Během hry svítí ve chvíli, když je ručička na straně
+            hráče
+            (vychýlená směrem od středu ke krajní poloze hráče).
+         </p>Dále obě tyto diody slouží k odpočtu
+         před začátkem hry – do zahájení hry (stisk obou tlačítek) po dobu 1 s blikají. Ve
+         chvíli, kdy
+         tyto diody zhasnou, hra začíná a počítají se stisky tlačítek. Od zahájení hry se diody
+         chovají
+         tak, jak je popsáno o odstavec výše. Ve chvíli, kdy hra skončí, na straně vítěze se
+         dioda
+         rozbliká a bliká až do zahájení příští hry.
+         <p>Po zapnutí testovacího režimu obě diody blikají
+            (viz popis testovacího režimu). 
+         </p>
+         <h3>Sériová linka</h3>
+         <p>Zařízení komunikuje s počítačem s
+            pomocí sériové linky po celou dobu hry. Do sériové linky zapisuje:
+         </p>
+         <ol>
+            
+            <li>Během hry informaci o počtu sekund, které zbývají – každou 1s počet zbývajících sekund
+               hry.
+            </li>
+            
+            <li>Po skončení hry vypisujete “Game over”.</li>
+            
+            <li>Po skončení hry informaci vypište do sériové linky skóre aktuální hry obou hráčů a
+               celkové
+               skóre obou hráčů. Formát můžete zvolit.
+            </li>
+            
+            <li>Je-li hra anulována kvůli shodnému počtu stisků, zobrazte “Last game ignored”.</li>
+            
+            <li>Před začátkem další hry (po uplynutí 5 vteřin) zobrazte&nbsp; “Game ready”. Dále přidejte
+               informaci, že hra začíná stiskem obou tlačítek.
+            </li>
+            
+            <li>Po stisku obou tlačítek a zahájení hry vypište “Game on”.</li>
+            
+            <li>Při přechodu do testovacího režimu vypíšete “Debug mode”.</li>
+            
+         </ol>
+         <h3>Diodový pás</h3>
+         <p>Diodový pásek slouží k zobrazení dvou informací:</p>
+         <ol>
+            
+            <li>Stav hry pro oba hráče.</li>
+            
+            <li>Informace o zbývajícím čase.</li>
+            
+         </ol>
+         <p>Pásek je rozdělen na levou a pravou polovinu, prostřední dioda zobrazuje čas. Levému
+            hráči je přidělena modrá barva, pravému hráči fialová barva.
+         </p>
+         <p>Levému hráči svítí v páse
+            vždy nejvýše jedna modrá dioda, její poloha odpovídá poloze ručičky. Pravému hráči
+            svítí v
+            jeho polovině pásu vždy nejvýše jedna dioda fialově, poloha diody odpovídá poloze
+            ručičky.
+            Dioda se pohybuje v obou případech od středu pásu k okraji, střed odpovídá středové
+            poloze
+            ručičky, kraj mezní poloze ručičky servomotoru. Chování pásu je zakresleno v obrázku.
+         </p>
+         
+         <p align="center"><img src="image1.png" alt="Chování diodového pásu" style="max-width: 70%;"></p>
+         
+         <p>Čím blíže je rozsvícená dioda ke kraji pásu, tím vyšší je jas diody. Celkový počet
+            diod
+            záleží na vaší volbě a délce vašeho pásu, minimální počet je alespoň 5 pro každou
+            stranu.
+         </p>
+         <p>Středová dioda slouží k zobrazení informace o zbývajícím čase. Na začátku hry
+            svítí jasně zeleně, během hry přechází plynule do červené, 5 s před koncem hry svítí
+            jasně
+            červeně. Posledních 5 vteřin dioda bliká (nejméně 3x za vteřinu).
+         </p>
+         <p>Celkem tedy na páse
+            využijete nejméně 11 diod (minimálně 5 vlevo, 1 střed, minimálně 5 vpravo).
+         </p>
+         <h3>Testovací
+            režim
+         </h3>
+         <p>Zařízení může kromě režimu, v němž se hraje (režim hry), pracovat také v
+            testovacím režimu. Přepnutí do testovacího režimu se dělá polohovým přepínačem: jedna
+            poloha
+            přepínače odpovídá režimu hry, druhá poloha režimu testování. Testovací režim se tedy
+            ukončí
+            přepnutím přepínače do režimu hry.
+         </p>
+         <p>Do testovacího režimu je možné se přepnout pouze ve
+            chvíli, když se nehraje. Je-li do polohy pro testovací režim přepnuto během hry, aktivuje
+            se
+            testovací režim až po skončení hry.
+         </p>
+         <p>Je-li zařízení v režimu testování, informační diody
+            blikají podobně jako světla na železničním přejezdu: když svítí levá, nesvítí pravá
+            a
+            naopak.
+         </p>
+         <p>V testovacím režimu se poloha ručičky nemění stiskem tlačítek, ale posunem
+            potenciometru. Otočením vlevo vychylujeme ručičku vlevo, otočením vpravo směrem vpravo.
+            Diodový pás reaguje na pohyb ručičky jako při skutečné hře tak, jak je popsáno v kapitole
+            o
+            diodovém pásu.&nbsp;Středová dioda ale barvu nemění – neplyne čas. V testovacím režimu
+            vůbec
+            nesvítí.
+         </p>
+         <p>Při vstupu do testovacího režimu se do sériové linky napíše zpráva “Debug
+            mode”.
+         </p>
+         <h3>Dokumentace</h3>
+         <p>Váš kód by měl být přehledný a srozumitelný. U jednotlivých
+            funkcí v komentáři stručně popište jejich účel. Dále doplňte svou práci stručným popisem
+            toho,
+            jak je co zapojeno – tedy na jakých portech máte připojena zařízení. Popište, jak
+            řešíte
+            zákmit tlačítek.
+         </p>
+         
+         <h3>Odevzdání</h3>
+         <p>Odevzdáváte zdrojový kód
+            a video natočené podle testovacího scénáře. Video natáčejte maximálně s rozlišením
+            Full-HD.
+            Video se může skládat z více částí, s natáčením videa může pomáhat druhá osoba.
+         </p>
+         <p>Video
+            můžete komentovat a vysvětlovat, co demonstrujete.
+         </p>
+         <p>Video je základní podklad pro
+            hodnocení, co není vidět ve videu, za to nedostanete body (s výjimkou bodů, které
+            se týkají
+            zdrojového kódu a dokumentace).
+         </p>
+         <p>Při demonstraci funkce sériové linky je nutné zabírat
+            také displej počítače s otevřeným terminálem sériové linky.&nbsp;
+         </p>
+         <p><b>Je naprosto nutné
+               dodržet níže předepsaný testovací scénář, jinak vám nemůžeme přidělit správně body.
+               Zachovejte pořadí akcí tak, jak je ve scénáři popsáno.</b></p>
+         <p>Maximální délka videa (nebo
+            všech částí v součtu) by měla být zhruba 2 minuty. 
+         </p>
+         <h3>Testovací scénář</h3>
+         <p class="keep-with-next"><strong>Ve
+               vašem videu dodržte následující postup:</strong></p>
+         <ol>
+            
+            <li>Úvod – vidíme výpis sériové linky: game ready.</li>
+            
+            <li>Hra – vyhraje levý na 10 stisků před vypršením časového limitu. Sériová linka ukazuje
+               game on. Potřebujeme vidět diody i pás po dobu hry.
+            </li>
+            
+            <li>Sériová linka ukáže po skonšení hry "game over"; skóre hry a celkové skóre.&nbsp;Po 5 s
+               se
+               servo vrátí do původní polohy a rozsvítí se zelená LED.
+            </li>
+            
+            <li>Pauza – demonstrace testovacího režimu:
+               <ol>
+                  
+                  <li>Aktivace přepínačem.</li>
+                  
+                  <li>Sériová linka – debug mode.</li>
+                  
+                  <li>Mačkání tlačítek, abychom viděli, že na stisky nyní zařízení nereaguje.</li>
+                  
+                  <li>Vychýlit potenciometr do jedné krajní polohy – je vidět pohyb ručičky.</li>
+                  
+                  <li>Vychýlit potenciometr do druhé krajní polohy – znovu je vidět správný pohyb
+                     ručičky.
+                  </li>
+                  
+                  <li>Vypnutí přepínačem, návrat do režimu hry:&nbsp;Ručička jde do středové polohy, rozsvítí
+                     se
+                     zelená LED na páse.
+                  </li>
+                  
+               </ol>
+            </li>
+            
+            <li>Znovu hra, nyní vyhraje pravý na 10 stisků. I nyní se také kroutí potenciometrem a
+               přepíná
+               přepínač na testovací režim a zde přepínač zůstane (to je během hry ignorováno) a
+               my to
+               potřebujeme vidět.
+            </li>
+            
+            <li>Po ukončení hry automatické spuštění testovacího režimu – jen je potřeba vidět, že
+               testovací režim nastal a že jej lze přepínačem ukončit.
+            </li>
+            
+            <li>Poslední hra – simulace reálné hry, ručička se vychyluje náhodně, hraje se na timeout,
+               nikoliv na rozdíl. 
+               <ol>
+                  
+                  <li>Musí být vidět funkce pásu (blikání ke konci hry)</li>
+                  
+                  <li>Ukažte sériovou linku (informace o zbývajícím čase)</li>
+                  
+               </ol>
+            </li>
+            
+            <li>Hra pro demonstraci "remízy": siskněte vlevo 2x stisk, vpravo 2x stisk.&nbsp;Sériová linka
+               nyní
+               zobrazí – game over; skóre hry a celkové skóre, navíc informaci "Last game ignored".
+            </li>
+            
+         </ol>
+         <section>
+            
+            <h3>Hodnocení</h3>
+            
+            <table class="hodnoceni">
+               
+               <thead>
+                  
+                  <tr>
+                     
+                     <th>Body</th>
+                     
+                     <th>Za co</th>
+                     
+                  </tr>
+                  
+               </thead>
+               
+               <tbody>
+                  
+                  <!-- Strukturu této části je potřeba dodržet, automaticky se z ní generují hodnotící tabulky v Excelu -->
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Hra se spouští stiskem obou tlačítek současným nebo postupným.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>V úvodu hry se rozsvítí levá dioda, když levý hráč stiskne tlačítko pro
+                        zahájení.
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>V úvodu hry se rozsvítí pravá dioda, když pravý hráč stiskne tlačítko pro
+                        zahájení.
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Na začátku nové hry musí být servo ve středové poloze.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Na začátku nové hry je prostřední dioda pásu zelená.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Před startem hry indikační diody blikají.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Sériová linka před startem zobrazuje "Game ready".</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Po startu hry se v sériové lince zobrazí "Game on".</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Stisk tlačítka vychýlí indikační diodu v herním režimu.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Držení jednoho z tlačítek neznemožní klikání druhého tlačítka. </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Tlačítka v herním režimu ovlivňují pás LED.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Na pásu svítí dioda indikující stav hry (pro levého nebo pravého hráče).</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Na páse vždy svítí jen dvě diody současně (středová a vítězící hráč).</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Levý hráč má správnou barvu "své" diody na páse.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Pravý hráč má správnou barvu "své" diody na páse.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>3</td>
+                     
+                     <td>Poloha ručičky na motorku odpovídá stavu LED na pásku.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Rozsvícené diody indikující vítěze se na pásu pohybují od středu ke stranám.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Levá indikační dioda svítí vždy, když je ručička vychýlena na stranu levého
+                        hráče.
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Tlačítka v herním režimu ovlivňují servo s ručičkou dle zadání.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Po 10 stisknutích na levé straně je ručička v levé krajní poloze.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Po 10 stisknutích na levé straně svítí nejlevější dioda v pásu.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Hra se zastaví, když jeden hráčů vede o deset stisků.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Dioda na straně hráče, jenž prohrál, po skončení hry nesvítí.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>V závěru hry bliká dioda na straně vítěze.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Sériová linka zobrazí po skončení hry nápis "Game over".</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Sériová linka zobrazí po skončení hry skore hry.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Sériová linka zobrazí po skončení hry celkové skore od resetu.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>5 s po skončení hry se ručička vrací do středové polohy.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>5 s po skončení hry se rozsvítí středová LED pásu zeleně.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Po ukončení hry zařízení 5 s nereaguje na stisk tlačítek.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Testovací režim lze zapnout přepínačem při čekání na novou hru.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Po vstupu do testovacího režimu se servo vychýlí do středové polohy.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Při zahájení testovacího režimu zhasne středová LED na páse.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Informační diody v testovacím režimu blikají.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Informační diody nejen, že blikají, ale navíc v souladu se zadáním svítí jako
+                        železniční přejezd (střídají se).
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>V testovacím režimu posun potenciometru vlevo vychýlí ručičku vlevo.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>V testovacím režimu posun potenciometru vlevo vyvolá pohyb rozsvícené LED na páse
+                        vlevo.
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>V testovacím režimu posun potenciometru vpravo vychýlí ručičku vpravo.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>V testovacím režimu posun potenciometru vpravo vyvolá pohyb rozsvícené LED na páse
+                        vpravo.
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>V testovacím režimu je v sériovém portu je rozsvíceno "Debug mode".</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>V testovacím režimu zařízení nereaguje na stisk tlačítek. </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Testovací režim lze vypnout přepínačem.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Po ukončení testovacího režimu přechází zařízení do režimu "čekám na hru".</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Změna polohy přepínače je během hry ignorována.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Během hry je ignorována změna polohy potenciometru.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Pravá indikační dioda svítí vždy, když je ručička vychýlena na stranu pravého
+                        hráče.
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Po 10 stisknutích na pravé straně je ručička v pravé krajní poloze.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Po 10 stisknutích na pravé straně svítí nejpravější dioda v pásu.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Sériová linka zobrazuje uplynulý počet sekund hry.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Po ukončení hry přechází zařízení do testovacího režimu; má-li v této poloze
+                        přepínač.
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Středová LED pásu během hry správně mění barvu podle času.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Středová LED pásu před koncem hry bliká červeně.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Středová LED pásu těsně před skončením hry červeně svítí.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Hra je ukončena po vypršení časového limitu (20 s).</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Po remíze (stejný počet stisků na obou stranách) sériová linka zobrazí celkové skore
+                        a skore hry.
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Sériová linka v případě remízy zobrazí "Game ignored".</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>3</td>
+                     
+                     <td>Součástí odevzdané úlohy je i vývojový diagram zachycující strukturu programu.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Ve videu je přehledně vidět zapojení kabelů a lze poznat detailnější zapojení.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Video se netřese a přesně odpovídá pokynům testovacího scénáře.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Video je srozumitelně komentováno.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Video je maximálne v rozlišení FullHD.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>V dokumentaci je popsáno, co je připojeno na jakém portu.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Součástí dokumentace je i vývojový diagram.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Kód obsahuje stručné komentáře s vysvětlením účelu u podporogramů.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>Podprogramy a proměnné jsou pojmenovány podle své funkce a kód je tím
+                        srozumitený.
+                     </td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>1</td>
+                     
+                     <td>V dokumentaci je popsáno, jak je řešen zákmit tlačítek.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>3</td>
+                     
+                     <td>Zákmit tlačítek je v kódu ošetřen.</td>
+                     
+                  </tr>
+                  
+                  <tr>
+                     
+                     <td>2</td>
+                     
+                     <td>Pro zpracování signálu z tlačítek je užito přerušení.</td>
+                     
+                  </tr>          
+                  
+               </tbody>
+               
+            </table>
+            
+            
+         </section>
+         
+         
+      </section>
+      
+      
+      
+      
+      
+   </body>
+</html>

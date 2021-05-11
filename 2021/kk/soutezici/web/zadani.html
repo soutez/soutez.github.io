@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta charset="utf-8">
+      
+      <title>Zadání soutěžních úloh</title>
+      <style type="text/css">
+        body { font-family: Calibri, Verdana, Unifont, sans-serif; 
+               max-width: 50em; 
+               margin-left: auto;
+               margin-right: auto; 
+               font-size: 140%; }
+        h1, h2, h3, h4, header { font-family: Cambria, serif; }
+        header { background-color: #FFE2AA; padding: 8px; margin-bottom: 8px; }
+        pre { background-color: silver }
+        header { text-align: center; }
+        .katex { font-size: inherit !important; }
+        table { border: solid 2px black; border-collapse: collapse; }
+        thead { background-color: silver; }
+        td, th { border: solid 1px black; padding: 4px; }
+        table.layout, table.layout td, table.layout th  { border: none; }
+        .koeficient { font-style: italic; }
+        .float-right { float: right; margin-left: 8px; }
+        hr { clear: both; }
+        figure { margin-bottom: 1em; }
+        figcaption { font-style: italic;  }
+        figcaption::before { content: "Obr. "; font-weight: bold; }
+      </style></head>
+   
+   <body>
+      
+      
+      <header>
+         
+         <h1><span>Zadání</span> soutěžních
+            úloh
+         </h1>
+         
+         <h2 class="category">Kategorie programování webu</h2>
+         
+         <h2 class="date">22. dubna 2021</h2>
+         
+         <p class="contest">Soutěž v&nbsp;programování – 34.&nbsp;ročník</p>
+         
+         <p>Krajské&nbsp;kolo&nbsp;2020/2021</p>
+         
+      </header>
+      <div class="toc"><a href="#semafor">Semafor</a><br><a href="#hra2048">Hra 2048</a><br></div>
+      
+      
+      <p>Úlohy můžete řešit v&nbsp;libovolném
+         pořadí a samozřejmě je nemusíte vyřešit všechny. Počet bodů za každou úlohu
+         je uveden přímo v&nbsp;jejím zadání. Hodnotí se shoda se zadáním,
+         funkčnost, dodržování webových standardů a přehlednost zdrojového
+         kódu.
+      </p>
+      
+      
+      <p>Na řešení úloh máte 4 hodiny čistého
+         času.
+      </p>
+      
+      
+      <section class=" md">
+         <p>Vaše řešení nahrávejte do cloudu přístupného na adrese https://svp.proed.cz/</p>
+         <p>Přihlašovací jméno a heslo jste dostali emailem. Po přihlášení uvidíte
+            složku odpovídající vašemu přihlašovacímu jménu (např. <code>X123</code>) a do ní
+            řešení uložte. Pokud je řešení jedné úlohy složeno z&nbsp;více
+            souborů, doporučujeme je nenahrávat samostatně, ale jako jeden ZIP
+            archiv, jehož jméno odpovídá názvu úlohy (<code>uloha-xyz.zip</code>).
+         </p>
+         <p>Vaše řešení musíte nahrát do 13:00, pozdější nahrání souborů nebude
+            možné. Doporučujeme proto řešení nahrát s&nbsp;několikaminutovou
+            rezervou. Pokud ve vaší kategorii řešíte více úloh, je vhodné každou
+            úlohu nahrát hned, jak ji dokončíte.
+         </p>
+         <p>Nahrávejte jak zdrojové kódy vašeho řešení, tak zkompilované
+            spustitelné soubory (pokud to ve vámi používaném programovacím jazyce
+            dává smysl).
+         </p>
+      </section>
+      
+      
+      <p>Kompletní řešení každé úlohy (soubory HTML, CSS, obrázky,
+         Javascript) uložte do samostatného podadresáře nazvaného jménem
+         úlohy (např. <code>semafor</code>). Stránku s&nbsp;řešením vždy pojmenujte
+         <code>index.html</code> a uložte v&nbsp;kódování UTF-8.
+      </p>
+      
+      
+      <p>Při zápisu HTML a CSS kódu dodržujte webové
+         standardy. Řešení by mělo fungovat ve všech běžně dostupných prohlížečích.
+      </p>
+      
+      
+      <p>Při řešení můžete používat frontendové
+         technologie HTML, CSS a JavaScript. Všechny zdrojové kódy musíte
+         napsat sami v průběhu soutěže. Řešení úlohy smí využívat pouze běžně
+         dostupná API současných webových prohlížečů. Preprocesory zdrojového
+         kódu (jako např. Babel, <span class="nohyphen">Typescript</span>,
+         Sass, Less, …) jsou povoleny, odevzdávejte pak jak vámi napsaný
+         vstupní kód, tak i vygenerovaný výsledek. Snažte se, aby vygenerovaný
+         výsledek co nejlépe odpovídal zdrojovému souboru, neprovádějte
+         minifikaci nebo obfuskaci.
+      </p>
+      
+      
+      <p>Není povoleno používat knihovny, frameworky nebo
+         kompilátory, které vyžadují runtime podporu prohlížeče (např. jQuery,
+         Bootstrap, React, mono-wasm, …). <strong>Zdůrazňujeme, že
+            stejně jako v&nbsp;minulých letech je zakázáno používat jQuery.</strong></p>
+      
+      
+      <section class="break-before include">    
+         
+         <hr>
+         <h2 id="semafor">Semafor</h2>
+         
+         
+         <p>Semafor pro automobily jistě znáte. Vaším úkolem je vytvořit
+            webovou stránku, která bude takový semafor zobrazovat, a to jako
+            obdélník, který obsahuje nad sebou tři barevná kruhová světla —
+            shora postupně červené, oranžové a zelené. Obdélník semaforu na
+            výšku zabírá celou viditelnou plochu prohlížeče. Zhasnuté světlo
+            zobrazte buď černou barvou, nebo velmi tmavou
+            červenou/oranžovou/zelenou (s malým jasem). Rozsvícené světlo naopak
+            zobrazujte s plným jasem.
+         </p>
+         
+         
+         <p>Po načtení stránky bude na 5 sekund svítit zelené světlo, pak tři
+            vteřiny svítí oranžové světlo, následně bude 5 sekund svítit
+            červená, pak jednu sekundu červená a oranžová zároveň a následně se
+            celý cyklus opakuje (5 sekund zelená …). Tedy stejně jako na
+            skutečném semaforu, jen čas pro červený a zelený signál jsme v
+            zadání trochu zkrátili.
+         </p>
+         
+         
+         <p><strong>Při řešení této úlohy není dovoleno používat JavaScript. Musíte
+               si vystačit s HTML a CSS.</strong></p>
+         
+         
+         
+         
+         
+      </section>
+      
+      <section class="break-before include">    
+         
+         
+         <hr>
+         <h2 id="hra2048">Hra 2048</h2>    
+         
+         
+         <p>Vytvořte stránku s&nbsp;hrací plochou pro hru 2048 a následně hru
+            naprogramujte.
+         </p>
+         
+         
+         <h3>Hrací plocha</h3>
+         
+         
+         <p>Kromě samotného herního plánu na stránce hry zobrazte aktuální a
+            nejlepší skóre a 10 nejlepších výsledků. Následující obrázek slouží
+            jako inspirace toho, jak přibližně by na stránce měly být jednotlivé
+            prvky rozmístěny.
+         </p>
+         
+         
+         <figure>
+            
+            <figcaption>Příklad hrací plochy</figcaption>
+            <img src="hraci-plocha.svg">
+            
+         </figure>
+         
+         
+         <p>Stránku vytvořte tak, aby byla responzivní a šlo ji zobrazit i&nbsp;na
+            zařízeních s&nbsp;menším displejem jako je mobilní telefon. V&nbsp;tom případě
+            hrací políčka 4×4 zabírají celou šíři okna prohlížeče a tabulka s&nbsp;výsledky se odsune
+            na konec stránky.
+         </p>
+         
+         
+         <h3>Pravidla hry</h3>
+         
+         
+         <p>Hra 2048 se hraje na herním plánu, který je tvořen 4×4 čtvercovými
+            políčky. Na čtvercových políčkách mohou být dlaždice s&nbsp;čísly, jejichž
+            hodnoty jsou mocniny 2 – od 2 až do 2048 (2<sup>11</sup>).
+         </p>
+         
+         
+         <p>V&nbsp;každém tahu se určí směr posunu dlaždic (nahoru, dolů, doleva,
+            doprava).
+         </p>
+         
+         
+         <p>Konečná pozice a sloučení dlaždic na konci tahu je dáno
+            následujícími pravidly:
+         </p>
+         
+         
+         <ul>
+            
+            <li>Poslední dlaždice ve zvoleném směru se posune co nejdále po čtvercích
+               
+               <ul>
+                  
+                  <li>pokud tam nejsou žádné dlaždice nebo</li>
+                  
+                  <li>pokud tam není kraj hracího pole nebo</li>
+                  
+                  <li>pokud narazí na dlaždici se stejným číslem – v&nbsp;tom případě
+                     se obě dlaždice sloučí na místě dlaždice, do které se
+                     narazilo. Sloučená dlaždice má součet obou čísel a dále se již
+                     neposouvá ani se v&nbsp;tomto tahu dále neslučuje.
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li>Tento postup se zopakuje pro předchozí dlaždice ve zvoleném
+               směru až po první dlaždici ve zvoleném směru.
+            </li>
+            
+         </ul>
+         
+         
+         <p>Po každém tahu se náhodně na některém z&nbsp;volných čtverců vygeneruje
+            nová dlaždice s&nbsp;číslem 2 nebo 4. Zda je to 2 nebo 4 je také náhodné.
+         </p>
+         
+         
+         <figure>
+            
+            <figcaption>Ukázka základního pohybu</figcaption>
+            <img src="2048_a1.png" style="max-width: 60%">
+            
+         </figure>
+         
+         
+         <figure>
+            
+            <figcaption>Spojování více dlaždic v&nbsp;jednom řádku</figcaption>
+            <img src="2048_a2.png" style="max-width: 60%">
+            
+         </figure>
+         
+         
+         <p class="keep-with-next">Posun dlaždic lze provést buď</p>
+         
+         <ul>
+            
+            <li>pomocí klávesových šipek nebo</li>
+            
+            <li>na obrazovce pomocí tlačítek směru (<b>Nahoru</b>, <b>Dolů</b>, <b>Vlevo</b> a <b>Vpravo</b>) nebo
+            </li>
+            
+            <li>pomocí myši tažením po hracím poli se stisknutým levým tlačítkem
+               nebo
+            </li>
+            
+            <li>tažením prstu po řádce nebo sloupci.</li>
+            
+         </ul>
+         
+         
+         <p>Na začátku hry se vygenerují na náhodných pozicích dvě dlaždice s&nbsp;hodnotou 2.</p>
+         
+         
+         <h3>Cíl hry</h3>
+         
+         
+         <p>Cílem hry je posunovat dlaždice po hracím plánu tak, aby vznikla  dlaždice s&nbsp;číslem
+            2048. V&nbsp;tomto případě hra končí výhrou.
+         </p>
+         
+         
+         <p>Pokud nelze provést tah (tj. neexistuje žádný směr posunu, při kterém by se mohla
+            posunout aspoň jedna dlaždice), hra končí prohrou.
+         </p>
+         
+         
+         <p>Skóre hry je dáno celkovým součtem čísel na všech dlaždicích.</p>
+         
+         
+         <p>Jak hra funguje si můžete vyzkoušet na adrese <a href="https://2048game.com/">https://2048game.com/</a>.
+         </p>
+         
+         
+         <h3>Úkoly</h3>
+         
+         
+         <ol>
+            
+            <li>Vytvořte stránku s&nbsp;jednotlivýmu prvky herní plochy. Do tabulky s&nbsp;výsledky na začátku
+               vložte smyšlené výsledky s&nbsp;body 1 až 10.
+            </li>
+            
+            <li>Vygenerujte první dvě dlaždice.</li>
+            
+            <li>Určení směru posunu dlaždic zajistěte pomocí klávesových šipek.</li>
+            
+            <li>Určení směru posunu dlaždic zajistěte pomocí 4 tlačítek <b>Nahoru</b>, <b>Dolů</b>, <b>Vlevo</b> a <b>Vpravo</b>.
+            </li>
+            
+            <li>Určení směru posunu dlaždic zajistěte pomocí tažení myši (levé tlačítko), podle toho,
+               zda je delší vodorovný nebo svislý směr.
+            </li>
+            
+            <li>Určení směru posunu dlaždic zajistěte tažením prstu. (Na
+               počítačích bez dotykové obrazovky můžete tuto funkci zkoušet a ladit
+               pomocí vývojářských nástrojů a funkce <b>Device Toolbar</b> –
+               viz. např. <a href="https://jecas.cz/testovani-mobily">https://jecas.cz/testovani-mobily</a>.)
+            </li>
+            
+            <li>Průběžně zobrazujte stav skóre.</li>
+            
+            <li>Přidejte animaci posunu dlaždic.</li>
+            
+            <li>Přidejte animační efekt při sloučení dlaždic.</li>
+            
+            <li>Program dokáže poznat konec hry (výhru i&nbsp;prohru) a zobrazí
+               tento stav.
+            </li>
+            
+            <li>Pokud je po skončení hry získané skóre hry vyšší než nejvyšší
+               skóre, aktualizuje se nejvyšší dosažené skóre.
+            </li>
+            
+            <li>Pokud je po skončení hry získané skóre hry vyšší než skóre
+               v&nbsp;tabulce výsledků, aktualizují se výsledky v&nbsp;tabulce.
+            </li>
+            
+            <li>Jméno hráče lze zadat kdykoliv v&nbsp;průběhu hry.</li>
+            
+            <li>Umožněte vrátit libovolný počet tahů zpět pomocí tlačítka
+               <b>Krok zpět</b>.
+            </li>
+            
+            <li>Novou hru lze kdykoliv zahájit stiskem tlačítka <b>Nová
+                  hra</b>. Pokud se nová hra zahájí v&nbsp;průběhu hry, tak se
+               neaktualizují nejvyšší skóre a tabulka s&nbsp;výsledky.
+            </li>
+            
+            <li>Umožněte přehrát celou hru ze záznamu a zadat délku pauzy mezi
+               jednotlivými tahy. Funkci přehrání je možné vyvolat i&nbsp;v&nbsp;průběhu
+               hry.
+            </li>
+            
+            <li>Tabulku s&nbsp;výsledky a nejvyšší skóre si stránka pamatuje, i&nbsp;když
+               se mezitím vypne a znovu nastartuje prohlížeč.
+            </li>
+            
+            <li>Přehrát lze libovolnou hru uloženou v&nbsp;tabulce výsledků.</li>
+            
+         </ol>
+         
+         
+         <p>Na konci stránky zdokumentujte, které z&nbsp;předchozích úkolů jste
+            vyřešili. Stačí vypsat čísla jednotlivých úkolů.
+         </p>     
+         
+         
+         
+         
+         
+         
+         
+         
+      </section>
+      
+      
+      
+      
+   </body>
+</html>
